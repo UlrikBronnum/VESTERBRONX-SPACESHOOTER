@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 8f8934ba834de48ee8fb975a9d43d680
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ambientLight1
+    100002: areaLight1
+    100004: camera1
+    100006: camera1_aim
+    100008: camera1_group
+    100010: directionalLight1
+    100012: //RootNode
+    100014: elephant:EleTuskL
+    100016: elephant:EleTuskR
+    100018: elephant:ElphEYEL
+    100020: elephant:ElphEYER
+    100022: elephant:MainEleH
+    100024: elephant:MainEleH_MeshPart0
+    100026: elephant:MainEleH_MeshPart1
+    100028: persp1
+    100030: pPlane1
+    400000: ambientLight1
+    400002: areaLight1
+    400004: camera1
+    400006: camera1_aim
+    400008: camera1_group
+    400010: directionalLight1
+    400012: //RootNode
+    400014: elephant:EleTuskL
+    400016: elephant:EleTuskR
+    400018: elephant:ElphEYEL
+    400020: elephant:ElphEYER
+    400022: elephant:MainEleH
+    400024: elephant:MainEleH_MeshPart0
+    400026: elephant:MainEleH_MeshPart1
+    400028: persp1
+    400030: pPlane1
+    2300000: elephant:EleTuskL
+    2300002: elephant:EleTuskR
+    2300004: elephant:ElphEYEL
+    2300006: elephant:ElphEYER
+    2300008: elephant:MainEleH_MeshPart0
+    2300010: elephant:MainEleH_MeshPart1
+    2300012: pPlane1
+    3300000: elephant:EleTuskL
+    3300002: elephant:EleTuskR
+    3300004: elephant:ElphEYEL
+    3300006: elephant:ElphEYER
+    3300008: elephant:MainEleH_MeshPart0
+    3300010: elephant:MainEleH_MeshPart1
+    3300012: pPlane1
+    4300000: elephant:MainEleH_MeshPart0
+    4300002: elephant:MainEleH_MeshPart1
+    4300004: elephant:EleTuskL
+    4300006: elephant:EleTuskR
+    4300008: elephant:ElphEYEL
+    4300010: elephant:ElphEYER
+    4300012: pPlane1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

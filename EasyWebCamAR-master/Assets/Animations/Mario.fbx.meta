@@ -1,0 +1,1478 @@
+fileFormatVersion: 2
+guid: 49f3fbaa9e45f481ca6d45313b193a7c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: All_ctrl
+    100002: biaoqing
+    100004: body
+    100006: camera1
+    100008: camera2
+    100010: camera3
+    100012: camera4
+    100014: camera5
+    100016: camera6
+    100018: camera7
+    100020: camera8
+    100022: Char_c_1
+    100024: Char_c_2
+    100026: Char_h_1
+    100028: Char_l_1
+    100030: Char_m_1
+    100032: Char_o_1
+    100034: Char_o_2
+    100036: Char_o_3
+    100038: Char_w_1
+    100040: Char_w_2
+    100042: Char_w_3
+    100044: Char_x_1
+    100046: Char_x_2
+    100048: Char_z_1
+    100050: ctrl_L_ankle
+    100052: ctrl_L_foot
+    100054: ctrl_L_jian
+    100056: ctrl_L_toe
+    100058: ctrl_R_ankle
+    100060: ctrl_R_foot
+    100062: ctrl_R_jian
+    100064: ctrl_R_toe
+    100066: curve10
+    100068: curve11
+    100070: curve12
+    100072: curve13
+    100074: curve14
+    100076: curve15
+    100078: curve16
+    100080: curve17
+    100082: curve18
+    100084: curve19
+    100086: curve20
+    100088: curve21
+    100090: curve22
+    100092: curve23
+    100094: curve24
+    100096: curve7detachedCurve10
+    100098: curve7detachedCurve11
+    100100: curve7detachedCurve12
+    100102: curve7detachedCurve2
+    100104: curve7detachedCurve4
+    100106: curve7detachedCurve5
+    100108: curve7detachedCurve6
+    100110: curve7detachedCurve7
+    100112: curve7detachedCurve8
+    100114: curve7detachedCurve9
+    100116: curve8
+    100118: curve9
+    100120: group10
+    100122: group11
+    100124: group12
+    100126: group13
+    100128: group14
+    100130: group15
+    100132: group16
+    100134: group2
+    100136: group2 1
+    100138: group2 10
+    100140: group2 11
+    100142: group2 12
+    100144: group2 13
+    100146: group2 14
+    100148: group2 15
+    100150: group2 16
+    100152: group2 17
+    100154: group2 18
+    100156: group2 19
+    100158: group2 2
+    100160: group2 20
+    100162: group2 21
+    100164: group2 22
+    100166: group2 23
+    100168: group2 24
+    100170: group2 25
+    100172: group2 26
+    100174: group2 27
+    100176: group2 28
+    100178: group2 29
+    100180: group2 3
+    100182: group2 30
+    100184: group2 31
+    100186: group2 4
+    100188: group2 5
+    100190: group2 6
+    100192: group2 7
+    100194: group2 8
+    100196: group2 9
+    100198: group3
+    100200: group4
+    100202: group5
+    100204: group6
+    100206: group7
+    100208: group8
+    100210: group9
+    100212: Head
+    100214: Head 1
+    100216: Head1
+    100218: Head10
+    100220: Head11
+    100222: Head12
+    100224: Head13
+    100226: Head14
+    100228: Head15
+    100230: Head2
+    100232: Head3
+    100234: Head4
+    100236: Head5
+    100238: Head6
+    100240: Head7
+    100242: Head8
+    100244: Head9
+    100246: Head_end
+    100248: ikHandle1
+    100250: ikHandle10
+    100252: ikHandle11
+    100254: ikHandle2
+    100256: ikHandle3
+    100258: ikHandle4
+    100260: ikHandle5
+    100262: ikHandle6
+    100264: ikHandle7
+    100266: ikHandle8
+    100268: ikHandle9
+    100270: joint1
+    100272: joint2
+    100274: joint3
+    100276: L_ankle
+    100278: L_arm_dist
+    100280: L_clavicle
+    100282: L_elbow
+    100284: L_EyeGroup
+    100286: L_EyeGroup 1
+    100288: L_EyeGroup 10
+    100290: L_EyeGroup 11
+    100292: L_EyeGroup 12
+    100294: L_EyeGroup 13
+    100296: L_EyeGroup 14
+    100298: L_EyeGroup 15
+    100300: L_EyeGroup 2
+    100302: L_EyeGroup 3
+    100304: L_EyeGroup 4
+    100306: L_EyeGroup 5
+    100308: L_EyeGroup 6
+    100310: L_EyeGroup 7
+    100312: L_EyeGroup 8
+    100314: L_EyeGroup 9
+    100316: L_foot
+    100318: L_foot_dist
+    100320: L_hand1
+    100322: L_hip
+    100324: L_Index_01
+    100326: L_Index_02
+    100328: L_Index_03
+    100330: L_Index_04
+    100332: L_jiao_dist
+    100334: L_knee
+    100336: L_Middle_01
+    100338: L_Middle_02
+    100340: L_Middle_03
+    100342: L_Middle_04
+    100344: L_Pinky_01
+    100346: L_Pinky_02
+    100348: L_Pinky_03
+    100350: L_Pinky_04
+    100352: L_Ring_01
+    100354: L_Ring_02
+    100356: L_Ring_03
+    100358: L_Ring_04
+    100360: L_shou_dist
+    100362: L_shoulder
+    100364: L_Thumb_02
+    100366: L_Thumb_03
+    100368: L_Thumb_03 1
+    100370: L_Thumb_04
+    100372: L_toe
+    100374: locator10
+    100376: locator2
+    100378: locator3
+    100380: locator5
+    100382: locator6
+    100384: locator7
+    100386: locator8
+    100388: locator9
+    100390: mali
+    100392: //RootNode
+    100394: Neck
+    100396: NotTouch
+    100398: nurbsCircle1
+    100400: nurbsCircle10
+    100402: nurbsCircle2
+    100404: nurbsCircle3
+    100406: nurbsCircle4
+    100408: nurbsCircle5
+    100410: nurbsCircle6
+    100412: nurbsCircle8
+    100414: nurbsCircle9
+    100416: nurbsCube1
+    100418: nurbsCylinder1
+    100420: nurbsSphere4
+    100422: nurbsSphere4 1
+    100424: nurbsSphere4 2
+    100426: nurbsSphere5
+    100428: nurbsSphere5 1
+    100430: nurbsSphere5detachedSurface2
+    100432: nurbsSphere5detachedSurface2 1
+    100434: nurbsSphere6
+    100436: pasted__nurbsSphere8
+    100438: pCube16
+    100440: pCube21
+    100442: pCube22
+    100444: pCylinder1
+    100446: pCylinder4
+    100448: pCylinder5
+    100450: polySurface34
+    100452: polySurface34 1
+    100454: polySurface34 10
+    100456: polySurface34 11
+    100458: polySurface34 12
+    100460: polySurface34 13
+    100462: polySurface34 14
+    100464: polySurface34 15
+    100466: polySurface34 2
+    100468: polySurface34 3
+    100470: polySurface34 4
+    100472: polySurface34 5
+    100474: polySurface34 6
+    100476: polySurface34 7
+    100478: polySurface34 8
+    100480: polySurface34 9
+    100482: polySurface58
+    100484: polySurface59
+    100486: polySurface60
+    100488: polySurface62
+    100490: polySurface63
+    100492: polySurface65
+    100494: polySurface65 1
+    100496: polySurface67
+    100498: polySurface69
+    100500: polySurface70
+    100502: polySurface71
+    100504: polySurface72
+    100506: polySurface73
+    100508: polySurface74
+    100510: polyToSubd1
+    100512: pPlane3
+    100514: pPlane4
+    100516: R_ankle
+    100518: R_arm_dist
+    100520: R_clavicle
+    100522: R_elbow
+    100524: R_EyeGroup
+    100526: R_EyeGroup 1
+    100528: R_EyeGroup 10
+    100530: R_EyeGroup 11
+    100532: R_EyeGroup 12
+    100534: R_EyeGroup 13
+    100536: R_EyeGroup 14
+    100538: R_EyeGroup 15
+    100540: R_EyeGroup 2
+    100542: R_EyeGroup 3
+    100544: R_EyeGroup 4
+    100546: R_EyeGroup 5
+    100548: R_EyeGroup 6
+    100550: R_EyeGroup 7
+    100552: R_EyeGroup 8
+    100554: R_EyeGroup 9
+    100556: R_foot
+    100558: R_foot_dist
+    100560: R_hand1
+    100562: R_hip
+    100564: R_Index_01
+    100566: R_Index_02
+    100568: R_Index_03
+    100570: R_Index_04
+    100572: R_jiao_dist
+    100574: R_knee
+    100576: R_Middle_01
+    100578: R_Middle_02
+    100580: R_Middle_03
+    100582: R_Middle_04
+    100584: R_Pinky_01
+    100586: R_Pinky_02
+    100588: R_Pinky_03
+    100590: R_Pinky_04
+    100592: R_Ring_01
+    100594: R_Ring_02
+    100596: R_Ring_03
+    100598: R_Ring_04
+    100600: R_shou_dist
+    100602: R_shoulder
+    100604: R_Thumb_02
+    100606: R_Thumb_03
+    100608: R_Thumb_03 1
+    100610: R_Thumb_04
+    100612: R_toe
+    100614: Root
+    100616: softMod1Handle
+    100618: softMod2Handle
+    100620: softMod3Handle
+    100622: softMod4Handle
+    100624: softMod5Handle
+    100626: softMod6Handle
+    100628: softMod7Handle
+    100630: Spine_01
+    100632: Spine_02
+    100634: Spine_03
+    100636: Text_wwwxhzcoolxcom_1
+    100638: transform1
+    100640: transform2
+    100642: transform3
+    100644: transform4
+    100646: transform5
+    100648: transform6
+    100650: transform7
+    100652: transform8
+    100654: transform9
+    100656: tunbu
+    400000: All_ctrl
+    400002: biaoqing
+    400004: body
+    400006: camera1
+    400008: camera2
+    400010: camera3
+    400012: camera4
+    400014: camera5
+    400016: camera6
+    400018: camera7
+    400020: camera8
+    400022: Char_c_1
+    400024: Char_c_2
+    400026: Char_h_1
+    400028: Char_l_1
+    400030: Char_m_1
+    400032: Char_o_1
+    400034: Char_o_2
+    400036: Char_o_3
+    400038: Char_w_1
+    400040: Char_w_2
+    400042: Char_w_3
+    400044: Char_x_1
+    400046: Char_x_2
+    400048: Char_z_1
+    400050: ctrl_L_ankle
+    400052: ctrl_L_foot
+    400054: ctrl_L_jian
+    400056: ctrl_L_toe
+    400058: ctrl_R_ankle
+    400060: ctrl_R_foot
+    400062: ctrl_R_jian
+    400064: ctrl_R_toe
+    400066: curve10
+    400068: curve11
+    400070: curve12
+    400072: curve13
+    400074: curve14
+    400076: curve15
+    400078: curve16
+    400080: curve17
+    400082: curve18
+    400084: curve19
+    400086: curve20
+    400088: curve21
+    400090: curve22
+    400092: curve23
+    400094: curve24
+    400096: curve7detachedCurve10
+    400098: curve7detachedCurve11
+    400100: curve7detachedCurve12
+    400102: curve7detachedCurve2
+    400104: curve7detachedCurve4
+    400106: curve7detachedCurve5
+    400108: curve7detachedCurve6
+    400110: curve7detachedCurve7
+    400112: curve7detachedCurve8
+    400114: curve7detachedCurve9
+    400116: curve8
+    400118: curve9
+    400120: group10
+    400122: group11
+    400124: group12
+    400126: group13
+    400128: group14
+    400130: group15
+    400132: group16
+    400134: group2
+    400136: group2 1
+    400138: group2 10
+    400140: group2 11
+    400142: group2 12
+    400144: group2 13
+    400146: group2 14
+    400148: group2 15
+    400150: group2 16
+    400152: group2 17
+    400154: group2 18
+    400156: group2 19
+    400158: group2 2
+    400160: group2 20
+    400162: group2 21
+    400164: group2 22
+    400166: group2 23
+    400168: group2 24
+    400170: group2 25
+    400172: group2 26
+    400174: group2 27
+    400176: group2 28
+    400178: group2 29
+    400180: group2 3
+    400182: group2 30
+    400184: group2 31
+    400186: group2 4
+    400188: group2 5
+    400190: group2 6
+    400192: group2 7
+    400194: group2 8
+    400196: group2 9
+    400198: group3
+    400200: group4
+    400202: group5
+    400204: group6
+    400206: group7
+    400208: group8
+    400210: group9
+    400212: Head
+    400214: Head 1
+    400216: Head1
+    400218: Head10
+    400220: Head11
+    400222: Head12
+    400224: Head13
+    400226: Head14
+    400228: Head15
+    400230: Head2
+    400232: Head3
+    400234: Head4
+    400236: Head5
+    400238: Head6
+    400240: Head7
+    400242: Head8
+    400244: Head9
+    400246: Head_end
+    400248: ikHandle1
+    400250: ikHandle10
+    400252: ikHandle11
+    400254: ikHandle2
+    400256: ikHandle3
+    400258: ikHandle4
+    400260: ikHandle5
+    400262: ikHandle6
+    400264: ikHandle7
+    400266: ikHandle8
+    400268: ikHandle9
+    400270: joint1
+    400272: joint2
+    400274: joint3
+    400276: L_ankle
+    400278: L_arm_dist
+    400280: L_clavicle
+    400282: L_elbow
+    400284: L_EyeGroup
+    400286: L_EyeGroup 1
+    400288: L_EyeGroup 10
+    400290: L_EyeGroup 11
+    400292: L_EyeGroup 12
+    400294: L_EyeGroup 13
+    400296: L_EyeGroup 14
+    400298: L_EyeGroup 15
+    400300: L_EyeGroup 2
+    400302: L_EyeGroup 3
+    400304: L_EyeGroup 4
+    400306: L_EyeGroup 5
+    400308: L_EyeGroup 6
+    400310: L_EyeGroup 7
+    400312: L_EyeGroup 8
+    400314: L_EyeGroup 9
+    400316: L_foot
+    400318: L_foot_dist
+    400320: L_hand1
+    400322: L_hip
+    400324: L_Index_01
+    400326: L_Index_02
+    400328: L_Index_03
+    400330: L_Index_04
+    400332: L_jiao_dist
+    400334: L_knee
+    400336: L_Middle_01
+    400338: L_Middle_02
+    400340: L_Middle_03
+    400342: L_Middle_04
+    400344: L_Pinky_01
+    400346: L_Pinky_02
+    400348: L_Pinky_03
+    400350: L_Pinky_04
+    400352: L_Ring_01
+    400354: L_Ring_02
+    400356: L_Ring_03
+    400358: L_Ring_04
+    400360: L_shou_dist
+    400362: L_shoulder
+    400364: L_Thumb_02
+    400366: L_Thumb_03
+    400368: L_Thumb_03 1
+    400370: L_Thumb_04
+    400372: L_toe
+    400374: locator10
+    400376: locator2
+    400378: locator3
+    400380: locator5
+    400382: locator6
+    400384: locator7
+    400386: locator8
+    400388: locator9
+    400390: mali
+    400392: //RootNode
+    400394: Neck
+    400396: NotTouch
+    400398: nurbsCircle1
+    400400: nurbsCircle10
+    400402: nurbsCircle2
+    400404: nurbsCircle3
+    400406: nurbsCircle4
+    400408: nurbsCircle5
+    400410: nurbsCircle6
+    400412: nurbsCircle8
+    400414: nurbsCircle9
+    400416: nurbsCube1
+    400418: nurbsCylinder1
+    400420: nurbsSphere4
+    400422: nurbsSphere4 1
+    400424: nurbsSphere4 2
+    400426: nurbsSphere5
+    400428: nurbsSphere5 1
+    400430: nurbsSphere5detachedSurface2
+    400432: nurbsSphere5detachedSurface2 1
+    400434: nurbsSphere6
+    400436: pasted__nurbsSphere8
+    400438: pCube16
+    400440: pCube21
+    400442: pCube22
+    400444: pCylinder1
+    400446: pCylinder4
+    400448: pCylinder5
+    400450: polySurface34
+    400452: polySurface34 1
+    400454: polySurface34 10
+    400456: polySurface34 11
+    400458: polySurface34 12
+    400460: polySurface34 13
+    400462: polySurface34 14
+    400464: polySurface34 15
+    400466: polySurface34 2
+    400468: polySurface34 3
+    400470: polySurface34 4
+    400472: polySurface34 5
+    400474: polySurface34 6
+    400476: polySurface34 7
+    400478: polySurface34 8
+    400480: polySurface34 9
+    400482: polySurface58
+    400484: polySurface59
+    400486: polySurface60
+    400488: polySurface62
+    400490: polySurface63
+    400492: polySurface65
+    400494: polySurface65 1
+    400496: polySurface67
+    400498: polySurface69
+    400500: polySurface70
+    400502: polySurface71
+    400504: polySurface72
+    400506: polySurface73
+    400508: polySurface74
+    400510: polyToSubd1
+    400512: pPlane3
+    400514: pPlane4
+    400516: R_ankle
+    400518: R_arm_dist
+    400520: R_clavicle
+    400522: R_elbow
+    400524: R_EyeGroup
+    400526: R_EyeGroup 1
+    400528: R_EyeGroup 10
+    400530: R_EyeGroup 11
+    400532: R_EyeGroup 12
+    400534: R_EyeGroup 13
+    400536: R_EyeGroup 14
+    400538: R_EyeGroup 15
+    400540: R_EyeGroup 2
+    400542: R_EyeGroup 3
+    400544: R_EyeGroup 4
+    400546: R_EyeGroup 5
+    400548: R_EyeGroup 6
+    400550: R_EyeGroup 7
+    400552: R_EyeGroup 8
+    400554: R_EyeGroup 9
+    400556: R_foot
+    400558: R_foot_dist
+    400560: R_hand1
+    400562: R_hip
+    400564: R_Index_01
+    400566: R_Index_02
+    400568: R_Index_03
+    400570: R_Index_04
+    400572: R_jiao_dist
+    400574: R_knee
+    400576: R_Middle_01
+    400578: R_Middle_02
+    400580: R_Middle_03
+    400582: R_Middle_04
+    400584: R_Pinky_01
+    400586: R_Pinky_02
+    400588: R_Pinky_03
+    400590: R_Pinky_04
+    400592: R_Ring_01
+    400594: R_Ring_02
+    400596: R_Ring_03
+    400598: R_Ring_04
+    400600: R_shou_dist
+    400602: R_shoulder
+    400604: R_Thumb_02
+    400606: R_Thumb_03
+    400608: R_Thumb_03 1
+    400610: R_Thumb_04
+    400612: R_toe
+    400614: Root
+    400616: softMod1Handle
+    400618: softMod2Handle
+    400620: softMod3Handle
+    400622: softMod4Handle
+    400624: softMod5Handle
+    400626: softMod6Handle
+    400628: softMod7Handle
+    400630: Spine_01
+    400632: Spine_02
+    400634: Spine_03
+    400636: Text_wwwxhzcoolxcom_1
+    400638: transform1
+    400640: transform2
+    400642: transform3
+    400644: transform4
+    400646: transform5
+    400648: transform6
+    400650: transform7
+    400652: transform8
+    400654: transform9
+    400656: tunbu
+    2300000: pCylinder1
+    2300002: polySurface34
+    2300004: polySurface34 1
+    2300006: polySurface34 10
+    2300008: polySurface34 11
+    2300010: polySurface34 12
+    2300012: polySurface34 13
+    2300014: polySurface34 14
+    2300016: polySurface34 15
+    2300018: polySurface34 2
+    2300020: polySurface34 3
+    2300022: polySurface34 4
+    2300024: polySurface34 5
+    2300026: polySurface34 6
+    2300028: polySurface34 7
+    2300030: polySurface34 8
+    2300032: polySurface34 9
+    2300034: polySurface65 1
+    3300000: pCylinder1
+    3300002: polySurface34
+    3300004: polySurface34 1
+    3300006: polySurface34 10
+    3300008: polySurface34 11
+    3300010: polySurface34 12
+    3300012: polySurface34 13
+    3300014: polySurface34 14
+    3300016: polySurface34 15
+    3300018: polySurface34 2
+    3300020: polySurface34 3
+    3300022: polySurface34 4
+    3300024: polySurface34 5
+    3300026: polySurface34 6
+    3300028: polySurface34 7
+    3300030: polySurface34 8
+    3300032: polySurface34 9
+    3300034: polySurface65 1
+    4300000: pCube21
+    4300002: pCube22
+    4300004: polySurface62
+    4300006: polySurface63
+    4300008: polySurface73
+    4300010: polySurface74
+    4300012: polySurface65
+    4300014: pPlane3
+    4300016: pPlane4
+    4300040: polySurface65
+    4300050: pCylinder1
+    4300052: polyToSubd1
+    4300054: polySurface69
+    4300058: pCube16
+    4300060: polySurface67
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: pCube16
+    13700002: pCube21
+    13700004: pCube22
+    13700006: polySurface62
+    13700008: polySurface63
+    13700010: polySurface65
+    13700012: polySurface67
+    13700014: polySurface69
+    13700016: polySurface73
+    13700018: polySurface74
+    13700020: polyToSubd1
+    13700022: pPlane3
+    13700024: pPlane4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 254
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera1
+        weight: 1
+      - path: camera2
+        weight: 1
+      - path: camera3
+        weight: 1
+      - path: camera4
+        weight: 1
+      - path: camera5
+        weight: 1
+      - path: camera6
+        weight: 1
+      - path: camera8
+        weight: 1
+      - path: group3
+        weight: 1
+      - path: group4
+        weight: 1
+      - path: group5
+        weight: 1
+      - path: group5/nurbsCylinder1
+        weight: 1
+      - path: group5/nurbsSphere6
+        weight: 1
+      - path: group5/pCylinder1
+        weight: 1
+      - path: group6
+        weight: 1
+      - path: group6/All_ctrl
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe/ctrl_L_jian
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe/ctrl_L_jian/ctrl_L_ankle
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe/ctrl_L_jian/ctrl_L_ankle/ikHandle1
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe/ctrl_L_jian/ctrl_L_ankle/ikHandle1/locator8
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe/ctrl_L_jian/ikHandle2
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/ctrl_L_foot/ctrl_L_toe/ikHandle3
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve4/curve7detachedCurve6
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian/ctrl_R_ankle
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian/ctrl_R_ankle/ikHandle4
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian/ctrl_R_ankle/ikHandle7
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian/ctrl_R_ankle/ikHandle7/locator10
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian/ikHandle5
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ctrl_R_jian/ikHandle8
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ikHandle6
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/ctrl_R_foot/ctrl_R_toe/ikHandle9
+        weight: 1
+      - path: group6/All_ctrl/curve7detachedCurve5/curve7detachedCurve7
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/curve7detachedCurve11
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/curve7detachedCurve12
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle1/locator3
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle2
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5/curve7detachedCurve2
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5/curve7detachedCurve8
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5/curve7detachedCurve9
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5/curve7detachedCurve10
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5/nurbsCircle6
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle3/nurbsCircle4/nurbsCircle5/nurbsCircle6/nurbsCircle9
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle10
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle10/locator6
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/nurbsCircle10/pasted__nurbsSphere8
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Index_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Index_01/L_Index_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Index_01/L_Index_02/L_Index_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Index_01/L_Index_02/L_Index_03/L_Index_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Middle_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Middle_01/L_Middle_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Middle_01/L_Middle_02/L_Middle_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Middle_01/L_Middle_02/L_Middle_03/L_Middle_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Pinky_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Pinky_01/L_Pinky_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Pinky_01/L_Pinky_02/L_Pinky_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Pinky_01/L_Pinky_02/L_Pinky_03/L_Pinky_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Ring_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Ring_01/L_Ring_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Ring_01/L_Ring_02/L_Ring_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Ring_01/L_Ring_02/L_Ring_03/L_Ring_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Thumb_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Thumb_03/L_Thumb_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Thumb_03/L_Thumb_02/L_Thumb_03
+          1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/L_elbow/L_hand1/L_Thumb_03/L_Thumb_02/L_Thumb_03
+          1/L_Thumb_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/L_clavicle/L_shoulder/locator2
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1/Head_end
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1/pCube16
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1/polySurface34 15
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1/polySurface67
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1/polySurface69
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/Neck/Head
+          1/polyToSubd1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/locator5
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Index_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Index_01/R_Index_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Index_01/R_Index_02/R_Index_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Index_01/R_Index_02/R_Index_03/R_Index_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Middle_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Middle_01/R_Middle_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Middle_01/R_Middle_02/R_Middle_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Middle_01/R_Middle_02/R_Middle_03/R_Middle_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Pinky_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Pinky_01/R_Pinky_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Pinky_01/R_Pinky_02/R_Pinky_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Pinky_01/R_Pinky_02/R_Pinky_03/R_Pinky_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Ring_01
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Ring_01/R_Ring_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Ring_01/R_Ring_02/R_Ring_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Ring_01/R_Ring_02/R_Ring_03/R_Ring_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Thumb_03
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Thumb_03/R_Thumb_02
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Thumb_03/R_Thumb_02/R_Thumb_03
+          1
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/Spine_01/Spine_02/Spine_03/R_clavicle/R_shoulder/R_elbow/R_hand1/R_Thumb_03/R_Thumb_02/R_Thumb_03
+          1/R_Thumb_04
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/L_hip
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/L_hip/L_knee
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/L_hip/L_knee/L_ankle
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/L_hip/L_knee/L_ankle/L_foot
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/L_hip/L_knee/L_ankle/L_foot/L_toe
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/L_hip/locator7
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/R_hip
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/R_hip/locator9
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/R_hip/R_knee
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/R_hip/R_knee/R_ankle
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/R_hip/R_knee/R_ankle/R_foot
+        weight: 1
+      - path: group6/All_ctrl/nurbsCircle8/Root/tunbu/R_hip/R_knee/R_ankle/R_foot/R_toe
+        weight: 1
+      - path: group7
+        weight: 1
+      - path: group8
+        weight: 1
+      - path: group9
+        weight: 1
+      - path: group9/group16
+        weight: 1
+      - path: group9/group16/camera7
+        weight: 1
+      - path: group9/pCylinder4
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_c_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_c_1/curve14
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_c_2
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_c_2/curve21
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_h_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_h_1/curve12
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_l_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_l_1/curve19
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_m_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_m_1/curve24
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_1/curve15
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_1/curve16
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_2
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_2/curve17
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_2/curve18
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_3
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_3/curve22
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_o_3/curve23
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_w_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_w_1/curve8
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_w_2
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_w_2/curve9
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_w_3
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_w_3/curve10
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_x_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_x_1/curve11
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_x_2
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_x_2/curve20
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_z_1
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/Text_wwwxhzcoolxcom_1/Char_z_1/curve13
+        weight: 1
+      - path: group9/pCylinder4/pCylinder5/transform8
+        weight: 1
+      - path: group9/pCylinder4/transform7
+        weight: 1
+      - path: group10
+        weight: 1
+      - path: group11
+        weight: 1
+      - path: group12
+        weight: 1
+      - path: group13
+        weight: 1
+      - path: group14
+        weight: 1
+      - path: group15
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: joint1/joint2
+        weight: 1
+      - path: joint1/joint2/joint3
+        weight: 1
+      - path: mali
+        weight: 1
+      - path: mali/biaoqing
+        weight: 1
+      - path: mali/biaoqing/Head1
+        weight: 1
+      - path: mali/biaoqing/Head1/L_EyeGroup 1
+        weight: 1
+      - path: mali/biaoqing/Head1/L_EyeGroup 1/group2 2
+        weight: 1
+      - path: mali/biaoqing/Head1/polySurface34
+        weight: 1
+      - path: mali/biaoqing/Head1/R_EyeGroup 1
+        weight: 1
+      - path: mali/biaoqing/Head1/R_EyeGroup 1/group2 3
+        weight: 1
+      - path: mali/biaoqing/Head2
+        weight: 1
+      - path: mali/biaoqing/Head2/L_EyeGroup 8
+        weight: 1
+      - path: mali/biaoqing/Head2/L_EyeGroup 8/group2 16
+        weight: 1
+      - path: mali/biaoqing/Head2/polySurface34 7
+        weight: 1
+      - path: mali/biaoqing/Head2/R_EyeGroup 8
+        weight: 1
+      - path: mali/biaoqing/Head2/R_EyeGroup 8/group2 17
+        weight: 1
+      - path: mali/biaoqing/Head3
+        weight: 1
+      - path: mali/biaoqing/Head3/L_EyeGroup 9
+        weight: 1
+      - path: mali/biaoqing/Head3/L_EyeGroup 9/group2 18
+        weight: 1
+      - path: mali/biaoqing/Head3/polySurface34 8
+        weight: 1
+      - path: mali/biaoqing/Head3/R_EyeGroup 9
+        weight: 1
+      - path: mali/biaoqing/Head3/R_EyeGroup 9/group2 19
+        weight: 1
+      - path: mali/biaoqing/Head4
+        weight: 1
+      - path: mali/biaoqing/Head4/L_EyeGroup 10
+        weight: 1
+      - path: mali/biaoqing/Head4/L_EyeGroup 10/group2 20
+        weight: 1
+      - path: mali/biaoqing/Head4/polySurface34 9
+        weight: 1
+      - path: mali/biaoqing/Head4/R_EyeGroup 10
+        weight: 1
+      - path: mali/biaoqing/Head4/R_EyeGroup 10/group2 21
+        weight: 1
+      - path: mali/biaoqing/Head5
+        weight: 1
+      - path: mali/biaoqing/Head5/L_EyeGroup 11
+        weight: 1
+      - path: mali/biaoqing/Head5/L_EyeGroup 11/group2 22
+        weight: 1
+      - path: mali/biaoqing/Head5/polySurface34 10
+        weight: 1
+      - path: mali/biaoqing/Head5/R_EyeGroup 11
+        weight: 1
+      - path: mali/biaoqing/Head5/R_EyeGroup 11/group2 23
+        weight: 1
+      - path: mali/biaoqing/Head6
+        weight: 1
+      - path: mali/biaoqing/Head6/L_EyeGroup 12
+        weight: 1
+      - path: mali/biaoqing/Head6/L_EyeGroup 12/group2 24
+        weight: 1
+      - path: mali/biaoqing/Head6/polySurface34 11
+        weight: 1
+      - path: mali/biaoqing/Head6/R_EyeGroup 12
+        weight: 1
+      - path: mali/biaoqing/Head6/R_EyeGroup 12/group2 25
+        weight: 1
+      - path: mali/biaoqing/Head7
+        weight: 1
+      - path: mali/biaoqing/Head7/L_EyeGroup 13
+        weight: 1
+      - path: mali/biaoqing/Head7/L_EyeGroup 13/group2 26
+        weight: 1
+      - path: mali/biaoqing/Head7/polySurface34 12
+        weight: 1
+      - path: mali/biaoqing/Head7/R_EyeGroup 13
+        weight: 1
+      - path: mali/biaoqing/Head7/R_EyeGroup 13/group2 27
+        weight: 1
+      - path: mali/biaoqing/Head8
+        weight: 1
+      - path: mali/biaoqing/Head8/L_EyeGroup 14
+        weight: 1
+      - path: mali/biaoqing/Head8/L_EyeGroup 14/group2 28
+        weight: 1
+      - path: mali/biaoqing/Head8/polySurface34 13
+        weight: 1
+      - path: mali/biaoqing/Head8/R_EyeGroup 14
+        weight: 1
+      - path: mali/biaoqing/Head8/R_EyeGroup 14/group2 29
+        weight: 1
+      - path: mali/biaoqing/Head9
+        weight: 1
+      - path: mali/biaoqing/Head9/L_EyeGroup 15
+        weight: 1
+      - path: mali/biaoqing/Head9/L_EyeGroup 15/group2 30
+        weight: 1
+      - path: mali/biaoqing/Head9/polySurface34 14
+        weight: 1
+      - path: mali/biaoqing/Head9/R_EyeGroup 15
+        weight: 1
+      - path: mali/biaoqing/Head9/R_EyeGroup 15/group2 31
+        weight: 1
+      - path: mali/biaoqing/Head10
+        weight: 1
+      - path: mali/biaoqing/Head10/L_EyeGroup 2
+        weight: 1
+      - path: mali/biaoqing/Head10/L_EyeGroup 2/group2 4
+        weight: 1
+      - path: mali/biaoqing/Head10/polySurface34 1
+        weight: 1
+      - path: mali/biaoqing/Head10/R_EyeGroup 2
+        weight: 1
+      - path: mali/biaoqing/Head10/R_EyeGroup 2/group2 5
+        weight: 1
+      - path: mali/biaoqing/Head11
+        weight: 1
+      - path: mali/biaoqing/Head11/L_EyeGroup 3
+        weight: 1
+      - path: mali/biaoqing/Head11/L_EyeGroup 3/group2 6
+        weight: 1
+      - path: mali/biaoqing/Head11/polySurface34 2
+        weight: 1
+      - path: mali/biaoqing/Head11/polySurface65 1
+        weight: 1
+      - path: mali/biaoqing/Head11/R_EyeGroup 3
+        weight: 1
+      - path: mali/biaoqing/Head11/R_EyeGroup 3/group2 7
+        weight: 1
+      - path: mali/biaoqing/Head12
+        weight: 1
+      - path: mali/biaoqing/Head12/L_EyeGroup 4
+        weight: 1
+      - path: mali/biaoqing/Head12/L_EyeGroup 4/group2 8
+        weight: 1
+      - path: mali/biaoqing/Head12/polySurface34 3
+        weight: 1
+      - path: mali/biaoqing/Head12/R_EyeGroup 4
+        weight: 1
+      - path: mali/biaoqing/Head12/R_EyeGroup 4/group2 9
+        weight: 1
+      - path: mali/biaoqing/Head12/R_EyeGroup 4/group2 9/nurbsSphere4 2
+        weight: 1
+      - path: mali/biaoqing/Head13
+        weight: 1
+      - path: mali/biaoqing/Head13/L_EyeGroup 5
+        weight: 1
+      - path: mali/biaoqing/Head13/L_EyeGroup 5/group2 10
+        weight: 1
+      - path: mali/biaoqing/Head13/polySurface34 4
+        weight: 1
+      - path: mali/biaoqing/Head13/R_EyeGroup 5
+        weight: 1
+      - path: mali/biaoqing/Head13/R_EyeGroup 5/group2 11
+        weight: 1
+      - path: mali/biaoqing/Head14
+        weight: 1
+      - path: mali/biaoqing/Head14/L_EyeGroup 6
+        weight: 1
+      - path: mali/biaoqing/Head14/L_EyeGroup 6/group2 12
+        weight: 1
+      - path: mali/biaoqing/Head14/polySurface34 5
+        weight: 1
+      - path: mali/biaoqing/Head14/R_EyeGroup 6
+        weight: 1
+      - path: mali/biaoqing/Head14/R_EyeGroup 6/group2 13
+        weight: 1
+      - path: mali/biaoqing/Head15
+        weight: 1
+      - path: mali/biaoqing/Head15/L_EyeGroup 7
+        weight: 1
+      - path: mali/biaoqing/Head15/L_EyeGroup 7/group2 14
+        weight: 1
+      - path: mali/biaoqing/Head15/polySurface34 6
+        weight: 1
+      - path: mali/biaoqing/Head15/R_EyeGroup 7
+        weight: 1
+      - path: mali/biaoqing/Head15/R_EyeGroup 7/group2 15
+        weight: 1
+      - path: mali/body
+        weight: 1
+      - path: mali/body/pCube21
+        weight: 1
+      - path: mali/body/pCube22
+        weight: 1
+      - path: mali/body/polySurface58
+        weight: 1
+      - path: mali/body/polySurface58/transform3
+        weight: 1
+      - path: mali/body/polySurface59
+        weight: 1
+      - path: mali/body/polySurface59/transform2
+        weight: 1
+      - path: mali/body/polySurface60
+        weight: 1
+      - path: mali/body/polySurface60/transform1
+        weight: 1
+      - path: mali/body/polySurface62
+        weight: 1
+      - path: mali/body/polySurface63
+        weight: 1
+      - path: mali/body/polySurface70
+        weight: 1
+      - path: mali/body/polySurface70/transform6
+        weight: 1
+      - path: mali/body/polySurface71
+        weight: 1
+      - path: mali/body/polySurface71/transform5
+        weight: 1
+      - path: mali/body/polySurface72
+        weight: 1
+      - path: mali/body/polySurface72/transform4
+        weight: 1
+      - path: mali/body/polySurface73
+        weight: 1
+      - path: mali/body/polySurface74
+        weight: 1
+      - path: mali/Head
+        weight: 1
+      - path: mali/Head/L_EyeGroup
+        weight: 1
+      - path: mali/Head/L_EyeGroup/group2
+        weight: 1
+      - path: mali/Head/L_EyeGroup/group2/nurbsSphere4
+        weight: 1
+      - path: mali/Head/L_EyeGroup/group2/nurbsSphere5
+        weight: 1
+      - path: mali/Head/L_EyeGroup/group2/nurbsSphere5detachedSurface2
+        weight: 1
+      - path: mali/Head/polySurface65
+        weight: 1
+      - path: mali/Head/pPlane3
+        weight: 1
+      - path: mali/Head/pPlane4
+        weight: 1
+      - path: mali/Head/R_EyeGroup
+        weight: 1
+      - path: mali/Head/R_EyeGroup/group2 1
+        weight: 1
+      - path: mali/Head/R_EyeGroup/group2 1/nurbsSphere4 1
+        weight: 1
+      - path: mali/Head/R_EyeGroup/group2 1/nurbsSphere5 1
+        weight: 1
+      - path: mali/Head/R_EyeGroup/group2 1/nurbsSphere5detachedSurface2 1
+        weight: 1
+      - path: NotTouch
+        weight: 1
+      - path: NotTouch/ikHandle10
+        weight: 1
+      - path: NotTouch/ikHandle11
+        weight: 1
+      - path: NotTouch/L_arm_dist
+        weight: 1
+      - path: NotTouch/L_foot_dist
+        weight: 1
+      - path: NotTouch/L_jiao_dist
+        weight: 1
+      - path: NotTouch/L_shou_dist
+        weight: 1
+      - path: NotTouch/R_arm_dist
+        weight: 1
+      - path: NotTouch/R_foot_dist
+        weight: 1
+      - path: NotTouch/R_jiao_dist
+        weight: 1
+      - path: NotTouch/R_shou_dist
+        weight: 1
+      - path: NotTouch/softMod1Handle
+        weight: 1
+      - path: NotTouch/softMod2Handle
+        weight: 1
+      - path: NotTouch/softMod3Handle
+        weight: 1
+      - path: NotTouch/softMod4Handle
+        weight: 1
+      - path: NotTouch/softMod5Handle
+        weight: 1
+      - path: NotTouch/softMod6Handle
+        weight: 1
+      - path: NotTouch/softMod7Handle
+        weight: 1
+      - path: nurbsCube1
+        weight: 1
+      - path: transform9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
