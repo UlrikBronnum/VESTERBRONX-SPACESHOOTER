@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+
 // imports a characterController
 [RequireComponent(typeof(CharacterController))] 
 
 public class Spaceship_Player : Spaceship_Base {
 
-	public string cameraName = "ARCamera" ;
+	public string cameraName ;
+
+	private bool fire = false;
+	private bool left = false;
+	private bool right = false;
+
 
 	/// <summary>
 	/// This is the base class of Spaceships. All spaceship
@@ -23,9 +29,12 @@ public class Spaceship_Player : Spaceship_Base {
 	protected GameObject player;
 
 	// for the buttons:
-	protected GameObject aButton;
-	protected GameObject rightArrow;
-	protected GameObject leftArrow;
+
+	public void getButtonInput(bool fb, bool lb, bool rb){
+		fire = fb;
+		left = lb;
+		right = rb;
+	}
 
 	/// <summary>
 	/// Only use this on new gameobjects
@@ -47,53 +56,110 @@ public class Spaceship_Player : Spaceship_Base {
 	/// </summary>
 	public override void Update () 
 	{
-	
 
-		if(isActive)
-			buttonsActive();
-			moveSpaceship(canonMountCapacity);	
+		if(Application.platform == RuntimePlatform.WindowsEditor ||
+		   Application.platform == RuntimePlatform.OSXPlayer)
+		{
+			if(IsActive)
+				pcControls(canonMountCapacity);
 
-	}
-	/// <summary>
-	/// System for maneuvering player spaceship
-	/// should be inside this function
-	/// </summary>
-	/// <param name="shipCapacity">Ship capacity.</param>
-	protected void moveSpaceship (int shipCapacity) 
-	{
-
-		float sideSpeed;
-		// fire weapons
-		if(Input.GetButton("Fire1")){
-			for(int i = 0; i < shipCapacity; i++){
-				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
-				script.fireWeapon();
-				Player_Charactor playerScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
-				if(canonMounted[i].name == playerScript.hangar.canonTypes[0]){
-					playerScript.hangar.canonAmmunitionStorage[0] -= 1;
-				}else if(canonMounted[i].name == playerScript.hangar.canonTypes[1]){
-					playerScript.hangar.canonAmmunitionStorage[1] -= 1;
-				}
-
-			}
 		}
+		else if (Application.platform == RuntimePlatform.Android)
+		{
+			if(IsActive)
+				androidControls(canonMountCapacity);
+		}
+
+		
+	
+	}
+	private void pcControls(int shipCapacity){
+		float sideSpeed;
+
 		if(Input.GetKey("left")){
 			sideSpeed = -1;
+			Debug.Log("left");
 		}else if(Input.GetKey("right")){
 			sideSpeed = 1;
+			Debug.Log("right");
 		}else{
 			sideSpeed = 0;
 		}
 		// moves the player 
 		if(sideSpeed > 0){
-			if(transform.position.x < 15.0f){
+			if(transform.position.x < 45.0f){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
 				}
 			}
 		}else if(sideSpeed < 0){
-			if(transform.position.x > -15.0f ){
+			if(transform.position.x > -45.0f ){
+				moveShip (sideSpeed * maneuverSpeed);
+				if(transform.rotation.z < 0.3){
+					transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
+				}
+			}
+		}else{
+			if (transform.rotation.z < spaceshipRotation){
+				transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
+			}else if(transform.rotation.z > spaceshipRotation){
+				transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
+			}
+		}
+
+		// fire weapons
+		if(Input.GetButton("Fire1")){
+			for(int i = 0; i < shipCapacity; i++){
+				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
+				script.fireWeapon();
+				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
+				for(int j = 0 ; j < playerScr.hangar.canonTypes.Count;j++){
+					if(canonMounted[i].name == playerScr.hangar.canonTypes[j]){
+						playerScr.hangar.canonAmmunitionStorage[j] -= 1;
+					}
+				}
+				
+			}
+		}
+		
+
+	}
+	
+	private void androidControls(int shipCapacity){
+
+		float sideSpeed;
+
+		if(fire){
+			for(int i = 0; i < shipCapacity; i++){
+				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
+				script.fireWeapon();
+				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
+				if(canonMounted[i].name == playerScr.hangar.canonTypes[0]){
+					playerScr.hangar.canonAmmunitionStorage[0] -= 1;
+				}else if(canonMounted[i].name == playerScr.hangar.canonTypes[1]){
+					playerScr.hangar.canonAmmunitionStorage[1] -= 1;
+				}
+			}
+		}
+		
+		if(left){// gyo1.attitude.eulerAngles.z > 45){//Input.GetKey("left")){
+			sideSpeed = -3;
+		}else if(right){// gyo1.attitude.eulerAngles.z < -45){//Input.GetKey("right")){
+			sideSpeed = 3;
+		}else{
+			sideSpeed = 0;
+		}
+		
+		if(sideSpeed > 1){
+			if(transform.position.x < 150.0f){
+				moveShip (sideSpeed * maneuverSpeed);
+				if(transform.rotation.z > -0.3){
+					transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
+				}
+			}
+		}else if(sideSpeed < -1){
+			if(transform.position.x > -150.0f ){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z < 0.3){
 					transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
@@ -108,16 +174,15 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 
 	}
+
+
 	private void moveShip(float xAxis){
+
 		Vector3 speed = new Vector3(xAxis,0,0);
 		cc.Move (speed * Time.deltaTime);
+		Debug.Log(speed * Time.deltaTime);
 	}
 
-	public void buttonsActive(){
-		aButton.SetActive (isActive);
-		leftArrow.SetActive (isActive);
-		rightArrow.SetActive (isActive);
-		
-	}
+
 
 }

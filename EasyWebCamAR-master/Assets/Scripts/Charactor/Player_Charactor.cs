@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class Player_Charactor : MonoBehaviour 
 {
+	
+
+
+
 	// timer to control internal behavior
 	public char gameSetting;
 
@@ -15,7 +19,6 @@ public class Player_Charactor : MonoBehaviour
 
 	public int shipChoise;
 	private List<LevelScript_Base> levels = new List<LevelScript_Base>();
-	//private string[] newArmorment;
 
 	public void Start () 
 	{
@@ -24,26 +27,36 @@ public class Player_Charactor : MonoBehaviour
 		systemState = "Menu";
 		levelLoaded = false;
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
-		hangar.addSpaceshipToHangar("TurdClass");
-		hangar.addSpaceshipToHangar("SecondClass");
 		hangar.addGunToHangar("projectileCanon");
 		hangar.addGunToHangar("ionCanon");
+		hangar.addSpaceshipToHangar("TurdClass");
+		hangar.addSpaceshipToHangar("SecondClass");
+
 		setLevels();
 		hangar.setHangar();
-
-
 
 	}
 
 	public  void Update () 
 	{
+		if(systemState == "Level1"){
+			if(levelLoaded == false){
+
+				Debug.Log(Application.platform);
+			}
+
+		}
+
+
+
+
 
 		if(systemState == "Menu"){
 
 		}
 		/*
 		if(systemState == "Missions"){
-			if(levelLoaded == false){
+
 				levelLoaded = true;
 				levels[0].loadLevel();
 			}else if(levelLoaded == true){
@@ -51,17 +64,17 @@ public class Player_Charactor : MonoBehaviour
 
 			}
 		}
-
+*/
 		if(systemState == "Hangar"){
 
 			if(levelLoaded == false){
 				levelLoaded = true;
-				levels[1].loadLevel();
+				levels[0].loadLevel();
 			}else{
-				levels[1].updateLevel();
+				levels[0].updateLevel();
 			}
 		}
-*/
+
 		if(systemState == "Level1"){
 			if(levelLoaded == false){
 				levelLoaded = true;
@@ -103,11 +116,11 @@ public class Player_Charactor : MonoBehaviour
 			}
 
 		}else if(systemState == "Hangar"){
-			if(levels[1].Completed){
+			if(levels[0].Completed){
 				systemState = "Menu";
 				levelLoaded = false;
 			}else{
-				levels[1].levelGUI();
+				levels[0].levelGUI();
 			}
 		}else if(systemState == "Level1"){
 			if(levels[1].Completed){

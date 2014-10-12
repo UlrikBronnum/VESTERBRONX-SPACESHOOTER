@@ -9,7 +9,7 @@ public class TouchLogic : MonoBehaviour  {
 	[HideInInspector]
 	public int touch2Watch = 64;
 
-	public bool isActive = false;
+
 	
 	void Update ()
 	{

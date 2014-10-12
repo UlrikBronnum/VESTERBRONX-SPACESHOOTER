@@ -19,7 +19,7 @@ public class Weapons_Base : MonoBehaviour {
 	public void fireWeapon(){
 		if(fireTimer.timerTick()){
 			audio.PlayOneShot(fireExplosion);
-			Instantiate(ammunition,barrelEnd.position,barrelEnd.rotation);
+			Instantiate(ammunition,barrelEnd.position,transform.rotation);//barrelEnd.rotation);
 		}
 	}
 }

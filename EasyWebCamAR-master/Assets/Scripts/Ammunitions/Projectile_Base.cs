@@ -10,7 +10,8 @@ public class Projectile_Base : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		flyTime = 5f;
+		projectileVelocity = 200;
 		timer = new EventTimer_Base(flyTime);
 		rigidbody.velocity = transform.forward * projectileVelocity;
 	}

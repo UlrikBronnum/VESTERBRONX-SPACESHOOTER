@@ -53,9 +53,8 @@ public class Spaceship_Base : MonoBehaviour {
 		canonMounted[i].transform.parent = canonMount[i].transform;
 
 	}
-	// Mounts canons on canonMounts
 	public void mountCanon(int mount){
-
+		
 		removeCanon(mount);
 		if(mount == 0){
 			initializeCanon(canonScale,0);
@@ -65,6 +64,7 @@ public class Spaceship_Base : MonoBehaviour {
 			initializeCanon(canonScale,3);
 		}
 	}
+
 	// Destroys unwanted canon prefabs
 	public void removeCanon(int gun){
 		if(gun == 0){

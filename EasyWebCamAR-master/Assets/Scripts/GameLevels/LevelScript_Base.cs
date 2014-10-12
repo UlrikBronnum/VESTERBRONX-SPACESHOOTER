@@ -12,7 +12,8 @@ public class LevelScript_Base : MonoBehaviour {
 
 
 	protected bool completed;
-
+	protected virtual void loadButtons(){}
+	protected virtual void unloadButtons(){}
 	public virtual void loadLevel(){}
 	public virtual void updateLevel(){}
 	public virtual void levelGUI(){	}

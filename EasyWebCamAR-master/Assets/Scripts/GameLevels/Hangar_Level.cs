@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Hangar_Level : LevelScript_Base {
 		
-
+	private string cameraName = "Camera";
 	private int countMountOne = 0;
 	private int countMountTwo = 0;
 	private int selectedGun = 0;
@@ -12,19 +12,34 @@ public class Hangar_Level : LevelScript_Base {
 
 	public override void loadLevel()
 	{
-		player = GameObject.Find("ARCamera");
+		player = GameObject.Find(cameraName);
 		script = player.GetComponent<Player_Charactor>();
 
 		completed = false;
+		GameObject background;
+		Vector3 newScale;
+		Vector3 newPosition;
+		Vector3 newRotation;
 
-		Vector3 newScale = new Vector3(5,5,5);
-		Vector3 newPosition = new Vector3(0,-15,30);
-		Vector3 newRotation = new Vector3(-3,180,0);
+		if (Application.platform == RuntimePlatform.Android)
+		{
+			newScale = new Vector3(100,100,100);
+			newPosition = new Vector3(-50,0,0);
+			newRotation = new Vector3(270,0,-5);
+			background = GameObject.Find("ImageTarget");
+
+		}else{
+			background = player;
+			newScale = new Vector3(7,7,7);
+			newPosition = new Vector3(0,0,30);
+			newRotation = new Vector3(-10,180,0);
+		}
+
 		for (int i = 0; i < script.hangar.hangarslots.Count; i++){
 			if(i == script.shipChoise){
-				createPlayerSpaceship(script.hangar.hangarslots[i],newScale,newPosition,newRotation,player.transform,false,true);
+				createPlayerSpaceship(script.hangar.hangarslots[i],newScale,newPosition,newRotation,background.transform,false,true);
 			}else{
-				createPlayerSpaceship(script.hangar.hangarslots[i],newScale,newPosition,newRotation,player.transform,false,false);
+				createPlayerSpaceship(script.hangar.hangarslots[i],newScale,newPosition,newRotation,background.transform,false,false);
 			}
 		}
 
