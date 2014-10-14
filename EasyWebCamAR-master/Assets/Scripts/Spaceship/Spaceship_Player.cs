@@ -176,12 +176,36 @@ public class Spaceship_Player : Spaceship_Base {
 	}
 
 
+
 	private void moveShip(float xAxis){
 
 		Vector3 speed = new Vector3(xAxis,0,0);
 		cc.Move (speed * Time.deltaTime);
 		Debug.Log(speed * Time.deltaTime);
 	}
+
+	/*
+	public override void takeDamage(int damage){
+		health -= damage;
+		if(health>=0){
+			die();}
+	}
+	// if the player is out of health, it will die. 
+	public void die(){
+		// die stuff in here
+
+	}
+
+
+	void OnCollisionEnter(Collision other)
+	{
+		//If the enemy have the tag enemy run this
+		if(other.collider.tag =="enemy")
+		{
+			//Run a function to subtract damage from the player's health, according to the damage of the enemy
+			takeDamage(other.collider.GetComponent<Spaceship_Enemy>().damage);
+		}
+	}*/
 
 
 

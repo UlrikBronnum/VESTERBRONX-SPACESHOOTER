@@ -38,6 +38,8 @@ public class Spaceship_Base : MonoBehaviour {
 	protected float maneuverSpeed;
 	// Use for stabilizing ship turn animation
 	protected float spaceshipRotation;
+	// health of the player/enemy
+	protected int health;
 
 
 	public virtual void shipInitialization(){}
@@ -112,5 +114,9 @@ public class Spaceship_Base : MonoBehaviour {
 		}
 	}
 
+	// function that makes sure the enemies or player takes damage 
+	public virtual void takeDamage(int damage){
+		
+	}
 
 }

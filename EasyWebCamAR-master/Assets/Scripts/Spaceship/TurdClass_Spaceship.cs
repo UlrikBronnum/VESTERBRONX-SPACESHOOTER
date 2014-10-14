@@ -23,6 +23,8 @@ public class TurdClass_Spaceship : Spaceship_Player {
 
 		// Ship speed
 		maneuverSpeed = 30f;
+		// Health of this ship 
+		health = 200;
 
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;

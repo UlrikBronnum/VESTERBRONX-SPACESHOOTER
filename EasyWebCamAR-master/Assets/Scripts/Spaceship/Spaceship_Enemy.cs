@@ -7,6 +7,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	private float lifeSpan;
 	private EventTimer_Base timer;
 
+
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
 	// Use this for initialization
@@ -65,6 +66,28 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(Parent != null)
 			Parent.enemyStack.Push (this);
 	}
+
+	public override void takeDamage(int damage){
+		health -= damage;
+		if(health>=0){
+			die();}
+	}
+	// if the enemy os out of health, it will die. 
+	public void die(){
+		Despawn ();
+	}
+
+	void OnCollisionEnter(Collision other)
+	{
+		//If the object has the tag projectile run this
+		if(other.collider.tag =="projectile")
+		{
+			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
+			takeDamage(other.collider.GetComponent<Projectile_Base>().damage);
+		}
+	}
+
+
 
 
 }

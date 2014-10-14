@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Projectile_Base : MonoBehaviour {
 
-	public float projectileVelocity;
+	protected float projectileVelocity;
 	protected EventTimer_Base timer;
 	protected float flyTime;
-	protected int damage;
+	public int damage;
 
 	// Use this for initialization
 	public virtual void  Start () {
-		flyTime = 5f;
-		projectileVelocity = 200;
-		timer = new EventTimer_Base(flyTime);
-		rigidbody.velocity = transform.forward * projectileVelocity;
+		//flyTime = 5f;
+		//projectileVelocity = 200;
+		//timer = new EventTimer_Base(flyTime);
+		//rigidbody.velocity = transform.forward * projectileVelocity;
 	}
 	void Update(){
 		if(timer.timerTick()){
