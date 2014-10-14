@@ -5,15 +5,13 @@ public class NineMM : Projectile_Base {
 
 	
 	// Use this for initialization
-	void Start () {
-
+	public override void Start () {
+		damage = 10;
 		flyTime = 5f;
 		projectileVelocity = 200;
-//			damage = 30;
+		timer = new EventTimer_Base(flyTime);
+		rigidbody.velocity = transform.forward * projectileVelocity;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

@@ -31,6 +31,7 @@ public class Player_Charactor : MonoBehaviour
 		hangar.addGunToHangar("ionCanon");
 		hangar.addSpaceshipToHangar("TurdClass");
 		hangar.addSpaceshipToHangar("SecondClass");
+		hangar.addSpaceshipToHangar("whaleClass");
 
 		setLevels();
 		hangar.setHangar();

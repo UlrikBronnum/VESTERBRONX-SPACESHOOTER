@@ -24,7 +24,7 @@ public class Hangar_Level : LevelScript_Base {
 		if (Application.platform == RuntimePlatform.Android)
 		{
 			newScale = new Vector3(100,100,100);
-			newPosition = new Vector3(-50,0,0);
+			newPosition = new Vector3(50,0,0);
 			newRotation = new Vector3(270,0,-5);
 			background = GameObject.Find("ImageTarget");
 

@@ -21,7 +21,7 @@ public class Hangar_Base : MonoBehaviour {
 				script.IsActive = false;
 				script.shipInitialization();
 				hangarslots.Add(newObj);
-				gunMountManagement(script.canonTypes[i], i);
+				gunMountManagement(script.canonTypes[0], i);
 			}
 
 		}

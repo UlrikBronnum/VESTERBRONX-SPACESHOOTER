@@ -65,4 +65,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(Parent != null)
 			Parent.enemyStack.Push (this);
 	}
+
+
 }

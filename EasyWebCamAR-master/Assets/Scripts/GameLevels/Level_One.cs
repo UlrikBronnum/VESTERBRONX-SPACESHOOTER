@@ -35,24 +35,35 @@ public class Level_One : LevelScript_Base {
 
 	public override void loadLevel( )
 	{
-		if (Application.platform == RuntimePlatform.Android)
-		{
-			loadButtons();		
-		}else{
-
-		}
 
 		player = GameObject.Find(cameraName);
 		script = player.GetComponent<Player_Charactor>();
 		shipScr = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
 
-
 		completed = false;
 
-		Vector3 newScale = new Vector3(2,2,2);
-		Vector3 newPosition = new Vector3(0,-15,45);
-		Vector3 newRotation = new Vector3(-20,0,0);
-		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,player.transform,true,true);
+		Vector3 newScale;
+		Vector3 newPosition;
+		Vector3 newRotation;
+
+		if (Application.platform == RuntimePlatform.Android)
+		{
+			loadButtons();	
+			
+			newScale = new Vector3(5,5,5);
+			newPosition = new Vector3(0,0,-100);
+			newRotation = new Vector3(-20,0,0);
+			createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,player.transform,true,true);
+		}else{
+			
+			newScale = new Vector3(2,2,2);
+			newPosition = new Vector3(0,-15,45);
+			newRotation = new Vector3(-20,0,0);
+			createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,player.transform,true,true);
+		}
+
+
+
 
 
 
@@ -86,7 +97,7 @@ public class Level_One : LevelScript_Base {
 	}
 	public override void updateLevel(){
 
-		//sentButtonInput();
+		sentButtonInput();
 		if(completed){
 			closeLevel();
 			if (Application.platform == RuntimePlatform.Android)

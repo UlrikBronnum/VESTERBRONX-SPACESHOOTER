@@ -9,7 +9,7 @@ public class Projectile_Base : MonoBehaviour {
 	protected int damage;
 
 	// Use this for initialization
-	void Start () {
+	public virtual void  Start () {
 		flyTime = 5f;
 		projectileVelocity = 200;
 		timer = new EventTimer_Base(flyTime);
