@@ -10,10 +10,10 @@ public class Spaceship_Enemy : Spaceship_Base {
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
 	// Use this for initialization
-	public virtual void Start () {
+	public virtual void Start() {
 
 	}
-	public override void shipInitialization(){
+	public virtual void shipInitialization(){
 
 		
 		canonScale = transform;

@@ -8,7 +8,7 @@ public class Mission_Level : LevelScript_Base {
 
 	public override void loadLevel()
 	{
-		player = GameObject.Find("Main Camera");
+		player = GameObject.Find("ARCamera");
 		script = player.GetComponent<Player_Charactor>();
 
 		string newProp = "SolarSystem";

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Hangar_Level : LevelScript_Base {
 		
-	private string cameraName = "Camera";
+	private string cameraName = "ARCamera";
 	private int countMountOne = 0;
 	private int countMountTwo = 0;
 	private int selectedGun = 0;

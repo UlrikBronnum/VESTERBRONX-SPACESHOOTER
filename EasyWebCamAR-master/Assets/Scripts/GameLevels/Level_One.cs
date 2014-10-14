@@ -7,7 +7,7 @@ public class Level_One : LevelScript_Base {
 	public GameObject[] button ;
 	public AButton[] buttonScript;
 	protected Spaceship_Player shipScr ;
-	private string cameraName = "Camera";
+	private string cameraName = "ARCamera";
 
 	protected override void loadButtons(){
 		button  = new GameObject[3];

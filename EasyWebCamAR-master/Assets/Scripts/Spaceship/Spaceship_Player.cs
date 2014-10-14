@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public class Spaceship_Player : Spaceship_Base {
 
-	public string cameraName ;
+	public string cameraName = "ARCamera";
 
 	private bool fire = false;
 	private bool left = false;
