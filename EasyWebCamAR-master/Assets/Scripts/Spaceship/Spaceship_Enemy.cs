@@ -11,45 +11,21 @@ public class Spaceship_Enemy : Spaceship_Base {
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
 	// Use this for initialization
-	public virtual void Start() {
+	public virtual void Start() { }
+	public virtual void shipInitialization(){ }
 
-	}
-	public virtual void shipInitialization(){
-
-		
-		canonScale = transform;
-		
-		// Ship speed
-		maneuverSpeed = 30f;
-		// Amount of gun attachments 
-		canonMountCapacity = 2;
-
-		// Give an intitial value to canon types
-		canonTypes = new string[canonMountCapacity];
-		canonTypes[0] = "projectileCanon";
-		canonTypes[1] = "projectileCanon";
-		
-		// Find the canon mounts on model
-		canonMount = new Transform[canonMountCapacity];
-		canonMount[0] = transform.FindChild("gunMountLeft1");
-		canonMount[1] = transform.FindChild("gunMountRight1");
-		// Set array for canons
-		canonMounted = new GameObject[canonMountCapacity];
-		// Save the initial rotation of ship for reference
-		spaceshipRotation = transform.rotation.z;
-		
-		mountCanon(0);
+	public void  resetTimer(){
+		timer.resetTimer();
 	}
 	// Update is called once per frame
-	public virtual void Update () {
+	public override void Update () {
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
-		tmpPos.z += -10 * Time.deltaTime;
+		tmpPos.y += maneuverSpeed * Time.deltaTime;
 		transform.position = tmpPos;
 	}
-	public void initTimer(float life,float speed){
+	public void initTimer(float life){
 		lifeSpan = life;
-		objectVelocity = speed;
 		timer = new EventTimer_Base(lifeSpan);
 	}
 
@@ -76,6 +52,8 @@ public class Spaceship_Enemy : Spaceship_Base {
 	public void die(){
 		Despawn ();
 	}
+
+
 
 	void OnCollisionEnter(Collision other)
 	{

@@ -6,7 +6,7 @@ public class Solar_System : Planet_Base {
 
 	protected GameObject player; 
 	protected Player_Charactor script;
-
+	/*
 	public List<GameObject> moonObjects = new List<GameObject>();
 	public float moonOrbit;
 
@@ -126,4 +126,5 @@ public class Solar_System : Planet_Base {
 		
 		
 	}
+	*/
 }

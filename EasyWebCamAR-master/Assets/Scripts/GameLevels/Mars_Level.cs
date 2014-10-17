@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Meteor : MonoBehaviour {
+public class Mars_Level : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

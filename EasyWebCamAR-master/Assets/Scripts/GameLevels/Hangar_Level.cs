@@ -16,25 +16,17 @@ public class Hangar_Level : LevelScript_Base {
 		script = player.GetComponent<Player_Charactor>();
 
 		completed = false;
-		GameObject background;
+
 		Vector3 newScale;
 		Vector3 newPosition;
 		Vector3 newRotation;
 
-		if (Application.platform == RuntimePlatform.Android)
-		{
-			newScale = new Vector3(100,100,100);
-			newPosition = new Vector3(50,0,0);
-			newRotation = new Vector3(270,0,-5);
-			background = GameObject.Find("ImageTarget");
+		newScale = new Vector3(30,30,30);
+		newPosition = new Vector3(0,50,0);
+		newRotation = new Vector3(90,180,0);
+		GameObject background = GameObject.Find("ImageTarget");
 
-		}else{
-			background = player;
-			newScale = new Vector3(7,7,7);
-			newPosition = new Vector3(0,0,30);
-			newRotation = new Vector3(-10,180,0);
-		}
-
+		
 		for (int i = 0; i < script.hangar.hangarslots.Count; i++){
 			if(i == script.shipChoise){
 				createPlayerSpaceship(script.hangar.hangarslots[i],newScale,newPosition,newRotation,background.transform,false,true);
@@ -48,7 +40,7 @@ public class Hangar_Level : LevelScript_Base {
 		newPosition = new Vector3(0,15,-15);
 		newRotation = new Vector3(45,0,0);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
-		                              player.transform, Color.yellow);
+		                              background.transform, Color.yellow);
 
 	}
 

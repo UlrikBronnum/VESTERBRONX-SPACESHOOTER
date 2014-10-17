@@ -21,7 +21,7 @@ public class AstroidBelt_Planet : Planet_Base {
 			createdObject.transform.position = newPos;
 			createdObject.transform.RotateAround(createdObject.transform.parent.position, Vector3.up, Random.Range(0.1f,360f));
 			Planet_Base script = createdObject.GetComponent<Planet_Base>();
-			script.loadPlanet(new Vector3(0f,30f,0),Random.Range(15f,30f));
+//			script.loadPlanet(new Vector3(0f,30f,0),Random.Range(15f,30f));
 			astroids.Add(createdObject);
 			
 		}
@@ -30,11 +30,8 @@ public class AstroidBelt_Planet : Planet_Base {
 
 	}
 	
-	public override void loadPlanet(Vector3 rotSpeed, float orbSpeed,
-	                               string moonNames, Vector3 scale, 
-	                               Vector3 pos , Vector3 turnRotation)	{}
+
 	
-	public override void loadPlanet(Vector3 rotSpeed, float orbitSpeed){}
-	protected override void createSceneObject(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation){}
+
 
 }

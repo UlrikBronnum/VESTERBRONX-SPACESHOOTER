@@ -17,6 +17,10 @@ public class UFO_Base : MonoBehaviour {
 		timer = new EventTimer_Base(lifeSpan);
 	}
 
+	public void  resetTimer(){
+		timer.resetTimer();
+	}
+
 	public virtual void Start(){
 		timer = new EventTimer_Base(lifeSpan);
 	}
@@ -29,9 +33,6 @@ public class UFO_Base : MonoBehaviour {
 			Despawn();
 		}
 
-		if(transform.position.z < -10){
-			Despawn();
-		}
 	}
 	public void Spawn(){
 		if(this.gameObject != null)

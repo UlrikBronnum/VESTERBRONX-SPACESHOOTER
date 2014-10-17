@@ -9,10 +9,11 @@ public class Spaceship_Player : Spaceship_Base {
 
 	public string cameraName = "ARCamera";
 
+
+
 	private bool fire = false;
 	private bool left = false;
 	private bool right = false;
-
 
 	/// <summary>
 	/// This is the base class of Spaceships. All spaceship
@@ -78,33 +79,31 @@ public class Spaceship_Player : Spaceship_Base {
 
 		if(Input.GetKey("left")){
 			sideSpeed = -1;
-			Debug.Log("left");
 		}else if(Input.GetKey("right")){
 			sideSpeed = 1;
-			Debug.Log("right");
 		}else{
 			sideSpeed = 0;
 		}
 		// moves the player 
 		if(sideSpeed > 0){
-			if(transform.position.x < 45.0f){
+			if(transform.position.x < 150.0f){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z > -0.3){
-					transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
+					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}else if(sideSpeed < 0){
-			if(transform.position.x > -45.0f ){
+			if(transform.position.x > -150.0f ){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z < 0.3){
-					transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
+					transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}else{
 			if (transform.rotation.z < spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 			}else if(transform.rotation.z > spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 			}
 		}
 
@@ -130,18 +129,7 @@ public class Spaceship_Player : Spaceship_Base {
 
 		float sideSpeed;
 
-		if(fire){
-			for(int i = 0; i < shipCapacity; i++){
-				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
-				script.fireWeapon();
-				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
-				if(canonMounted[i].name == playerScr.hangar.canonTypes[0]){
-					playerScr.hangar.canonAmmunitionStorage[0] -= 1;
-				}else if(canonMounted[i].name == playerScr.hangar.canonTypes[1]){
-					playerScr.hangar.canonAmmunitionStorage[1] -= 1;
-				}
-			}
-		}
+
 		
 		if(left){// gyo1.attitude.eulerAngles.z > 45){//Input.GetKey("left")){
 			sideSpeed = -3;
@@ -155,21 +143,34 @@ public class Spaceship_Player : Spaceship_Base {
 			if(transform.position.x < 150.0f){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z > -0.3){
-					transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
+					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}else if(sideSpeed < -1){
 			if(transform.position.x > -150.0f ){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z < 0.3){
-					transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
+					transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}else{
 			if (transform.rotation.z < spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * 150 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 			}else if(transform.rotation.z > spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * -150 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
+			}
+		}
+
+		if(fire){
+			for(int i = 0; i < shipCapacity; i++){
+				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
+				script.fireWeapon();
+				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
+				if(canonMounted[i].name == playerScr.hangar.canonTypes[0]){
+					playerScr.hangar.canonAmmunitionStorage[0] -= 1;
+				}else if(canonMounted[i].name == playerScr.hangar.canonTypes[1]){
+					playerScr.hangar.canonAmmunitionStorage[1] -= 1;
+				}
 			}
 		}
 
@@ -181,7 +182,6 @@ public class Spaceship_Player : Spaceship_Base {
 
 		Vector3 speed = new Vector3(xAxis,0,0);
 		cc.Move (speed * Time.deltaTime);
-		Debug.Log(speed * Time.deltaTime);
 	}
 
 	/*

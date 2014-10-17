@@ -18,7 +18,7 @@ public class Meteor_Spawn : SpawnClass_Base {
 			createdObject.transform.localScale = new Vector3 (Random.Range(1f,3f),Random.Range(1f,3f),Random.Range(1f,3f));
 			createdObject.Parent = this;
 			createdObject.transform.parent = this.transform;
-			createdObject.initTimer(15f,Random.Range(-20f,-50f));
+			createdObject.initTimer(10f,Random.Range(-100f,-200f));
 			createdObject.Despawn();
 			meteorStack.Push(createdObject);
 			
@@ -31,7 +31,7 @@ public class Meteor_Spawn : SpawnClass_Base {
 			newObject.transform.localScale = new Vector3 (Random.Range(1f,3f),Random.Range(1f,3f),Random.Range(1f,3f));
 			newObject.gameObject.transform.position = new Vector3 (transform.position.x + Random.Range(-50f,50f),transform.position.y,transform.position.z);
 			newObject.gameObject.transform.rotation = transform.rotation;
-			newObject.initTimer(15f,Random.Range(-20f,-50f));
+			newObject.resetTimer();
 			newObject.Spawn();
 		}else{
 			GameObject go = (GameObject)Object.Instantiate(spawnObject[0]);
@@ -39,7 +39,7 @@ public class Meteor_Spawn : SpawnClass_Base {
 			go.transform.position = new Vector3 (transform.position.x + Random.Range(-50f,50f),transform.position.y,transform.position.z);
 			go.transform.rotation = transform.rotation;
 			UFO_Base createdObject = go.GetComponent<UFO_Base>();
-			createdObject.initTimer(15f,Random.Range(-20f,-50f));
+			createdObject.initTimer(5f,Random.Range(-100f,-200f));
 			createdObject.Parent = this;
 			createdObject.transform.parent = this.transform;
 		}

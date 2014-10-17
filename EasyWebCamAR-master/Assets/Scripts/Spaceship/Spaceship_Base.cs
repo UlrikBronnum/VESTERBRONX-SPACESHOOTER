@@ -19,7 +19,7 @@ public class Spaceship_Base : MonoBehaviour {
 	// The names of the canon and shield prefabs that is mounted on spaceship.
 	// Needs to be public for ease access
 	public string[] canonTypes;
-	public List<string> shieldTypes = new List<string>();
+	public string shieldType;
 	// The transform where canons spawn on prefab
 	protected Transform[] canonMount;
 	// The canons that are mounted on spaceship
@@ -107,7 +107,7 @@ public class Spaceship_Base : MonoBehaviour {
 		set {isActive = value;}
 	}
 	public bool GotShield(){
-		if(shieldTypes.Count != 0){
+		if(shieldType == "Shield"){
 			return true;
 		}else{
 			return false;

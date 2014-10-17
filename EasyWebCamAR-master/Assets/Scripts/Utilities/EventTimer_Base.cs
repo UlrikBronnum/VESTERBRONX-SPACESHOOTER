@@ -21,6 +21,9 @@ public class EventTimer_Base {
 			return false;
 		}
 	}
+	public void resetTimer(){
+		_timer = TimerValue;
+	}
 	public float TimerValue{
 		get { return timerValue;}
 		set { timerValue = value;}

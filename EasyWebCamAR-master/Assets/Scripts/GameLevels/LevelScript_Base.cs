@@ -12,16 +12,18 @@ public class LevelScript_Base : MonoBehaviour {
 
 
 	protected bool completed;
+
 	protected virtual void loadButtons(){}
 	protected virtual void unloadButtons(){}
 	public virtual void loadLevel(){}
 	public virtual void updateLevel(){}
 	public virtual void levelGUI(){	}
 
+
 	protected void createSceneObject(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,Transform cameraTransform)
 	{
 		GameObject tmp = (GameObject)Object.Instantiate(Resources.Load(gameProp));
-		tmp.transform.localScale = scale;
+		tmp.transform.localScale = new Vector3(tmp.transform.localScale.x * scale.x , tmp.transform.localScale.y * scale.y , tmp.transform.localScale.z * scale.z);
 		Vector3 newPos = cameraTransform.position;
 		newPos.x += pos.x;
 		newPos.y += pos.y;
@@ -36,7 +38,7 @@ public class LevelScript_Base : MonoBehaviour {
 	protected void createSceneObject(GameObject gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,Transform cameraTransform)
 	{
 		GameObject tmp = (GameObject)Object.Instantiate(gameProp);
-		tmp.transform.localScale = scale;
+		tmp.transform.localScale = new Vector3(tmp.transform.localScale.x * scale.x , tmp.transform.localScale.y * scale.y , tmp.transform.localScale.z * scale.z);
 		Vector3 newPos = cameraTransform.position;
 		newPos.x += pos.x;
 		newPos.y += pos.y;
@@ -74,7 +76,7 @@ public class LevelScript_Base : MonoBehaviour {
 		tmp.light.type = LightType.Directional;
 		tmp.light.color = Color.white;
 
-		tmp.transform.localScale = scale;
+		//tmp.transform.localScale = new Vector3(tmp.transform.localScale.x * scale.x , tmp.transform.localScale.y * scale.y , tmp.transform.localScale.z * scale.z);
 		Vector3 newPos = cameraTransform.position;
 		newPos.x += pos.x;
 		newPos.y += pos.y;
