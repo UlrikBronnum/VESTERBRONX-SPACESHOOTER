@@ -9,7 +9,7 @@ public class Meteor_Spawn : SpawnClass_Base {
 	public override void Start () {
 
 		spawnObject = new GameObject[1];
-		spawnObject[0] = (GameObject)Object.Instantiate(Resources.Load("Meteor"));
+		spawnObject[0] = (GameObject)Resources.Load("Meteor");
 		stackSize = 50;
 		
 		for (int i = 0; i < stackSize; i++){

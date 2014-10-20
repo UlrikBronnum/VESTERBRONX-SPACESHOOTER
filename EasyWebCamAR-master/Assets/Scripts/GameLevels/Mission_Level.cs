@@ -13,6 +13,8 @@ public class Mission_Level : LevelScript_Base {
 		if(levels.Count == 0){
 			setLevels();
 		}
+		levelLoaded = false;
+		completed = false;
 
 		planetState = "Home";
 		player = GameObject.Find("ARCamera");
@@ -52,7 +54,7 @@ public class Mission_Level : LevelScript_Base {
 			if(levelLoaded == false){
 				levelLoaded = true;
 				levels[2].loadLevel();
-			}else if(levelLoaded == true){
+			}else{
 				levels[2].updateLevel();
 				
 			}
@@ -60,15 +62,15 @@ public class Mission_Level : LevelScript_Base {
 	}
 	public override void levelGUI(){
 		if(planetState == "Home"){
-			if(GUI.Button(new Rect(Screen.width/10 * 1,Screen.height/10 * 6,100,50),"Level1")){
+			if(GUI.Button(new Rect(Screen.width/10 + 0,Screen.height/10 * 6,200,100),"Level1")){
 				planetState = "Level1";
 				levelLoaded = false;
 			}
-			if(GUI.Button(new Rect(Screen.width/10 * 2,Screen.height/10 * 6,100,50),"Level2")){
+			if(GUI.Button(new Rect(Screen.width/10 + 200,Screen.height/10 * 6,200,100),"Level2")){
 				planetState = "Level2";
 				levelLoaded = false;
 			}
-			if(GUI.Button(new Rect(Screen.width/10 * 3,Screen.height/10 * 6,100,50),"Level3")){
+			if(GUI.Button(new Rect(Screen.width/10 + 400,Screen.height/10 * 6,200,100),"Level3")){
 				planetState = "Level3";
 				levelLoaded = false;
 			}
@@ -85,7 +87,7 @@ public class Mission_Level : LevelScript_Base {
 			if(levels[1].Completed){
 				planetState = "Home";
 				levelLoaded = false;
-			}else if(levelLoaded == true){
+			}else{
 				levels[1].levelGUI();
 			}
 		}
@@ -97,8 +99,11 @@ public class Mission_Level : LevelScript_Base {
 				levels[2].levelGUI();
 			}
 		}
-		if(GUI.Button(new Rect(0,0,80,50),"Back")){
-			completed = true;	
+		if(planetState == "Home"){
+			if(GUI.Button(new Rect(0,0,200,100),"Back")){
+				levels.Clear();
+				completed = true;	
+			}
 		}
 	}
 

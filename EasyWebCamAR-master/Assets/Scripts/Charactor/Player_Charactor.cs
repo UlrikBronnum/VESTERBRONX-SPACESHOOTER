@@ -40,9 +40,7 @@ public class Player_Charactor : MonoBehaviour
 	public  void Update () 
 	{
 
-
-
-
+		Debug.Log(systemState);
 		if(systemState == "Menu"){
 
 		}
@@ -52,7 +50,7 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "Hangar"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				levels[0].loadLevel();
+				//levels[0].loadLevel();
 			}else{
 				levels[0].updateLevel();
 			}
@@ -61,7 +59,7 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "MissionLevel"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				levels[1].loadLevel();
+				//levels[1].loadLevel();
 			}else{
 				levels[1].updateLevel();
 			}
@@ -70,8 +68,8 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "AmmoShop"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				levels[2].loadLevel();
-			}else if(levelLoaded == true){
+				//levels[2].loadLevel();
+			}else{
 				levels[2].updateLevel();
 				
 			}
@@ -80,17 +78,23 @@ public class Player_Charactor : MonoBehaviour
 
 	public void OnGUI(){
 		if(systemState == "Menu"){
-			if(GUI.Button(new Rect(0,0,80,50),"Hangar")){
+			if(GUI.Button(new Rect(0,0,200,100),"Hangar")){
 				systemState = "Hangar";
 				levelLoaded = false;
+				levels[0].loadLevel();
+				Debug.Log("0");
 			}
-			if(GUI.Button(new Rect(0,100,80,50),"MissionLevel")){
+			if(GUI.Button(new Rect(0,100,200,100),"MissionLevel")){
 				systemState = "MissionLevel";
 				levelLoaded = false;
+				levels[1].loadLevel();
+				Debug.Log("1");
 			}
-			if(GUI.Button(new Rect(0,50,80,50),"AmmoShop")){
+			if(GUI.Button(new Rect(0,200,200,100),"AmmoShop")){
 				systemState = "AmmoShop";
 				levelLoaded = false;
+				levels[2].loadLevel();
+				Debug.Log("2");
 			}
 		}
 		else if(systemState == "Hangar"){
@@ -105,7 +109,7 @@ public class Player_Charactor : MonoBehaviour
 			if(levels[1].Completed){
 				systemState = "Menu";
 				levelLoaded = false;
-			}else if(levelLoaded == true){
+			}else {
 				levels[1].levelGUI();
 			}
 		}

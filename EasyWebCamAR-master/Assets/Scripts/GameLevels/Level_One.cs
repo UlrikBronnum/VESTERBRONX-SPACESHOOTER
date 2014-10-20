@@ -65,7 +65,7 @@ public class Level_One : LevelScript_Base {
 
 		newProp = "EnemySpawn";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-1000,-20);
+		newPosition = new Vector3(0,-2000,-20);
 		newRotation = new Vector3(-90,0,180);
 		createSceneObject(newProp,newScale,newPosition,newRotation,image.transform);
 
@@ -87,21 +87,18 @@ public class Level_One : LevelScript_Base {
 	public override void updateLevel(){
 
 		sentButtonInput();
-		if(completed){
-			closeLevel();
-			unloadButtons();	
 
-			Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
-			shipScript.gameObject.SetActive(false);
-			shipScript.IsActive = false;
-
-		}
 	}
 
 
 	public override void levelGUI(){
-		if(GUI.Button(new Rect(0,0,80,50),"Back")){
+		if(GUI.Button(new Rect(0,0,200,100),"Back")){
 			completed = true;	
+			closeLevel();
+			unloadButtons();
+			Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
+			shipScript.gameObject.SetActive(false);
+			shipScript.IsActive = false;
 		}
 
 	}

@@ -6,6 +6,7 @@ public class Level_Two :  LevelScript_Base {
 	public GameObject[] button ;
 	public AButton[] buttonScript;
 	protected Spaceship_Player shipScr ;
+
 	private string cameraName = "ARCamera";
 
 	
@@ -34,13 +35,13 @@ public class Level_Two :  LevelScript_Base {
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,image.transform,true,true);
 		
 		
-		string newProp = "Earth";
+		string /*newProp = "Earth";
 		newScale = new Vector3(3000,3000,3000);
 		newPosition = new Vector3(0,-50,-1550);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,image.transform);
 
-		newProp = "SunLight";
+		*/newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(90,180,0);
@@ -52,21 +53,18 @@ public class Level_Two :  LevelScript_Base {
 	public override void updateLevel(){
 		
 		sentButtonInput();
-		if(completed){
-			closeLevel();
-			unloadButtons();	
-			
-			Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
-			shipScript.gameObject.SetActive(false);
-			shipScript.IsActive = false;
-			
-		}
+
 	}
 	
 	
 	public override void levelGUI(){
-		if(GUI.Button(new Rect(0,0,80,50),"Back")){
-			completed = true;	
+		if(GUI.Button(new Rect(0,0,200,100),"Back")){
+			completed = true;
+			closeLevel();
+			unloadButtons();
+			Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
+			shipScript.gameObject.SetActive(false);
+			shipScript.IsActive = false;
 		}
 		
 	}

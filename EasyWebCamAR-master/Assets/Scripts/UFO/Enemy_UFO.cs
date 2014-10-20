@@ -9,7 +9,7 @@ public class Enemy_UFO : UFO_Base {
 		lifeSpan = 30f;
 		objectVelocity = -400f;
 		timer = new EventTimer_Base(lifeSpan);
-		CameraPos = GameObject.Find ("ARCamera");
+		cameraPos = GameObject.Find ("ARCamera").transform;
 	}
 	
 	public void Update(){
@@ -18,21 +18,14 @@ public class Enemy_UFO : UFO_Base {
 		
 		if(!gameObject.activeSelf)
 			return;
-		
-		if(timer.timerTick()){
-			Despawn();
-			timer.TimerValue = lifeSpan;
-		}
-		
+
 		// deletes the enemy if it flies past the camera: 
-		if(transform.position.y > CameraPos.transform.position.y){
-			
+		if(transform.position.y > cameraPos.transform.position.y){	
 			Despawn();
 		}
 	}
 	public void Spawn(){
 		gameObject.SetActive(true);
-		//objectVelocity = -300f;
 		rigidbody.velocity = transform.forward * objectVelocity;
 	}
 	

@@ -6,7 +6,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	private float objectVelocity;
 	private float lifeSpan;
 	private EventTimer_Base timer;
-
+	protected Transform cameraPos; 
 
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
@@ -19,10 +19,21 @@ public class Spaceship_Enemy : Spaceship_Base {
 	}
 	// Update is called once per frame
 	public override void Update () {
+
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;
 		transform.position = tmpPos;
+
+		if(!gameObject.activeSelf)
+			return;
+		
+		// deletes the enemy if it flies past the camera: 
+		if(transform.position.y > cameraPos.transform.position.y){	
+			Despawn();
+		}
+
+
 	}
 	public void initTimer(float life){
 		lifeSpan = life;

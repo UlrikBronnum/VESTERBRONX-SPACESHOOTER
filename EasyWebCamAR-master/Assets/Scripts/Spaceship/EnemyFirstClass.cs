@@ -3,13 +3,13 @@ using System.Collections;
 
 public class EnemyFirstClass : Spaceship_Enemy {
 
-	public virtual void shipInitialization(){
-		
+	public virtual void Start() { 
+		cameraPos = GameObject.Find ("ARCamera").transform;
 		
 		canonScale = transform;
 		
 		// Ship speed
-		maneuverSpeed = 100f;
+		maneuverSpeed = 200f;
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
 		
@@ -32,6 +32,10 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 			mountCanon(i);
 		}
+	}
+	public virtual void shipInitialization(){
+
+
 		
 	}
 

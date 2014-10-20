@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Enemy_Spawn : SpawnClass_Base {
 
 	public Stack<Spaceship_Enemy> enemyStack = new Stack<Spaceship_Enemy>();
-	private float objScale = 5f;
+	private float objScale = 10f;
 	// Use this for initialization
 	public override void Start () {
 
