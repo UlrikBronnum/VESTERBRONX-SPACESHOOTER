@@ -37,7 +37,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 	}
 	public override void SpawnPortal(){
 		if(!enemySpawning){
-			spawnPosition  = new Vector3 (transform.position.x + Random.Range(-150f,150f),transform.position.y,transform.position.z);
+			spawnPosition  = new Vector3 (transform.position.x + Random.Range(-150f,150f),0,transform.position.z);
 			Instantiate (spawnObject[2], new Vector3 (spawnPosition.x,spawnPosition.y + 5,spawnPosition.z) , Quaternion.identity);
 			enemySpawning = true;
 		}

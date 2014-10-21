@@ -10,10 +10,11 @@ public class Spaceship_Player : Spaceship_Base {
 	public string cameraName = "ARCamera";
 
 
+	// Use this for initialization
+
 
 	private bool fire = false;
-	private bool left = false;
-	private bool right = false;
+	private float dir = 0f;
 
 	/// <summary>
 	/// This is the base class of Spaceships. All spaceship
@@ -31,10 +32,9 @@ public class Spaceship_Player : Spaceship_Base {
 
 	// for the buttons:
 
-	public void getButtonInput(bool fb, bool lb, bool rb){
+	public void getButtonInput(bool fb, float js){
 		fire = fb;
-		left = lb;
-		right = rb;
+		dir = js;
 	}
 
 	/// <summary>
@@ -127,37 +127,32 @@ public class Spaceship_Player : Spaceship_Base {
 	
 	private void androidControls(int shipCapacity){
 
+	
 		float sideSpeed;
 
 
-		
+		/*
 		if(left){// gyo1.attitude.eulerAngles.z > 45){//Input.GetKey("left")){
 			sideSpeed = -3;
 		}else if(right){// gyo1.attitude.eulerAngles.z < -45){//Input.GetKey("right")){
 			sideSpeed = 3;
 		}else{
 			sideSpeed = 0;
-		}
+		}*/
 		
-		if(sideSpeed > 1){
-			if(transform.position.x < 150.0f){
-				moveShip (sideSpeed * maneuverSpeed);
+		if(dir != 0){
+			if(transform.position.x < 150.0f && transform.position.x > -150.0f){
+				moveShip (maneuverSpeed*dir);
 				if(transform.rotation.z > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
-		}else if(sideSpeed < -1){
-			if(transform.position.x > -150.0f ){
-				moveShip (sideSpeed * maneuverSpeed);
-				if(transform.rotation.z < 0.3){
-					transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
-				}
-			}
-		}else{
+		}
+		else{
 			if (transform.rotation.z < spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1) * dir* maneuverSpeed * 2 * Time.deltaTime);
 			}else if(transform.rotation.z > spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1) *dir * maneuverSpeed * 2 * Time.deltaTime);
 			}
 		}
 

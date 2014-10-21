@@ -5,31 +5,33 @@ using System.Collections.Generic;
 public class Level_One : LevelScript_Base {
 
 	public GameObject[] button ;
-	public AButton[] buttonScript;
+	public AButton buttonScript;
 	protected Spaceship_Player shipScr ;
 	private string cameraName = "ARCamera";
+	public Joystick joystick;
+	public bool useAxisInput = true;
+	public float h = 0;
 
 	protected override void loadButtons(){
-		button  = new GameObject[3];
-		buttonScript = new AButton[3];
+		button  = new GameObject[2];
+		buttonScript = new AButton();
 		button[0] = (GameObject)Object.Instantiate(Resources.Load ("AButton"));
 		button[0].SetActive(true);
-		buttonScript[0] = button[0].GetComponent<AButton>();
-		button[1] = (GameObject)Object.Instantiate(Resources.Load ("Red_Arrow_Left"));
+		buttonScript = button[0].GetComponent<AButton>();
+		button[1] = (GameObject)Object.Instantiate(Resources.Load ("joystick"));
 		button[1].SetActive(true);
-		buttonScript[1] = button[1].GetComponent<AButton>();
-		button[2] = (GameObject)Object.Instantiate(Resources.Load ("Red_Arrow_Right"));
-		button[2].SetActive(true);
-		buttonScript[2] = button[2].GetComponent<AButton>();
+		joystick = new Joystick ();
+		joystick = button[1].GetComponent<Joystick>();
+	
 	}
 	protected override void unloadButtons(){
-		for(int i = 0; i < 3 ; i++){
+		for(int i = 0; i < 2 ; i++){
 			Destroy(button[i]);
 		}
 	}
 
 	protected void sentButtonInput(){
-		shipScr.getButtonInput(buttonScript[0].touch, buttonScript[1].touch, buttonScript[2].touch);
+		shipScr.getButtonInput(buttonScript.touch, h);
 	}
 
 
@@ -86,8 +88,17 @@ public class Level_One : LevelScript_Base {
 	}
 	public override void updateLevel(){
 
-		sentButtonInput();
 
+
+		if(useAxisInput) {
+			// assigns the position of the joystick to h and v
+			h = joystick.position.x;
+		}
+		else {
+			h = Input.GetAxis("Horizontal");
+		}
+		print (joystick.position.x);
+		sentButtonInput();
 	}
 
 

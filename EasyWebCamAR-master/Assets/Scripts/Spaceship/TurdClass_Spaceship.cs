@@ -8,6 +8,7 @@ public class TurdClass_Spaceship : Spaceship_Player {
 	// Run function to set class specific lists 
 	public override void shipInitialization(){
 
+
 		cameraName = "ARCamera";
 		player = GameObject.Find(cameraName);
 		// Character Controller used to move the ship

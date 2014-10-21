@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 3f419a34ef262004896f83582d024a19
 TextureImporter:
+=======
+guid: 07d46ba7873c24e048989c138a924f1a
+TextureImporter:
+  fileIDToRecycleName: {}
+>>>>>>> Stashed changes
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,6 +41,10 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+<<<<<<< Updated upstream
+=======
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> Stashed changes
   spritePixelsToUnits: 100
   alphaIsTransparency: 0
   textureType: -1
