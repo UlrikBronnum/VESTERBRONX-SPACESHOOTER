@@ -58,7 +58,7 @@ public class Spaceship_Player : Spaceship_Base {
 	public override void Update () 
 	{
 
-		if(Application.platform == RuntimePlatform.WindowsEditor ||
+		/*if(Application.platform == RuntimePlatform.WindowsEditor ||
 		   Application.platform == RuntimePlatform.OSXPlayer)
 		{
 			if(IsActive)
@@ -69,8 +69,9 @@ public class Spaceship_Player : Spaceship_Base {
 		{
 			if(IsActive)
 				androidControls(canonMountCapacity);
-		}
-
+		}*/
+		if(IsActive)
+			androidControls(canonMountCapacity);
 		
 	
 	}
@@ -139,20 +140,31 @@ public class Spaceship_Player : Spaceship_Base {
 		}else{
 			sideSpeed = 0;
 		}*/
-		
+
+		Debug.Log(transform.rotation.z);
+		Debug.Log(spaceshipRotation);
+		if(dir < 0.01 && dir > -0.01)
+		{
+			dir = 0;
+		}
 		if(dir != 0){
-			if(transform.position.x < 150.0f && transform.position.x > -150.0f){
+			if(transform.position.x < 150.0f  ){
 				moveShip (maneuverSpeed*dir);
-				if(transform.rotation.z > -0.3){
-					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
+				if(transform.rotation.z > -0.3 && transform.rotation.z < 0.3){
+					transform.Rotate(new Vector3(0,0,1) * dir * maneuverSpeed * 2 * Time.deltaTime);
+				}
+			}else if(transform.position.x > -150.0f){
+				moveShip (maneuverSpeed*dir);
+				if(transform.rotation.z > -0.3 && transform.rotation.z < 0.3){
+					transform.Rotate(new Vector3(0,0,1) * -dir * maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}
 		else{
 			if (transform.rotation.z < spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) * dir* maneuverSpeed * 2 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1)  * maneuverSpeed * 2 * Time.deltaTime);
 			}else if(transform.rotation.z > spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1) *dir * maneuverSpeed * 2 * Time.deltaTime);
+				transform.Rotate(new Vector3(0,0,1)  * -maneuverSpeed * 2 * Time.deltaTime);
 			}
 		}
 
