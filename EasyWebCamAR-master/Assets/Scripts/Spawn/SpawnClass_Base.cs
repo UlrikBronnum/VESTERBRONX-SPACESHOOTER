@@ -11,7 +11,9 @@ public class SpawnClass_Base : MonoBehaviour {
 	public virtual void Start(){
 
 	}
+	public virtual void SpawnPortal(){	
 
+	}
 	public virtual void Spawn(){
 
 	}

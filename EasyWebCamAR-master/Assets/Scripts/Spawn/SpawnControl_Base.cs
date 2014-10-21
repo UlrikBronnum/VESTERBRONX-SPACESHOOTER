@@ -9,17 +9,11 @@ public class SpawnControl_Base : MonoBehaviour {
 	public SpawnClass_Base spawnBase;
 
 	// Use this for initialization
-	void Start () {
-		timer = new EventTimer_Base(spawnRate);
+	protected virtual void Start () {
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(timer.timerTick()){
-			timer.TimerValue = spawnRate;
-			spawnBase.Spawn();
-		}
 
+	// Update is called once per frame
+	protected virtual void Update () {
 	}
 
 }

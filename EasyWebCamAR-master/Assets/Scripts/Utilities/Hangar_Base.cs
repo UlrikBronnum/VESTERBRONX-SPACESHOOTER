@@ -12,6 +12,7 @@ public class Hangar_Base : MonoBehaviour {
 
 
 	public void setHangar(){
+
 		int hangarCapacity = shipTypes.Count;
 		if(hangarslots.Count != hangarCapacity){
 			for (int i = hangarslots.Count; i < hangarCapacity; i++){
@@ -38,16 +39,36 @@ public class Hangar_Base : MonoBehaviour {
 			}
 		}
 	}
+	public void addAmmo(int amount){
+		canonAmmunitionStorage.Add(amount);
+	}
 	public void addSpaceshipToHangar(string shipType){
 		shipTypes.Add(shipType);
+		setHangar();
 	}
 	public void addGunToHangar(string gunType){
 		canonTypes.Add(gunType);
 	}
 	public void gunMountManagement(string gunType, int ship){
 		Spaceship_Player script = hangarslots[ship].GetComponent<Spaceship_Player>();
-		script.gunSetting(gunType,ship);
+		script.gunSetting(gunType);
 	}
 
+
+	public string returnContentString(){
+		string reportString = "";
+		for(int i = 0; i < canonAmmunitionStorage.Count ; i++){
+			reportString +=  "Ammunition=" + canonAmmunitionStorage[i].ToString() + "\n";
+		}
+		for(int i = 0; i < canonTypes.Count ; i++){
+			reportString +=  "CanonType=" + canonTypes[i] + "\n";
+		}
+		for(int i = 0; i < shipTypes.Count ; i++){
+			reportString +=  "ShipType=" + shipTypes[i] + "\n";
+		}
+
+
+		return reportString;
+	}
 
 }

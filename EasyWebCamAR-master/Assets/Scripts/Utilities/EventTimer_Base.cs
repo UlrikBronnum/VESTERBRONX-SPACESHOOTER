@@ -7,6 +7,7 @@ public class EventTimer_Base {
 	private float timerValue;
 	private float _timer;
 
+
 	public EventTimer_Base(float timeInterval) //starting a new time
 	{
 		timerValue = timeInterval;
@@ -16,6 +17,13 @@ public class EventTimer_Base {
 		_timer -= Time.deltaTime;
 		if(_timer < 0){
 			_timer = timerValue;
+			return true;
+		}else{
+			return false;
+		}
+	}
+	public bool timerTick2(){
+		if(_timer < 2){
 			return true;
 		}else{
 			return false;

@@ -60,8 +60,13 @@ public class AmmunitionShop_Level : LevelScript_Base {
 		}
 
 		if(GUI.Button(new Rect(Screen.width/10 *9-100,Screen.height/10 * 1 ,200,100),"Buy Ammunition")){
-			
-			
+			script.hangar.addSpaceshipToHangar("SecondClass");
+			foreach(string element in script.hangar.shipTypes)
+			{
+				Debug.Log(element);
+			}
+
+			script.profileMan.gameSave();
 		}
 		if(GUI.Button(new Rect(0,0,200,100),"Back")){
 			completed = true;

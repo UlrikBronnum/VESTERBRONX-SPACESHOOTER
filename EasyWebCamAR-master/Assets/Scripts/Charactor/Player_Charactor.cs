@@ -17,22 +17,33 @@ public class Player_Charactor : MonoBehaviour
 	protected int hangarCapacity;
 	public int shipChoise;
 
-	private int kredits;
+	public int kredits;
 
+	public ProfileSavenLoad profileMan;
+
+	public void OnApplicationQuit(){
+		profileMan.gameSave();
+	}
 	public void Start () 
 	{
-
+		profileMan = gameObject.AddComponent("ProfileSavenLoad") as ProfileSavenLoad;
 		shipChoise = 0;
 		systemState = "Menu";
 		levelLoaded = false;
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
-		hangar.addGunToHangar("projectileCanon");
-		hangar.addGunToHangar("ionCanon");
-		hangar.addSpaceshipToHangar("TurdClass");
-		hangar.addSpaceshipToHangar("SecondClass");
-	
-
 		setLevels();
+
+
+
+		if(profileMan.filePresent()){
+			profileMan.gameLoad();
+			Debug.Log("Load");
+		}else{
+			hangar.addGunToHangar("projectileCanon");
+			hangar.addSpaceshipToHangar("TurdClass");
+			Debug.Log("noLoad");
+		}
+
 		hangar.setHangar();
 
 	}
@@ -40,7 +51,6 @@ public class Player_Charactor : MonoBehaviour
 	public  void Update () 
 	{
 
-		Debug.Log(systemState);
 		if(systemState == "Menu"){
 
 		}
@@ -82,19 +92,19 @@ public class Player_Charactor : MonoBehaviour
 				systemState = "Hangar";
 				levelLoaded = false;
 				levels[0].loadLevel();
-				Debug.Log("0");
+
 			}
 			if(GUI.Button(new Rect(0,100,200,100),"MissionLevel")){
 				systemState = "MissionLevel";
 				levelLoaded = false;
 				levels[1].loadLevel();
-				Debug.Log("1");
+
 			}
 			if(GUI.Button(new Rect(0,200,200,100),"AmmoShop")){
 				systemState = "AmmoShop";
 				levelLoaded = false;
 				levels[2].loadLevel();
-				Debug.Log("2");
+
 			}
 		}
 		else if(systemState == "Hangar"){
@@ -133,7 +143,11 @@ public class Player_Charactor : MonoBehaviour
 		levels.Add(newAmmoLevel);
 	
 	}
-
+	public string returnContentString(){
+		string reportString = "";
+		reportString +=  "Kredit=" + kredits + "\n";
+		return reportString;
+	}
 
 }
 

@@ -36,7 +36,7 @@ public class SecondClass_Spaceship : Spaceship_Player {
 		
 		for (int i = 0 ; i < transform.childCount ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);
-			canonTypes[i] = script.hangar.canonTypes[0];
+			canonTypes[i] = standartCanon ;//script.hangar.canonTypes[0];
 		}
 		// Give an intitial value to canon types
 		

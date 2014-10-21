@@ -15,6 +15,7 @@ public class Spaceship_Base : MonoBehaviour {
 	/// Don't write new code here
 	/// </summary>
 
+	protected string standartCanon = "projectileCanon";
 
 	// The names of the canon and shield prefabs that is mounted on spaceship.
 	// Needs to be public for ease access
@@ -90,9 +91,9 @@ public class Spaceship_Base : MonoBehaviour {
 	}
 	// Overloaded func changes canon types
 	// of all racks
-	public void gunSetting(string[] newSetting){ 
+	public void gunSetting(string newSetting){ 
 		for(int i = 0; i < canonMountCapacity ; i++){
-			canonTypes[i] = newSetting[i];	
+			canonTypes[i] = newSetting;	
 		}
 
 	}

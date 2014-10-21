@@ -5,25 +5,38 @@ using System.Globalization;
 
 public class ProfileSavenLoad : MonoBehaviour {
 
-	public GameObject profile;
+	private GameObject profile;
 	private Player_Charactor profileScript;
 
 	// Use this for initialization
-	void Start () {
+	public void Start() {
+		profile = GameObject.Find("ARCamera");
 		profileScript = profile.GetComponent<Player_Charactor>();
-		gameLoad();
 	}
-	void Update () 
+	public void onClose () 
 	{
-		if(Input.GetKey(KeyCode.Escape))
-		{
-			gameSave();
+		gameSave();
+	}
+	public bool filePresent(){
+		profile = GameObject.Find("ARCamera");
+		profileScript = profile.GetComponent<Player_Charactor>();
+		//string path = Application.dataPath + "/SaveGame";
+		string path = Application.persistentDataPath + "/SaveGame";
+		if(Directory.Exists(path)){
+			if(!File.Exists(path + "/profileSave.fzf")){
+				return false;
+			}else{
+				return true;
+			}
+		}else{
+			return false;
 		}
 	}
 
 	public void gameSave(){
 		// Find path of game folder and save it
-		string path = Application.dataPath + "/SaveGame";
+		//string path = Application.dataPath + "/SaveGame";
+		string path = Application.persistentDataPath + "/SaveGame";
 		// Check if the folder does not exists, if not 
 		// then create it at the path!
 		if(!Directory.Exists(path)){
@@ -44,10 +57,16 @@ public class ProfileSavenLoad : MonoBehaviour {
 
 	}
 	public void gameLoad(){
+		profile = GameObject.Find("ARCamera");
+		profileScript = profile.GetComponent<Player_Charactor>();
+		Debug.Log("x");
 		// Find path of folder 
-		string path = Application.dataPath + "/SaveGame/";
+		//string path = Application.dataPath + "/SaveGame/";
+		string path = Application.persistentDataPath + "/SaveGame";
+		Debug.Log(path);
 		// If the file exists 
 		if(File.Exists(path + "/profileSave.fzf")){
+			Debug.Log("xxx");
 			// Load file
 			StreamReader fileLoaded = File.OpenText(path + "/profileSave.fzf");
 			string s = "";
@@ -56,27 +75,23 @@ public class ProfileSavenLoad : MonoBehaviour {
 				// Split the line at the '='
 				string[] getLine = s.ToString().Split('=');
 				// Match title to variable and update game
-				if(getLine[0] == "Player Position X"){ 
-					Vector3 temp = profile.transform.position;
-					temp.x = float.Parse(getLine[1].ToString(), System.Globalization.CultureInfo.InvariantCulture);
-					profile.transform.position = temp;
+				if(getLine[0] == "Ammunition"){
+					Debug.Log(getLine[1]);
+					profileScript.hangar.addAmmo( int.Parse(getLine[1]));
 				}
-				if(getLine[0] == "Player Position Y"){
-					Vector3 temp = profile.transform.position;
-					temp.y = float.Parse(getLine[1].ToString(), System.Globalization.CultureInfo.InvariantCulture);
-					profile.transform.position = temp;
+				if(getLine[0] == "CanonType"){
+					Debug.Log(getLine[1]);
+					profileScript.hangar.addGunToHangar(getLine[1]);
 				}
-				if(getLine[0] == "Player Position Z"){
-					Vector3 temp = profile.transform.position;
-					temp.z = float.Parse(getLine[1].ToString(), System.Globalization.CultureInfo.InvariantCulture);
-					profile.transform.position = temp;
+				if(getLine[0] == "ShipType"){
+					Debug.Log(getLine[1]);
+					profileScript.hangar.addSpaceshipToHangar(getLine[1]);
 				}
-				if(getLine[0] == "Player Lives"){
+				if(getLine[0] == "Kredit"){
+					Debug.Log(getLine[1]);
+					profileScript.kredits =  int.Parse(getLine[1]);
+				}
 
-				}
-				if(getLine[0] == "Player Defence"){
-
-				}
 			}
 			// Close the file
 			fileLoaded.Close();
@@ -86,10 +101,8 @@ public class ProfileSavenLoad : MonoBehaviour {
 		// The file is a long string 
 		string data = "";
 		// adds lines to it
-		data += "Player Position X=" + profile.transform.position.x + "\n";
-		data += "Player Position Y=" + profile.transform.position.y + "\n";
-		data += "Player Position Z=" + profile.transform.position.z + "\n";
-
+		data += profileScript.hangar.returnContentString();
+		data += profileScript.returnContentString();
 		// returns the string when done
 		return data;
 	}

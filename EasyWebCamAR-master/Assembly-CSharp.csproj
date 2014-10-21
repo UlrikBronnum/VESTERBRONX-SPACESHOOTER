@@ -93,6 +93,7 @@
      <Compile Include="Assets\Scripts\Gyro.cs" />
      <Compile Include="Assets\Scripts\KillerWhale.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\PortalFog.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\Spaceship\EnemyFirstClass.cs" />
@@ -105,7 +106,10 @@
      <Compile Include="Assets\Scripts\Spawn\Meteor_Spawn.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnClass_Base.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnControl_Base.cs" />
+     <Compile Include="Assets\Scripts\Spawn\SpawnControl_Enemy.cs" />
+     <Compile Include="Assets\Scripts\Spawn\SpawnControl_Props.cs" />
      <Compile Include="Assets\Scripts\StartScript.cs" />
+     <Compile Include="Assets\Scripts\Twirl.cs" />
      <Compile Include="Assets\Scripts\UFO\Enemy_UFO.cs" />
      <Compile Include="Assets\Scripts\UFO\Moon_Planet.cs" />
      <Compile Include="Assets\Scripts\UFO\Planet_Base.cs" />
