@@ -17,7 +17,7 @@ public class Player_Charactor : MonoBehaviour
 	protected int hangarCapacity;
 	public int shipChoise;
 
-	public int kredits;
+	public int credits;
 
 	public ProfileSavenLoad profileMan;
 
@@ -40,6 +40,9 @@ public class Player_Charactor : MonoBehaviour
 			Debug.Log("Load");
 		}else{
 			hangar.addGunToHangar("projectileCanon");
+			hangar.canonUpgrade1.Add(0);
+			hangar.canonUpgrade2.Add(0);
+			hangar.canonUpgrade3.Add(0);
 			hangar.addSpaceshipToHangar("TurdClass");
 			Debug.Log("noLoad");
 		}
@@ -145,7 +148,7 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public string returnContentString(){
 		string reportString = "";
-		reportString +=  "Kredit=" + kredits + "\n";
+		reportString +=  "Credit=" + credits + "\n";
 		return reportString;
 	}
 

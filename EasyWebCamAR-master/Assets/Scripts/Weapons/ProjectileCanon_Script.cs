@@ -3,8 +3,20 @@ using System.Collections;
 
 public class ProjectileCanon_Script : Weapons_Base {
 
-	public override void Start () {
-		rateOfFire = 2/10.0f;
+	public override void Start () 
+	{
+		ammoType = "Projectile";
+		// upgradeStates = { rate of fire , damage , capacity }
+		// will range from 0 to topLimit?
+		// the purchase value of the weapon
+		weaponValue = 1000;
+		// Damage of projetile
+		projectileDamage = 5;
+		// the rate of fire value
+		rateOfFire = 3/10f;
+		// magasin capacity
+		magCapacity = 5000;
+
 		fireTimer = new EventTimer_Base(rateOfFire);
 	}
 }

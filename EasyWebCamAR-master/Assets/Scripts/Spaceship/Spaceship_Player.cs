@@ -116,7 +116,7 @@ public class Spaceship_Player : Spaceship_Base {
 				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
 				for(int j = 0 ; j < playerScr.hangar.canonTypes.Count;j++){
 					if(canonMounted[i].name == playerScr.hangar.canonTypes[j]){
-						playerScr.hangar.canonAmmunitionStorage[j] -= 1;
+
 					}
 				}
 				
@@ -174,9 +174,9 @@ public class Spaceship_Player : Spaceship_Base {
 				script.fireWeapon();
 				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
 				if(canonMounted[i].name == playerScr.hangar.canonTypes[0]){
-					playerScr.hangar.canonAmmunitionStorage[0] -= 1;
+
 				}else if(canonMounted[i].name == playerScr.hangar.canonTypes[1]){
-					playerScr.hangar.canonAmmunitionStorage[1] -= 1;
+
 				}
 			}
 		}

@@ -25,7 +25,7 @@ public class Spaceship_Base : MonoBehaviour {
 	protected Transform[] canonMount;
 	// The canons that are mounted on spaceship
 	protected GameObject[] canonMounted;
-	protected GameObject[] shieldMounted;
+	protected GameObject shieldMounted;
 
 	// How many canon mounts does the ship have
 	protected int canonMountCapacity;
@@ -54,6 +54,17 @@ public class Spaceship_Base : MonoBehaviour {
 		canonMounted[i].transform.position = canonMount[i].position;
 		canonMounted[i].transform.rotation = canonMount[i].rotation;
 		canonMounted[i].transform.parent = canonMount[i].transform;
+
+		Weapons_Base wScript = canonMounted[i].GetComponent<Weapons_Base>();
+		Player_Charactor hScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
+
+		for(int j = 0; j < hScript.hangar.canonUpgrade1.Count ; j++){
+			if (hScript.hangar.canonTypes[j] == canonTypes[i]){
+				wScript.upgradeStates[0] = hScript.hangar.canonUpgrade1[j];
+				wScript.upgradeStates[1] = hScript.hangar.canonUpgrade2[j];
+				wScript.upgradeStates[2] = hScript.hangar.canonUpgrade3[j];
+			}
+		}
 
 	}
 	public void mountCanon(int mount){

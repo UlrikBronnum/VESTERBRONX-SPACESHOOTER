@@ -75,21 +75,24 @@ public class ProfileSavenLoad : MonoBehaviour {
 				// Split the line at the '='
 				string[] getLine = s.ToString().Split('=');
 				// Match title to variable and update game
-				if(getLine[0] == "Ammunition"){
-					Debug.Log(getLine[1]);
-					profileScript.hangar.addAmmo( int.Parse(getLine[1]));
-				}
+
 				if(getLine[0] == "CanonType"){
-					Debug.Log(getLine[1]);
 					profileScript.hangar.addGunToHangar(getLine[1]);
 				}
 				if(getLine[0] == "ShipType"){
-					Debug.Log(getLine[1]);
 					profileScript.hangar.addSpaceshipToHangar(getLine[1]);
 				}
-				if(getLine[0] == "Kredit"){
-					Debug.Log(getLine[1]);
-					profileScript.kredits =  int.Parse(getLine[1]);
+				if(getLine[0] == "CanonUpgrade1"){
+					profileScript.hangar.canonUpgrade1.Add(int.Parse(getLine[1]));
+				}
+				if(getLine[0] == "CanonUpgrade2"){
+					profileScript.hangar.canonUpgrade2.Add(int.Parse(getLine[1]));
+				}
+				if(getLine[0] == "CanonUpgrade3"){
+					profileScript.hangar.canonUpgrade3.Add(int.Parse(getLine[1]));
+				}
+				if(getLine[0] == "Credit"){
+					profileScript.credits =  int.Parse(getLine[1]);
 				}
 
 			}

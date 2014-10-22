@@ -9,10 +9,8 @@ public class Projectile_Base : MonoBehaviour {
 	public int damage;
 
 	// Use this for initialization
-	public virtual void  Start () {
-		//timer = new EventTimer_Base(flyTime);
-		//rigidbody.velocity = transform.forward * projectileVelocity;
-	}
+	public virtual void  Start () {	}
+
 	void Update(){
 		if(timer.timerTick()){
 			Destroy(gameObject);
@@ -21,6 +19,9 @@ public class Projectile_Base : MonoBehaviour {
 	void OnCollisionEnter(Collision col){
 	
 		Destroy(gameObject);
+	}
+	public void setProjectileDamage(int newDamage){
+		damage = newDamage;
 	}
 
 }
