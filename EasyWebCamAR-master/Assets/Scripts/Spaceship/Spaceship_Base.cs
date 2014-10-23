@@ -58,13 +58,16 @@ public class Spaceship_Base : MonoBehaviour {
 		Weapons_Base wScript = canonMounted[i].GetComponent<Weapons_Base>();
 		Player_Charactor hScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
 
-		for(int j = 0; j < hScript.hangar.canonUpgrade1.Count ; j++){
+		for(int j = 0; j < hScript.hangar.canonTypes.Count ; j++){
 			if (hScript.hangar.canonTypes[j] == canonTypes[i]){
 				wScript.upgradeStates[0] = hScript.hangar.canonUpgrade1[j];
 				wScript.upgradeStates[1] = hScript.hangar.canonUpgrade2[j];
 				wScript.upgradeStates[2] = hScript.hangar.canonUpgrade3[j];
+
+
 			}
 		}
+		Debug.Log(wScript.upgradeStates[0] + " " + wScript.upgradeStates[1] + " " + wScript.upgradeStates[2]);
 
 	}
 	public void mountCanon(int mount){

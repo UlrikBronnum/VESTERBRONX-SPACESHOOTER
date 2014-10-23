@@ -36,7 +36,7 @@ public class Weapons_Base : MonoBehaviour {
 			script.setProjectileDamage(weaponDamage());
 			newShot.transform.position = barrelEnd.position;
 			newShot.transform.rotation = barrelEnd.rotation;
-
+			Debug.Log(weaponRateOfFire() + " " + weaponDamage() + " " + weaponCapacity());
 		}
 	}
 

@@ -40,10 +40,10 @@ public class Player_Charactor : MonoBehaviour
 			Debug.Log("Load");
 		}else{
 			hangar.addGunToHangar("projectileCanon");
-			hangar.canonUpgrade1.Add(0);
-			hangar.canonUpgrade2.Add(0);
-			hangar.canonUpgrade3.Add(0);
+			hangar.addToCanonUpgrades();
 			hangar.addSpaceshipToHangar("TurdClass");
+			hangar.addToShipUpgrades();
+			credits = 100000;
 			Debug.Log("noLoad");
 		}
 
@@ -78,12 +78,22 @@ public class Player_Charactor : MonoBehaviour
 			}
 		}
 
-		if(systemState == "AmmoShop"){
+		if(systemState == "CanonShop"){
 			if(levelLoaded == false){
 				levelLoaded = true;
 				//levels[2].loadLevel();
 			}else{
 				levels[2].updateLevel();
+				
+			}
+		}
+
+		if(systemState == "ShipShop"){
+			if(levelLoaded == false){
+				levelLoaded = true;
+				//levels[2].loadLevel();
+			}else{
+				levels[3].updateLevel();
 				
 			}
 		}
@@ -103,11 +113,17 @@ public class Player_Charactor : MonoBehaviour
 				levels[1].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(0,200,200,100),"AmmoShop")){
-				systemState = "AmmoShop";
+			if(GUI.Button(new Rect(0,200,200,100),"CanonShop")){
+				systemState = "CanonShop";
 				levelLoaded = false;
 				levels[2].loadLevel();
 
+			}
+			if(GUI.Button(new Rect(0,300,200,100),"ShipShop")){
+				systemState = "ShipShop";
+				levelLoaded = false;
+				levels[3].loadLevel();
+				
 			}
 		}
 		else if(systemState == "Hangar"){
@@ -126,7 +142,7 @@ public class Player_Charactor : MonoBehaviour
 				levels[1].levelGUI();
 			}
 		}
-		else if(systemState == "AmmoShop"){
+		else if(systemState == "CanonShop"){
 			if(levels[2].Completed){
 				systemState = "Menu";
 				levelLoaded = false;
@@ -134,7 +150,14 @@ public class Player_Charactor : MonoBehaviour
 				levels[2].levelGUI();
 			}
 		}
-		
+		else if(systemState == "ShipShop"){
+			if(levels[3].Completed){
+				systemState = "Menu";
+				levelLoaded = false;
+			}else{
+				levels[3].levelGUI();
+			}
+		}
 	}
 
 	private void setLevels(){
@@ -142,9 +165,10 @@ public class Player_Charactor : MonoBehaviour
 		levels.Add (newHangarLevel);
 		Mission_Level newMissionLevel = gameObject.AddComponent("Mission_Level") as Mission_Level;
 		levels.Add(newMissionLevel);
-		AmmunitionShop_Level newAmmoLevel = gameObject.AddComponent("AmmunitionShop_Level") as AmmunitionShop_Level;
-		levels.Add(newAmmoLevel);
-	
+		CanonShop_Level newCanonLevel = gameObject.AddComponent("CanonShop_Level") as CanonShop_Level;
+		levels.Add(newCanonLevel);
+		SpaceshipShop_Level newShipLevel = gameObject.AddComponent("SpaceshipShop_Level") as SpaceshipShop_Level;
+		levels.Add(newShipLevel);
 	}
 	public string returnContentString(){
 		string reportString = "";

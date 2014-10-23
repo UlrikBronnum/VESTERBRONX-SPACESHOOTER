@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Mission_Level : LevelScript_Base {
 
-	public List<LevelScript_Base> levels = new List<LevelScript_Base>();
+	public List<LevelScript_Level> levels = new List<LevelScript_Level>();
 	private string planetState;
 	private bool levelLoaded;
 

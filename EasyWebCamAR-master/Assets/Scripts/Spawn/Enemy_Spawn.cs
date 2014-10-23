@@ -10,6 +10,10 @@ public class Enemy_Spawn : SpawnClass_Base {
 	private Vector3 spawnPosition;
 	private float portalTime;
 
+	public int enemiesToSpawn;
+
+	public int deadEnemy = 0;
+
 	// Use this for initialization
 	public override void Start () {
 		enemySpawning = false;
@@ -19,59 +23,75 @@ public class Enemy_Spawn : SpawnClass_Base {
 		spawnObject[2] = (GameObject)Resources.Load("PortalFog");
 
 		portalTime = 0.66f;
-		stackSize = 10;
-
+		stackSize = 25;
+		/*
 		for (int i = 0; i < stackSize; i++){
 			GameObject go = (GameObject)Object.Instantiate(spawnObject[0]);
 			Spaceship_Enemy createdObject = go.GetComponent<Spaceship_Enemy>();
 			createdObject.transform.localScale = new Vector3 (objScale,objScale,objScale);
 			createdObject.Parent = this;
 			createdObject.transform.parent = this.transform;
-			createdObject.initTimer(5f);
 			createdObject.Despawn();
 			createdObject.shipInitialization();
 			enemyStack.Push(createdObject);
 			
 		}
+		*/
 		
 	}
-	public override void SpawnPortal(){
-		if(!enemySpawning){
-			spawnPosition  = new Vector3 (transform.position.x + Random.Range(-150f,150f),0,transform.position.z);
-			Instantiate (spawnObject[2], new Vector3 (spawnPosition.x,spawnPosition.y + 5,spawnPosition.z) , Quaternion.identity);
-			enemySpawning = true;
-		}
+	public void SpawnWing(Vector3 newPos , int num){
 
-		portalTime -= Time.deltaTime;
-		if ( portalTime < 0) {
-			Instantiate (spawnObject[1],spawnPosition , Quaternion.identity);
-			portalTime = 0.25f;
+		Vector3 holdPosition = newPos;
+		switch(num){
+		case 0:
+			spawnPosition  = new Vector3 (holdPosition.x ,holdPosition.y ,holdPosition.z);
+			Spawn();
+			break;
+		case 1:
+			spawnPosition  = new Vector3 (holdPosition.x + 75 ,holdPosition.y ,holdPosition.z);
+			Spawn();
+			spawnPosition  = new Vector3 (holdPosition.x - 75 ,holdPosition.y ,holdPosition.z);
+			Spawn();
+			break;
+		case 2:
+			spawnPosition  = new Vector3 (holdPosition.x + 150,holdPosition.y ,holdPosition.z);
+			Spawn();
+			spawnPosition  = new Vector3 (holdPosition.x - 150,holdPosition.y ,holdPosition.z);
+			Spawn();
+			break;
+		default:
+			break;
 		}
 
 	}
+
 	public override  void Spawn()
 	{
+		GameObject go = (GameObject)Object.Instantiate(spawnObject[0]);
+		go.transform.localScale = new Vector3 (objScale,objScale,objScale);
+		go.transform.position = spawnPosition ;
+		go.transform.rotation = transform.rotation;
+		Spaceship_Enemy createdObject = go.GetComponent<Spaceship_Enemy>();
+		createdObject.Parent = this;
+		createdObject.transform.parent = this.transform;
+		enemiesToSpawn--;
 
-		enemySpawning = false;
+		Instantiate(spawnObject[2], spawnPosition,transform.rotation);
+		/*
 		if(enemyStack.Count > 0){
 			Spaceship_Enemy newObject = enemyStack.Pop();
 			newObject.transform.localScale = new Vector3 (objScale,objScale,objScale);
-
 			newObject.gameObject.transform.position = spawnPosition;
 			newObject.gameObject.transform.rotation = transform.rotation;
-			newObject.resetTimer();
 			newObject.Spawn();
-		}else{
-			GameObject go = (GameObject)Object.Instantiate(spawnObject[0]);
-			go.transform.localScale = new Vector3 (objScale,objScale,objScale);
-			//spawnPosition  = new Vector3 (transform.position.x + Random.Range(-150f,150f),transform.position.y,transform.position.z);
-			go.transform.position = spawnPosition ;
-			go.transform.rotation = transform.rotation;
-			Spaceship_Enemy createdObject = go.GetComponent<Spaceship_Enemy>();
-			createdObject.initTimer(5f);
-			createdObject.Parent = this;
-			createdObject.transform.parent = this.transform;
+			enemiesToSpawn--;
 		}
+		else{
+
+
+		}
+		*/
+
 	}
 
 }

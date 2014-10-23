@@ -8,8 +8,8 @@ using System.Collections.Generic;
 public class Spaceship_Player : Spaceship_Base {
 
 	public string cameraName = "ARCamera";
-
-
+	public int shipValue;
+	public int[] upgradeStates = new int[3];
 	// Use this for initialization
 
 
@@ -58,21 +58,20 @@ public class Spaceship_Player : Spaceship_Base {
 	public override void Update () 
 	{
 
-		/*if(Application.platform == RuntimePlatform.WindowsEditor ||
+		if(Application.platform == RuntimePlatform.WindowsEditor ||
 		   Application.platform == RuntimePlatform.OSXPlayer)
 		{
 			if(IsActive)
 				pcControls(canonMountCapacity);
 
 		}
-		else if (Application.platform == RuntimePlatform.Android)
+		else if (Application.platform == RuntimePlatform.Android ||
+		         Application.platform == RuntimePlatform.IPhonePlayer)
 		{
 			if(IsActive)
 				androidControls(canonMountCapacity);
-		}*/
-		if(IsActive)
-			androidControls(canonMountCapacity);
-		
+		}
+
 	
 	}
 	private void pcControls(int shipCapacity){
@@ -87,23 +86,23 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 		// moves the player 
 		if(sideSpeed > 0){
-			if(transform.position.x < 150.0f){
+			if(transform.position.x < 250.0f){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}else if(sideSpeed < 0){
-			if(transform.position.x > -150.0f ){
+			if(transform.position.x > -250.0f ){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z < 0.3){
 					transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
 		}else{
-			if (transform.rotation.z < spaceshipRotation){
+			if (transform.rotation.z < -0.02f){
 				transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
-			}else if(transform.rotation.z > spaceshipRotation){
+			}else if(transform.rotation.z > 0.02f){
 				transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 			}
 		}
@@ -129,42 +128,30 @@ public class Spaceship_Player : Spaceship_Base {
 	private void androidControls(int shipCapacity){
 
 	
-		float sideSpeed;
 
 
-		/*
-		if(left){// gyo1.attitude.eulerAngles.z > 45){//Input.GetKey("left")){
-			sideSpeed = -3;
-		}else if(right){// gyo1.attitude.eulerAngles.z < -45){//Input.GetKey("right")){
-			sideSpeed = 3;
-		}else{
-			sideSpeed = 0;
-		}*/
-
-		Debug.Log(transform.rotation.z);
-		Debug.Log(spaceshipRotation);
 		if(dir < 0.01 && dir > -0.01)
 		{
 			dir = 0;
 		}
 		if(dir != 0){
-			if(transform.position.x < 150.0f  ){
-				moveShip (maneuverSpeed*dir);
+			if(transform.position.x < 250.0f  ){
+				moveShip (shipManeuverSpeed()*dir);
 				if(transform.rotation.z > -0.3 && transform.rotation.z < 0.3){
-					transform.Rotate(new Vector3(0,0,1) * dir * maneuverSpeed * 2 * Time.deltaTime);
+					transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 				}
-			}else if(transform.position.x > -150.0f){
-				moveShip (maneuverSpeed*dir);
+			}else if(transform.position.x > -250.0f){
+				moveShip (shipManeuverSpeed()*dir);
 				if(transform.rotation.z > -0.3 && transform.rotation.z < 0.3){
-					transform.Rotate(new Vector3(0,0,1) * -dir * maneuverSpeed * 2 * Time.deltaTime);
+					transform.Rotate(new Vector3(0,0,1) * dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 				}
 			}
 		}
 		else{
-			if (transform.rotation.z < spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1)  * maneuverSpeed * 2 * Time.deltaTime);
-			}else if(transform.rotation.z > spaceshipRotation){
-				transform.Rotate(new Vector3(0,0,1)  * -maneuverSpeed * 2 * Time.deltaTime);
+			if (transform.rotation.z < - 0.02f){
+				transform.Rotate(new Vector3(0,0,1)  * shipManeuverSpeed() * 2 * Time.deltaTime);
+			}else if(transform.rotation.z > 0.02f){
+				transform.Rotate(new Vector3(0,0,1)  * -shipManeuverSpeed() * 2 * Time.deltaTime);
 			}
 		}
 
@@ -183,6 +170,25 @@ public class Spaceship_Player : Spaceship_Base {
 
 	}
 
+	public void setUpStates(int up1, int up2, int up3){
+		upgradeStates[0] = up1;
+		upgradeStates[1] = up2;
+		upgradeStates[2] = up3;
+	}
+	public int shipHealth(){
+		int sH = health +  (int)(health * (upgradeStates[0] / 10.0f));
+		return sH;
+	}
+	
+	public int shipShild(){
+		int sS = health +  (int)(health * (upgradeStates[0] / 10.0f));
+		return sS;
+	}
+	
+	public float shipManeuverSpeed(){
+		float sMS = maneuverSpeed +  (maneuverSpeed * (upgradeStates[2] / 10.0f));
+		return sMS;
+	}
 
 
 	private void moveShip(float xAxis){

@@ -68,6 +68,23 @@ public class LevelScript_Base : MonoBehaviour {
 		Spaceship_Player shipScript = gameProp.GetComponent<Spaceship_Player>();
 		shipScript.IsActive = active;
 	}
+	protected void createShopSpaceship(GameObject gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,Transform cameraTransform, bool active)
+	{
+		gameProp.transform.localScale = scale;
+		Vector3 newPos = cameraTransform.position;
+		newPos.x += pos.x;
+		newPos.y += pos.y;
+		newPos.z += pos.z;
+		gameProp.transform.position = newPos;
+		gameProp.transform.rotation = cameraTransform.rotation;
+		gameProp.transform.Rotate(new Vector3(1,0,0) * turnRotation.x );
+		gameProp.transform.Rotate(new Vector3(0,1,0) * turnRotation.y );
+		gameProp.transform.Rotate(new Vector3(0,0,1) * turnRotation.z );
+		Spaceship_Player shipScript = gameProp.GetComponent<Spaceship_Player>();
+		shipScript.IsActive = active;
+		shipScript.shipInitialization();
+		props.Add(gameProp);
+	}
 	protected void createDirectionalLightInScene(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,
 	                                  			Transform cameraTransform, Color lightColor)
 	{

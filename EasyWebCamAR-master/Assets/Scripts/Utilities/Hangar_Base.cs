@@ -6,6 +6,9 @@ public class Hangar_Base : MonoBehaviour {
 	
 	public List<GameObject> hangarslots = new List<GameObject>();
 	public List<string> shipTypes = new List<string>();
+	public List<int> shipUpgrade1 = new List<int>();
+	public List<int> shipUpgrade2 = new List<int>();
+	public List<int> shipUpgrade3 = new List<int>();
 
 	public List<string> canonTypes = new List<string>();
 	public List<int> canonUpgrade1 = new List<int>();
@@ -21,6 +24,10 @@ public class Hangar_Base : MonoBehaviour {
 				newObj.SetActive(false);
 				Spaceship_Player script = newObj.GetComponent<Spaceship_Player>();
 				script.IsActive = false;
+				if(shipUpgrade1.Count != shipTypes.Count){
+					addToShipUpgrades();
+				}
+				script.setUpStates(shipUpgrade1[i] , shipUpgrade2[i] , shipUpgrade3[i]);
 				script.shipInitialization();
 				hangarslots.Add(newObj);
 				gunMountManagement(script.canonTypes[0], i);
@@ -29,12 +36,15 @@ public class Hangar_Base : MonoBehaviour {
 	}
 
 
+
 	public void addSpaceshipToHangar(string shipType){
 		shipTypes.Add(shipType);
-		setHangar();
+		//setHangar();
+
 	}
 	public void addGunToHangar(string gunType){
 		canonTypes.Add(gunType);
+		//setHangar();
 	}
 	public void gunMountManagement(string gunType, int ship){
 		Spaceship_Player script = hangarslots[ship].GetComponent<Spaceship_Player>();
@@ -45,16 +55,17 @@ public class Hangar_Base : MonoBehaviour {
 		canonUpgrade2.Add(0);
 		canonUpgrade3.Add(0);
 	}
-
+	public void addToShipUpgrades(){
+		shipUpgrade1.Add(0);
+		shipUpgrade2.Add(0);
+		shipUpgrade3.Add(0);
+	}
 
 	public string returnContentString(){
 		string reportString = "";
 
 		for(int i = 0; i < canonTypes.Count ; i++){
 			reportString +=  "CanonType=" + canonTypes[i] + "\n";
-		}
-		for(int i = 0; i < shipTypes.Count ; i++){
-			reportString +=  "ShipType=" + shipTypes[i] + "\n";
 		}
 		for(int i = 0; i < canonUpgrade1.Count ; i++){
 			reportString +=  "CanonUpgrade1=" + canonUpgrade1[i] + "\n";
@@ -65,6 +76,20 @@ public class Hangar_Base : MonoBehaviour {
 		for(int i = 0; i < canonUpgrade3.Count ; i++){
 			reportString +=  "CanonUpgrade3=" + canonUpgrade3[i] + "\n";
 		}
+
+		for(int i = 0; i < shipTypes.Count ; i++){
+			reportString +=  "ShipType=" + shipTypes[i] + "\n";
+		}
+		for(int i = 0; i < shipUpgrade1.Count ; i++){
+			reportString +=  "ShipUpgrade1=" + shipUpgrade1[i] + "\n";
+		}
+		for(int i = 0; i < shipUpgrade2.Count ; i++){
+			reportString +=  "ShipUpgrade2=" + shipUpgrade2[i] + "\n";
+		}
+		for(int i = 0; i < shipUpgrade3.Count ; i++){
+			reportString +=  "ShipUpgrade3=" + shipUpgrade3[i] + "\n";
+		}
+
 
 		return reportString;
 	}

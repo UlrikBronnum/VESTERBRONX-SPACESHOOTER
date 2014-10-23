@@ -79,9 +79,6 @@ public class ProfileSavenLoad : MonoBehaviour {
 				if(getLine[0] == "CanonType"){
 					profileScript.hangar.addGunToHangar(getLine[1]);
 				}
-				if(getLine[0] == "ShipType"){
-					profileScript.hangar.addSpaceshipToHangar(getLine[1]);
-				}
 				if(getLine[0] == "CanonUpgrade1"){
 					profileScript.hangar.canonUpgrade1.Add(int.Parse(getLine[1]));
 				}
@@ -90,6 +87,19 @@ public class ProfileSavenLoad : MonoBehaviour {
 				}
 				if(getLine[0] == "CanonUpgrade3"){
 					profileScript.hangar.canonUpgrade3.Add(int.Parse(getLine[1]));
+				}
+
+				if(getLine[0] == "ShipType"){
+					profileScript.hangar.addSpaceshipToHangar(getLine[1]);
+				}
+				if(getLine[0] == "ShipUpgrade1"){
+					profileScript.hangar.shipUpgrade1.Add(int.Parse(getLine[1]));
+				}
+				if(getLine[0] == "ShipUpgrade2"){
+					profileScript.hangar.shipUpgrade2.Add(int.Parse(getLine[1]));
+				}
+				if(getLine[0] == "ShipUpgrade3"){
+					profileScript.hangar.shipUpgrade3.Add(int.Parse(getLine[1]));
 				}
 				if(getLine[0] == "Credit"){
 					profileScript.credits =  int.Parse(getLine[1]);

@@ -9,7 +9,7 @@ public class ProjectileCanon_Script : Weapons_Base {
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
-		weaponValue = 1000;
+		weaponValue = 1500;
 		// Damage of projetile
 		projectileDamage = 5;
 		// the rate of fire value

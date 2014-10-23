@@ -7,7 +7,7 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		cameraPos = GameObject.Find ("ARCamera").transform;
 		
 		canonScale = transform;
-		
+		health = 200;
 		// Ship speed
 		maneuverSpeed = 200f;
 		// Amount of gun attachments 

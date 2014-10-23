@@ -30,7 +30,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		
 		// deletes the enemy if it flies past the camera: 
 		if(transform.position.y > cameraPos.transform.position.y){	
-			Despawn();
+			Destroy(gameObject);
 		}
 
 
@@ -40,28 +40,20 @@ public class Spaceship_Enemy : Spaceship_Base {
 		timer = new EventTimer_Base(lifeSpan);
 	}
 
-	public void Spawn(){
-		if(this.gameObject != null)
-			timer.TimerValue = lifeSpan;
-		
-		gameObject.SetActive(true);
-
-	}
-	
-	public void Despawn(){
-		gameObject.SetActive(false);
-		if(Parent != null)
-			Parent.enemyStack.Push (this);
-	}
 
 	public override void takeDamage(int damage){
 		health -= damage;
-		if(health>=0){
-			die();}
+		if(health>=0)
+		{
+			Parent.deadEnemy++;
+			Destroy(gameObject);
+		}
 	}
 	// if the enemy os out of health, it will die. 
-	public void die(){
-		Despawn ();
+	public void die()
+	{
+
+
 	}
 
 
