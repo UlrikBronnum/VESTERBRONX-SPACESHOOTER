@@ -47,31 +47,9 @@ public class Spaceship_Base : MonoBehaviour {
 	public virtual void Update () {}
 
 	// Instantiates canons on 
-	public void initializeCanon(Transform scale, int i){
-		canonMounted[i] = (GameObject)Object.Instantiate(Resources.Load(canonTypes[i]));
-		Transform thisTrans = canonMounted[i].transform;
-		canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
-		canonMounted[i].transform.position = canonMount[i].position;
-		canonMounted[i].transform.rotation = canonMount[i].rotation;
-		canonMounted[i].transform.parent = canonMount[i].transform;
 
-		Weapons_Base wScript = canonMounted[i].GetComponent<Weapons_Base>();
-		Player_Charactor hScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
-
-		for(int j = 0; j < hScript.hangar.canonTypes.Count ; j++){
-			if (hScript.hangar.canonTypes[j] == canonTypes[i]){
-				wScript.upgradeStates[0] = hScript.hangar.canonUpgrade1[j];
-				wScript.upgradeStates[1] = hScript.hangar.canonUpgrade2[j];
-				wScript.upgradeStates[2] = hScript.hangar.canonUpgrade3[j];
-
-
-			}
-		}
-		Debug.Log(wScript.upgradeStates[0] + " " + wScript.upgradeStates[1] + " " + wScript.upgradeStates[2]);
-
-	}
 	public void mountCanon(int mount){
-		
+
 		removeCanon(mount);
 		if(mount == 0){
 			initializeCanon(canonScale,0);
@@ -82,12 +60,23 @@ public class Spaceship_Base : MonoBehaviour {
 		}
 	}
 
+	public virtual void initializeCanon(Transform scale, int i){
+		canonMounted[i] = (GameObject)Object.Instantiate(Resources.Load(canonTypes[i]));
+		Transform thisTrans = canonMounted[i].transform;
+		canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
+		canonMounted[i].transform.position = canonMount[i].position;
+		canonMounted[i].transform.rotation = canonMount[i].rotation;
+		canonMounted[i].transform.parent = canonMount[i].transform;
+		
+		
+		
+	}
 	// Destroys unwanted canon prefabs
-	public void removeCanon(int gun){
-		if(gun == 0){
+	public void removeCanon(int mount){
+		if(mount == 0){
 			Destroy(canonMounted[0]);
 			Destroy(canonMounted[1]);
-		}else if(gun == 1){
+		}else if(mount == 1){
 			Destroy(canonMounted[2]);
 			Destroy(canonMounted[3]);
 		}

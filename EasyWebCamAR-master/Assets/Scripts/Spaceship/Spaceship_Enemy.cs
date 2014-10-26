@@ -32,9 +32,24 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(transform.position.y > cameraPos.transform.position.y){	
 			Destroy(gameObject);
 		}
+		RaycastHit hit;
+		Ray weaponSight = new Ray(transform.position,Vector3.forward);
+		Debug.DrawRay(transform.position,Vector3.forward, Color.blue);
 
+		if(Physics.Raycast(weaponSight,out hit, 5000f)){
+			if(hit.collider.tag == "Player"){
+
+				for(int i = 0; i < canonMountCapacity; i++){
+					Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
+					script.fireWeapon();
+				}
+			}
+		}
 
 	}
+
+
+
 	public void initTimer(float life){
 		lifeSpan = life;
 		timer = new EventTimer_Base(lifeSpan);
@@ -55,8 +70,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 
 	}
-
-
 
 	void OnCollisionEnter(Collision other)
 	{

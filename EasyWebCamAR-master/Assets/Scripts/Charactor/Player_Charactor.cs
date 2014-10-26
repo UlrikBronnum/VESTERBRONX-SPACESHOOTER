@@ -43,7 +43,7 @@ public class Player_Charactor : MonoBehaviour
 			hangar.addToCanonUpgrades();
 			hangar.addSpaceshipToHangar("TurdClass");
 			hangar.addToShipUpgrades();
-			credits = 100000;
+			credits = 0;
 			Debug.Log("noLoad");
 		}
 
@@ -158,6 +158,9 @@ public class Player_Charactor : MonoBehaviour
 				levels[3].levelGUI();
 			}
 		}
+
+		GUI.TextField (new Rect (Screen.width/2,Screen.height - 50,120,50) , "Credits: " + credits.ToString() )  ;
+		
 	}
 
 	private void setLevels(){

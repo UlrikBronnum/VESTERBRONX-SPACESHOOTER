@@ -8,7 +8,7 @@ public class NineMM : Projectile_Base {
 	public override void Start () {
 
 		flyTime = 5f;
-		projectileVelocity = 200;
+		projectileVelocity = 1000;
 		timer = new EventTimer_Base(flyTime);
 		rigidbody.velocity = transform.forward * projectileVelocity;
 	}

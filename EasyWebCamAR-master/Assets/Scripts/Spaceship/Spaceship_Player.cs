@@ -50,6 +50,29 @@ public class Spaceship_Player : Spaceship_Base {
 	/// </summary>
 	public virtual void copyInitialization(){}
 
+
+	public override void initializeCanon(Transform scale, int i){
+		canonMounted[i] = (GameObject)Object.Instantiate(Resources.Load(canonTypes[i]));
+		Transform thisTrans = canonMounted[i].transform;
+		canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
+		canonMounted[i].transform.position = canonMount[i].position;
+		canonMounted[i].transform.rotation = canonMount[i].rotation;
+		canonMounted[i].transform.parent = canonMount[i].transform;
+		
+		Weapons_Base wScript = canonMounted[i].GetComponent<Weapons_Base>();
+		Player_Charactor hScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
+
+
+		for(int j = 0; j < hScript.hangar.canonTypes.Count ; j++){
+			if (hScript.hangar.canonTypes[j] == canonTypes[i]){
+				wScript.setUpStates(hScript.hangar.canonUpgrade1[j], hScript.hangar.canonUpgrade2[j] , hScript.hangar.canonUpgrade3[j]);
+				
+			}
+		}
+		
+	}
+
+
 	/// <summary>
 	/// All of the players spaceship inherits 
 	/// this updatefunction, moves the spaceship
@@ -92,14 +115,15 @@ public class Spaceship_Player : Spaceship_Base {
 					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
-		}else if(sideSpeed < 0){
+		}if(sideSpeed < 0){
 			if(transform.position.x > -250.0f ){
 				moveShip (sideSpeed * maneuverSpeed);
 				if(transform.rotation.z < 0.3){
 					transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
-		}else{
+		}
+		if(sideSpeed == 0){
 			if (transform.rotation.z < -0.02f){
 				transform.Rotate(new Vector3(0,0,1) * maneuverSpeed * 2 * Time.deltaTime);
 			}else if(transform.rotation.z > 0.02f){
@@ -137,12 +161,12 @@ public class Spaceship_Player : Spaceship_Base {
 		if(dir != 0){
 			if(transform.position.x < 250.0f  ){
 				moveShip (shipManeuverSpeed()*dir);
-				if(transform.rotation.z > -0.3 && transform.rotation.z < 0.3){
+				if(transform.rotation.z < 0.3){
 					transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 				}
 			}else if(transform.position.x > -250.0f){
 				moveShip (shipManeuverSpeed()*dir);
-				if(transform.rotation.z > -0.3 && transform.rotation.z < 0.3){
+				if(transform.rotation.z > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 				}
 			}
@@ -181,7 +205,7 @@ public class Spaceship_Player : Spaceship_Base {
 	}
 	
 	public int shipShild(){
-		int sS = health +  (int)(health * (upgradeStates[0] / 10.0f));
+		int sS = health +  (int)(health * (upgradeStates[1] / 10.0f));
 		return sS;
 	}
 	

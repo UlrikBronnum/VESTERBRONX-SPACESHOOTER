@@ -13,10 +13,15 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 	private bool spwnWing = false;
 	private Vector3 tmpPos;
 
+	private string[] shaderNames;
+
 	public int EnemyDead = 0;
 
 	public void setSpawnBase () {
 		spawnBase.enemiesToSpawn = numberOfEnemies;
+		shaderNames = new string[2];
+		shaderNames[0] = "Mars";
+		shaderNames[1] = "Fart";
 	}
 
 	protected override void Start () {

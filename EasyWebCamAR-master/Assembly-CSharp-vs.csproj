@@ -78,11 +78,9 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordBehaviour.cs" />
      <Compile Include="Assets\Scripts\Ammunitions\NineMM.cs" />
      <Compile Include="Assets\Scripts\Ammunitions\Projectile_Base.cs" />
-     <Compile Include="Assets\Scripts\Charactor\Charactor_Class.cs" />
      <Compile Include="Assets\Scripts\Charactor\Player_Charactor.cs" />
      <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
-     <Compile Include="Assets\Scripts\GameLevels\AmmunitionShop_Level.cs" />
      <Compile Include="Assets\Scripts\GameLevels\AstroidBelt_Planet.cs" />
      <Compile Include="Assets\Scripts\GameLevels\CanonShop_Level.cs" />
      <Compile Include="Assets\Scripts\GameLevels\Hangar_Level.cs" />
@@ -100,6 +98,7 @@
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\Spaceship\EnemyFirstClass.cs" />
+     <Compile Include="Assets\Scripts\Spaceship\EnemySecondClass.cs" />
      <Compile Include="Assets\Scripts\Spaceship\SecondClass_Spaceship.cs" />
      <Compile Include="Assets\Scripts\Spaceship\Spaceship_Base.cs" />
      <Compile Include="Assets\Scripts\Spaceship\Spaceship_Enemy.cs" />
@@ -135,6 +134,7 @@
      <Compile Include="Assets\Scripts\Weapons\Weapons_Base.cs" />
      <Compile Include="Assets\Scripts\explosion.cs" />
      <Compile Include="Assets\Scripts\spawnScript.cs" />
+     <Compile Include="Assets\movement.cs" />
      <None Include="Assets\Model\ls87fl8ake0w-audi-r8\archibase.net.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\license_3rdpartynotice.txt" />

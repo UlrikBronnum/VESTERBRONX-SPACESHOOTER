@@ -4,7 +4,6 @@ using System.Collections;
 public class Weapons_Base : MonoBehaviour {
 
 	public Transform barrelEnd;
-	public GameObject ammunition;
 	public AudioClip fireExplosion;
 
 	public string ammoType;

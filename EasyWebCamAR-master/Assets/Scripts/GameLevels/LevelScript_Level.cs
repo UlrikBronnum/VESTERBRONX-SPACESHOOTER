@@ -5,6 +5,8 @@ public class LevelScript_Level : LevelScript_Base {
 
 	public GameObject[] button ;
 	public AButton buttonScript;
+
+
 	protected Spaceship_Player shipScr ;
 	protected SpawnControl_Enemy spwnScr;
 	
@@ -43,7 +45,10 @@ public class LevelScript_Level : LevelScript_Base {
 		button  = new GameObject[2];
 		button[0] = (GameObject)Object.Instantiate(Resources.Load ("AButton"));
 		button[0].SetActive(true);
+		button[0].guiTexture.pixelInset = new Rect(182,-175,100,100);
 		buttonScript = button[0].GetComponent<AButton>();
+
+
 		button[1] = (GameObject)Object.Instantiate(Resources.Load ("joystick"));
 		button[1].SetActive(true);
 		joystick = button[1].GetComponent<Joystick>();

@@ -1,20 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyFirstClass : Spaceship_Enemy {
-
+public class EnemySecondClass : Spaceship_Enemy {
+	
 	public override void Start() { 
 		cameraPos = GameObject.Find ("ARCamera").transform;
-		
 
 		renderer.material.shader = Shader.Find("Specular");
-		renderer.material.SetColor("_Color" , Color.blue);
-
+		renderer.material.SetColor("_Color" , Color.red);
 
 		canonScale = transform;
-		health = 200;
+		health = 400;
 		// Ship speed
-		maneuverSpeed = 200f;
+		maneuverSpeed = 300f;
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
 		
@@ -25,13 +23,14 @@ public class EnemyFirstClass : Spaceship_Enemy {
 
 		canonTypes[0] = "projectileCanon";
 		canonTypes[1] = "projectileCanon";
-		canonTypes[2] = "IonCanon";
-		canonTypes[3] = "IonCanon";
+		canonTypes[2] = "projectileCanon";
+		canonTypes[3] = "projectileCanon";
 
-		for (int i = 0 ; i < canonMountCapacity ; i ++){
+
+		
+		for (int i = 0 ; i < transform.childCount ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);
 			canonTypes[i] = canonTypes[i];
-	
 		}
 		// Give an intitial value to canon types
 		
@@ -43,17 +42,10 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 			mountCanon(i);
 		}
-		/*for (int i = 0 ; i < canonMountCapacity ; i ++){
-			Weapons_Base weaponScript = canonMount[i].GetComponent<Weapons_Base>();
-			weaponScript.setUpStates(0,0,0);
-			
-		}*/
-
 	}
 	public virtual void shipInitialization(){
-
-
+		
+		
 		
 	}
-
 }

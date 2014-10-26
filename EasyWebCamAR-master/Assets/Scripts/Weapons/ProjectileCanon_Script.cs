@@ -5,7 +5,7 @@ public class ProjectileCanon_Script : Weapons_Base {
 
 	public override void Start () 
 	{
-		ammoType = "Projectile";
+		ammoType = "Projectile1";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
