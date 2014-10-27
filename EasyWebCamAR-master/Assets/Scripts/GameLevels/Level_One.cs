@@ -29,7 +29,6 @@ public class Level_One : LevelScript_Level {
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,image.transform,true,true);
 		
 
-
 		newProp = "EnemySpawn";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,-4000,-20);
@@ -38,6 +37,7 @@ public class Level_One : LevelScript_Level {
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
 		spwnScr.numberOfEnemies = howManyEnemies;
 		spwnScr.setSpawnBase();
+
 
 
 		newProp = "MeteorSpawn";
@@ -60,7 +60,11 @@ public class Level_One : LevelScript_Level {
 		newRotation = new Vector3(0,0,0);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              image.transform, Color.yellow);
-
+		newProp = "Vortex";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,2,0);
+		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,image.transform);
 
 	}
 	public override void updateLevel(){

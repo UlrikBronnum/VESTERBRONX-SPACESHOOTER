@@ -54,6 +54,7 @@
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\readme_SDK.txt" />
+     <None Include="Assets\Depth Mask Example\Shaders\DepthMask.shader" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\QCAR\Streeeet.xml" />
