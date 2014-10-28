@@ -83,11 +83,11 @@ public class Mission_Menu_Level : LevelScript_Base {
 		
 		
 		if(missionState == "Home"){
-			if(GUI.Button(new Rect(Screen.width - 200, 0 ,200,100),levelNames[swipeScript.NumberOfSwipes])){
+			if(GUI.Button(new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/4),levelNames[swipeScript.NumberOfSwipes])){
 				missionState = levelNames[swipeScript.NumberOfSwipes];
 				levelLoaded = false;
 			}
-			if(GUI.Button(new Rect(0,0,200,100),"Back")){
+			if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
 				levels.Clear();
 				completed = true;	
 				closeLevel();

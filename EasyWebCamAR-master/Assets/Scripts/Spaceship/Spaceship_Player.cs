@@ -80,7 +80,7 @@ public class Spaceship_Player : Spaceship_Base {
 	/// </summary>
 	public override void Update () 
 	{
-		/*
+	
 		if(Application.platform == RuntimePlatform.WindowsEditor ||
 		   Application.platform == RuntimePlatform.OSXPlayer)
 		{
@@ -94,8 +94,7 @@ public class Spaceship_Player : Spaceship_Base {
 			if(IsActive)
 				androidControls(canonMountCapacity);
 		}
-		*/
-		androidControls(canonMountCapacity);
+
 	}
 	private void pcControls(int shipCapacity){
 		float sideSpeed;

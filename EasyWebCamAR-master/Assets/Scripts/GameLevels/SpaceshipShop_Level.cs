@@ -67,7 +67,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	}
 	
 	public override void levelGUI(){
-		if(GUI.Button(new Rect(Screen.width/10 * 1,Screen.height/10 * 9 ,200,100),"Switch Ship -")){
+		if(GUI.Button(new Rect(Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Ship -")){
 			props[shipSelected].SetActive(false);
 			shipSelected--;
 			if(shipSelected < 0){
@@ -85,7 +85,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			}
 		}
 		
-		if(GUI.Button(new Rect(Screen.width/10 *9-100,Screen.height/10 * 9 ,200,100),"Switch Ship + ")){
+		if(GUI.Button(new Rect(Screen.width-Screen.width/4-Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Ship + ")){
 			props[shipSelected].SetActive(false);
 			shipSelected++;
 			if(shipSelected > 3){
@@ -141,7 +141,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 		}
 		
 		
-		if(GUI.Button(new Rect(0,0,200,100),"Back")){
+		if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
 			completed = true;
 			closeLevel();
 		}

@@ -67,7 +67,7 @@ public class CanonShop_Level : LevelScript_Base {
 	}
 	
 	public override void levelGUI(){
-		if(GUI.Button(new Rect(Screen.width/10 * 1,Screen.height/10 * 9 ,200,100),"Switch Canon -")){
+		if(GUI.Button(new Rect(Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Canon -")){
 			props[canonSelected].SetActive(false);
 			canonSelected--;
 			if(canonSelected < 0){
@@ -86,7 +86,7 @@ public class CanonShop_Level : LevelScript_Base {
 			}
 		}
 		
-		if(GUI.Button(new Rect(Screen.width/10 *9-100,Screen.height/10 * 9 ,200,100),"Switch Canon + ")){
+		if(GUI.Button(new Rect(Screen.width-Screen.width/4-Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Canon + ")){
 			props[canonSelected].SetActive(false);
 			canonSelected++;
 			if(canonSelected > 3){
@@ -147,7 +147,7 @@ public class CanonShop_Level : LevelScript_Base {
 		}
 		
 		
-		if(GUI.Button(new Rect(0,0,200,100),"Back")){
+		if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
 			completed = true;
 			closeLevel();
 		}

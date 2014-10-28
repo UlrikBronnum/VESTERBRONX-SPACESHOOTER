@@ -117,6 +117,7 @@
      <Compile Include="Assets\Scripts\Spawn\SpawnControl_Base.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnControl_Enemy.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnControl_Props.cs" />
+     <Compile Include="Assets\Scripts\Spawn\TextureDemo.cs" />
      <Compile Include="Assets\Scripts\StartScript.cs" />
      <Compile Include="Assets\Scripts\Twirl.cs" />
      <Compile Include="Assets\Scripts\UFO\Enemy_UFO.cs" />
@@ -153,6 +154,7 @@
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\QCAR\Streeeet.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Depth Mask Example\Shaders\TextureDemo.shader" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\BrightTexture.shader" />
      <None Include="Assets\StreamingAssets\QCAR\ARTest.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\Text3D.shader" />

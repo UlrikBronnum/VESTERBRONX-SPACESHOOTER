@@ -116,7 +116,7 @@ public class Level_One : LevelScript_Level {
 
 	public override void levelGUI(){
 		if(spwnScr.spawnEmpty){
-			GUI.TextField(new Rect(Screen.width/2 - 120,Screen.height - 50,240,100), endGame + "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
+			GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4), endGame + "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
 		}
 
 
