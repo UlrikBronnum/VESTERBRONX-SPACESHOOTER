@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Depth Mask Example\Scripts\Animation\BobbingBoat.cs" />
+     <Compile Include="Assets\Depth Mask Example\Scripts\SetRenderQueue.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CloudRecoBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CylinderTargetBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DataSetLoadBehaviour.cs" />
@@ -78,6 +80,7 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordBehaviour.cs" />
      <Compile Include="Assets\Scripts\Ammunitions\NineMM.cs" />
      <Compile Include="Assets\Scripts\Ammunitions\Projectile_Base.cs" />
+     <Compile Include="Assets\Scripts\CameraSwipe.cs" />
      <Compile Include="Assets\Scripts\Charactor\Player_Charactor.cs" />
      <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
@@ -129,6 +132,7 @@
      <Compile Include="Assets\Scripts\Utilities\ProfileSavenLoad.cs" />
      <Compile Include="Assets\Scripts\Utilities\SmoothCamera.cs" />
      <Compile Include="Assets\Scripts\Utilities\TouchLogic.cs" />
+     <Compile Include="Assets\Scripts\VertexScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\IonCanon_Script.cs" />
      <Compile Include="Assets\Scripts\Weapons\ProjectileCanon_Script.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapons_Base.cs" />
@@ -140,6 +144,7 @@
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\readme_SDK.txt" />
+     <None Include="Assets\Depth Mask Example\Shaders\DepthMask.shader" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\QCAR\Streeeet.xml" />

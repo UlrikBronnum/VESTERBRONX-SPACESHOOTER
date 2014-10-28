@@ -48,7 +48,12 @@ public class Level_Two :  LevelScript_Level {
 		newRotation = new Vector3(0,0,0);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              image.transform, Color.yellow);
-		
+
+		newProp = "Vortex";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,2,0);
+		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,image.transform);
 		
 	}
 	public override void updateLevel(){
