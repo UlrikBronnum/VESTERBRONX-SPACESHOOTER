@@ -9,9 +9,10 @@ public class Solar_System : Planet_Base {
 
 	public List<GameObject> moonObjects = new List<GameObject>();
 	public float moonOrbit;
+	public int numberOfChildren;
 
-	private float[] sizes = {25,25,25,25,25,25,25,25};
-	private float[] spacing = {50,100,150,200,250,300,350,400};
+	private float sizes = 150;
+	private float[] spacing = {300,600,900,1200,1500,1800,2100,2400};
 
 	private string[] propName = {"Sun","Sun","Sun","Sun","Sun","Sun","Sun","Sun" };
 
@@ -26,9 +27,9 @@ public class Solar_System : Planet_Base {
 		Vector3 newPosition;
 		Vector3 newRotation;
 
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < numberOfChildren; i++) {
 			newProp = propName[i];
-			newScale = new Vector3(sizes[i],sizes[i],sizes[i]);
+			newScale = new Vector3(sizes,sizes,sizes);
 			newPosition = new Vector3(spacing[i],0,0);
 			newRotation = new Vector3(0,0,0);
 			createSceneObject(newProp,newScale,newPosition,newRotation,player.transform);

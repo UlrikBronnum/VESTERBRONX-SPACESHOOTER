@@ -57,7 +57,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	{
 		if(!completed ){
 			price = props[shipSelected].GetComponent<Spaceship_Player>().shipValue;
-			Debug.Log(price );
 		}else{
 			
 		}
@@ -76,7 +75,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			}
 			props[shipSelected].SetActive(true);
 			price = props[shipSelected].GetComponent<Spaceship_Player>().shipValue;
-			Debug.Log(price );
 			hasShip = false;
 			
 			for(int i = 0 ; i < script.hangar.shipTypes.Count ; i++){
@@ -95,7 +93,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			}
 			props[shipSelected].SetActive(true);
 			price = props[shipSelected].GetComponent<Spaceship_Player>().shipValue;
-			Debug.Log(price );
 			hasShip = false;
 			
 			for(int i = 0 ; i < script.hangar.shipTypes.Count ; i++){
@@ -113,7 +110,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 				{
 					script.hangar.shipUpgrade1[shipPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1);
-					Debug.Log(script.hangar.shipUpgrade1[shipPos]);
 				}
 			}
 			if(script.hangar.shipUpgrade2[shipPos] < 3 && script.credits > calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1)){
@@ -121,7 +117,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 				{
 					script.hangar.shipUpgrade2[shipPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1);
-					Debug.Log(script.hangar.shipUpgrade2[shipPos]);
 				}
 			}
 			if(script.hangar.shipUpgrade3[shipPos] < 3 && script.credits > calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1)){
@@ -129,7 +124,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 				{
 					script.hangar.shipUpgrade3[shipPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1);
-					Debug.Log(script.hangar.shipUpgrade3[shipPos]);
 				}
 			}
 		}else {
@@ -139,7 +133,6 @@ public class SpaceshipShop_Level : LevelScript_Base {
 					script.hangar.addToShipUpgrades();
 					script.hangar.addSpaceshipToHangar(ships[shipSelected]);
 					script.credits -= price;
-					Debug.Log("Buy Ship");
 					hasShip = true;
 					shipPos = shipPos + 1;
 				}

@@ -108,7 +108,6 @@ public class Level_One : LevelScript_Level {
 				Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
 				shipScript.gameObject.SetActive(false);
 				shipScript.IsActive = false;
-				Debug.Log("Empty");
 			}
 			
 		}

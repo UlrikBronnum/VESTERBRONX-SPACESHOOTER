@@ -59,7 +59,7 @@ public class LevelScript_Level : LevelScript_Base {
 			Destroy(button[i]);
 		}
 	}
-	
+
 	protected void sentButtonInput(){
 		shipScr.getButtonInput(buttonScript.touch, joystickInput);
 	}

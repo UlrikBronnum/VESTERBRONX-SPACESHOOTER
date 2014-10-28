@@ -1,15 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameLevels\Level_One.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Spaceship\Spaceship_Enemy.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameLevels\Level_One.cs" Line="63" Column="20" />
-      <File FileName="Assets\Scripts\GameLevels\Mission_Level.cs" Line="76" Column="29" />
-      <File FileName="Assets\Scripts\Spawn\SpawnControl_Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Charactor\Player_Charactor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Spaceship\Spaceship_Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UFO\Solar_System.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameLevels\LevelScript_Base.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameLevels\Level_Two.cs" Line="52" Column="20" />
+      <File FileName="Assets\Scripts\Spaceship\Spaceship_Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Spaceship\EnemyFirstClass.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

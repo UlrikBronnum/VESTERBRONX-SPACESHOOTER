@@ -166,7 +166,7 @@ public class Player_Charactor : MonoBehaviour
 	private void setLevels(){
 		Hangar_Level newHangarLevel = gameObject.AddComponent("Hangar_Level") as Hangar_Level;
 		levels.Add (newHangarLevel);
-		Mission_Level newMissionLevel = gameObject.AddComponent("Mission_Level") as Mission_Level;
+		Mission_Menu_Level newMissionLevel = gameObject.AddComponent("Mission_Menu_Level") as Mission_Menu_Level;
 		levels.Add(newMissionLevel);
 		CanonShop_Level newCanonLevel = gameObject.AddComponent("CanonShop_Level") as CanonShop_Level;
 		levels.Add(newCanonLevel);

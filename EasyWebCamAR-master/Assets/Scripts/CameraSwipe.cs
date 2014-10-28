@@ -5,14 +5,14 @@ public class CameraSwipe : MonoBehaviour {
 
 	Vector2 StartPos;
 	int swipeID = -1;
-	float minMovement = 50.0f;
+	float minMovement = 150.0f;
 
 	// Use this for initialization
 
 	public int numberOfSwipes = 0;
 	public int maxNumberOfSwipes = 7;
 	public int targetPos = 0;
-	public float speed = 1F;
+	public float speed = 200F;
 	public bool swipe = false;
 
 	void Update() {
@@ -34,14 +34,14 @@ public class CameraSwipe : MonoBehaviour {
 							if(numberOfSwipes>=1){
 							Debug.Log ("Swipe Right Found");
 							swipe = true;
-							targetPos +=50;
+							targetPos +=300;
 							numberOfSwipes-=1;
 							}
 						} else {
 							if(numberOfSwipes<maxNumberOfSwipes){
 							Debug.Log ("Swipe Left Found");
 							swipe = true;
-							targetPos -=50;
+							targetPos -=300;
 							numberOfSwipes+=1;
 							}
 						}
