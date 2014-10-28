@@ -34,7 +34,6 @@ public class Player_Charactor : MonoBehaviour
 		setLevels();
 
 
-
 		if(profileMan.filePresent()){
 			profileMan.gameLoad();
 			Debug.Log("Load");
@@ -101,25 +100,25 @@ public class Player_Charactor : MonoBehaviour
 
 	public void OnGUI(){
 		if(systemState == "Menu"){
-			if(GUI.Button(new Rect(0,0,200,100),"Hangar")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2),Screen.width/3,Screen.height/5),"Hangar")){
 				systemState = "Hangar";
 				levelLoaded = false;
 				levels[0].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(0,100,200,100),"MissionLevel")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+(Screen.height/5),Screen.width/3,Screen.height/5),"MissionLevel")){
 				systemState = "MissionLevel";
 				levelLoaded = false;
 				levels[1].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(0,200,200,100),"CanonShop")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/3,Screen.height/5),"CanonShop")){
 				systemState = "CanonShop";
 				levelLoaded = false;
 				levels[2].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(0,300,200,100),"ShipShop")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+3*(Screen.height/5),Screen.width/3,Screen.height/5),"ShipShop")){
 				systemState = "ShipShop";
 				levelLoaded = false;
 				levels[3].loadLevel();
