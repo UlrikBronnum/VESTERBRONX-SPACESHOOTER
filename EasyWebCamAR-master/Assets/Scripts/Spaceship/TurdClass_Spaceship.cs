@@ -51,6 +51,6 @@ public class TurdClass_Spaceship : Spaceship_Player {
 			mountCanon(i);
 		}
 	}
-	// 
+	 
 
 }

@@ -95,6 +95,7 @@ public class Spaceship_Player : Spaceship_Base {
 				androidControls(canonMountCapacity);
 		}
 
+
 	}
 	private void pcControls(int shipCapacity){
 		float sideSpeed;
@@ -110,7 +111,7 @@ public class Spaceship_Player : Spaceship_Base {
 		if(sideSpeed > 0){
 			if(transform.position.x < 250.0f){
 				moveShip (sideSpeed * maneuverSpeed);
-				if(transform.rotation.z > -0.3){
+				if(transform.rotation.y > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * -maneuverSpeed * 2 * Time.deltaTime);
 				}
 			}
@@ -150,33 +151,49 @@ public class Spaceship_Player : Spaceship_Base {
 	
 	private void androidControls(int shipCapacity){
 
-	
-
 
 		if(dir < 0.01 && dir > -0.01)
 		{
 			dir = 0;
 		}
-		if(dir != 0){
-			if(transform.position.x < 250.0f  ){
-				moveShip (shipManeuverSpeed()*dir);
-				if(transform.rotation.z < 0.3){
-					transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
+		//if (transform.position.x < 250.0f && transform.position.x > -250.0f) {
+						if (dir != 0) {
+								moveShip (shipManeuverSpeed () * dir);
+								//	}
+								if (transform.rotation.y > 320 && transform.rotation.y < 400) {
+										transform.Rotate (new Vector3 (0, 0, 1) * -dir * shipManeuverSpeed () * 2 * Time.deltaTime);
+										
+										//}
+								}
+
+						}
+				//}
+		// checks if the spaceship is out of border!
+			else if (transform.position.x > 250.0f) {
+			Vector3 temp = transform.position; 
+			temp.x = 249.0f; 
+			transform.position = temp; 
+				} else if (transform.position.x < -250.0f) {
+			Vector3 temp = transform.position; 
+			temp.x = -249f; 
+			transform.position = temp;  
 				}
-			}else if(transform.position.x > -250.0f){
+		      //  else
+			//transform.Rotate(new Vector3(0,0,0));
+		/*	else if(transform.position.x > -250.0f){
 				moveShip (shipManeuverSpeed()*dir);
-				if(transform.rotation.z > -0.3){
+				//if(transform.rotation.z > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * dir * shipManeuverSpeed() * 2 * Time.deltaTime);
-				}
+				//}
 			}
-		}
-		else{
+		}*/
+		/*else{
 			if (transform.rotation.z < - 0.02f){
 				transform.Rotate(new Vector3(0,0,1)  * shipManeuverSpeed() * 2 * Time.deltaTime);
 			}else if(transform.rotation.z > 0.02f){
 				transform.Rotate(new Vector3(0,0,1)  * -shipManeuverSpeed() * 2 * Time.deltaTime);
 			}
-		}
+		}*/
 
 		if(fire){
 			for(int i = 0; i < shipCapacity; i++){
@@ -190,7 +207,6 @@ public class Spaceship_Player : Spaceship_Base {
 				}
 			}
 		}
-
 	}
 
 	public void setUpStates(int up1, int up2, int up3){
@@ -220,28 +236,36 @@ public class Spaceship_Player : Spaceship_Base {
 		cc.Move (speed * Time.deltaTime);
 	}
 
-	/*
+
 	public override void takeDamage(int damage){
 		health -= damage;
-		if(health>=0){
+		if(health<=0){
 			die();}
 	}
 	// if the player is out of health, it will die. 
 	public void die(){
-		// die stuff in here
+		Destroy (gameObject);
 
 	}
 
 
 	void OnCollisionEnter(Collision other)
 	{
-		//If the enemy have the tag enemy run this
-		if(other.collider.tag =="enemy")
+		//If the enemy collides with the player and has the tag " enemy", following will run:
+		if(other.collider.tag =="Enemy")
 		{
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
-			takeDamage(other.collider.GetComponent<Spaceship_Enemy>().damage);
+			takeDamage(other.collider.GetComponent<Spaceship_Enemy>().collisionDamage);
+			Destroy (other.collider.gameObject);
+			other.collider.GetComponent<Spaceship_Enemy>().Parent.deadEnemy++;
 		}
-	}*/
+		if(other.collider.tag =="EnemyProjectile")
+		{
+			//Run a function to subtract damage from the player's health, according to the damage of the enemy
+			takeDamage(other.collider.GetComponent<Projectile_Base>().damage);
+			Destroy (other.collider.gameObject);
+		}
+	}
 
 
 

@@ -13,8 +13,12 @@ public class EnemySecondClass : Spaceship_Enemy {
 		health = 400;
 		// Ship speed
 		maneuverSpeed = 300f;
+		// damage inflicted if the player collides with this enemy
+		collisionDamage = 100;
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
+		// sets the rate of fire for the guns of this Enemy:
+		enemyFireRate = 1;
 		
 		
 		// Find the canon mounts on model
@@ -42,6 +46,9 @@ public class EnemySecondClass : Spaceship_Enemy {
 		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 			mountCanon(i);
 		}
+		// this function determines how often the ship will fire
+		//setRateofFire ();
+
 	}
 	public virtual void shipInitialization(){
 		

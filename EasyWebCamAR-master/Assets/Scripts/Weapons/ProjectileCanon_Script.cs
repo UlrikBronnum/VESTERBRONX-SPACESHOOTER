@@ -11,12 +11,17 @@ public class ProjectileCanon_Script : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 1500;
 		// Damage of projetile
-		projectileDamage = 5;
+		projectileDamage = 1;
 		// the rate of fire value
-		rateOfFire = 3/10f;
+		rateOfFire = 1/2f;
 		// magasin capacity
 		magCapacity = 5000;
 
 		fireTimer = new EventTimer_Base(rateOfFire);
+	}
+
+	public void update(){
+		
+		print ("Rate OF FIRE: " + rateOfFire);
 	}
 }

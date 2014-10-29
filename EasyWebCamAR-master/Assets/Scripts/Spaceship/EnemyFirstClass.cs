@@ -15,10 +15,14 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		health = 200;
 		// Ship speed
 		maneuverSpeed = 200f;
+
+		// damage inflicted if the player collides with this enemy
+		collisionDamage = 100;
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
-		
-		
+		// sets the rate of fire for the guns of this Enemy:
+		enemyFireRate = 1;
+
 		// Find the canon mounts on model
 		canonMount = new Transform[canonMountCapacity];
 		canonTypes = new string[canonMountCapacity];
@@ -31,7 +35,6 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		for (int i = 0 ; i < canonMountCapacity ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);
 			canonTypes[i] = canonTypes[i];
-	
 		}
 		// Give an intitial value to canon types
 		
@@ -43,11 +46,9 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 			mountCanon(i);
 		}
-		/*for (int i = 0 ; i < canonMountCapacity ; i ++){
-			Weapons_Base weaponScript = canonMount[i].GetComponent<Weapons_Base>();
-			weaponScript.setUpStates(0,0,0);
-			
-		}*/
+
+		// this function determines how often the ship will fire
+		//setRateofFire ();
 
 	}
 	public virtual void shipInitialization(){

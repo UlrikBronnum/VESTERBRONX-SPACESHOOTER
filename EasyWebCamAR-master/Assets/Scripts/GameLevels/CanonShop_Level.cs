@@ -7,8 +7,6 @@ public class CanonShop_Level : LevelScript_Base {
 	private string[] canons = new string[4];
 	private bool hasGun = false;
 	private int gunPos = 0;
-	
-	
 	private int price;
 	
 	public override void loadLevel()
@@ -105,7 +103,7 @@ public class CanonShop_Level : LevelScript_Base {
 			}
 			
 		}
-		
+
 		if(hasGun){
 			if(script.hangar.canonUpgrade1[gunPos] < 3 && script.credits > calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1)){
 				if(GUI.Button(new Rect(Screen.width/2 - 200,0 ,200,100),"Upgrade: Rate of fire" + "\n" + "Price: " + calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1) ))

@@ -12,12 +12,13 @@ public class IonCanon_Script : Weapons_Base {
 		// Damage of projetile
 		projectileDamage = 20;
 		// the rate of fire value
-		rateOfFire = 3/10f;
+		rateOfFire = 1/2f;
 		// magasin capacity
 		magCapacity = 5000;
 		
 		fireTimer = new EventTimer_Base(rateOfFire);
 	}
+
 
 
 }

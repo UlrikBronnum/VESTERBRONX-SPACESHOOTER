@@ -19,7 +19,7 @@ public class Weapons_Base : MonoBehaviour {
 	// magasin capacity
 	public int magCapacity;
 
-	protected EventTimer_Base fireTimer;
+	public EventTimer_Base fireTimer;
 
 
 
@@ -31,6 +31,20 @@ public class Weapons_Base : MonoBehaviour {
 		if(fireTimer.timerTick()){
 			audio.PlayOneShot(fireExplosion);
 			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
+			Projectile_Base script = newShot.GetComponent<Projectile_Base>();
+			script.setProjectileDamage(weaponDamage());
+			newShot.transform.position = barrelEnd.position;
+			newShot.transform.rotation = barrelEnd.rotation;
+			Debug.Log(weaponRateOfFire() + " " + weaponDamage() + " " + weaponCapacity());
+		}
+	}
+
+	public void EnemyFireWeapon(){
+		if(fireTimer.timerTick()){
+			audio.PlayOneShot(fireExplosion);
+			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
+			newShot.tag = "EnemyProjectile";
+			newShot.layer =LayerMask.NameToLayer("EnemyProjectile");
 			Projectile_Base script = newShot.GetComponent<Projectile_Base>();
 			script.setProjectileDamage(weaponDamage());
 			newShot.transform.position = barrelEnd.position;
@@ -58,6 +72,8 @@ public class Weapons_Base : MonoBehaviour {
 		int wCap = magCapacity + (int) (magCapacity * (upgradeStates[2] / 10.0f));
 		return wCap;
 	}
+
+
 
 
 

@@ -43,6 +43,7 @@ public class Spaceship_Base : MonoBehaviour {
 	protected int health;
 
 
+
 	public virtual void shipInitialization(){}
 	public virtual void Update () {}
 

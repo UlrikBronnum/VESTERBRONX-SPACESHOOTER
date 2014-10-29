@@ -6,7 +6,13 @@ public class Spaceship_Enemy : Spaceship_Base {
 	private float objectVelocity;
 	private float lifeSpan;
 	private EventTimer_Base timer;
-	protected Transform cameraPos; 
+	protected Transform cameraPos;
+
+	// The rate of fire is set in the child classes of the class and sets the rate of fire for the enemy's weapons
+	protected float enemyFireRate;
+
+	// collisionDamage of the ENEMY
+	public int collisionDamage;
 
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
@@ -17,6 +23,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	public void  resetTimer(){
 		timer.resetTimer();
 	}
+
 	// Update is called once per frame
 	public override void Update () {
 
@@ -32,22 +39,33 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(transform.position.y > cameraPos.transform.position.y){	
 			Destroy(gameObject);
 		}
-		RaycastHit hit;
-		Ray weaponSight = new Ray(transform.position,Vector3.forward);
-		Debug.DrawRay(transform.position,Vector3.forward, Color.blue);
+		//	RaycastHit hit;
+		//	Ray weaponSight = new Ray(transform.position,Vector3.forward);
+		//	Debug.DrawRay(transform.position,Vector3.forward, Color.blue);
 
-		if(Physics.Raycast(weaponSight,out hit, 5000f)){
-			if(hit.collider.tag == "Player"){
+		//if(Physics.Raycast(weaponSight,out hit, 5000f)){
+			//if(hit.collider.tag == "Player"){
 
-				for(int i = 0; i < canonMountCapacity; i++){
-					Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
-					script.fireWeapon();
+				
+			//}
+		//}
+		for (int i = 0; i < canonMountCapacity; i++) {
+				Weapons_Base script = canonMounted [i].GetComponent<Weapons_Base> ();
+						script.EnemyFireWeapon ();
 				}
-			}
-		}
+
+
 
 	}
 
+	protected void setRateofFire(){
+		for (int i = 0; i < canonMountCapacity; i++) {
+				Weapons_Base script = canonMounted [i].GetComponent<Weapons_Base> ();
+				script.rateOfFire = enemyFireRate; 
+		//	script.fireTimer.TimerValue =enemyFireRate;
+		//	script.fireTimer.resetTimer();
+			}
+	}
 
 
 	public void initTimer(float life){
@@ -58,7 +76,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 	public override void takeDamage(int damage){
 		health -= damage;
-		if(health>=0)
+		if(health<=0)
 		{
 			Parent.deadEnemy++;
 			Destroy(gameObject);
@@ -74,7 +92,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	void OnCollisionEnter(Collision other)
 	{
 		//If the object has the tag projectile run this
-		if(other.collider.tag =="projectile")
+		if(other.collider.tag =="PlayerProjectile")
 		{
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
 			takeDamage(other.collider.GetComponent<Projectile_Base>().damage);
