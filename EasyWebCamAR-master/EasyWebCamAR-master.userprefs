@@ -1,19 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spawn/TextureDemo.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy_the_prostitute.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameLevels/Level_One.cs" Line="119" Column="24" />
-      <File FileName="Assets/Scripts/Utilities/ProfileSavenLoad.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Charactor/Player_Charactor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/CanonShop_Level.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/Hangar_Level.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/LevelScript_Level.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/Mission_Level.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/LevelScript_Base.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/Mission_Menu_Level.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/Planet_One_Level.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameLevels/SpaceshipShop_Level.cs" Line="77" Column="75" />
-      <File FileName="Assets/Scripts/Spawn/TextureDemo.cs" Line="6" Column="17" />
+      <File FileName="Assets\Scripts\Enemy_the_prostitute.cs" Line="17" Column="24" />
+      <File FileName="Assets\Scripts\Enemy_the_bikemonster.cs" Line="15" Column="15" />
+      <File FileName="Assets\Scripts\Enemy_The_ChristianiaCykel.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\Enemy_the_ufo.cs" Line="15" Column="15" />
+      <File FileName="Assets\Scripts\Enemy_the_needle1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Weapons\IonCanon_Script.cs" Line="10" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
