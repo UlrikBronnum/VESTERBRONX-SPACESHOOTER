@@ -84,6 +84,15 @@
      <Compile Include="Assets\Scripts\Charactor\Player_Charactor.cs" />
      <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
+     <Compile Include="Assets\Scripts\Enemy_The_ChristianiaCykel.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_bikemonster.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_dove.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_needle.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_needle1.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_prostitute.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_spikeship.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_ufo.cs" />
+     <Compile Include="Assets\Scripts\Enemy_the_x_fighter.cs" />
      <Compile Include="Assets\Scripts\GameLevels\AstroidBelt_Planet.cs" />
      <Compile Include="Assets\Scripts\GameLevels\CanonShop_Level.cs" />
      <Compile Include="Assets\Scripts\GameLevels\Hangar_Level.cs" />
@@ -106,6 +115,7 @@
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\Spaceship\EnemyFirstClass.cs" />
      <Compile Include="Assets\Scripts\Spaceship\EnemySecondClass.cs" />
+     <Compile Include="Assets\Scripts\Spaceship\Enemy_The_Rat_One.cs" />
      <Compile Include="Assets\Scripts\Spaceship\SecondClass_Spaceship.cs" />
      <Compile Include="Assets\Scripts\Spaceship\Spaceship_Base.cs" />
      <Compile Include="Assets\Scripts\Spaceship\Spaceship_Enemy.cs" />
