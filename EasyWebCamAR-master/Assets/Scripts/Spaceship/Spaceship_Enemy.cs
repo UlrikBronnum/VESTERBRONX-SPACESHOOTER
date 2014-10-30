@@ -57,13 +57,26 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 
 	}
-
+	public override void initializeCanon(Transform scale, int i){
+		canonMounted[i] = (GameObject)Object.Instantiate(Resources.Load(canonTypes[i]));
+		Transform thisTrans = canonMounted[i].transform;
+		canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
+		canonMounted[i].transform.position = canonMount[i].position;
+		canonMounted[i].transform.rotation = canonMount[i].rotation;
+		canonMounted[i].transform.parent = canonMount[i].transform;
+		Weapons_Base wwscript = canonMounted [i].GetComponent<Weapons_Base> ();
+		wwscript.setFireRate (enemyFireRate);
+		print ("firerate" + wwscript.rateOfFire + "Timer" + wwscript.fireTimer.TimerValue + "other" + wwscript.fireTimer._timer);
+			
+	}
 	protected void setRateofFire(){
 		for (int i = 0; i < canonMountCapacity; i++) {
 				Weapons_Base script = canonMounted [i].GetComponent<Weapons_Base> ();
 				script.rateOfFire = enemyFireRate; 
-		//	script.fireTimer.TimerValue =enemyFireRate;
-		//	script.fireTimer.resetTimer();
+				script.fireTimer.TimerValue =20f;
+				script.fireTimer.resetTimer();
+				print ("firerate" + script.rateOfFire + "Timer" + script.fireTimer.TimerValue + "other" + script.fireTimer._timer);
+				
 			}
 	}
 

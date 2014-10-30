@@ -5,7 +5,7 @@ using System.IO;
 public class EventTimer_Base {
 
 	private float timerValue;
-	private float _timer;
+	public float _timer;
 
 
 	public EventTimer_Base(float timeInterval) //starting a new time

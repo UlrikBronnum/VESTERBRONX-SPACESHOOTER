@@ -61,7 +61,7 @@ public class Spaceship_Player : Spaceship_Base {
 		
 		Weapons_Base wScript = canonMounted[i].GetComponent<Weapons_Base>();
 		Player_Charactor hScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
-
+		wScript.setFireRatePl (10f);
 
 		for(int j = 0; j < hScript.hangar.canonTypes.Count ; j++){
 			if (hScript.hangar.canonTypes[j] == canonTypes[i]){
@@ -81,7 +81,7 @@ public class Spaceship_Player : Spaceship_Base {
 	public override void Update () 
 	{
 	
-		if(Application.platform == RuntimePlatform.WindowsEditor ||
+	/*	if(Application.platform == RuntimePlatform.WindowsEditor ||
 		   Application.platform == RuntimePlatform.OSXPlayer)
 		{
 			if(IsActive)
@@ -93,11 +93,11 @@ public class Spaceship_Player : Spaceship_Base {
 		{
 			if(IsActive)
 				androidControls(canonMountCapacity);
-		}
-
+		}*/
+		androidControls(canonMountCapacity);
 
 	}
-	private void pcControls(int shipCapacity){
+	/*private void pcControls(int shipCapacity){
 		float sideSpeed;
 
 		if(Input.GetKey("left")){
@@ -147,7 +147,7 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 		
 
-	}
+	}*/
 	
 	private void androidControls(int shipCapacity){
 

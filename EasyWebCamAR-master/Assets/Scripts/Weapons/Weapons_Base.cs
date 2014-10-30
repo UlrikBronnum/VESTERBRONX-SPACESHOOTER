@@ -21,12 +21,20 @@ public class Weapons_Base : MonoBehaviour {
 
 	public EventTimer_Base fireTimer;
 
+	public float playerFireRate;
 
 
 	// Use this for initialization
 	public virtual void Start () {}
-	
 
+	public void setFireRatePl(float playerFireRate){
+		rateOfFire = playerFireRate;
+		fireTimer = new EventTimer_Base(rateOfFire);
+	}
+	public void setFireRate(float newFire){
+		rateOfFire = newFire;
+		fireTimer = new EventTimer_Base(rateOfFire);
+	}
 	public void fireWeapon(){
 		if(fireTimer.timerTick()){
 			audio.PlayOneShot(fireExplosion);

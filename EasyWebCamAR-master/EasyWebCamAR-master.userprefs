@@ -1,29 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy_the_prostitute.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameLevels/Hangar_Level.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemy_the_prostitute.cs" Line="17" Column="24" />
-      <File FileName="Assets\Scripts\Enemy_the_bikemonster.cs" Line="15" Column="15" />
-      <File FileName="Assets\Scripts\Enemy_The_ChristianiaCykel.cs" Line="5" Column="1" />
-      <File FileName="Assets\Scripts\Enemy_the_ufo.cs" Line="15" Column="15" />
-      <File FileName="Assets\Scripts\Enemy_the_needle1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Weapons\IonCanon_Script.cs" Line="10" Column="38" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spaceship/Spaceship_Player.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Spaceship/Spaceship_Base.cs" Line="67" Column="45" />
-      <File FileName="Assets/Scripts/Spaceship/Spaceship_Enemy.cs" Line="27" Column="36" />
-      <File FileName="Assets/Scripts/Spaceship/EnemyFirstClass.cs" Line="37" Column="34" />
-      <File FileName="Assets/Scripts/Spaceship/Spaceship_Player.cs" Line="84" Column="3" />
-      <File FileName="Assets/Scripts/Weapons/IonCanon_Script.cs" Line="21" Column="2" />
-      <File FileName="Assets/Scripts/Ammunitions/NineMM.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Weapons/Weapons_Base.cs" Line="52" Column="1" />
-      <File FileName="Assets/Scripts/Spaceship/EnemySecondClass.cs" Line="37" Column="34" />
-      <File FileName="Assets/Scripts/Weapons/ProjectileCanon_Script.cs" Line="26" Column="3" />
-      <File FileName="Assets/Scripts/GameLevels/CanonShop_Level.cs" Line="9" Column="25" />
-      <File FileName="Assets/Scripts/GameLevels/Level_One.cs" Line="28" Column="33" />
->>>>>>> Stashed changes
+      <File FileName="Assets/Scripts/GameLevels/CanonShop_Level.cs" Line="16" Column="25" />
+      <File FileName="Assets/Scripts/Charactor/Player_Charactor.cs" Line="70" Column="4" />
+      <File FileName="Assets/Scripts/GameLevels/Hangar_Level.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

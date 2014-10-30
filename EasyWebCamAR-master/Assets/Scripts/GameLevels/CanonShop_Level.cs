@@ -8,6 +8,12 @@ public class CanonShop_Level : LevelScript_Base {
 	private bool hasGun = false;
 	private int gunPos = 0;
 	private int price;
+
+	// textures for the interface:
+	public Texture hangarTex;
+	public Texture missionTex;
+	public Texture canonTex;
+	public Texture shipTex;
 	
 	public override void loadLevel()
 	{

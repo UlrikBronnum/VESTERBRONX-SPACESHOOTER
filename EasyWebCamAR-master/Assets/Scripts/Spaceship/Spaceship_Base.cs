@@ -62,15 +62,7 @@ public class Spaceship_Base : MonoBehaviour {
 	}
 
 	public virtual void initializeCanon(Transform scale, int i){
-		canonMounted[i] = (GameObject)Object.Instantiate(Resources.Load(canonTypes[i]));
-		Transform thisTrans = canonMounted[i].transform;
-		canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
-		canonMounted[i].transform.position = canonMount[i].position;
-		canonMounted[i].transform.rotation = canonMount[i].rotation;
-		canonMounted[i].transform.parent = canonMount[i].transform;
-		
-		
-		
+
 	}
 	// Destroys unwanted canon prefabs
 	public void removeCanon(int mount){

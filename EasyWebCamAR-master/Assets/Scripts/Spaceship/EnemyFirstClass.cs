@@ -21,16 +21,17 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
 		// sets the rate of fire for the guns of this Enemy:
-		enemyFireRate = 1;
+		enemyFireRate = 5;
 
 		// Find the canon mounts on model
 		canonMount = new Transform[canonMountCapacity];
 		canonTypes = new string[canonMountCapacity];
 
-		canonTypes[0] = "projectileCanon";
-		canonTypes[1] = "projectileCanon";
-		canonTypes[2] = "IonCanon";
-		canonTypes[3] = "IonCanon";
+		// the guns of this enemy:
+		//canonTypes[0] = "projectileCanon";
+		//canonTypes[1] = "projectileCanon";
+		//canonTypes[2] = "IonCanon";
+		//canonTypes[3] = "IonCanon";
 
 		for (int i = 0 ; i < canonMountCapacity ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);

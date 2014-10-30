@@ -21,6 +21,13 @@ public class Player_Charactor : MonoBehaviour
 
 	public ProfileSavenLoad profileMan;
 
+	// textures for the interface:
+	public Texture hangarTex;
+	public Texture missionTex;
+	public Texture canonTex;
+	public Texture shipTex;
+
+
 	public void OnApplicationQuit(){
 		profileMan.gameSave();
 	}
@@ -47,6 +54,12 @@ public class Player_Charactor : MonoBehaviour
 		}
 
 		hangar.setHangar();
+
+		// finds the textures in the resources folder
+		hangarTex = Resources.Load("Interface/Main Menu/Hangar button") as Texture;
+		missionTex = Resources.Load("Interface/Main Menu/Mission Level button") as Texture;
+		canonTex = Resources.Load("Interface/Main Menu/Cannon Shop Button") as Texture;
+		shipTex = Resources.Load("Interface/Main Menu/Ship Shop button") as Texture;
 
 	}
 
@@ -100,25 +113,26 @@ public class Player_Charactor : MonoBehaviour
 
 	public void OnGUI(){
 		if(systemState == "Menu"){
-			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2),Screen.width/3,Screen.height/5),"Hangar")){
+
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2),Screen.width/3,Screen.height/5),hangarTex, GUIStyle.none)){
 				systemState = "Hangar";
 				levelLoaded = false;
 				levels[0].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+(Screen.height/5),Screen.width/3,Screen.height/5),"MissionLevel")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+(Screen.height/5),Screen.width/3,Screen.height/5),missionTex,GUIStyle.none)){
 				systemState = "MissionLevel";
 				levelLoaded = false;
 				levels[1].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/3,Screen.height/5),"CanonShop")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/3,Screen.height/5),canonTex,GUIStyle.none)){
 				systemState = "CanonShop";
 				levelLoaded = false;
 				levels[2].loadLevel();
 
 			}
-			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+3*(Screen.height/5),Screen.width/3,Screen.height/5),"ShipShop")){
+			if(GUI.Button(new Rect(Screen.width/2-((Screen.width/3)/2),((Screen.height/5)/2)+3*(Screen.height/5),Screen.width/3,Screen.height/5),shipTex,GUIStyle.none)){
 				systemState = "ShipShop";
 				levelLoaded = false;
 				levels[3].loadLevel();
