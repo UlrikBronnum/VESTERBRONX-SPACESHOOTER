@@ -42,7 +42,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,image.transform);
 		transform.parent = transform;
-		
+
 		
 		swipeScript = props[0].GetComponent<CameraSwipe>();
 		
@@ -51,6 +51,9 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 	public override void updateLevel()
 	{
+		// finds the texture for the buttons
+		backTex = Resources.Load("Interface/Hanger Screen/Back button") as Texture;
+
 		if(!completed ){
 			Debug.Log(swipeScript.NumberOfSwipes);
 			
@@ -87,7 +90,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 				missionState = levelNames[swipeScript.NumberOfSwipes];
 				levelLoaded = false;
 			}
-			if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
+			if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/7),backTex,GUIStyle.none)){
 				levels.Clear();
 				completed = true;	
 				closeLevel();

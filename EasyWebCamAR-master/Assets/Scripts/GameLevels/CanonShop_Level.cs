@@ -9,14 +9,18 @@ public class CanonShop_Level : LevelScript_Base {
 	private int gunPos = 0;
 	private int price;
 
+
 	// textures for the interface:
-	public Texture hangarTex;
-	public Texture missionTex;
-	public Texture canonTex;
-	public Texture shipTex;
+	public Texture switchCanTex;
+	public Texture switchCanTex2;
 	
 	public override void loadLevel()
 	{
+		// finds the texture for the buttons
+		backTex = Resources.Load("Interface/Cannon Shop/Back button") as Texture;
+		switchCanTex = Resources.Load("Interface/Cannon Shop/<Switch Cannon") as Texture;
+		switchCanTex2 = Resources.Load("Interface/Cannon Shop/Switch cannon>") as Texture;
+
 		canons[0] = "projectileCanon";
 		canons[1] = "ionCanon";
 		canons[2] = "projectileCanon";
@@ -71,7 +75,7 @@ public class CanonShop_Level : LevelScript_Base {
 	}
 	
 	public override void levelGUI(){
-		if(GUI.Button(new Rect(Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Canon -")){
+		if(GUI.Button(new Rect(Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/7),switchCanTex,GUIStyle.none)){
 			props[canonSelected].SetActive(false);
 			canonSelected--;
 			if(canonSelected < 0){
@@ -90,7 +94,7 @@ public class CanonShop_Level : LevelScript_Base {
 			}
 		}
 		
-		if(GUI.Button(new Rect(Screen.width-Screen.width/4-Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Canon + ")){
+		if(GUI.Button(new Rect(Screen.width-Screen.width/4-Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/7),switchCanTex2,GUIStyle.none)){
 			props[canonSelected].SetActive(false);
 			canonSelected++;
 			if(canonSelected > 3){
@@ -151,7 +155,7 @@ public class CanonShop_Level : LevelScript_Base {
 		}
 		
 		
-		if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
+		if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/7),backTex,GUIStyle.none)){
 			completed = true;
 			closeLevel();
 		}

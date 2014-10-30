@@ -18,6 +18,7 @@ public class LevelScript_Base : MonoBehaviour {
 	public virtual void loadLevel(){}
 	public virtual void updateLevel(){}
 	public virtual void levelGUI(){	}
+	public Texture backTex;
 
 
 	protected void createSceneObject(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,Transform cameraTransform)

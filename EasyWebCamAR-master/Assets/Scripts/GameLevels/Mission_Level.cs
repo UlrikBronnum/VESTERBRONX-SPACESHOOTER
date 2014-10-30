@@ -14,10 +14,13 @@ public class Mission_Level : LevelScript_Base {
 
 	public virtual void loadLevel()	{}
 	public virtual void setLevels()	{}
-
+	
 
 	public override void updateLevel()
 	{
+		// finds the texture for the buttons
+		backTex = Resources.Load("Interface/Hanger Screen/Back button") as Texture;
+
 		if(!completed ){
 		
 		}else{
@@ -53,7 +56,7 @@ public class Mission_Level : LevelScript_Base {
 				planetState = levelNames[swipeScript.NumberOfSwipes];
 				levelLoaded = false;
 			}
-			if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
+			if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/7),backTex, GUIStyle.none)){
 				levels.Clear();
 				completed = true;	
 				closeLevel();

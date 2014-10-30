@@ -7,12 +7,21 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	private string[] ships = new string[4];
 	private bool hasShip = false;
 	private int shipPos = 0;
-	
-	
+
 	private int price;
+
+	// textures for the interface:
+	public Texture switchShipTex;
+	public Texture switchShipTex2;
 	
 	public override void loadLevel()
 	{
+		// finds the texture for the buttons
+		backTex = Resources.Load("Interface/Cannon Shop/Back button") as Texture;
+		switchShipTex = Resources.Load("Interface/Ship Shop/<Switch Ship") as Texture;
+		switchShipTex2 = Resources.Load("Interface/Ship Shop/Switch Ship>") as Texture;
+
+
 		ships[0] = "TurdClass";
 		ships[1] = "SecondClass";
 		ships[2] = "TurdClass";
@@ -67,7 +76,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	}
 	
 	public override void levelGUI(){
-		if(GUI.Button(new Rect(Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Ship -")){
+		if(GUI.Button(new Rect(Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/7),switchShipTex,GUIStyle.none)){
 			props[shipSelected].SetActive(false);
 			shipSelected--;
 			if(shipSelected < 0){
@@ -85,7 +94,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			}
 		}
 		
-		if(GUI.Button(new Rect(Screen.width-Screen.width/4-Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/4),"Switch Ship + ")){
+		if(GUI.Button(new Rect(Screen.width-Screen.width/4-Screen.width/10,Screen.height-Screen.height/4,Screen.width/4,Screen.height/7),switchShipTex2,GUIStyle.none)){
 			props[shipSelected].SetActive(false);
 			shipSelected++;
 			if(shipSelected > 3){
@@ -141,7 +150,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 		}
 		
 		
-		if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/4),"Back")){
+		if(GUI.Button(new Rect(0,0,Screen.width/4,Screen.height/7),backTex,GUIStyle.none)){
 			completed = true;
 			closeLevel();
 		}
