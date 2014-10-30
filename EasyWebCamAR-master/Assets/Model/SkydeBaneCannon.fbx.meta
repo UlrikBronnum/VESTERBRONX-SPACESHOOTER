@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 780d88b55b80e40d29f1dadeb6895d31
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: DurumGun:group
+    100002: DurumGun:group1
+    100004: DurumGun:group2
+    100006: DurumGun:group4
+    100008: DurumGun:group5
+    100010: DurumGun:group6
+    100012: DurumGun:group7
+    100014: DurumGun:group8
+    100016: DurumGun:pasted__group1
+    100018: DurumGun:pasted__group4
+    100020: DurumGun:pasted__group4 1
+    100022: DurumGun:pasted__group5
+    100024: group
+    100026: group1
+    100028: group2
+    100030: Old_Canon:_UNKNOWN_REF_NODE_fosterParent1
+    100032: Old_Canon:pCylinder1
+    100034: pSphere1
+    100036: //RootNode
+    100038: SkydebaneCannon:group
+    100040: SkydebaneCannon:group1
+    100042: SkydebaneCannon:group1_SkydebaneCannon:MiniGun1:transform1
+    100044: SkydebaneCannon:group1_SkydebaneCannon:MiniGun1:transform2
+    100046: SkydebaneCannon:group1_SkydebaneCannon:MiniGun1:transform3
+    100048: SkydebaneCannon:group2
+    100050: SkydebaneCannon:MiniGun1:pCube3
+    100052: SkydebaneCannon:MiniGun2:pCube3
+    100054: SkydebaneCannon:MiniGun:pCube3
+    100056: SkydebaneCannon:MiniGun:pCube4
+    100058: SkydebaneCannon:MiniGun:pCylinder3
+    100060: SkydebaneCannon:MiniGun:pCylinder4
+    100062: SkydebaneCannon:MiniGun:transform19
+    100064: SkydebaneCannon:MiniGun:transform20
+    100066: SkydebaneCannon:MiniGun:transform21
+    100068: SkydebaneCannon:MiniGun:transform22
+    100070: SkydebaneCannon:pasted__group1
+    100072: SkydebaneCannon:pCylinder1
+    400000: DurumGun:group
+    400002: DurumGun:group1
+    400004: DurumGun:group2
+    400006: DurumGun:group4
+    400008: DurumGun:group5
+    400010: DurumGun:group6
+    400012: DurumGun:group7
+    400014: DurumGun:group8
+    400016: DurumGun:pasted__group1
+    400018: DurumGun:pasted__group4
+    400020: DurumGun:pasted__group4 1
+    400022: DurumGun:pasted__group5
+    400024: group
+    400026: group1
+    400028: group2
+    400030: Old_Canon:_UNKNOWN_REF_NODE_fosterParent1
+    400032: Old_Canon:pCylinder1
+    400034: pSphere1
+    400036: //RootNode
+    400038: SkydebaneCannon:group
+    400040: SkydebaneCannon:group1
+    400042: SkydebaneCannon:group1_SkydebaneCannon:MiniGun1:transform1
+    400044: SkydebaneCannon:group1_SkydebaneCannon:MiniGun1:transform2
+    400046: SkydebaneCannon:group1_SkydebaneCannon:MiniGun1:transform3
+    400048: SkydebaneCannon:group2
+    400050: SkydebaneCannon:MiniGun1:pCube3
+    400052: SkydebaneCannon:MiniGun2:pCube3
+    400054: SkydebaneCannon:MiniGun:pCube3
+    400056: SkydebaneCannon:MiniGun:pCube4
+    400058: SkydebaneCannon:MiniGun:pCylinder3
+    400060: SkydebaneCannon:MiniGun:pCylinder4
+    400062: SkydebaneCannon:MiniGun:transform19
+    400064: SkydebaneCannon:MiniGun:transform20
+    400066: SkydebaneCannon:MiniGun:transform21
+    400068: SkydebaneCannon:MiniGun:transform22
+    400070: SkydebaneCannon:pasted__group1
+    400072: SkydebaneCannon:pCylinder1
+    2300000: Old_Canon:pCylinder1
+    2300002: pSphere1
+    3300000: Old_Canon:pCylinder1
+    3300002: pSphere1
+    4300000: pSphere1
+    4300002: Old_Canon:pCylinder1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 
