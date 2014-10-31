@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e221a4806bce4bc4a7cb79ff5dfc053
+guid: ec2b504777d0140d185c1854e70b6f2a
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -8,19 +8,14 @@ ModelImporter:
     100004: group6
     100006: //RootNode
     100008: pasted__polySurface6
-    100010: polySurface1
     400000: group
     400002: group5
     400004: group6
     400006: //RootNode
     400008: pasted__polySurface6
-    400010: polySurface1
     2300000: pasted__polySurface6
-    2300002: polySurface1
     3300000: pasted__polySurface6
-    3300002: polySurface1
     4300000: pasted__polySurface6
-    4300002: polySurface1
     9500000: //RootNode
   materials:
     importMaterials: 1
