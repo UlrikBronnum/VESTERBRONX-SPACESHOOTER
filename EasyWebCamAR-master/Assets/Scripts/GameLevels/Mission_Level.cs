@@ -26,7 +26,6 @@ public class Mission_Level : LevelScript_Base {
 		}else{
 
 		}
-		Debug.Log(levelLoaded);
 		if(planetState == "Home"){
 			if(levelLoaded == false){
 				levelLoaded = true;

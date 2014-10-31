@@ -94,10 +94,12 @@ public class Spaceship_Player : Spaceship_Base {
 			if(IsActive)
 				androidControls(canonMountCapacity);
 		}*/
-		androidControls(canonMountCapacity);
+
+		if(IsActive)
+			androidControls(canonMountCapacity);
 
 	}
-	/*private void pcControls(int shipCapacity){
+	private void pcControls(int shipCapacity){
 		float sideSpeed;
 
 		if(Input.GetKey("left")){
@@ -147,66 +149,51 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 		
 
-	}*/
+	}
 	
 	private void androidControls(int shipCapacity){
-
-
+		
+		
+		
+		
 		if(dir < 0.01 && dir > -0.01)
 		{
 			dir = 0;
 		}
-		//if (transform.position.x < 250.0f && transform.position.x > -250.0f) {
-						if (dir != 0) {
-								moveShip (shipManeuverSpeed () * dir);
-								//	}
-								if (transform.rotation.y > 320 && transform.rotation.y < 400) {
-										transform.Rotate (new Vector3 (0, 0, 1) * -dir * shipManeuverSpeed () * 2 * Time.deltaTime);
-										
-										//}
-								}
-
-						}
-				//}
-		// checks if the spaceship is out of border!
-			else if (transform.position.x > 250.0f) {
-			Vector3 temp = transform.position; 
-			temp.x = 249.0f; 
-			transform.position = temp; 
-				} else if (transform.position.x < -250.0f) {
-			Vector3 temp = transform.position; 
-			temp.x = -249f; 
-			transform.position = temp;  
-				}
-		      //  else
-			//transform.Rotate(new Vector3(0,0,0));
-		/*	else if(transform.position.x > -250.0f){
+		if(dir != 0){
+			if(transform.position.x < 250.0f  ){
 				moveShip (shipManeuverSpeed()*dir);
-				//if(transform.rotation.z > -0.3){
+				if(transform.rotation.z < 0.3){
+					transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
+				}
+			}else if(transform.position.x > -250.0f){
+				moveShip (shipManeuverSpeed()*dir);
+				if(transform.rotation.z > -0.3){
 					transform.Rotate(new Vector3(0,0,1) * dir * shipManeuverSpeed() * 2 * Time.deltaTime);
-				//}
+				}
 			}
-		}*/
-		/*else{
-			if (transform.rotation.z < - 0.02f){
+		}
+		else{
+			if (transform.rotation.z < - 0.1f){
 				transform.Rotate(new Vector3(0,0,1)  * shipManeuverSpeed() * 2 * Time.deltaTime);
-			}else if(transform.rotation.z > 0.02f){
+			}else if(transform.rotation.z > 0.1f){
 				transform.Rotate(new Vector3(0,0,1)  * -shipManeuverSpeed() * 2 * Time.deltaTime);
 			}
-		}*/
-
+		}
+		
 		if(fire){
 			for(int i = 0; i < shipCapacity; i++){
 				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
 				script.fireWeapon();
 				Player_Charactor playerScr = GameObject.Find(cameraName).GetComponent<Player_Charactor>();
 				if(canonMounted[i].name == playerScr.hangar.canonTypes[0]){
-
+					
 				}else if(canonMounted[i].name == playerScr.hangar.canonTypes[1]){
-
+					
 				}
 			}
 		}
+		
 	}
 
 	public void setUpStates(int up1, int up2, int up3){

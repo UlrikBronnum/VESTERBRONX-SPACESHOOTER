@@ -50,9 +50,9 @@ public class Spaceship_Enemy : Spaceship_Base {
 			//}
 		//}
 		for (int i = 0; i < canonMountCapacity; i++) {
-				Weapons_Base script = canonMounted [i].GetComponent<Weapons_Base> ();
-						script.EnemyFireWeapon ();
-				}
+			Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base> ();
+			script.EnemyFireWeapon ();
+		}
 
 
 
@@ -71,13 +71,13 @@ public class Spaceship_Enemy : Spaceship_Base {
 	}
 	protected void setRateofFire(){
 		for (int i = 0; i < canonMountCapacity; i++) {
-				Weapons_Base script = canonMounted [i].GetComponent<Weapons_Base> ();
-				script.rateOfFire = enemyFireRate; 
-				script.fireTimer.TimerValue =20f;
-				script.fireTimer.resetTimer();
-				print ("firerate" + script.rateOfFire + "Timer" + script.fireTimer.TimerValue + "other" + script.fireTimer._timer);
-				
-			}
+			Weapons_Base script = canonMounted [i].GetComponent<Weapons_Base> ();
+			script.rateOfFire = enemyFireRate; 
+			script.fireTimer.TimerValue =20f;
+			script.fireTimer.resetTimer();
+			print ("firerate" + script.rateOfFire + "Timer" + script.fireTimer.TimerValue + "other" + script.fireTimer._timer);
+			
+		}
 	}
 
 

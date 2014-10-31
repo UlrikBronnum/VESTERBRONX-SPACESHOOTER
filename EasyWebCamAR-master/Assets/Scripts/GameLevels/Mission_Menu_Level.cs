@@ -55,12 +55,12 @@ public class Mission_Menu_Level : LevelScript_Base {
 		backTex = Resources.Load("Interface/Hanger Screen/Back button") as Texture;
 
 		if(!completed ){
-			Debug.Log(swipeScript.NumberOfSwipes);
+		
 			
 		}else{
 
 		}
-		Debug.Log(levelLoaded);
+
 		if(missionState == "Home"){
 			if(levelLoaded == false){
 				levelLoaded = true;

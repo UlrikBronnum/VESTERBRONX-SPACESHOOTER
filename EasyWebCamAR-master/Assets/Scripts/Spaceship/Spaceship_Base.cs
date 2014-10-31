@@ -41,6 +41,7 @@ public class Spaceship_Base : MonoBehaviour {
 	protected float spaceshipRotation;
 	// health of the player/enemy
 	protected int health;
+	protected int shield;
 
 
 
@@ -103,12 +104,13 @@ public class Spaceship_Base : MonoBehaviour {
 		get {return isActive;}
 		set {isActive = value;}
 	}
-	public bool GotShield(){
-		if(shieldType == "Shield"){
-			return true;
-		}else{
-			return false;
-		}
+	public int Health{
+		get {return health;}
+		set {health = value;}
+	}
+	public int Shield{
+		get {return shield;}
+		set {shield = value;}
 	}
 
 	// function that makes sure the enemies or player takes damage 

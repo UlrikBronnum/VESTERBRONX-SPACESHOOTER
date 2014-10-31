@@ -18,7 +18,7 @@ public class EnemySecondClass : Spaceship_Enemy {
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
 		// sets the rate of fire for the guns of this Enemy:
-		enemyFireRate = 5;
+		enemyFireRate = 10;
 		
 		
 		// Find the canon mounts on model

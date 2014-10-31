@@ -19,7 +19,7 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		// damage inflicted if the player collides with this enemy
 		collisionDamage = 100;
 		// Amount of gun attachments 
-		canonMountCapacity = transform.childCount;
+		canonMountCapacity = 4;
 		// sets the rate of fire for the guns of this Enemy:
 		enemyFireRate = 5;
 
@@ -28,10 +28,10 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		canonTypes = new string[canonMountCapacity];
 
 		// the guns of this enemy:
-		//canonTypes[0] = "projectileCanon";
-		//canonTypes[1] = "projectileCanon";
-		//canonTypes[2] = "IonCanon";
-		//canonTypes[3] = "IonCanon";
+		canonTypes[0] = "projectileCanon";
+		canonTypes[1] = "projectileCanon";
+		canonTypes[2] = "IonCanon";
+		canonTypes[3] = "IonCanon";
 
 		for (int i = 0 ; i < canonMountCapacity ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);
