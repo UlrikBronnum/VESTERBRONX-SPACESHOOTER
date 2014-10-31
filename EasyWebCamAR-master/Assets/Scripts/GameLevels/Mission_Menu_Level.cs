@@ -10,9 +10,29 @@ public class Mission_Menu_Level : LevelScript_Base {
 	protected bool levelLoaded;
 
 	protected string[] levelNames;
+	protected Texture[] levelTex;
+
+	// textures for the interface:
+	public Texture planet1;
+	public Texture planet2;
+	public Texture planet3;
+
 
 	public override void loadLevel()
 	{
+		// finds the texture for the buttons
+
+		planet1 = Resources.Load("Interface/MissionLevelScreen/Planet1") as Texture;
+		planet2 = Resources.Load("Interface/MissionLevelScreen/Planet2") as Texture;
+		planet3 = Resources.Load("Interface/MissionLevelScreen/Planet") as Texture;
+		backTex = Resources.Load("Interface/HangerScreen/Back button") as Texture;
+
+		levelTex = new Texture[3];
+		levelTex [0] = planet1;
+		levelTex [1] = planet2;
+		levelTex [2] = planet3;
+
+
 		levelNames = new string[3];
 		levelNames[0] = "Planet_One";
 		levelNames[1] = "Planet_Two";
@@ -51,8 +71,6 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 	public override void updateLevel()
 	{
-		// finds the texture for the buttons
-		backTex = Resources.Load("Interface/Hanger Screen/Back button") as Texture;
 
 		if(!completed ){
 		
@@ -86,7 +104,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 		
 		
 		if(missionState == "Home"){
-			if(GUI.Button(new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/4),levelNames[swipeScript.NumberOfSwipes])){
+			if(GUI.Button(new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/7),levelTex[swipeScript.NumberOfSwipes], GUIStyle.none)){
 				missionState = levelNames[swipeScript.NumberOfSwipes];
 				levelLoaded = false;
 			}

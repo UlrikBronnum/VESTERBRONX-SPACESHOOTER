@@ -12,7 +12,7 @@ public class CameraSwipe : MonoBehaviour {
 	public int numberOfSwipes = 0;
 	public int maxNumberOfSwipes = 7;
 	public int targetPos = 0;
-	public float speed = 200F;
+	public float speed = 2000F;
 	public bool swipe = false;
 
 	void Update() {

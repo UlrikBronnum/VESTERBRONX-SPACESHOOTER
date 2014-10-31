@@ -24,10 +24,10 @@ public class Hangar_Level : LevelScript_Base {
 	public override void loadLevel()
 	{
 		// finds the texture for the buttons
-		switchShip1Tex = Resources.Load("Interface/Hanger Screen/<Switch Ship") as Texture;
-		switchShip2Tex = Resources.Load("Interface/Hanger Screen/Switch Ship_") as Texture;
-		gunMountTex = Resources.Load("Interface/Hanger Screen/Gun Mount") as Texture;
-		backTex = Resources.Load("Interface/Hanger Screen/Back button") as Texture;
+		switchShip1Tex = Resources.Load("Interface/HangerScreen/<Switch Ship") as Texture;
+		switchShip2Tex = Resources.Load("Interface/HangerScreen/Switch Ship_") as Texture;
+		gunMountTex = Resources.Load("Interface/HangerScreen/Gun Mount") as Texture;
+		backTex = Resources.Load("Interface/HangerScreen/Back button") as Texture;
 
 
 		player = GameObject.Find(cameraName);

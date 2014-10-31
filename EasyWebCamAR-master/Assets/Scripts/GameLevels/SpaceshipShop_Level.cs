@@ -13,14 +13,28 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	// textures for the interface:
 	public Texture switchShipTex;
 	public Texture switchShipTex2;
+	public Texture upgradeHealthTex;
+	public Texture upgradeShieldTex;
+	public Texture upgradeSpeedTex;
+	public Texture buyShipTex;
+	private GUIStyle myGUIStyle = new GUIStyle();
 	
 	public override void loadLevel()
 	{
 		// finds the texture for the buttons
-		backTex = Resources.Load("Interface/Cannon Shop/Back button") as Texture;
-		switchShipTex = Resources.Load("Interface/Ship Shop/<Switch Ship") as Texture;
-		switchShipTex2 = Resources.Load("Interface/Ship Shop/Switch Ship>") as Texture;
+		backTex = Resources.Load("Interface/CannonShop/Back button") as Texture;
+		switchShipTex = Resources.Load("Interface/ShipShop/<Switch Ship") as Texture;
+		switchShipTex2 = Resources.Load("Interface/ShipShop/Switch Ship_") as Texture;
+		upgradeHealthTex = Resources.Load("Interface/ShipShop/Upgrade Health") as Texture;
+		upgradeShieldTex = Resources.Load("Interface/ShipShop/UpgradeShield") as Texture;
+		upgradeSpeedTex = Resources.Load("Interface/ShipShop/UpgradeSpeed") as Texture;
+		buyShipTex = Resources.Load("Interface/ShipShop/BuyShip") as Texture;
 
+
+		// sets the font style for the price, which varies
+		myGUIStyle.normal.textColor =  new Color(0F, 1F, 3F, 0.6F);
+		myGUIStyle.fontSize = 15;
+		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 
 		ships[0] = "TurdClass";
 		ships[1] = "SecondClass";
@@ -115,29 +129,36 @@ public class SpaceshipShop_Level : LevelScript_Base {
 
 		if(hasShip){
 			if(script.hangar.shipUpgrade1[shipPos] < 3 && script.credits > calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1)){
-				if(GUI.Button(new Rect(Screen.width/2 - 200,0 ,200,100),"Upgrade: Rate of fire" + "\n" + "Price: " + calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1) ))
+				if(GUI.Button(new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2),Screen.width/4,Screen.height/7), upgradeHealthTex, GUIStyle.none ))
 				{
 					script.hangar.shipUpgrade1[shipPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1);
 				}
+				// the box containing the varying price of the upgrade
+				GUI.Box (new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2),Screen.width/4,Screen.height/7), calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1).ToString(), myGUIStyle);
 			}
 			if(script.hangar.shipUpgrade2[shipPos] < 3 && script.credits > calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1)){
-				if(GUI.Button(new Rect(Screen.width/2 ,0,200,100),"Upgrade: Damage" + "\n"  + "Price: " + calcUpgradePrice(script.hangar.shipUpgrade2[shipPos]+1) ))
+				if(GUI.Button(new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+(Screen.height/5),Screen.width/4,Screen.height/7), upgradeShieldTex, GUIStyle.none ))
 				{
 					script.hangar.shipUpgrade2[shipPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1);
 				}
+				// the box containing the varying price of the upgrade
+				GUI.Box (new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+(Screen.height/5),Screen.width/4,Screen.height/7), calcUpgradePrice(script.hangar.shipUpgrade2[shipPos]+1).ToString(), myGUIStyle);
+
 			}
 			if(script.hangar.shipUpgrade3[shipPos] < 3 && script.credits > calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1)){
-				if(GUI.Button(new Rect(Screen.width/2 + 200, 0 ,200,100),"Upgrade: Magasin Capacity" + "\n" + "Price: " + calcUpgradePrice(script.hangar.shipUpgrade3[shipPos]+1)))
+				if(GUI.Button(new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/4,Screen.height/7), upgradeSpeedTex, GUIStyle.none ))
 				{
 					script.hangar.shipUpgrade3[shipPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.shipUpgrade1[shipPos]+1);
 				}
+				// the box containing the varying price of the upgrade
+				GUI.Box (new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/4,Screen.height/7), calcUpgradePrice(script.hangar.shipUpgrade3[shipPos]+1).ToString(), myGUIStyle);
 			}
 		}else {
 			if(script.credits > price){
-				if(GUI.Button(new Rect(Screen.width/2 - 200,0 ,200,100),"Buy Ship" + "\n" + "Price: " + price))
+				if(GUI.Button(new Rect(Screen.width/2 - Screen.width/8,Screen.height/2-Screen.height/14,Screen.width/4,Screen.height/7),buyShipTex, GUIStyle.none))
 				{
 					script.hangar.addToShipUpgrades();
 					script.hangar.addSpaceshipToHangar(ships[shipSelected]);
@@ -145,6 +166,8 @@ public class SpaceshipShop_Level : LevelScript_Base {
 					hasShip = true;
 					shipPos = shipPos + 1;
 				}
+				GUI.Box (new Rect(Screen.width/2 - Screen.width/8,Screen.height/2-Screen.height/14,Screen.width/4,Screen.height/7), price.ToString(), myGUIStyle);
+
 			}
 			
 		}

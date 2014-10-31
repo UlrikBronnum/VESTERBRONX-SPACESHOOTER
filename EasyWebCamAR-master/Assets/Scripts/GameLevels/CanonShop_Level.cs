@@ -13,13 +13,26 @@ public class CanonShop_Level : LevelScript_Base {
 	// textures for the interface:
 	public Texture switchCanTex;
 	public Texture switchCanTex2;
+	public Texture upgradeDamTex;
+	public Texture upgradeMagTex;
+	public Texture upgradeRateTex;
+	public Texture buyCannonTex;
+	private GUIStyle myGUIStyle = new GUIStyle();
 	
 	public override void loadLevel()
 	{
 		// finds the texture for the buttons
-		backTex = Resources.Load("Interface/Cannon Shop/Back button") as Texture;
-		switchCanTex = Resources.Load("Interface/Cannon Shop/<Switch Cannon") as Texture;
-		switchCanTex2 = Resources.Load("Interface/Cannon Shop/Switch cannon>") as Texture;
+		backTex = Resources.Load("Interface/CannonShop/Back button") as Texture;
+		switchCanTex = Resources.Load("Interface/CannonShop/<Switch Cannon") as Texture;
+		switchCanTex2 = Resources.Load("Interface/CannonShop/Switch cannon>") as Texture;
+		upgradeDamTex = Resources.Load("Interface/CannonShop/Upgrade Damage") as Texture;
+		upgradeMagTex = Resources.Load("Interface/CannonShop/Upgrade Magasin Capacity") as Texture;
+		upgradeRateTex = Resources.Load("Interface/CannonShop/Upgrade Rate Of fire") as Texture;
+		buyCannonTex = Resources.Load("Interface/CannonShop/BuyCannon") as Texture;
+		// sets the font style for the price, which varies
+		myGUIStyle.normal.textColor =  new Color(0F, 1F, 3F, 0.6F);
+		myGUIStyle.fontSize = 15;
+		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 
 		canons[0] = "projectileCanon";
 		canons[1] = "ionCanon";
@@ -116,32 +129,41 @@ public class CanonShop_Level : LevelScript_Base {
 
 		if(hasGun){
 			if(script.hangar.canonUpgrade1[gunPos] < 3 && script.credits > calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1)){
-				if(GUI.Button(new Rect(Screen.width/2 - 200,0 ,200,100),"Upgrade: Rate of fire" + "\n" + "Price: " + calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1) ))
+
+				if(GUI.Button(new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2),Screen.width/4,Screen.height/7),upgradeRateTex, GUIStyle.none))
 				{
 					script.hangar.canonUpgrade1[gunPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1);
 					Debug.Log(script.hangar.canonUpgrade1[gunPos]);
 				}
+				// the box containing the varying price of the upgrade
+				GUI.Box (new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2),Screen.width/4,Screen.height/7), calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1).ToString(), myGUIStyle);
 			}
 			if(script.hangar.canonUpgrade2[gunPos] < 3 && script.credits > calcUpgradePrice(script.hangar.canonUpgrade2[gunPos]+1)){
-				if(GUI.Button(new Rect(Screen.width/2 ,0,200,100),"Upgrade: Damage" + "\n"  + "Price: " + calcUpgradePrice(script.hangar.canonUpgrade2[gunPos]+1) ))
+				if(GUI.Button(new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+(Screen.height/5),Screen.width/4,Screen.height/7),upgradeDamTex, GUIStyle.none ))
 				{
 					script.hangar.canonUpgrade2[gunPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1);
 					Debug.Log(script.hangar.canonUpgrade2[gunPos]);
 				}
+				// the box containing the varying price of the upgrade
+				GUI.Box (new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+(Screen.height/5),Screen.width/4,Screen.height/7), calcUpgradePrice(script.hangar.canonUpgrade2[gunPos]+1).ToString(), myGUIStyle);
+
 			}
 			if(script.hangar.canonUpgrade3[gunPos] < 3 && script.credits > calcUpgradePrice(script.hangar.canonUpgrade3[gunPos]+1)){
-				if(GUI.Button(new Rect(Screen.width/2 + 200, 0 ,200,100),"Upgrade: Magasin Capacity" + "\n" + "Price: " + calcUpgradePrice(script.hangar.canonUpgrade3[gunPos]+1)))
+				if(GUI.Button(new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/4,Screen.height/7),upgradeMagTex, GUIStyle.none))
 				{
 					script.hangar.canonUpgrade3[gunPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1);
 					Debug.Log(script.hangar.canonUpgrade3[gunPos]);
 				}
+				// the box containing the varying price of the upgrade
+				GUI.Box (new Rect(Screen.width - Screen.width/4,((Screen.height/5)/2)+2*(Screen.height/5),Screen.width/4,Screen.height/7), calcUpgradePrice(script.hangar.canonUpgrade3[gunPos]+1).ToString(), myGUIStyle);
+
 			}
 		}else {
 			if(script.credits > price){
-				if(GUI.Button(new Rect(Screen.width/2 - 200,0 ,200,100),"Buy Canon" + "\n" + "Price: " + price))
+				if(GUI.Button(new Rect(Screen.width/2 - Screen.width/8,Screen.height/2-Screen.height/14,Screen.width/4,Screen.height/7), buyCannonTex, GUIStyle.none))
 				{
 					script.hangar.addToCanonUpgrades();
 					script.hangar.addGunToHangar(canons[canonSelected]);
@@ -150,6 +172,8 @@ public class CanonShop_Level : LevelScript_Base {
 					hasGun = true;
 					gunPos = gunPos+1;
 				}
+				GUI.Box (new Rect(Screen.width/2 - Screen.width/8,Screen.height/2-Screen.height/14,Screen.width/4,Screen.height/7), price.ToString(), myGUIStyle);
+
 			}
 			
 		}
