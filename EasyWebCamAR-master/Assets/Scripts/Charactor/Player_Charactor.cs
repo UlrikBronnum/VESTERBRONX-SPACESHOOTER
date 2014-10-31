@@ -172,7 +172,7 @@ public class Player_Charactor : MonoBehaviour
 			}
 		}
 
-		GUI.TextField (new Rect(Screen.width/2+Screen.width/4,Screen.height/16,Screen.width/7,Screen.height/8) , "Credits: " + credits.ToString() )  ;
+		//GUI.TextField (new Rect(Screen.width/2+Screen.width/4,Screen.height/16,Screen.width/7,Screen.height/8) , "Credits: " + credits.ToString() )  ;
 		
 	}
 

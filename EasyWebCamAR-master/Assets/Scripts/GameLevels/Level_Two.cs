@@ -3,10 +3,7 @@ using System.Collections;
 
 public class Level_Two :  LevelScript_Level {
 
-	string endGame;
-	float _unLoadTimer = 5f;
-	int gain;
-	
+
 	public override void loadLevel( )
 	{
 		setClassTargets();
@@ -106,18 +103,6 @@ public class Level_Two :  LevelScript_Level {
 	}
 	
 	
-	public override void levelGUI(){
-		if(spwnScr.spawnEmpty){
-			GUI.TextField(new Rect(Screen.width/2 - 120,Screen.height - 50,240,100), endGame + "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
-		}
-
-
-
-		/*else if(GUI.Button(new Rect(0,0,200,100),"Back")){
-				GUI.TextField(new Rect(Screen.width/2 - 60,Screen.height - 50,120,50), "Health: " + tmpDef.ToString() + "\nArmor: " + tmpArm.ToString() + "\nEnemy Kills: " + enemyKills.ToString());
-		}*/
-		
-	}
 
 	
 

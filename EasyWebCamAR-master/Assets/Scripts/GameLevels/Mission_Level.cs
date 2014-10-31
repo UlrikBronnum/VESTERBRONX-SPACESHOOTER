@@ -47,8 +47,7 @@ public class Mission_Level : LevelScript_Base {
 		}
 
 	}
-	public override void levelGUI(){
-
+	public virtual void levelGUI(){
 
 		if(planetState == "Home"){
 			if(GUI.Button(new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/4),levelNames[swipeScript.NumberOfSwipes])){
@@ -60,8 +59,10 @@ public class Mission_Level : LevelScript_Base {
 				completed = true;	
 				closeLevel();
 			}
+		}else{
+			levels[swipeScript.NumberOfSwipes].levelGUI();
 		}
-
+	
 	}
 
 

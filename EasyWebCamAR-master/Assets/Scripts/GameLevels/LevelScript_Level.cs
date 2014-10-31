@@ -26,16 +26,46 @@ public class LevelScript_Level : LevelScript_Base {
 	protected Vector3 newPosition;
 	protected Vector3 newRotation;
 	protected string newProp;
+
+
+	//Make these nice
+	
+	protected float backGroundWidthLife;
+	protected float lifePercent;
+	protected float lifeWidth;
+	protected float left;
+	protected float top;
+	protected float height;
+
+	protected Texture lifeRemainingTexture;
+	protected Texture lifeRemainingBehindTexture;
+
+	protected int shipHealth;
+	protected int shipShield;
+
+	
+	protected string endGame;
+	protected float _unLoadTimer = 5f;
+	protected int gain;
+
 	
 	public virtual void loadLevel(){}
 	public virtual void updateLevel(){}
-	public virtual void levelGUI(){	}
+
+
+
 
 	protected void setClassTargets(){
 		player = GameObject.Find(cameraName);
 		script = player.GetComponent<Player_Charactor>();
 		shipScr = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
-		
+
+
+
+		lifeRemainingTexture = Resources.Load("io") as Texture;
+		lifeRemainingBehindTexture = Resources.Load("io") as Texture;
+
+
 		completed = false;
 		
 		image = GameObject.Find("ImageTarget");
@@ -74,5 +104,23 @@ public class LevelScript_Level : LevelScript_Base {
 		int priceValue = priceCreditsValue();
 		priceValue += (int) ((priceValue * 0.1f) * ( (float)enemiesDestroyed / howManyEnemies));
 		return priceValue;
+	}
+
+	public override void levelGUI(){
+		if(spwnScr.spawnEmpty)
+		{
+			GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4),endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
+		}
+
+		left = Screen.width / 2;
+		top = 8F;
+		backGroundWidthLife = Screen.width / 4;
+		lifeWidth = lifePercent * backGroundWidthLife;
+		height = 12F;
+		
+		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), top, Screen.width / 10, Screen.height / 40), "Health: " + shipHealth.ToString() + "/" + shipShield.ToString());
+		GUI.DrawTexture (new Rect (left, top, backGroundWidthLife, height), lifeRemainingBehindTexture, ScaleMode.StretchToFill, true, 1.0F);
+		GUI.DrawTexture (new Rect (left, top, lifeWidth, height), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
+
 	}
 }

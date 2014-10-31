@@ -4,23 +4,9 @@ using System.Collections.Generic;
 
 public class Level_One : LevelScript_Level {
 
-	public Texture lifeRemainingTexture;
-	public Texture lifeRemainingBehindTexture;
-	
-	string endGame;
-	float _unLoadTimer = 5f;
-	int shipHealth;
-	int shipShield;
-	int gain;
 
-	//Make these nice
 
-	private float backGroundWidthLife;
-	private float lifePercent;
-	private float lifeWidth;
-	private float left;
-	private float top;
-	private float height;
+
 
 	public override void loadLevel( )
 	{
@@ -126,21 +112,5 @@ public class Level_One : LevelScript_Level {
 	}
 
 
-	public override void levelGUI(){
 
-		if(spwnScr.spawnEmpty){
-			GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4), endGame + "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
-		}
-
-		left = Screen.width / 2;
-		top = 8F;
-		backGroundWidthLife = Screen.width / 4;
-		lifeWidth = lifePercent * backGroundWidthLife;
-		height = 12F;
-
-		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), top, Screen.width / 10, Screen.height / 40), "Health: " + shipHealth.ToString() + "/" + shipShield.ToString());
-		GUI.DrawTexture (new Rect (left, top, backGroundWidthLife, height), lifeRemainingBehindTexture, ScaleMode.StretchToFill, true, 1.0F);
-		GUI.DrawTexture (new Rect (left, top, lifeWidth, height), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
-
-	}
 }

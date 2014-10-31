@@ -161,26 +161,23 @@ public class Spaceship_Player : Spaceship_Base {
 			dir = 0;
 		}
 		if(dir != 0){
-			if(transform.position.x < 250.0f  ){
+			if(transform.position.x < 250.0f && transform.position.x > -250.0f ){
 				moveShip (shipManeuverSpeed()*dir);
-				if(transform.rotation.z < 0.3){
+				if(transform.rotation.z > - 0.3 && transform.rotation.z < 0.0){
 					transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
-				}
-			}else if(transform.position.x > -250.0f){
-				moveShip (shipManeuverSpeed()*dir);
-				if(transform.rotation.z > -0.3){
+				}else if(transform.rotation.z <  0.3 && transform.rotation.z >  0.0){
 					transform.Rotate(new Vector3(0,0,1) * dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 				}
 			}
 		}
 		else{
-			if (transform.rotation.z < - 0.1f){
+			if (transform.rotation.z < - 0.01f){
 				transform.Rotate(new Vector3(0,0,1)  * shipManeuverSpeed() * 2 * Time.deltaTime);
-			}else if(transform.rotation.z > 0.1f){
+			}else if(transform.rotation.z > 0.01f){
 				transform.Rotate(new Vector3(0,0,1)  * -shipManeuverSpeed() * 2 * Time.deltaTime);
 			}
 		}
-		
+		Debug.Log(transform.rotation.z + " " +  spaceshipRotation);
 		if(fire){
 			for(int i = 0; i < shipCapacity; i++){
 				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
