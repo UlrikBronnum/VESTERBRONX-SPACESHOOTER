@@ -8,6 +8,8 @@ public class Player_Charactor : MonoBehaviour
 	// timer to control internal behavior
 	public char gameSetting;
 
+	private GUIStyle myGUIStyle = new GUIStyle();
+
 
 	private bool levelLoaded;
 	private string systemState;
@@ -26,7 +28,7 @@ public class Player_Charactor : MonoBehaviour
 	public Texture missionTex;
 	public Texture canonTex;
 	public Texture shipTex;
-
+	public Texture creditsTex;
 
 	public void OnApplicationQuit(){
 		profileMan.gameSave();
@@ -56,10 +58,11 @@ public class Player_Charactor : MonoBehaviour
 		hangar.setHangar();
 
 		// finds the textures in the resources folder
-		hangarTex = Resources.Load("Interface/Main Menu/Hangar button") as Texture;
-		missionTex = Resources.Load("Interface/Main Menu/Mission Level button") as Texture;
-		canonTex = Resources.Load("Interface/Main Menu/Cannon Shop Button") as Texture;
-		shipTex = Resources.Load("Interface/Main Menu/Ship Shop button") as Texture;
+		hangarTex = Resources.Load("Interface/MainMenu/Hangar button") as Texture;
+		missionTex = Resources.Load("Interface/MainMenu/Mission Level button") as Texture;
+		canonTex = Resources.Load("Interface/MainMenu/Cannon Shop Button") as Texture;
+		shipTex = Resources.Load("Interface/MainMenu/Ship Shop button") as Texture;
+		creditsTex = Resources.Load("Interface/MainMenu/Credits") as Texture;
 
 	}
 
@@ -156,6 +159,12 @@ public class Player_Charactor : MonoBehaviour
 			}
 		}
 		else if(systemState == "CanonShop"){
+			myGUIStyle.normal.textColor =  new Color(0F, 1F, 3F, 0.6F);
+			myGUIStyle.fontSize = 16;
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
+			GUI.Box (new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/7),  creditsTex, GUIStyle.none )  ;
+			GUI.Box (new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/7), credits.ToString(), myGUIStyle )  ;
+
 			if(levels[2].Completed){
 				systemState = "Menu";
 				levelLoaded = false;
@@ -164,17 +173,30 @@ public class Player_Charactor : MonoBehaviour
 			}
 		}
 		else if(systemState == "ShipShop"){
+			myGUIStyle.normal.textColor =  new Color(0F, 1F, 3F, 0.6F);
+			myGUIStyle.fontSize = 16;
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
+			GUI.Box (new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/7),  creditsTex, GUIStyle.none )  ;
+			GUI.Box (new Rect(Screen.width/2 -Screen.width/8, Screen.height/10,Screen.width/4,Screen.height/7), credits.ToString(), myGUIStyle )  ;
+
 			if(levels[3].Completed){
 				systemState = "Menu";
 				levelLoaded = false;
 			}else{
 				levels[3].levelGUI();
 			}
+
 		}
 
+<<<<<<< Updated upstream
 		//GUI.TextField (new Rect(Screen.width/2+Screen.width/4,Screen.height/16,Screen.width/7,Screen.height/8) , "Credits: " + credits.ToString() )  ;
 		
+=======
+
+>>>>>>> Stashed changes
 	}
+
+
 
 	private void setLevels(){
 		Hangar_Level newHangarLevel = gameObject.AddComponent("Hangar_Level") as Hangar_Level;

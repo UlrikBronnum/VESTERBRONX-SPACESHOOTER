@@ -75,12 +75,13 @@ public class LevelScript_Level : LevelScript_Base {
 		button  = new GameObject[2];
 		button[0] = (GameObject)Object.Instantiate(Resources.Load ("AButton"));
 		button[0].SetActive(true);
-		button[0].guiTexture.pixelInset = new Rect(182,-175,100,100);
+		button[0].guiTexture.pixelInset = new Rect(Screen.width-Screen.width/5,Screen.height/8,Screen.height/5,Screen.height/5);
 		buttonScript = button[0].GetComponent<AButton>();
 
 
 		button[1] = (GameObject)Object.Instantiate(Resources.Load ("joystick"));
 		button[1].SetActive(true);
+		button[1].guiTexture.pixelInset = new Rect ( Screen.width / 12, Screen.height / 8, Screen.height / 5, Screen.height / 5);
 		joystick = button[1].GetComponent<Joystick>();
 		
 	}
