@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: b7ab55802ccae5c4bb65fed917217bc6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: CoffeeCannon:DurumGun:group
+    100002: CoffeeCannon:DurumGun:group1
+    100004: CoffeeCannon:DurumGun:group2
+    100006: CoffeeCannon:DurumGun:group4
+    100008: CoffeeCannon:DurumGun:group5
+    100010: CoffeeCannon:DurumGun:group6
+    100012: CoffeeCannon:DurumGun:group7
+    100014: CoffeeCannon:DurumGun:group8
+    100016: CoffeeCannon:DurumGun:pasted__group1
+    100018: CoffeeCannon:DurumGun:pasted__group4
+    100020: CoffeeCannon:DurumGun:pasted__group4 1
+    100022: CoffeeCannon:DurumGun:pasted__group5
+    100024: CoffeeCannon:group
+    100026: CoffeeCannon:group1
+    100028: CoffeeCannon:group2
+    100030: CoffeeCannon:group3
+    100032: CoffeeCannon:group4
+    100034: CoffeeCannon:pasted__group1
+    100036: CoffeeCannon:pasted__pasted__pSphere3
+    100038: CoffeeCannon:pasted__pPipe1
+    100040: CoffeeCannon:pasted__pPipe3
+    100042: CoffeeCannon:pasted__pSphere3
+    100044: CoffeeCannon:pasted__pSphere3 1
+    100046: CoffeeCannon:pasted__pSphere4
+    100048: CoffeeCannon:pasted__pTorus1
+    100050: CoffeeCannon:pasted__transform5
+    100052: CoffeeCannon:pasted__transform6
+    100054: CoffeeCannon:pasted__transform7
+    100056: CoffeeCannon:pCube1
+    100058: CoffeeCannon:pCylinder1
+    100060: CoffeeCannon:pPipe1
+    100062: CoffeeCannon:pPipe2
+    100064: CoffeeCannon:pPipe3
+    100066: CoffeeCannon:pSphere1
+    100068: CoffeeCannon:pSphere2
+    100070: CoffeeCannon:pSphere3
+    100072: CoffeeCannon:pSphere4
+    100074: CoffeeCannon:pTorus1
+    100076: CoffeeCannon:transform1
+    100078: CoffeeCannon:transform10
+    100080: CoffeeCannon:transform11
+    100082: CoffeeCannon:transform12
+    100084: CoffeeCannon:transform13
+    100086: CoffeeCannon:transform14
+    100088: CoffeeCannon:transform2
+    100090: CoffeeCannon:transform3
+    100092: CoffeeCannon:transform4
+    100094: CoffeeCannon:transform5
+    100096: CoffeeCannon:transform6
+    100098: CoffeeCannon:transform7
+    100100: CoffeeCannon:transform8
+    100102: CoffeeCannon:transform9
+    100104: group11
+    100106: //RootNode
+    100108: polySurface1
+    400000: CoffeeCannon:DurumGun:group
+    400002: CoffeeCannon:DurumGun:group1
+    400004: CoffeeCannon:DurumGun:group2
+    400006: CoffeeCannon:DurumGun:group4
+    400008: CoffeeCannon:DurumGun:group5
+    400010: CoffeeCannon:DurumGun:group6
+    400012: CoffeeCannon:DurumGun:group7
+    400014: CoffeeCannon:DurumGun:group8
+    400016: CoffeeCannon:DurumGun:pasted__group1
+    400018: CoffeeCannon:DurumGun:pasted__group4
+    400020: CoffeeCannon:DurumGun:pasted__group4 1
+    400022: CoffeeCannon:DurumGun:pasted__group5
+    400024: CoffeeCannon:group
+    400026: CoffeeCannon:group1
+    400028: CoffeeCannon:group2
+    400030: CoffeeCannon:group3
+    400032: CoffeeCannon:group4
+    400034: CoffeeCannon:pasted__group1
+    400036: CoffeeCannon:pasted__pasted__pSphere3
+    400038: CoffeeCannon:pasted__pPipe1
+    400040: CoffeeCannon:pasted__pPipe3
+    400042: CoffeeCannon:pasted__pSphere3
+    400044: CoffeeCannon:pasted__pSphere3 1
+    400046: CoffeeCannon:pasted__pSphere4
+    400048: CoffeeCannon:pasted__pTorus1
+    400050: CoffeeCannon:pasted__transform5
+    400052: CoffeeCannon:pasted__transform6
+    400054: CoffeeCannon:pasted__transform7
+    400056: CoffeeCannon:pCube1
+    400058: CoffeeCannon:pCylinder1
+    400060: CoffeeCannon:pPipe1
+    400062: CoffeeCannon:pPipe2
+    400064: CoffeeCannon:pPipe3
+    400066: CoffeeCannon:pSphere1
+    400068: CoffeeCannon:pSphere2
+    400070: CoffeeCannon:pSphere3
+    400072: CoffeeCannon:pSphere4
+    400074: CoffeeCannon:pTorus1
+    400076: CoffeeCannon:transform1
+    400078: CoffeeCannon:transform10
+    400080: CoffeeCannon:transform11
+    400082: CoffeeCannon:transform12
+    400084: CoffeeCannon:transform13
+    400086: CoffeeCannon:transform14
+    400088: CoffeeCannon:transform2
+    400090: CoffeeCannon:transform3
+    400092: CoffeeCannon:transform4
+    400094: CoffeeCannon:transform5
+    400096: CoffeeCannon:transform6
+    400098: CoffeeCannon:transform7
+    400100: CoffeeCannon:transform8
+    400102: CoffeeCannon:transform9
+    400104: group11
+    400106: //RootNode
+    400108: polySurface1
+    2300000: polySurface1
+    3300000: polySurface1
+    4300000: polySurface1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,1263 @@
+fileFormatVersion: 2
+guid: 4af843ee0d654459aba6d650ce275ff3
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Man:head
+    100004: Man:HeadEff
+    100006: Man:headFK
+    100008: Man:hips
+    100010: Man:HipsEff
+    100012: Man:hipsFK
+    100014: Man:JapCnt
+    100016: Man:JapMod
+    100018: Man:JapSkeleton
+    100020: Man:joint13
+    100022: Man:joint13 1
+    100024: Man:joint18
+    100026: Man:joint18 1
+    100028: Man:joint23
+    100030: Man:joint23 1
+    100032: Man:joint23FK
+    100034: Man:joint23FK 1
+    100036: Man:joint28
+    100038: Man:joint28 1
+    100040: Man:joint44
+    100042: Man:joint86
+    100044: Man:joint86FK
+    100046: Man:joint87
+    100048: Man:joint87FK
+    100050: Man:jointFfd1Base
+    100052: Man:jointFfd1Lattice
+    100054: Man:jointFfd1LatticeGroup
+    100056: Man:jointFfd2Base
+    100058: Man:jointFfd2Lattice
+    100060: Man:jointFfd2LatticeGroup
+    100062: Man:jointFlexor1
+    100064: Man:jointFlexor2
+    100066: Man:leftArm
+    100068: Man:LeftArmEff
+    100070: Man:leftArmFK
+    100072: Man:LeftFingerBaseEff
+    100074: Man:leftFoot
+    100076: Man:LeftFootEff
+    100078: Man:LeftFootEffPivot
+    100080: Man:leftFootFK
+    100082: Man:leftFootIndex1
+    100084: Man:LeftFootIndex1Eff
+    100086: Man:leftFootIndex1FK
+    100088: Man:leftFootIndex2
+    100090: Man:leftFootIndex2FK
+    100092: Man:leftForearm
+    100094: Man:LeftForeArmEff
+    100096: Man:leftForearmFK
+    100098: Man:leftForeArmRoll
+    100100: Man:leftForeArmRollFK
+    100102: Man:leftHand
+    100104: Man:LeftHandEff
+    100106: Man:leftHandFK
+    100108: Man:leftHandIndex1
+    100110: Man:LeftHandIndex1Eff
+    100112: Man:leftHandIndex1FK
+    100114: Man:leftHandIndex2
+    100116: Man:leftHandIndex2FK
+    100118: Man:leftHandIndex3
+    100120: Man:leftHandIndex3FK
+    100122: Man:leftHandIndex4
+    100124: Man:leftHandIndex4FK
+    100126: Man:leftHandMiddle1
+    100128: Man:LeftHandMiddle1Eff
+    100130: Man:leftHandMiddle1FK
+    100132: Man:leftHandMiddle2
+    100134: Man:leftHandMiddle2FK
+    100136: Man:leftHandMiddle3
+    100138: Man:leftHandMiddle3FK
+    100140: Man:leftHandMiddle4
+    100142: Man:leftHandMiddle4FK
+    100144: Man:leftHandPinky1
+    100146: Man:LeftHandPinky1Eff
+    100148: Man:leftHandPinky1FK
+    100150: Man:leftHandPinky2
+    100152: Man:leftHandPinky2FK
+    100154: Man:leftHandPinky3
+    100156: Man:leftHandPinky3FK
+    100158: Man:leftHandPinky4
+    100160: Man:leftHandPinky4FK
+    100162: Man:leftHandRing1
+    100164: Man:LeftHandRing1Eff
+    100166: Man:leftHandRing1FK
+    100168: Man:leftHandRing2
+    100170: Man:leftHandRing2FK
+    100172: Man:leftHandRing3
+    100174: Man:leftHandRing3FK
+    100176: Man:leftHandRing4
+    100178: Man:leftHandRing4FK
+    100180: Man:leftHandThumb1
+    100182: Man:LeftHandThumb1Eff
+    100184: Man:leftHandThumb1FK
+    100186: Man:leftHandThumb2
+    100188: Man:leftHandThumb2FK
+    100190: Man:leftHandThumb3
+    100192: Man:leftHandThumb3FK
+    100194: Man:leftHandThumb4
+    100196: Man:leftHandThumb4FK
+    100198: Man:leftLeg
+    100200: Man:LeftLegEff
+    100202: Man:leftLegFK
+    100204: Man:leftShoulder
+    100206: Man:leftShoulderFK
+    100208: Man:LeftToeBaseEff
+    100210: Man:leftUpLeg
+    100212: Man:LeftUpLegEff
+    100214: Man:leftUpLegFK
+    100216: Man:neck
+    100218: Man:NeckEff
+    100220: Man:neckFK
+    100222: Man:pCube1
+    100224: Man:pCube1 1
+    100226: Man:pCube10
+    100228: Man:pCube10 1
+    100230: Man:pCube11
+    100232: Man:pCube11 1
+    100234: Man:pCube12
+    100236: Man:pCube12 1
+    100238: Man:pCube13
+    100240: Man:pCube13 1
+    100242: Man:pCube14
+    100244: Man:pCube14 1
+    100246: Man:pCube15
+    100248: Man:pCube15 1
+    100250: Man:pCube16
+    100252: Man:pCube16 1
+    100254: Man:pCube17
+    100256: Man:pCube17 1
+    100258: Man:pCube18
+    100260: Man:pCube18 1
+    100262: Man:pCube19
+    100264: Man:pCube19 1
+    100266: Man:pCube2
+    100268: Man:pCube2 1
+    100270: Man:pCube20
+    100272: Man:pCube20 1
+    100274: Man:pCube21
+    100276: Man:pCube21 1
+    100278: Man:pCube22
+    100280: Man:pCube22 1
+    100282: Man:pCube23
+    100284: Man:pCube23 1
+    100286: Man:pCube24
+    100288: Man:pCube24 1
+    100290: Man:pCube25
+    100292: Man:pCube25 1
+    100294: Man:pCube26
+    100296: Man:pCube3
+    100298: Man:pCube3 1
+    100300: Man:pCube4
+    100302: Man:pCube4 1
+    100304: Man:pCube5
+    100306: Man:pCube6
+    100308: Man:pCube7
+    100310: Man:pCube7 1
+    100312: Man:pCube8
+    100314: Man:pCube9
+    100316: Man:pCube9 1
+    100318: Man:polySurface3
+    100320: Man:polySurface4
+    100322: Man:polySurface5
+    100324: Man:polySurface8
+    100326: Man:rightArm
+    100328: Man:RightArmEff
+    100330: Man:rightArmFK
+    100332: Man:RightFingerBaseEff
+    100334: Man:rightFoot
+    100336: Man:RightFootEff
+    100338: Man:RightFootEffPivot
+    100340: Man:rightFootFK
+    100342: Man:rightFootIndex1
+    100344: Man:RightFootIndex1Eff
+    100346: Man:rightFootIndex1FK
+    100348: Man:rightFootIndex2
+    100350: Man:rightFootIndex2FK
+    100352: Man:rightForearm
+    100354: Man:RightForeArmEff
+    100356: Man:rightForearmFK
+    100358: Man:rightForeArmRoll
+    100360: Man:rightForeArmRollFK
+    100362: Man:rightHand
+    100364: Man:RightHandEff
+    100366: Man:rightHandFK
+    100368: Man:rightHandIndex1
+    100370: Man:RightHandIndex1Eff
+    100372: Man:rightHandIndex1FK
+    100374: Man:rightHandIndex2
+    100376: Man:rightHandIndex2FK
+    100378: Man:rightHandIndex3
+    100380: Man:rightHandIndex3FK
+    100382: Man:rightHandIndex4
+    100384: Man:rightHandIndex4FK
+    100386: Man:rightHandMiddle1
+    100388: Man:RightHandMiddle1Eff
+    100390: Man:rightHandMiddle1FK
+    100392: Man:rightHandMiddle2
+    100394: Man:rightHandMiddle2FK
+    100396: Man:rightHandMiddle3
+    100398: Man:rightHandMiddle3FK
+    100400: Man:rightHandMiddle4
+    100402: Man:rightHandMiddle4FK
+    100404: Man:rightHandPinky1
+    100406: Man:RightHandPinky1Eff
+    100408: Man:rightHandPinky1FK
+    100410: Man:rightHandPinky2
+    100412: Man:rightHandPinky2FK
+    100414: Man:rightHandPinky3
+    100416: Man:rightHandPinky3FK
+    100418: Man:rightHandPinky4
+    100420: Man:rightHandPinky4FK
+    100422: Man:rightHandRing1
+    100424: Man:RightHandRing1Eff
+    100426: Man:rightHandRing1FK
+    100428: Man:rightHandRing2
+    100430: Man:rightHandRing2FK
+    100432: Man:rightHandRing3
+    100434: Man:rightHandRing3FK
+    100436: Man:rightHandRing4
+    100438: Man:rightHandRing4FK
+    100440: Man:rightHandThumb1
+    100442: Man:RightHandThumb1Eff
+    100444: Man:rightHandThumb1FK
+    100446: Man:rightHandThumb2
+    100448: Man:rightHandThumb2FK
+    100450: Man:rightHandThumb3
+    100452: Man:rightHandThumb3FK
+    100454: Man:rightHandThumb4
+    100456: Man:rightHandThumb4FK
+    100458: Man:rightLeg
+    100460: Man:RightLegEff
+    100462: Man:rightLegFK
+    100464: Man:rightShoulder
+    100466: Man:rightShoulderFK
+    100468: Man:RightToeBaseEff
+    100470: Man:rightUpLeg
+    100472: Man:RightUpLegEff
+    100474: Man:rightUpLegFK
+    100476: Man:spine
+    100478: Man:spine1
+    100480: Man:spine1FK
+    100482: Man:SpineEff
+    100484: Man:spineFK
+    100486: Man:xxx
+    100488: Man:xxy
+    400000: //RootNode
+    400002: Man:head
+    400004: Man:HeadEff
+    400006: Man:headFK
+    400008: Man:hips
+    400010: Man:HipsEff
+    400012: Man:hipsFK
+    400014: Man:JapCnt
+    400016: Man:JapMod
+    400018: Man:JapSkeleton
+    400020: Man:joint13
+    400022: Man:joint13 1
+    400024: Man:joint18
+    400026: Man:joint18 1
+    400028: Man:joint23
+    400030: Man:joint23 1
+    400032: Man:joint23FK
+    400034: Man:joint23FK 1
+    400036: Man:joint28
+    400038: Man:joint28 1
+    400040: Man:joint44
+    400042: Man:joint86
+    400044: Man:joint86FK
+    400046: Man:joint87
+    400048: Man:joint87FK
+    400050: Man:jointFfd1Base
+    400052: Man:jointFfd1Lattice
+    400054: Man:jointFfd1LatticeGroup
+    400056: Man:jointFfd2Base
+    400058: Man:jointFfd2Lattice
+    400060: Man:jointFfd2LatticeGroup
+    400062: Man:jointFlexor1
+    400064: Man:jointFlexor2
+    400066: Man:leftArm
+    400068: Man:LeftArmEff
+    400070: Man:leftArmFK
+    400072: Man:LeftFingerBaseEff
+    400074: Man:leftFoot
+    400076: Man:LeftFootEff
+    400078: Man:LeftFootEffPivot
+    400080: Man:leftFootFK
+    400082: Man:leftFootIndex1
+    400084: Man:LeftFootIndex1Eff
+    400086: Man:leftFootIndex1FK
+    400088: Man:leftFootIndex2
+    400090: Man:leftFootIndex2FK
+    400092: Man:leftForearm
+    400094: Man:LeftForeArmEff
+    400096: Man:leftForearmFK
+    400098: Man:leftForeArmRoll
+    400100: Man:leftForeArmRollFK
+    400102: Man:leftHand
+    400104: Man:LeftHandEff
+    400106: Man:leftHandFK
+    400108: Man:leftHandIndex1
+    400110: Man:LeftHandIndex1Eff
+    400112: Man:leftHandIndex1FK
+    400114: Man:leftHandIndex2
+    400116: Man:leftHandIndex2FK
+    400118: Man:leftHandIndex3
+    400120: Man:leftHandIndex3FK
+    400122: Man:leftHandIndex4
+    400124: Man:leftHandIndex4FK
+    400126: Man:leftHandMiddle1
+    400128: Man:LeftHandMiddle1Eff
+    400130: Man:leftHandMiddle1FK
+    400132: Man:leftHandMiddle2
+    400134: Man:leftHandMiddle2FK
+    400136: Man:leftHandMiddle3
+    400138: Man:leftHandMiddle3FK
+    400140: Man:leftHandMiddle4
+    400142: Man:leftHandMiddle4FK
+    400144: Man:leftHandPinky1
+    400146: Man:LeftHandPinky1Eff
+    400148: Man:leftHandPinky1FK
+    400150: Man:leftHandPinky2
+    400152: Man:leftHandPinky2FK
+    400154: Man:leftHandPinky3
+    400156: Man:leftHandPinky3FK
+    400158: Man:leftHandPinky4
+    400160: Man:leftHandPinky4FK
+    400162: Man:leftHandRing1
+    400164: Man:LeftHandRing1Eff
+    400166: Man:leftHandRing1FK
+    400168: Man:leftHandRing2
+    400170: Man:leftHandRing2FK
+    400172: Man:leftHandRing3
+    400174: Man:leftHandRing3FK
+    400176: Man:leftHandRing4
+    400178: Man:leftHandRing4FK
+    400180: Man:leftHandThumb1
+    400182: Man:LeftHandThumb1Eff
+    400184: Man:leftHandThumb1FK
+    400186: Man:leftHandThumb2
+    400188: Man:leftHandThumb2FK
+    400190: Man:leftHandThumb3
+    400192: Man:leftHandThumb3FK
+    400194: Man:leftHandThumb4
+    400196: Man:leftHandThumb4FK
+    400198: Man:leftLeg
+    400200: Man:LeftLegEff
+    400202: Man:leftLegFK
+    400204: Man:leftShoulder
+    400206: Man:leftShoulderFK
+    400208: Man:LeftToeBaseEff
+    400210: Man:leftUpLeg
+    400212: Man:LeftUpLegEff
+    400214: Man:leftUpLegFK
+    400216: Man:neck
+    400218: Man:NeckEff
+    400220: Man:neckFK
+    400222: Man:pCube1
+    400224: Man:pCube1 1
+    400226: Man:pCube10
+    400228: Man:pCube10 1
+    400230: Man:pCube11
+    400232: Man:pCube11 1
+    400234: Man:pCube12
+    400236: Man:pCube12 1
+    400238: Man:pCube13
+    400240: Man:pCube13 1
+    400242: Man:pCube14
+    400244: Man:pCube14 1
+    400246: Man:pCube15
+    400248: Man:pCube15 1
+    400250: Man:pCube16
+    400252: Man:pCube16 1
+    400254: Man:pCube17
+    400256: Man:pCube17 1
+    400258: Man:pCube18
+    400260: Man:pCube18 1
+    400262: Man:pCube19
+    400264: Man:pCube19 1
+    400266: Man:pCube2
+    400268: Man:pCube2 1
+    400270: Man:pCube20
+    400272: Man:pCube20 1
+    400274: Man:pCube21
+    400276: Man:pCube21 1
+    400278: Man:pCube22
+    400280: Man:pCube22 1
+    400282: Man:pCube23
+    400284: Man:pCube23 1
+    400286: Man:pCube24
+    400288: Man:pCube24 1
+    400290: Man:pCube25
+    400292: Man:pCube25 1
+    400294: Man:pCube26
+    400296: Man:pCube3
+    400298: Man:pCube3 1
+    400300: Man:pCube4
+    400302: Man:pCube4 1
+    400304: Man:pCube5
+    400306: Man:pCube6
+    400308: Man:pCube7
+    400310: Man:pCube7 1
+    400312: Man:pCube8
+    400314: Man:pCube9
+    400316: Man:pCube9 1
+    400318: Man:polySurface3
+    400320: Man:polySurface4
+    400322: Man:polySurface5
+    400324: Man:polySurface8
+    400326: Man:rightArm
+    400328: Man:RightArmEff
+    400330: Man:rightArmFK
+    400332: Man:RightFingerBaseEff
+    400334: Man:rightFoot
+    400336: Man:RightFootEff
+    400338: Man:RightFootEffPivot
+    400340: Man:rightFootFK
+    400342: Man:rightFootIndex1
+    400344: Man:RightFootIndex1Eff
+    400346: Man:rightFootIndex1FK
+    400348: Man:rightFootIndex2
+    400350: Man:rightFootIndex2FK
+    400352: Man:rightForearm
+    400354: Man:RightForeArmEff
+    400356: Man:rightForearmFK
+    400358: Man:rightForeArmRoll
+    400360: Man:rightForeArmRollFK
+    400362: Man:rightHand
+    400364: Man:RightHandEff
+    400366: Man:rightHandFK
+    400368: Man:rightHandIndex1
+    400370: Man:RightHandIndex1Eff
+    400372: Man:rightHandIndex1FK
+    400374: Man:rightHandIndex2
+    400376: Man:rightHandIndex2FK
+    400378: Man:rightHandIndex3
+    400380: Man:rightHandIndex3FK
+    400382: Man:rightHandIndex4
+    400384: Man:rightHandIndex4FK
+    400386: Man:rightHandMiddle1
+    400388: Man:RightHandMiddle1Eff
+    400390: Man:rightHandMiddle1FK
+    400392: Man:rightHandMiddle2
+    400394: Man:rightHandMiddle2FK
+    400396: Man:rightHandMiddle3
+    400398: Man:rightHandMiddle3FK
+    400400: Man:rightHandMiddle4
+    400402: Man:rightHandMiddle4FK
+    400404: Man:rightHandPinky1
+    400406: Man:RightHandPinky1Eff
+    400408: Man:rightHandPinky1FK
+    400410: Man:rightHandPinky2
+    400412: Man:rightHandPinky2FK
+    400414: Man:rightHandPinky3
+    400416: Man:rightHandPinky3FK
+    400418: Man:rightHandPinky4
+    400420: Man:rightHandPinky4FK
+    400422: Man:rightHandRing1
+    400424: Man:RightHandRing1Eff
+    400426: Man:rightHandRing1FK
+    400428: Man:rightHandRing2
+    400430: Man:rightHandRing2FK
+    400432: Man:rightHandRing3
+    400434: Man:rightHandRing3FK
+    400436: Man:rightHandRing4
+    400438: Man:rightHandRing4FK
+    400440: Man:rightHandThumb1
+    400442: Man:RightHandThumb1Eff
+    400444: Man:rightHandThumb1FK
+    400446: Man:rightHandThumb2
+    400448: Man:rightHandThumb2FK
+    400450: Man:rightHandThumb3
+    400452: Man:rightHandThumb3FK
+    400454: Man:rightHandThumb4
+    400456: Man:rightHandThumb4FK
+    400458: Man:rightLeg
+    400460: Man:RightLegEff
+    400462: Man:rightLegFK
+    400464: Man:rightShoulder
+    400466: Man:rightShoulderFK
+    400468: Man:RightToeBaseEff
+    400470: Man:rightUpLeg
+    400472: Man:RightUpLegEff
+    400474: Man:rightUpLegFK
+    400476: Man:spine
+    400478: Man:spine1
+    400480: Man:spine1FK
+    400482: Man:SpineEff
+    400484: Man:spineFK
+    400486: Man:xxx
+    400488: Man:xxy
+    2300000: Man:pCube1
+    2300002: Man:pCube1 1
+    2300004: Man:pCube10
+    2300006: Man:pCube10 1
+    2300008: Man:pCube11
+    2300010: Man:pCube11 1
+    2300012: Man:pCube12
+    2300014: Man:pCube12 1
+    2300016: Man:pCube13
+    2300018: Man:pCube13 1
+    2300020: Man:pCube14
+    2300022: Man:pCube14 1
+    2300024: Man:pCube15
+    2300026: Man:pCube15 1
+    2300028: Man:pCube16
+    2300030: Man:pCube16 1
+    2300032: Man:pCube17
+    2300034: Man:pCube17 1
+    2300036: Man:pCube18
+    2300038: Man:pCube18 1
+    2300040: Man:pCube19
+    2300042: Man:pCube19 1
+    2300044: Man:pCube2
+    2300046: Man:pCube2 1
+    2300048: Man:pCube20
+    2300050: Man:pCube20 1
+    2300052: Man:pCube21
+    2300054: Man:pCube21 1
+    2300056: Man:pCube22
+    2300058: Man:pCube22 1
+    2300060: Man:pCube23
+    2300062: Man:pCube23 1
+    2300064: Man:pCube24
+    2300066: Man:pCube24 1
+    2300068: Man:pCube25
+    2300070: Man:pCube25 1
+    2300072: Man:pCube3
+    2300074: Man:pCube3 1
+    2300076: Man:pCube4
+    2300078: Man:pCube4 1
+    2300080: Man:pCube5
+    2300082: Man:pCube7
+    2300084: Man:pCube7 1
+    2300086: Man:pCube9
+    2300088: Man:pCube9 1
+    2300090: Man:polySurface4
+    2300092: Man:polySurface5
+    2300094: Man:polySurface8
+    3300000: Man:pCube1
+    3300002: Man:pCube1 1
+    3300004: Man:pCube10
+    3300006: Man:pCube10 1
+    3300008: Man:pCube11
+    3300010: Man:pCube11 1
+    3300012: Man:pCube12
+    3300014: Man:pCube12 1
+    3300016: Man:pCube13
+    3300018: Man:pCube13 1
+    3300020: Man:pCube14
+    3300022: Man:pCube14 1
+    3300024: Man:pCube15
+    3300026: Man:pCube15 1
+    3300028: Man:pCube16
+    3300030: Man:pCube16 1
+    3300032: Man:pCube17
+    3300034: Man:pCube17 1
+    3300036: Man:pCube18
+    3300038: Man:pCube18 1
+    3300040: Man:pCube19
+    3300042: Man:pCube19 1
+    3300044: Man:pCube2
+    3300046: Man:pCube2 1
+    3300048: Man:pCube20
+    3300050: Man:pCube20 1
+    3300052: Man:pCube21
+    3300054: Man:pCube21 1
+    3300056: Man:pCube22
+    3300058: Man:pCube22 1
+    3300060: Man:pCube23
+    3300062: Man:pCube23 1
+    3300064: Man:pCube24
+    3300066: Man:pCube24 1
+    3300068: Man:pCube25
+    3300070: Man:pCube25 1
+    3300072: Man:pCube3
+    3300074: Man:pCube3 1
+    3300076: Man:pCube4
+    3300078: Man:pCube4 1
+    3300080: Man:pCube5
+    3300082: Man:pCube7
+    3300084: Man:pCube7 1
+    3300086: Man:pCube9
+    3300088: Man:pCube9 1
+    3300090: Man:polySurface4
+    3300092: Man:polySurface5
+    3300094: Man:polySurface8
+    4300000: Man:pCube26
+    4300002: Man:pCube8
+    4300004: Man:polySurface4
+    4300006: Man:polySurface5
+    4300008: Man:polySurface8
+    4300010: Man:pCube11
+    4300012: Man:pCube10
+    4300014: Man:pCube9
+    4300016: Man:pCube12
+    4300018: Man:pCube13
+    4300020: Man:pCube14
+    4300022: Man:pCube15
+    4300024: Man:pCube16
+    4300026: Man:pCube17
+    4300028: Man:pCube18
+    4300030: Man:pCube19
+    4300032: Man:pCube20
+    4300034: Man:pCube21
+    4300036: Man:pCube22
+    4300038: Man:pCube23
+    4300040: Man:pCube25
+    4300042: Man:pCube24
+    4300044: Man:pCube7
+    4300046: Man:pCube11
+    4300048: Man:pCube10
+    4300050: Man:pCube9
+    4300052: Man:pCube12
+    4300054: Man:pCube13
+    4300056: Man:pCube14
+    4300058: Man:pCube15
+    4300060: Man:pCube16
+    4300062: Man:pCube17
+    4300064: Man:pCube18
+    4300066: Man:pCube19
+    4300068: Man:pCube20
+    4300070: Man:pCube21
+    4300072: Man:pCube22
+    4300074: Man:pCube23
+    4300076: Man:pCube25
+    4300078: Man:pCube24
+    4300080: Man:pCube7
+    4300082: Man:pCube4
+    4300084: Man:pCube3
+    4300086: Man:pCube2
+    4300088: Man:pCube1
+    4300090: Man:pCube4
+    4300092: Man:pCube3
+    4300094: Man:pCube2
+    4300096: Man:pCube1
+    4300098: Man:pCube5
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Man:pCube26
+    13700002: Man:pCube8
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 500
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Man:JapCnt
+        weight: 1
+      - path: Man:JapCnt/Man:HeadEff
+        weight: 1
+      - path: Man:JapCnt/Man:HipsEff
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:leftUpLegFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:leftUpLegFK/Man:leftLegFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:leftUpLegFK/Man:leftLegFK/Man:leftFootFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:leftUpLegFK/Man:leftLegFK/Man:leftFootFK/Man:joint86FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:leftUpLegFK/Man:leftLegFK/Man:leftFootFK/Man:joint86FK/Man:leftFootIndex1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:leftUpLegFK/Man:leftLegFK/Man:leftFootFK/Man:joint86FK/Man:leftFootIndex1FK/Man:leftFootIndex2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:rightUpLegFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:rightUpLegFK/Man:rightLegFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:rightUpLegFK/Man:rightLegFK/Man:rightFootFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:rightUpLegFK/Man:rightLegFK/Man:rightFootFK/Man:joint87FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:rightUpLegFK/Man:rightLegFK/Man:rightFootFK/Man:joint87FK/Man:rightFootIndex1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:rightUpLegFK/Man:rightLegFK/Man:rightFootFK/Man:joint87FK/Man:rightFootIndex1FK/Man:rightFootIndex2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:joint23FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:joint23FK/Man:leftHandMiddle1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:joint23FK/Man:leftHandMiddle1FK/Man:leftHandMiddle2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:joint23FK/Man:leftHandMiddle1FK/Man:leftHandMiddle2FK/Man:leftHandMiddle3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:joint23FK/Man:leftHandMiddle1FK/Man:leftHandMiddle2FK/Man:leftHandMiddle3FK/Man:leftHandMiddle4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandIndex1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandIndex1FK/Man:leftHandIndex2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandIndex1FK/Man:leftHandIndex2FK/Man:leftHandIndex3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandIndex1FK/Man:leftHandIndex2FK/Man:leftHandIndex3FK/Man:leftHandIndex4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandPinky1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandPinky1FK/Man:leftHandPinky2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandPinky1FK/Man:leftHandPinky2FK/Man:leftHandPinky3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandPinky1FK/Man:leftHandPinky2FK/Man:leftHandPinky3FK/Man:leftHandPinky4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandRing1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandRing1FK/Man:leftHandRing2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandRing1FK/Man:leftHandRing2FK/Man:leftHandRing3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandRing1FK/Man:leftHandRing2FK/Man:leftHandRing3FK/Man:leftHandRing4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandThumb1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandThumb1FK/Man:leftHandThumb2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandThumb1FK/Man:leftHandThumb2FK/Man:leftHandThumb3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:leftShoulderFK/Man:leftArmFK/Man:leftForearmFK/Man:leftForeArmRollFK/Man:leftHandFK/Man:leftHandThumb1FK/Man:leftHandThumb2FK/Man:leftHandThumb3FK/Man:leftHandThumb4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:neckFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:neckFK/Man:headFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:joint23FK
+          1
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:joint23FK
+          1/Man:rightHandMiddle1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:joint23FK
+          1/Man:rightHandMiddle1FK/Man:rightHandMiddle2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:joint23FK
+          1/Man:rightHandMiddle1FK/Man:rightHandMiddle2FK/Man:rightHandMiddle3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:joint23FK
+          1/Man:rightHandMiddle1FK/Man:rightHandMiddle2FK/Man:rightHandMiddle3FK/Man:rightHandMiddle4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandIndex1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandIndex1FK/Man:rightHandIndex2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandIndex1FK/Man:rightHandIndex2FK/Man:rightHandIndex3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandIndex1FK/Man:rightHandIndex2FK/Man:rightHandIndex3FK/Man:rightHandIndex4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandPinky1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandPinky1FK/Man:rightHandPinky2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandPinky1FK/Man:rightHandPinky2FK/Man:rightHandPinky3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandPinky1FK/Man:rightHandPinky2FK/Man:rightHandPinky3FK/Man:rightHandPinky4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandRing1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandRing1FK/Man:rightHandRing2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandRing1FK/Man:rightHandRing2FK/Man:rightHandRing3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandRing1FK/Man:rightHandRing2FK/Man:rightHandRing3FK/Man:rightHandRing4FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandThumb1FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandThumb1FK/Man:rightHandThumb2FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandThumb1FK/Man:rightHandThumb2FK/Man:rightHandThumb3FK
+        weight: 1
+      - path: Man:JapCnt/Man:hipsFK/Man:spineFK/Man:spine1FK/Man:rightShoulderFK/Man:rightArmFK/Man:rightForearmFK/Man:rightForeArmRollFK/Man:rightHandFK/Man:rightHandThumb1FK/Man:rightHandThumb2FK/Man:rightHandThumb3FK/Man:rightHandThumb4FK
+        weight: 1
+      - path: Man:JapCnt/Man:LeftArmEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftFingerBaseEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftFootEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftFootEff/Man:LeftFootIndex1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftFootEffPivot
+        weight: 1
+      - path: Man:JapCnt/Man:LeftForeArmEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftHandEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftHandEff/Man:LeftHandIndex1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftHandEff/Man:LeftHandMiddle1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftHandEff/Man:LeftHandPinky1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftHandEff/Man:LeftHandRing1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftHandEff/Man:LeftHandThumb1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftLegEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftToeBaseEff
+        weight: 1
+      - path: Man:JapCnt/Man:LeftUpLegEff
+        weight: 1
+      - path: Man:JapCnt/Man:NeckEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightArmEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightFingerBaseEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightFootEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightFootEff/Man:RightFootIndex1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:RightFootEffPivot
+        weight: 1
+      - path: Man:JapCnt/Man:RightForeArmEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightHandEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightHandEff/Man:RightHandIndex1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:RightHandEff/Man:RightHandMiddle1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:RightHandEff/Man:RightHandPinky1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:RightHandEff/Man:RightHandRing1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:RightHandEff/Man:RightHandThumb1Eff
+        weight: 1
+      - path: Man:JapCnt/Man:RightLegEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightToeBaseEff
+        weight: 1
+      - path: Man:JapCnt/Man:RightUpLegEff
+        weight: 1
+      - path: Man:JapCnt/Man:SpineEff
+        weight: 1
+      - path: Man:JapMod
+        weight: 1
+      - path: Man:JapMod/Man:pCube6
+        weight: 1
+      - path: Man:JapMod/Man:pCube8
+        weight: 1
+      - path: Man:JapMod/Man:pCube26
+        weight: 1
+      - path: Man:JapSkeleton
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:leftFoot
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:leftFoot/Man:joint86
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:leftFoot/Man:joint86/Man:leftFootIndex1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:leftFoot/Man:joint86/Man:leftFootIndex1/Man:leftFootIndex2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:leftFoot/Man:joint86/Man:leftFootIndex1/Man:pCube4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:leftFoot/Man:pCube3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:leftLeg/Man:pCube2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:leftUpLeg/Man:pCube1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:pCube5
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:pCube1 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:pCube2 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:rightFoot
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:rightFoot/Man:joint87
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:rightFoot/Man:joint87/Man:rightFootIndex1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:rightFoot/Man:joint87/Man:rightFootIndex1/Man:pCube4
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:rightFoot/Man:joint87/Man:rightFootIndex1/Man:rightFootIndex2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:rightUpLeg/Man:rightLeg/Man:rightFoot/Man:pCube3
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:jointFfd1LatticeGroup
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:jointFfd1LatticeGroup/Man:jointFfd1Base
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:jointFfd1LatticeGroup/Man:jointFfd1Lattice
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:jointFfd2LatticeGroup
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:jointFfd2LatticeGroup/Man:jointFfd2Base
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:jointFfd2LatticeGroup/Man:jointFfd2Lattice
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1/Man:leftHandPinky2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1/Man:leftHandPinky2/Man:leftHandPinky3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1/Man:leftHandPinky2/Man:leftHandPinky3/Man:leftHandPinky4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1/Man:leftHandPinky2/Man:leftHandPinky3/Man:pCube11
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1/Man:leftHandPinky2/Man:pCube10
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint13/Man:leftHandPinky1/Man:pCube9
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1/Man:leftHandRing2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1/Man:leftHandRing2/Man:leftHandRing3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1/Man:leftHandRing2/Man:leftHandRing3/Man:leftHandRing4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1/Man:leftHandRing2/Man:leftHandRing3/Man:pCube12
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1/Man:leftHandRing2/Man:pCube13
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint18/Man:leftHandRing1/Man:pCube14
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1/Man:leftHandMiddle2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1/Man:leftHandMiddle2/Man:leftHandMiddle3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1/Man:leftHandMiddle2/Man:leftHandMiddle3/Man:leftHandMiddle4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1/Man:leftHandMiddle2/Man:leftHandMiddle3/Man:pCube15
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1/Man:leftHandMiddle2/Man:pCube16
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint23/Man:leftHandMiddle1/Man:pCube17
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1/Man:leftHandIndex2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1/Man:leftHandIndex2/Man:leftHandIndex3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1/Man:leftHandIndex2/Man:leftHandIndex3/Man:leftHandIndex4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1/Man:leftHandIndex2/Man:leftHandIndex3/Man:pCube18
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1/Man:leftHandIndex2/Man:pCube19
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:joint28/Man:leftHandIndex1/Man:pCube20
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1/Man:leftHandThumb2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1/Man:leftHandThumb2/Man:leftHandThumb3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1/Man:leftHandThumb2/Man:leftHandThumb3/Man:leftHandThumb4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1/Man:leftHandThumb2/Man:leftHandThumb3/Man:pCube21
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1/Man:leftHandThumb2/Man:pCube22
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:leftHandThumb1/Man:pCube23
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:pCube24
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:leftForearm/Man:leftForeArmRoll/Man:leftHand/Man:pCube25
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:leftShoulder/Man:leftArm/Man:pCube7
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head/Man:joint44
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head/Man:jointFlexor2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head/Man:polySurface3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head/Man:polySurface3/Man:polySurface4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head/Man:polySurface3/Man:polySurface5
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:head/Man:polySurface3/Man:polySurface8
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:neck/Man:jointFlexor1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:pCube7
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1/Man:pCube9 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1/Man:rightHandPinky2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1/Man:rightHandPinky2/Man:pCube10 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1/Man:rightHandPinky2/Man:rightHandPinky3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1/Man:rightHandPinky2/Man:rightHandPinky3/Man:pCube11
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint13
+          1/Man:rightHandPinky1/Man:rightHandPinky2/Man:rightHandPinky3/Man:rightHandPinky4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1/Man:pCube14 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1/Man:rightHandRing2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1/Man:rightHandRing2/Man:pCube13 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1/Man:rightHandRing2/Man:rightHandRing3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1/Man:rightHandRing2/Man:rightHandRing3/Man:pCube12 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint18
+          1/Man:rightHandRing1/Man:rightHandRing2/Man:rightHandRing3/Man:rightHandRing4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1/Man:pCube17 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1/Man:rightHandMiddle2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1/Man:rightHandMiddle2/Man:pCube16 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1/Man:rightHandMiddle2/Man:rightHandMiddle3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1/Man:rightHandMiddle2/Man:rightHandMiddle3/Man:pCube15
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint23
+          1/Man:rightHandMiddle1/Man:rightHandMiddle2/Man:rightHandMiddle3/Man:rightHandMiddle4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1/Man:pCube20 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1/Man:rightHandIndex2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1/Man:rightHandIndex2/Man:pCube19 1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1/Man:rightHandIndex2/Man:rightHandIndex3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1/Man:rightHandIndex2/Man:rightHandIndex3/Man:pCube18
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:joint28
+          1/Man:rightHandIndex1/Man:rightHandIndex2/Man:rightHandIndex3/Man:rightHandIndex4
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:pCube24
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:pCube25
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1/Man:pCube23
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1/Man:rightHandThumb2
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1/Man:rightHandThumb2/Man:pCube22
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1/Man:rightHandThumb2/Man:rightHandThumb3
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1/Man:rightHandThumb2/Man:rightHandThumb3/Man:pCube21
+          1
+        weight: 1
+      - path: Man:JapSkeleton/Man:hips/Man:spine/Man:spine1/Man:xxy/Man:xxx/Man:rightShoulder/Man:rightArm/Man:rightForearm/Man:rightForeArmRoll/Man:rightHand/Man:rightHandThumb1/Man:rightHandThumb2/Man:rightHandThumb3/Man:rightHandThumb4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

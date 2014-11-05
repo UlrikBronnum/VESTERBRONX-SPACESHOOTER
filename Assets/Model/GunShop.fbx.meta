@@ -1,0 +1,1241 @@
+fileFormatVersion: 2
+guid: ea2ed4329f384437289ff1a36c5d2609
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: BeerBottleShooter1:group
+    100002: BeerBottleShooter1:group1
+    100004: BeerBottleShooter1:group2
+    100006: BeerBottleShooter1:group3
+    100008: BeerBottleShooter1:group4
+    100010: BeerBottleShooter1:pasted__group3
+    100012: BeerBottleShooter2:group
+    100014: BeerBottleShooter2:group3
+    100016: BeerBottleShooter2:group4
+    100018: BeerBottleShooter2:pasted__group3
+    100020: ButcherCleaverGun:group3
+    100022: ButcherCleaverGun:group4
+    100024: ButcherCleaverGun:group5
+    100026: ButcherCleaverGun:group6
+    100028: ButcherCleaverGun:group7
+    100030: ButcherCleaverGun:group8
+    100032: ButcherCleaverGun:pasted__group
+    100034: ButcherCleaverGun:pasted__group 1
+    100036: ButcherCleaverGun:pasted__group 2
+    100038: ButcherCleaverGun:pasted__group 3
+    100040: ButcherCleaverGun:pasted__group1
+    100042: ButcherCleaverGun:pasted__group1 1
+    100044: ButcherCleaverGun:pasted__group1 2
+    100046: ButcherCleaverGun:pasted__group1 3
+    100048: ButcherCleaverGun:pasted__group2
+    100050: ButcherCleaverGun:pasted__group2 1
+    100052: ButcherCleaverGun:pasted__group2 2
+    100054: ButcherCleaverGun:pasted__group2 3
+    100056: ButcherCleaverGun:pasted__group4
+    100058: ButcherCleaverGun:pasted__pasted__group
+    100060: ButcherCleaverGun:pasted__pasted__group 1
+    100062: ButcherCleaverGun:pasted__pasted__group 2
+    100064: ButcherCleaverGun:pasted__pasted__group 3
+    100066: ButcherCleaverGun:pasted__pasted__group 4
+    100068: ButcherCleaverGun:pasted__pasted__group 5
+    100070: ButcherCleaverGun:pasted__pasted__group 6
+    100072: ButcherCleaverGun:pasted__pasted__group 7
+    100074: ButcherCleaverGun:pasted__pasted__group 8
+    100076: ButcherCleaverGun:pasted__pasted__group1
+    100078: ButcherCleaverGun:pasted__pasted__group2
+    100080: ButcherCleaverGun:pasted__pasted__pasted__group
+    100082: ButcherCleaverGun:pasted__pasted__pasted__group 1
+    100084: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube1
+    100086: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube1 1
+    100088: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube2
+    100090: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube2 1
+    100092: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube3
+    100094: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube3 1
+    100096: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube4
+    100098: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube4 1
+    100100: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCylinder1
+    100102: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCylinder1 1
+    100104: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform1
+    100106: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform1 1
+    100108: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform2
+    100110: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform2 1
+    100112: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform3
+    100114: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform3 1
+    100116: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform4
+    100118: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform4 1
+    100120: ButcherCleaverGun:pasted__pasted__pasted__pCube1
+    100122: ButcherCleaverGun:pasted__pasted__pasted__pCube1 1
+    100124: ButcherCleaverGun:pasted__pasted__pasted__pCube1 2
+    100126: ButcherCleaverGun:pasted__pasted__pasted__pCube1 3
+    100128: ButcherCleaverGun:pasted__pasted__pasted__pCube1 4
+    100130: ButcherCleaverGun:pasted__pasted__pasted__pCube1 5
+    100132: ButcherCleaverGun:pasted__pasted__pasted__pCube1 6
+    100134: ButcherCleaverGun:pasted__pasted__pasted__pCube1 7
+    100136: ButcherCleaverGun:pasted__pasted__pasted__pCube1 8
+    100138: ButcherCleaverGun:pasted__pasted__pasted__pCube2
+    100140: ButcherCleaverGun:pasted__pasted__pasted__pCube2 1
+    100142: ButcherCleaverGun:pasted__pasted__pasted__pCube2 2
+    100144: ButcherCleaverGun:pasted__pasted__pasted__pCube2 3
+    100146: ButcherCleaverGun:pasted__pasted__pasted__pCube2 4
+    100148: ButcherCleaverGun:pasted__pasted__pasted__pCube2 5
+    100150: ButcherCleaverGun:pasted__pasted__pasted__pCube2 6
+    100152: ButcherCleaverGun:pasted__pasted__pasted__pCube2 7
+    100154: ButcherCleaverGun:pasted__pasted__pasted__pCube2 8
+    100156: ButcherCleaverGun:pasted__pasted__pasted__pCube3
+    100158: ButcherCleaverGun:pasted__pasted__pasted__pCube3 1
+    100160: ButcherCleaverGun:pasted__pasted__pasted__pCube3 2
+    100162: ButcherCleaverGun:pasted__pasted__pasted__pCube3 3
+    100164: ButcherCleaverGun:pasted__pasted__pasted__pCube3 4
+    100166: ButcherCleaverGun:pasted__pasted__pasted__pCube3 5
+    100168: ButcherCleaverGun:pasted__pasted__pasted__pCube3 6
+    100170: ButcherCleaverGun:pasted__pasted__pasted__pCube3 7
+    100172: ButcherCleaverGun:pasted__pasted__pasted__pCube3 8
+    100174: ButcherCleaverGun:pasted__pasted__pasted__pCube4
+    100176: ButcherCleaverGun:pasted__pasted__pasted__pCube4 1
+    100178: ButcherCleaverGun:pasted__pasted__pasted__pCube4 2
+    100180: ButcherCleaverGun:pasted__pasted__pasted__pCube4 3
+    100182: ButcherCleaverGun:pasted__pasted__pasted__pCube4 4
+    100184: ButcherCleaverGun:pasted__pasted__pasted__pCube4 5
+    100186: ButcherCleaverGun:pasted__pasted__pasted__pCube4 6
+    100188: ButcherCleaverGun:pasted__pasted__pasted__pCube4 7
+    100190: ButcherCleaverGun:pasted__pasted__pasted__pCube4 8
+    100192: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1
+    100194: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 1
+    100196: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 2
+    100198: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 3
+    100200: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 4
+    100202: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 5
+    100204: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 6
+    100206: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 7
+    100208: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 8
+    100210: ButcherCleaverGun:pasted__pasted__pasted__polySurface3
+    100212: ButcherCleaverGun:pasted__pasted__pasted__polySurface3 1
+    100214: ButcherCleaverGun:pasted__pasted__pasted__polySurface4
+    100216: ButcherCleaverGun:pasted__pasted__pasted__transform1
+    100218: ButcherCleaverGun:pasted__pasted__pasted__transform1 1
+    100220: ButcherCleaverGun:pasted__pasted__pasted__transform1 2
+    100222: ButcherCleaverGun:pasted__pasted__pasted__transform1 3
+    100224: ButcherCleaverGun:pasted__pasted__pasted__transform1 4
+    100226: ButcherCleaverGun:pasted__pasted__pasted__transform1 5
+    100228: ButcherCleaverGun:pasted__pasted__pasted__transform1 6
+    100230: ButcherCleaverGun:pasted__pasted__pasted__transform1 7
+    100232: ButcherCleaverGun:pasted__pasted__pasted__transform1 8
+    100234: ButcherCleaverGun:pasted__pasted__pasted__transform2
+    100236: ButcherCleaverGun:pasted__pasted__pasted__transform2 1
+    100238: ButcherCleaverGun:pasted__pasted__pasted__transform2 2
+    100240: ButcherCleaverGun:pasted__pasted__pasted__transform2 3
+    100242: ButcherCleaverGun:pasted__pasted__pasted__transform2 4
+    100244: ButcherCleaverGun:pasted__pasted__pasted__transform2 5
+    100246: ButcherCleaverGun:pasted__pasted__pasted__transform2 6
+    100248: ButcherCleaverGun:pasted__pasted__pasted__transform2 7
+    100250: ButcherCleaverGun:pasted__pasted__pasted__transform2 8
+    100252: ButcherCleaverGun:pasted__pasted__pasted__transform3
+    100254: ButcherCleaverGun:pasted__pasted__pasted__transform3 1
+    100256: ButcherCleaverGun:pasted__pasted__pasted__transform3 2
+    100258: ButcherCleaverGun:pasted__pasted__pasted__transform3 3
+    100260: ButcherCleaverGun:pasted__pasted__pasted__transform3 4
+    100262: ButcherCleaverGun:pasted__pasted__pasted__transform3 5
+    100264: ButcherCleaverGun:pasted__pasted__pasted__transform3 6
+    100266: ButcherCleaverGun:pasted__pasted__pasted__transform3 7
+    100268: ButcherCleaverGun:pasted__pasted__pasted__transform3 8
+    100270: ButcherCleaverGun:pasted__pasted__pasted__transform4
+    100272: ButcherCleaverGun:pasted__pasted__pasted__transform4 1
+    100274: ButcherCleaverGun:pasted__pasted__pasted__transform4 2
+    100276: ButcherCleaverGun:pasted__pasted__pasted__transform4 3
+    100278: ButcherCleaverGun:pasted__pasted__pasted__transform4 4
+    100280: ButcherCleaverGun:pasted__pasted__pasted__transform4 5
+    100282: ButcherCleaverGun:pasted__pasted__pasted__transform4 6
+    100284: ButcherCleaverGun:pasted__pasted__pasted__transform4 7
+    100286: ButcherCleaverGun:pasted__pasted__pasted__transform4 8
+    100288: ButcherCleaverGun:pasted__pasted__pasted__transform6
+    100290: ButcherCleaverGun:pasted__pasted__pasted__transform7
+    100292: ButcherCleaverGun:pasted__pasted__pasted__transform8
+    100294: ButcherCleaverGun:pasted__pasted__pCube1
+    100296: ButcherCleaverGun:pasted__pasted__pCube1 1
+    100298: ButcherCleaverGun:pasted__pasted__pCube1 2
+    100300: ButcherCleaverGun:pasted__pasted__pCube1 3
+    100302: ButcherCleaverGun:pasted__pasted__pCube1 4
+    100304: ButcherCleaverGun:pasted__pasted__pCube2
+    100306: ButcherCleaverGun:pasted__pasted__pCube2 1
+    100308: ButcherCleaverGun:pasted__pasted__pCube2 2
+    100310: ButcherCleaverGun:pasted__pasted__pCube2 3
+    100312: ButcherCleaverGun:pasted__pasted__pCube2 4
+    100314: ButcherCleaverGun:pasted__pasted__pCube3
+    100316: ButcherCleaverGun:pasted__pasted__pCube3 1
+    100318: ButcherCleaverGun:pasted__pasted__pCube3 2
+    100320: ButcherCleaverGun:pasted__pasted__pCube3 3
+    100322: ButcherCleaverGun:pasted__pasted__pCube3 4
+    100324: ButcherCleaverGun:pasted__pasted__pCube4
+    100326: ButcherCleaverGun:pasted__pasted__pCube4 1
+    100328: ButcherCleaverGun:pasted__pasted__pCube4 2
+    100330: ButcherCleaverGun:pasted__pasted__pCube4 3
+    100332: ButcherCleaverGun:pasted__pasted__pCube4 4
+    100334: ButcherCleaverGun:pasted__pasted__pCylinder1
+    100336: ButcherCleaverGun:pasted__pasted__pCylinder1 1
+    100338: ButcherCleaverGun:pasted__pasted__pCylinder1 2
+    100340: ButcherCleaverGun:pasted__pasted__pCylinder1 3
+    100342: ButcherCleaverGun:pasted__pasted__pCylinder1 4
+    100344: ButcherCleaverGun:pasted__pasted__pCylinder2
+    100346: ButcherCleaverGun:pasted__pasted__polySurface1
+    100348: ButcherCleaverGun:pasted__pasted__polySurface2
+    100350: ButcherCleaverGun:pasted__pasted__polySurface3
+    100352: ButcherCleaverGun:pasted__pasted__polySurface3 1
+    100354: ButcherCleaverGun:pasted__pasted__polySurface3 2
+    100356: ButcherCleaverGun:pasted__pasted__polySurface3 3
+    100358: ButcherCleaverGun:pasted__pasted__polySurface3 4
+    100360: ButcherCleaverGun:pasted__pasted__polySurface3 5
+    100362: ButcherCleaverGun:pasted__pasted__polySurface3 6
+    100364: ButcherCleaverGun:pasted__pasted__polySurface3 7
+    100366: ButcherCleaverGun:pasted__pasted__polySurface3 8
+    100368: ButcherCleaverGun:pasted__pasted__polySurface3 9
+    100370: ButcherCleaverGun:pasted__pasted__polySurface4
+    100372: ButcherCleaverGun:pasted__pasted__polySurface4 1
+    100374: ButcherCleaverGun:pasted__pasted__polySurface4 2
+    100376: ButcherCleaverGun:pasted__pasted__polySurface4 3
+    100378: ButcherCleaverGun:pasted__pasted__polySurface4 4
+    100380: ButcherCleaverGun:pasted__pasted__transform1
+    100382: ButcherCleaverGun:pasted__pasted__transform1 1
+    100384: ButcherCleaverGun:pasted__pasted__transform1 2
+    100386: ButcherCleaverGun:pasted__pasted__transform1 3
+    100388: ButcherCleaverGun:pasted__pasted__transform1 4
+    100390: ButcherCleaverGun:pasted__pasted__transform10
+    100392: ButcherCleaverGun:pasted__pasted__transform11
+    100394: ButcherCleaverGun:pasted__pasted__transform12
+    100396: ButcherCleaverGun:pasted__pasted__transform13
+    100398: ButcherCleaverGun:pasted__pasted__transform14
+    100400: ButcherCleaverGun:pasted__pasted__transform2
+    100402: ButcherCleaverGun:pasted__pasted__transform2 1
+    100404: ButcherCleaverGun:pasted__pasted__transform2 2
+    100406: ButcherCleaverGun:pasted__pasted__transform2 3
+    100408: ButcherCleaverGun:pasted__pasted__transform2 4
+    100410: ButcherCleaverGun:pasted__pasted__transform3
+    100412: ButcherCleaverGun:pasted__pasted__transform3 1
+    100414: ButcherCleaverGun:pasted__pasted__transform3 2
+    100416: ButcherCleaverGun:pasted__pasted__transform3 3
+    100418: ButcherCleaverGun:pasted__pasted__transform3 4
+    100420: ButcherCleaverGun:pasted__pasted__transform4
+    100422: ButcherCleaverGun:pasted__pasted__transform4 1
+    100424: ButcherCleaverGun:pasted__pasted__transform4 2
+    100426: ButcherCleaverGun:pasted__pasted__transform4 3
+    100428: ButcherCleaverGun:pasted__pasted__transform4 4
+    100430: ButcherCleaverGun:pasted__pasted__transform5
+    100432: ButcherCleaverGun:pasted__pasted__transform6
+    100434: ButcherCleaverGun:pasted__pasted__transform6 1
+    100436: ButcherCleaverGun:pasted__pasted__transform6 2
+    100438: ButcherCleaverGun:pasted__pasted__transform6 3
+    100440: ButcherCleaverGun:pasted__pasted__transform6 4
+    100442: ButcherCleaverGun:pasted__pasted__transform7
+    100444: ButcherCleaverGun:pasted__pasted__transform7 1
+    100446: ButcherCleaverGun:pasted__pasted__transform7 2
+    100448: ButcherCleaverGun:pasted__pasted__transform7 3
+    100450: ButcherCleaverGun:pasted__pasted__transform7 4
+    100452: ButcherCleaverGun:pasted__pasted__transform8
+    100454: ButcherCleaverGun:pasted__pasted__transform8 1
+    100456: ButcherCleaverGun:pasted__pasted__transform8 2
+    100458: ButcherCleaverGun:pasted__pasted__transform8 3
+    100460: ButcherCleaverGun:pasted__pasted__transform8 4
+    100462: ButcherCleaverGun:pasted__pasted__transform9
+    100464: ButcherCleaverGun:pasted__pCube1
+    100466: ButcherCleaverGun:pasted__pCube1 1
+    100468: ButcherCleaverGun:pasted__pCube1 2
+    100470: ButcherCleaverGun:pasted__pCube1 3
+    100472: ButcherCleaverGun:pasted__pCube2
+    100474: ButcherCleaverGun:pasted__pCube2 1
+    100476: ButcherCleaverGun:pasted__pCube2 2
+    100478: ButcherCleaverGun:pasted__pCube2 3
+    100480: ButcherCleaverGun:pasted__pCube3
+    100482: ButcherCleaverGun:pasted__pCube3 1
+    100484: ButcherCleaverGun:pasted__pCube3 2
+    100486: ButcherCleaverGun:pasted__pCube3 3
+    100488: ButcherCleaverGun:pasted__pCube4
+    100490: ButcherCleaverGun:pasted__pCube4 1
+    100492: ButcherCleaverGun:pasted__pCube4 2
+    100494: ButcherCleaverGun:pasted__pCube4 3
+    100496: ButcherCleaverGun:pasted__pCube7
+    100498: ButcherCleaverGun:pasted__pCylinder1
+    100500: ButcherCleaverGun:pasted__pCylinder1 1
+    100502: ButcherCleaverGun:pasted__pCylinder1 2
+    100504: ButcherCleaverGun:pasted__pCylinder1 3
+    100506: ButcherCleaverGun:pasted__pCylinder2
+    100508: ButcherCleaverGun:pasted__pCylinder2 1
+    100510: ButcherCleaverGun:pasted__pCylinder2 2
+    100512: ButcherCleaverGun:pasted__pCylinder2 3
+    100514: ButcherCleaverGun:pasted__polySurface1
+    100516: ButcherCleaverGun:pasted__polySurface1 1
+    100518: ButcherCleaverGun:pasted__polySurface1 2
+    100520: ButcherCleaverGun:pasted__polySurface1 3
+    100522: ButcherCleaverGun:pasted__polySurface2
+    100524: ButcherCleaverGun:pasted__polySurface2 1
+    100526: ButcherCleaverGun:pasted__polySurface2 2
+    100528: ButcherCleaverGun:pasted__polySurface2 3
+    100530: ButcherCleaverGun:pasted__polySurface3
+    100532: ButcherCleaverGun:pasted__polySurface3 1
+    100534: ButcherCleaverGun:pasted__polySurface3 2
+    100536: ButcherCleaverGun:pasted__polySurface3 3
+    100538: ButcherCleaverGun:pasted__polySurface3 4
+    100540: ButcherCleaverGun:pasted__polySurface3 5
+    100542: ButcherCleaverGun:pasted__polySurface3 6
+    100544: ButcherCleaverGun:pasted__polySurface3 7
+    100546: ButcherCleaverGun:pasted__polySurface4
+    100548: ButcherCleaverGun:pasted__polySurface4 1
+    100550: ButcherCleaverGun:pasted__polySurface4 2
+    100552: ButcherCleaverGun:pasted__polySurface4 3
+    100554: ButcherCleaverGun:pasted__transform1
+    100556: ButcherCleaverGun:pasted__transform1 1
+    100558: ButcherCleaverGun:pasted__transform1 2
+    100560: ButcherCleaverGun:pasted__transform1 3
+    100562: ButcherCleaverGun:pasted__transform10
+    100564: ButcherCleaverGun:pasted__transform10 1
+    100566: ButcherCleaverGun:pasted__transform10 2
+    100568: ButcherCleaverGun:pasted__transform10 3
+    100570: ButcherCleaverGun:pasted__transform11
+    100572: ButcherCleaverGun:pasted__transform11 1
+    100574: ButcherCleaverGun:pasted__transform11 2
+    100576: ButcherCleaverGun:pasted__transform11 3
+    100578: ButcherCleaverGun:pasted__transform12
+    100580: ButcherCleaverGun:pasted__transform12 1
+    100582: ButcherCleaverGun:pasted__transform12 2
+    100584: ButcherCleaverGun:pasted__transform12 3
+    100586: ButcherCleaverGun:pasted__transform13
+    100588: ButcherCleaverGun:pasted__transform13 1
+    100590: ButcherCleaverGun:pasted__transform13 2
+    100592: ButcherCleaverGun:pasted__transform13 3
+    100594: ButcherCleaverGun:pasted__transform14
+    100596: ButcherCleaverGun:pasted__transform14 1
+    100598: ButcherCleaverGun:pasted__transform14 2
+    100600: ButcherCleaverGun:pasted__transform14 3
+    100602: ButcherCleaverGun:pasted__transform2
+    100604: ButcherCleaverGun:pasted__transform2 1
+    100606: ButcherCleaverGun:pasted__transform2 2
+    100608: ButcherCleaverGun:pasted__transform2 3
+    100610: ButcherCleaverGun:pasted__transform3
+    100612: ButcherCleaverGun:pasted__transform3 1
+    100614: ButcherCleaverGun:pasted__transform3 2
+    100616: ButcherCleaverGun:pasted__transform3 3
+    100618: ButcherCleaverGun:pasted__transform4
+    100620: ButcherCleaverGun:pasted__transform4 1
+    100622: ButcherCleaverGun:pasted__transform4 2
+    100624: ButcherCleaverGun:pasted__transform4 3
+    100626: ButcherCleaverGun:pasted__transform5
+    100628: ButcherCleaverGun:pasted__transform5 1
+    100630: ButcherCleaverGun:pasted__transform5 2
+    100632: ButcherCleaverGun:pasted__transform5 3
+    100634: ButcherCleaverGun:pasted__transform6
+    100636: ButcherCleaverGun:pasted__transform6 1
+    100638: ButcherCleaverGun:pasted__transform6 2
+    100640: ButcherCleaverGun:pasted__transform6 3
+    100642: ButcherCleaverGun:pasted__transform7
+    100644: ButcherCleaverGun:pasted__transform7 1
+    100646: ButcherCleaverGun:pasted__transform7 2
+    100648: ButcherCleaverGun:pasted__transform7 3
+    100650: ButcherCleaverGun:pasted__transform8
+    100652: ButcherCleaverGun:pasted__transform8 1
+    100654: ButcherCleaverGun:pasted__transform8 2
+    100656: ButcherCleaverGun:pasted__transform8 3
+    100658: ButcherCleaverGun:pasted__transform9
+    100660: ButcherCleaverGun:pasted__transform9 1
+    100662: ButcherCleaverGun:pasted__transform9 2
+    100664: ButcherCleaverGun:pasted__transform9 3
+    100666: ButcherCleaverGun:pCube6
+    100668: ButcherCleaverGun:pCube7
+    100670: ButcherCleaverGun:transform15
+    100672: ButcherCleaverGun:transform16
+    100674: CoffeeCannon:DurumGun:group
+    100676: CoffeeCannon:DurumGun:group1
+    100678: CoffeeCannon:DurumGun:group2
+    100680: CoffeeCannon:DurumGun:group4
+    100682: CoffeeCannon:DurumGun:group5
+    100684: CoffeeCannon:DurumGun:group6
+    100686: CoffeeCannon:DurumGun:group7
+    100688: CoffeeCannon:DurumGun:group8
+    100690: CoffeeCannon:DurumGun:pasted__group1
+    100692: CoffeeCannon:DurumGun:pasted__group4
+    100694: CoffeeCannon:DurumGun:pasted__group4 1
+    100696: CoffeeCannon:DurumGun:pasted__group5
+    100698: CoffeeCannon:group4
+    100700: //RootNode
+    100702: Machinegun:pCylinder1
+    100704: MiniGun:pCylinder3
+    100706: MiniGun:polySurface1
+    100708: MiniGun:polySurface10
+    100710: MiniGun:polySurface11
+    100712: MiniGun:polySurface12
+    100714: MiniGun:polySurface13
+    100716: MiniGun:polySurface14
+    100718: MiniGun:polySurface15
+    100720: MiniGun:polySurface16
+    100722: MiniGun:polySurface17
+    100724: MiniGun:polySurface2
+    100726: MiniGun:polySurface3
+    100728: MiniGun:polySurface4
+    100730: MiniGun:polySurface5
+    100732: MiniGun:polySurface6
+    100734: MiniGun:polySurface7
+    100736: MiniGun:polySurface8
+    100738: MiniGun:polySurface9
+    100740: Missile:group5
+    100742: Missile:group6
+    100744: PlasmaGun:group12
+    100746: PlasmaGun:group13
+    100748: PlasmaGun:group14
+    100750: PlasmaGun:group15
+    100752: PlasmaGun:group17
+    100754: PlasmaGun:group18
+    100756: PlasmaGun:group9
+    100758: PlasmaGun:pasted__group12
+    100760: PlasmaGun:pasted__group6
+    100762: PlasmaGun:pasted__pCube13
+    100764: PlasmaGun:pasted__pCylinder1
+    100766: PlasmaGun:pCube12
+    100768: PlasmaGun:pCube13
+    100770: PlasmaGun:pCylinder1
+    100772: PlasmaGun:transform19
+    100774: PlasmaGun:transform20
+    100776: PlasmaGun:transform21
+    100778: PlasmaGun:transform22
+    100780: PlasmaGun:transform23
+    100782: polySurface248
+    100784: polySurface249
+    100786: polySurface267
+    100788: polySurface268
+    100790: polySurface269
+    100792: polySurface270
+    100794: polySurface271
+    100796: polySurface272
+    100798: polySurface273
+    100800: polySurface274
+    100802: polySurface275
+    100804: polySurface276
+    100806: polySurface277
+    100808: polySurface278
+    100810: polySurface279
+    100812: polySurface280
+    100814: polySurface281
+    100816: polySurface282
+    100818: polySurface283
+    100820: polySurface284
+    100822: polySurface285
+    100824: polySurface286
+    100826: polySurface287
+    100828: polySurface288
+    100830: polySurface289
+    100832: polySurface290
+    100834: polySurface291
+    100836: polySurface292
+    100838: polySurface293
+    100840: polySurface294
+    100842: polySurface295
+    100844: polySurface296
+    100846: polySurface297
+    100848: polySurface298
+    100850: polySurface299
+    100852: polySurface300
+    100854: polySurface301
+    100856: polySurface302
+    100858: polySurface303
+    100860: polySurface304
+    100862: polySurface305
+    100864: polySurface306
+    100866: polySurface307
+    100868: polySurface308
+    100870: polySurface309
+    100872: polySurface310
+    100874: polySurface311
+    100876: polySurface312
+    100878: polySurface313
+    100880: polySurface314
+    100882: polySurface315
+    100884: polySurface316
+    100886: Pr__vdenher:group10
+    100888: Pr__vdenher:group11
+    100890: Pr__vdenher:group12
+    100892: Pr__vdenher:group4
+    100894: Pr__vdenher:group5
+    100896: Pr__vdenher:group6
+    100898: Pr__vdenher:group7
+    100900: Pr__vdenher:group8
+    100902: Pr__vdenher:group9
+    100904: Pr__vdenher:Maya_Needle_Gun:group
+    100906: Pr__vdenher:Maya_Needle_Gun:group1
+    100908: Pr__vdenher:Maya_Needle_Gun:group2
+    100910: Pr__vdenher:Maya_Needle_Gun:group3
+    100912: Pr__vdenher:Maya_Needle_Gun:group4
+    100914: Pr__vdenher:Maya_Needle_Gun:group5
+    100916: Pr__vdenher:Maya_Needle_Gun:group6
+    100918: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1
+    100920: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 1
+    100922: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 2
+    100924: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 3
+    100926: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 4
+    100928: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 5
+    100930: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 6
+    100932: Pr__vdenher:Maya_Needle_Gun:pCylinder1
+    100934: Pr__vdenher:Maya_Needle_Gun:polySurface1
+    100936: Pr__vdenher:Maya_Needle_Gun:pPipe1
+    100938: Pr__vdenher:Maya_Needle_Gun:transform1
+    100940: Pr__vdenher:Maya_Needle_Gun:transform10
+    100942: Pr__vdenher:Maya_Needle_Gun:transform2
+    100944: Pr__vdenher:Maya_Needle_Gun:transform3
+    100946: Pr__vdenher:Maya_Needle_Gun:transform4
+    100948: Pr__vdenher:Maya_Needle_Gun:transform5
+    100950: Pr__vdenher:Maya_Needle_Gun:transform6
+    100952: Pr__vdenher:Maya_Needle_Gun:transform7
+    100954: Pr__vdenher:Maya_Needle_Gun:transform8
+    100956: Pr__vdenher:Maya_Needle_Gun:transform9
+    100958: Pr__vdenher:pasted__group4
+    100960: Pr__vdenher:pasted__group4 1
+    100962: Pr__vdenher:pasted__group5
+    100964: Pr__vdenher:pasted__group5 1
+    100966: Pr__vdenher:pasted__group7
+    100968: Pr__vdenher:pasted__group8
+    100970: Pr__vdenher:pasted__pasted__group4
+    100972: Pr__vdenher:pasted__pasted__group5
+    400000: BeerBottleShooter1:group
+    400002: BeerBottleShooter1:group1
+    400004: BeerBottleShooter1:group2
+    400006: BeerBottleShooter1:group3
+    400008: BeerBottleShooter1:group4
+    400010: BeerBottleShooter1:pasted__group3
+    400012: BeerBottleShooter2:group
+    400014: BeerBottleShooter2:group3
+    400016: BeerBottleShooter2:group4
+    400018: BeerBottleShooter2:pasted__group3
+    400020: ButcherCleaverGun:group3
+    400022: ButcherCleaverGun:group4
+    400024: ButcherCleaverGun:group5
+    400026: ButcherCleaverGun:group6
+    400028: ButcherCleaverGun:group7
+    400030: ButcherCleaverGun:group8
+    400032: ButcherCleaverGun:pasted__group
+    400034: ButcherCleaverGun:pasted__group 1
+    400036: ButcherCleaverGun:pasted__group 2
+    400038: ButcherCleaverGun:pasted__group 3
+    400040: ButcherCleaverGun:pasted__group1
+    400042: ButcherCleaverGun:pasted__group1 1
+    400044: ButcherCleaverGun:pasted__group1 2
+    400046: ButcherCleaverGun:pasted__group1 3
+    400048: ButcherCleaverGun:pasted__group2
+    400050: ButcherCleaverGun:pasted__group2 1
+    400052: ButcherCleaverGun:pasted__group2 2
+    400054: ButcherCleaverGun:pasted__group2 3
+    400056: ButcherCleaverGun:pasted__group4
+    400058: ButcherCleaverGun:pasted__pasted__group
+    400060: ButcherCleaverGun:pasted__pasted__group 1
+    400062: ButcherCleaverGun:pasted__pasted__group 2
+    400064: ButcherCleaverGun:pasted__pasted__group 3
+    400066: ButcherCleaverGun:pasted__pasted__group 4
+    400068: ButcherCleaverGun:pasted__pasted__group 5
+    400070: ButcherCleaverGun:pasted__pasted__group 6
+    400072: ButcherCleaverGun:pasted__pasted__group 7
+    400074: ButcherCleaverGun:pasted__pasted__group 8
+    400076: ButcherCleaverGun:pasted__pasted__group1
+    400078: ButcherCleaverGun:pasted__pasted__group2
+    400080: ButcherCleaverGun:pasted__pasted__pasted__group
+    400082: ButcherCleaverGun:pasted__pasted__pasted__group 1
+    400084: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube1
+    400086: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube1 1
+    400088: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube2
+    400090: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube2 1
+    400092: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube3
+    400094: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube3 1
+    400096: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube4
+    400098: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCube4 1
+    400100: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCylinder1
+    400102: ButcherCleaverGun:pasted__pasted__pasted__pasted__pCylinder1 1
+    400104: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform1
+    400106: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform1 1
+    400108: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform2
+    400110: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform2 1
+    400112: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform3
+    400114: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform3 1
+    400116: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform4
+    400118: ButcherCleaverGun:pasted__pasted__pasted__pasted__transform4 1
+    400120: ButcherCleaverGun:pasted__pasted__pasted__pCube1
+    400122: ButcherCleaverGun:pasted__pasted__pasted__pCube1 1
+    400124: ButcherCleaverGun:pasted__pasted__pasted__pCube1 2
+    400126: ButcherCleaverGun:pasted__pasted__pasted__pCube1 3
+    400128: ButcherCleaverGun:pasted__pasted__pasted__pCube1 4
+    400130: ButcherCleaverGun:pasted__pasted__pasted__pCube1 5
+    400132: ButcherCleaverGun:pasted__pasted__pasted__pCube1 6
+    400134: ButcherCleaverGun:pasted__pasted__pasted__pCube1 7
+    400136: ButcherCleaverGun:pasted__pasted__pasted__pCube1 8
+    400138: ButcherCleaverGun:pasted__pasted__pasted__pCube2
+    400140: ButcherCleaverGun:pasted__pasted__pasted__pCube2 1
+    400142: ButcherCleaverGun:pasted__pasted__pasted__pCube2 2
+    400144: ButcherCleaverGun:pasted__pasted__pasted__pCube2 3
+    400146: ButcherCleaverGun:pasted__pasted__pasted__pCube2 4
+    400148: ButcherCleaverGun:pasted__pasted__pasted__pCube2 5
+    400150: ButcherCleaverGun:pasted__pasted__pasted__pCube2 6
+    400152: ButcherCleaverGun:pasted__pasted__pasted__pCube2 7
+    400154: ButcherCleaverGun:pasted__pasted__pasted__pCube2 8
+    400156: ButcherCleaverGun:pasted__pasted__pasted__pCube3
+    400158: ButcherCleaverGun:pasted__pasted__pasted__pCube3 1
+    400160: ButcherCleaverGun:pasted__pasted__pasted__pCube3 2
+    400162: ButcherCleaverGun:pasted__pasted__pasted__pCube3 3
+    400164: ButcherCleaverGun:pasted__pasted__pasted__pCube3 4
+    400166: ButcherCleaverGun:pasted__pasted__pasted__pCube3 5
+    400168: ButcherCleaverGun:pasted__pasted__pasted__pCube3 6
+    400170: ButcherCleaverGun:pasted__pasted__pasted__pCube3 7
+    400172: ButcherCleaverGun:pasted__pasted__pasted__pCube3 8
+    400174: ButcherCleaverGun:pasted__pasted__pasted__pCube4
+    400176: ButcherCleaverGun:pasted__pasted__pasted__pCube4 1
+    400178: ButcherCleaverGun:pasted__pasted__pasted__pCube4 2
+    400180: ButcherCleaverGun:pasted__pasted__pasted__pCube4 3
+    400182: ButcherCleaverGun:pasted__pasted__pasted__pCube4 4
+    400184: ButcherCleaverGun:pasted__pasted__pasted__pCube4 5
+    400186: ButcherCleaverGun:pasted__pasted__pasted__pCube4 6
+    400188: ButcherCleaverGun:pasted__pasted__pasted__pCube4 7
+    400190: ButcherCleaverGun:pasted__pasted__pasted__pCube4 8
+    400192: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1
+    400194: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 1
+    400196: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 2
+    400198: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 3
+    400200: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 4
+    400202: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 5
+    400204: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 6
+    400206: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 7
+    400208: ButcherCleaverGun:pasted__pasted__pasted__pCylinder1 8
+    400210: ButcherCleaverGun:pasted__pasted__pasted__polySurface3
+    400212: ButcherCleaverGun:pasted__pasted__pasted__polySurface3 1
+    400214: ButcherCleaverGun:pasted__pasted__pasted__polySurface4
+    400216: ButcherCleaverGun:pasted__pasted__pasted__transform1
+    400218: ButcherCleaverGun:pasted__pasted__pasted__transform1 1
+    400220: ButcherCleaverGun:pasted__pasted__pasted__transform1 2
+    400222: ButcherCleaverGun:pasted__pasted__pasted__transform1 3
+    400224: ButcherCleaverGun:pasted__pasted__pasted__transform1 4
+    400226: ButcherCleaverGun:pasted__pasted__pasted__transform1 5
+    400228: ButcherCleaverGun:pasted__pasted__pasted__transform1 6
+    400230: ButcherCleaverGun:pasted__pasted__pasted__transform1 7
+    400232: ButcherCleaverGun:pasted__pasted__pasted__transform1 8
+    400234: ButcherCleaverGun:pasted__pasted__pasted__transform2
+    400236: ButcherCleaverGun:pasted__pasted__pasted__transform2 1
+    400238: ButcherCleaverGun:pasted__pasted__pasted__transform2 2
+    400240: ButcherCleaverGun:pasted__pasted__pasted__transform2 3
+    400242: ButcherCleaverGun:pasted__pasted__pasted__transform2 4
+    400244: ButcherCleaverGun:pasted__pasted__pasted__transform2 5
+    400246: ButcherCleaverGun:pasted__pasted__pasted__transform2 6
+    400248: ButcherCleaverGun:pasted__pasted__pasted__transform2 7
+    400250: ButcherCleaverGun:pasted__pasted__pasted__transform2 8
+    400252: ButcherCleaverGun:pasted__pasted__pasted__transform3
+    400254: ButcherCleaverGun:pasted__pasted__pasted__transform3 1
+    400256: ButcherCleaverGun:pasted__pasted__pasted__transform3 2
+    400258: ButcherCleaverGun:pasted__pasted__pasted__transform3 3
+    400260: ButcherCleaverGun:pasted__pasted__pasted__transform3 4
+    400262: ButcherCleaverGun:pasted__pasted__pasted__transform3 5
+    400264: ButcherCleaverGun:pasted__pasted__pasted__transform3 6
+    400266: ButcherCleaverGun:pasted__pasted__pasted__transform3 7
+    400268: ButcherCleaverGun:pasted__pasted__pasted__transform3 8
+    400270: ButcherCleaverGun:pasted__pasted__pasted__transform4
+    400272: ButcherCleaverGun:pasted__pasted__pasted__transform4 1
+    400274: ButcherCleaverGun:pasted__pasted__pasted__transform4 2
+    400276: ButcherCleaverGun:pasted__pasted__pasted__transform4 3
+    400278: ButcherCleaverGun:pasted__pasted__pasted__transform4 4
+    400280: ButcherCleaverGun:pasted__pasted__pasted__transform4 5
+    400282: ButcherCleaverGun:pasted__pasted__pasted__transform4 6
+    400284: ButcherCleaverGun:pasted__pasted__pasted__transform4 7
+    400286: ButcherCleaverGun:pasted__pasted__pasted__transform4 8
+    400288: ButcherCleaverGun:pasted__pasted__pasted__transform6
+    400290: ButcherCleaverGun:pasted__pasted__pasted__transform7
+    400292: ButcherCleaverGun:pasted__pasted__pasted__transform8
+    400294: ButcherCleaverGun:pasted__pasted__pCube1
+    400296: ButcherCleaverGun:pasted__pasted__pCube1 1
+    400298: ButcherCleaverGun:pasted__pasted__pCube1 2
+    400300: ButcherCleaverGun:pasted__pasted__pCube1 3
+    400302: ButcherCleaverGun:pasted__pasted__pCube1 4
+    400304: ButcherCleaverGun:pasted__pasted__pCube2
+    400306: ButcherCleaverGun:pasted__pasted__pCube2 1
+    400308: ButcherCleaverGun:pasted__pasted__pCube2 2
+    400310: ButcherCleaverGun:pasted__pasted__pCube2 3
+    400312: ButcherCleaverGun:pasted__pasted__pCube2 4
+    400314: ButcherCleaverGun:pasted__pasted__pCube3
+    400316: ButcherCleaverGun:pasted__pasted__pCube3 1
+    400318: ButcherCleaverGun:pasted__pasted__pCube3 2
+    400320: ButcherCleaverGun:pasted__pasted__pCube3 3
+    400322: ButcherCleaverGun:pasted__pasted__pCube3 4
+    400324: ButcherCleaverGun:pasted__pasted__pCube4
+    400326: ButcherCleaverGun:pasted__pasted__pCube4 1
+    400328: ButcherCleaverGun:pasted__pasted__pCube4 2
+    400330: ButcherCleaverGun:pasted__pasted__pCube4 3
+    400332: ButcherCleaverGun:pasted__pasted__pCube4 4
+    400334: ButcherCleaverGun:pasted__pasted__pCylinder1
+    400336: ButcherCleaverGun:pasted__pasted__pCylinder1 1
+    400338: ButcherCleaverGun:pasted__pasted__pCylinder1 2
+    400340: ButcherCleaverGun:pasted__pasted__pCylinder1 3
+    400342: ButcherCleaverGun:pasted__pasted__pCylinder1 4
+    400344: ButcherCleaverGun:pasted__pasted__pCylinder2
+    400346: ButcherCleaverGun:pasted__pasted__polySurface1
+    400348: ButcherCleaverGun:pasted__pasted__polySurface2
+    400350: ButcherCleaverGun:pasted__pasted__polySurface3
+    400352: ButcherCleaverGun:pasted__pasted__polySurface3 1
+    400354: ButcherCleaverGun:pasted__pasted__polySurface3 2
+    400356: ButcherCleaverGun:pasted__pasted__polySurface3 3
+    400358: ButcherCleaverGun:pasted__pasted__polySurface3 4
+    400360: ButcherCleaverGun:pasted__pasted__polySurface3 5
+    400362: ButcherCleaverGun:pasted__pasted__polySurface3 6
+    400364: ButcherCleaverGun:pasted__pasted__polySurface3 7
+    400366: ButcherCleaverGun:pasted__pasted__polySurface3 8
+    400368: ButcherCleaverGun:pasted__pasted__polySurface3 9
+    400370: ButcherCleaverGun:pasted__pasted__polySurface4
+    400372: ButcherCleaverGun:pasted__pasted__polySurface4 1
+    400374: ButcherCleaverGun:pasted__pasted__polySurface4 2
+    400376: ButcherCleaverGun:pasted__pasted__polySurface4 3
+    400378: ButcherCleaverGun:pasted__pasted__polySurface4 4
+    400380: ButcherCleaverGun:pasted__pasted__transform1
+    400382: ButcherCleaverGun:pasted__pasted__transform1 1
+    400384: ButcherCleaverGun:pasted__pasted__transform1 2
+    400386: ButcherCleaverGun:pasted__pasted__transform1 3
+    400388: ButcherCleaverGun:pasted__pasted__transform1 4
+    400390: ButcherCleaverGun:pasted__pasted__transform10
+    400392: ButcherCleaverGun:pasted__pasted__transform11
+    400394: ButcherCleaverGun:pasted__pasted__transform12
+    400396: ButcherCleaverGun:pasted__pasted__transform13
+    400398: ButcherCleaverGun:pasted__pasted__transform14
+    400400: ButcherCleaverGun:pasted__pasted__transform2
+    400402: ButcherCleaverGun:pasted__pasted__transform2 1
+    400404: ButcherCleaverGun:pasted__pasted__transform2 2
+    400406: ButcherCleaverGun:pasted__pasted__transform2 3
+    400408: ButcherCleaverGun:pasted__pasted__transform2 4
+    400410: ButcherCleaverGun:pasted__pasted__transform3
+    400412: ButcherCleaverGun:pasted__pasted__transform3 1
+    400414: ButcherCleaverGun:pasted__pasted__transform3 2
+    400416: ButcherCleaverGun:pasted__pasted__transform3 3
+    400418: ButcherCleaverGun:pasted__pasted__transform3 4
+    400420: ButcherCleaverGun:pasted__pasted__transform4
+    400422: ButcherCleaverGun:pasted__pasted__transform4 1
+    400424: ButcherCleaverGun:pasted__pasted__transform4 2
+    400426: ButcherCleaverGun:pasted__pasted__transform4 3
+    400428: ButcherCleaverGun:pasted__pasted__transform4 4
+    400430: ButcherCleaverGun:pasted__pasted__transform5
+    400432: ButcherCleaverGun:pasted__pasted__transform6
+    400434: ButcherCleaverGun:pasted__pasted__transform6 1
+    400436: ButcherCleaverGun:pasted__pasted__transform6 2
+    400438: ButcherCleaverGun:pasted__pasted__transform6 3
+    400440: ButcherCleaverGun:pasted__pasted__transform6 4
+    400442: ButcherCleaverGun:pasted__pasted__transform7
+    400444: ButcherCleaverGun:pasted__pasted__transform7 1
+    400446: ButcherCleaverGun:pasted__pasted__transform7 2
+    400448: ButcherCleaverGun:pasted__pasted__transform7 3
+    400450: ButcherCleaverGun:pasted__pasted__transform7 4
+    400452: ButcherCleaverGun:pasted__pasted__transform8
+    400454: ButcherCleaverGun:pasted__pasted__transform8 1
+    400456: ButcherCleaverGun:pasted__pasted__transform8 2
+    400458: ButcherCleaverGun:pasted__pasted__transform8 3
+    400460: ButcherCleaverGun:pasted__pasted__transform8 4
+    400462: ButcherCleaverGun:pasted__pasted__transform9
+    400464: ButcherCleaverGun:pasted__pCube1
+    400466: ButcherCleaverGun:pasted__pCube1 1
+    400468: ButcherCleaverGun:pasted__pCube1 2
+    400470: ButcherCleaverGun:pasted__pCube1 3
+    400472: ButcherCleaverGun:pasted__pCube2
+    400474: ButcherCleaverGun:pasted__pCube2 1
+    400476: ButcherCleaverGun:pasted__pCube2 2
+    400478: ButcherCleaverGun:pasted__pCube2 3
+    400480: ButcherCleaverGun:pasted__pCube3
+    400482: ButcherCleaverGun:pasted__pCube3 1
+    400484: ButcherCleaverGun:pasted__pCube3 2
+    400486: ButcherCleaverGun:pasted__pCube3 3
+    400488: ButcherCleaverGun:pasted__pCube4
+    400490: ButcherCleaverGun:pasted__pCube4 1
+    400492: ButcherCleaverGun:pasted__pCube4 2
+    400494: ButcherCleaverGun:pasted__pCube4 3
+    400496: ButcherCleaverGun:pasted__pCube7
+    400498: ButcherCleaverGun:pasted__pCylinder1
+    400500: ButcherCleaverGun:pasted__pCylinder1 1
+    400502: ButcherCleaverGun:pasted__pCylinder1 2
+    400504: ButcherCleaverGun:pasted__pCylinder1 3
+    400506: ButcherCleaverGun:pasted__pCylinder2
+    400508: ButcherCleaverGun:pasted__pCylinder2 1
+    400510: ButcherCleaverGun:pasted__pCylinder2 2
+    400512: ButcherCleaverGun:pasted__pCylinder2 3
+    400514: ButcherCleaverGun:pasted__polySurface1
+    400516: ButcherCleaverGun:pasted__polySurface1 1
+    400518: ButcherCleaverGun:pasted__polySurface1 2
+    400520: ButcherCleaverGun:pasted__polySurface1 3
+    400522: ButcherCleaverGun:pasted__polySurface2
+    400524: ButcherCleaverGun:pasted__polySurface2 1
+    400526: ButcherCleaverGun:pasted__polySurface2 2
+    400528: ButcherCleaverGun:pasted__polySurface2 3
+    400530: ButcherCleaverGun:pasted__polySurface3
+    400532: ButcherCleaverGun:pasted__polySurface3 1
+    400534: ButcherCleaverGun:pasted__polySurface3 2
+    400536: ButcherCleaverGun:pasted__polySurface3 3
+    400538: ButcherCleaverGun:pasted__polySurface3 4
+    400540: ButcherCleaverGun:pasted__polySurface3 5
+    400542: ButcherCleaverGun:pasted__polySurface3 6
+    400544: ButcherCleaverGun:pasted__polySurface3 7
+    400546: ButcherCleaverGun:pasted__polySurface4
+    400548: ButcherCleaverGun:pasted__polySurface4 1
+    400550: ButcherCleaverGun:pasted__polySurface4 2
+    400552: ButcherCleaverGun:pasted__polySurface4 3
+    400554: ButcherCleaverGun:pasted__transform1
+    400556: ButcherCleaverGun:pasted__transform1 1
+    400558: ButcherCleaverGun:pasted__transform1 2
+    400560: ButcherCleaverGun:pasted__transform1 3
+    400562: ButcherCleaverGun:pasted__transform10
+    400564: ButcherCleaverGun:pasted__transform10 1
+    400566: ButcherCleaverGun:pasted__transform10 2
+    400568: ButcherCleaverGun:pasted__transform10 3
+    400570: ButcherCleaverGun:pasted__transform11
+    400572: ButcherCleaverGun:pasted__transform11 1
+    400574: ButcherCleaverGun:pasted__transform11 2
+    400576: ButcherCleaverGun:pasted__transform11 3
+    400578: ButcherCleaverGun:pasted__transform12
+    400580: ButcherCleaverGun:pasted__transform12 1
+    400582: ButcherCleaverGun:pasted__transform12 2
+    400584: ButcherCleaverGun:pasted__transform12 3
+    400586: ButcherCleaverGun:pasted__transform13
+    400588: ButcherCleaverGun:pasted__transform13 1
+    400590: ButcherCleaverGun:pasted__transform13 2
+    400592: ButcherCleaverGun:pasted__transform13 3
+    400594: ButcherCleaverGun:pasted__transform14
+    400596: ButcherCleaverGun:pasted__transform14 1
+    400598: ButcherCleaverGun:pasted__transform14 2
+    400600: ButcherCleaverGun:pasted__transform14 3
+    400602: ButcherCleaverGun:pasted__transform2
+    400604: ButcherCleaverGun:pasted__transform2 1
+    400606: ButcherCleaverGun:pasted__transform2 2
+    400608: ButcherCleaverGun:pasted__transform2 3
+    400610: ButcherCleaverGun:pasted__transform3
+    400612: ButcherCleaverGun:pasted__transform3 1
+    400614: ButcherCleaverGun:pasted__transform3 2
+    400616: ButcherCleaverGun:pasted__transform3 3
+    400618: ButcherCleaverGun:pasted__transform4
+    400620: ButcherCleaverGun:pasted__transform4 1
+    400622: ButcherCleaverGun:pasted__transform4 2
+    400624: ButcherCleaverGun:pasted__transform4 3
+    400626: ButcherCleaverGun:pasted__transform5
+    400628: ButcherCleaverGun:pasted__transform5 1
+    400630: ButcherCleaverGun:pasted__transform5 2
+    400632: ButcherCleaverGun:pasted__transform5 3
+    400634: ButcherCleaverGun:pasted__transform6
+    400636: ButcherCleaverGun:pasted__transform6 1
+    400638: ButcherCleaverGun:pasted__transform6 2
+    400640: ButcherCleaverGun:pasted__transform6 3
+    400642: ButcherCleaverGun:pasted__transform7
+    400644: ButcherCleaverGun:pasted__transform7 1
+    400646: ButcherCleaverGun:pasted__transform7 2
+    400648: ButcherCleaverGun:pasted__transform7 3
+    400650: ButcherCleaverGun:pasted__transform8
+    400652: ButcherCleaverGun:pasted__transform8 1
+    400654: ButcherCleaverGun:pasted__transform8 2
+    400656: ButcherCleaverGun:pasted__transform8 3
+    400658: ButcherCleaverGun:pasted__transform9
+    400660: ButcherCleaverGun:pasted__transform9 1
+    400662: ButcherCleaverGun:pasted__transform9 2
+    400664: ButcherCleaverGun:pasted__transform9 3
+    400666: ButcherCleaverGun:pCube6
+    400668: ButcherCleaverGun:pCube7
+    400670: ButcherCleaverGun:transform15
+    400672: ButcherCleaverGun:transform16
+    400674: CoffeeCannon:DurumGun:group
+    400676: CoffeeCannon:DurumGun:group1
+    400678: CoffeeCannon:DurumGun:group2
+    400680: CoffeeCannon:DurumGun:group4
+    400682: CoffeeCannon:DurumGun:group5
+    400684: CoffeeCannon:DurumGun:group6
+    400686: CoffeeCannon:DurumGun:group7
+    400688: CoffeeCannon:DurumGun:group8
+    400690: CoffeeCannon:DurumGun:pasted__group1
+    400692: CoffeeCannon:DurumGun:pasted__group4
+    400694: CoffeeCannon:DurumGun:pasted__group4 1
+    400696: CoffeeCannon:DurumGun:pasted__group5
+    400698: CoffeeCannon:group4
+    400700: //RootNode
+    400702: Machinegun:pCylinder1
+    400704: MiniGun:pCylinder3
+    400706: MiniGun:polySurface1
+    400708: MiniGun:polySurface10
+    400710: MiniGun:polySurface11
+    400712: MiniGun:polySurface12
+    400714: MiniGun:polySurface13
+    400716: MiniGun:polySurface14
+    400718: MiniGun:polySurface15
+    400720: MiniGun:polySurface16
+    400722: MiniGun:polySurface17
+    400724: MiniGun:polySurface2
+    400726: MiniGun:polySurface3
+    400728: MiniGun:polySurface4
+    400730: MiniGun:polySurface5
+    400732: MiniGun:polySurface6
+    400734: MiniGun:polySurface7
+    400736: MiniGun:polySurface8
+    400738: MiniGun:polySurface9
+    400740: Missile:group5
+    400742: Missile:group6
+    400744: PlasmaGun:group12
+    400746: PlasmaGun:group13
+    400748: PlasmaGun:group14
+    400750: PlasmaGun:group15
+    400752: PlasmaGun:group17
+    400754: PlasmaGun:group18
+    400756: PlasmaGun:group9
+    400758: PlasmaGun:pasted__group12
+    400760: PlasmaGun:pasted__group6
+    400762: PlasmaGun:pasted__pCube13
+    400764: PlasmaGun:pasted__pCylinder1
+    400766: PlasmaGun:pCube12
+    400768: PlasmaGun:pCube13
+    400770: PlasmaGun:pCylinder1
+    400772: PlasmaGun:transform19
+    400774: PlasmaGun:transform20
+    400776: PlasmaGun:transform21
+    400778: PlasmaGun:transform22
+    400780: PlasmaGun:transform23
+    400782: polySurface248
+    400784: polySurface249
+    400786: polySurface267
+    400788: polySurface268
+    400790: polySurface269
+    400792: polySurface270
+    400794: polySurface271
+    400796: polySurface272
+    400798: polySurface273
+    400800: polySurface274
+    400802: polySurface275
+    400804: polySurface276
+    400806: polySurface277
+    400808: polySurface278
+    400810: polySurface279
+    400812: polySurface280
+    400814: polySurface281
+    400816: polySurface282
+    400818: polySurface283
+    400820: polySurface284
+    400822: polySurface285
+    400824: polySurface286
+    400826: polySurface287
+    400828: polySurface288
+    400830: polySurface289
+    400832: polySurface290
+    400834: polySurface291
+    400836: polySurface292
+    400838: polySurface293
+    400840: polySurface294
+    400842: polySurface295
+    400844: polySurface296
+    400846: polySurface297
+    400848: polySurface298
+    400850: polySurface299
+    400852: polySurface300
+    400854: polySurface301
+    400856: polySurface302
+    400858: polySurface303
+    400860: polySurface304
+    400862: polySurface305
+    400864: polySurface306
+    400866: polySurface307
+    400868: polySurface308
+    400870: polySurface309
+    400872: polySurface310
+    400874: polySurface311
+    400876: polySurface312
+    400878: polySurface313
+    400880: polySurface314
+    400882: polySurface315
+    400884: polySurface316
+    400886: Pr__vdenher:group10
+    400888: Pr__vdenher:group11
+    400890: Pr__vdenher:group12
+    400892: Pr__vdenher:group4
+    400894: Pr__vdenher:group5
+    400896: Pr__vdenher:group6
+    400898: Pr__vdenher:group7
+    400900: Pr__vdenher:group8
+    400902: Pr__vdenher:group9
+    400904: Pr__vdenher:Maya_Needle_Gun:group
+    400906: Pr__vdenher:Maya_Needle_Gun:group1
+    400908: Pr__vdenher:Maya_Needle_Gun:group2
+    400910: Pr__vdenher:Maya_Needle_Gun:group3
+    400912: Pr__vdenher:Maya_Needle_Gun:group4
+    400914: Pr__vdenher:Maya_Needle_Gun:group5
+    400916: Pr__vdenher:Maya_Needle_Gun:group6
+    400918: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1
+    400920: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 1
+    400922: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 2
+    400924: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 3
+    400926: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 4
+    400928: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 5
+    400930: Pr__vdenher:Maya_Needle_Gun:pasted__pCylinder1 6
+    400932: Pr__vdenher:Maya_Needle_Gun:pCylinder1
+    400934: Pr__vdenher:Maya_Needle_Gun:polySurface1
+    400936: Pr__vdenher:Maya_Needle_Gun:pPipe1
+    400938: Pr__vdenher:Maya_Needle_Gun:transform1
+    400940: Pr__vdenher:Maya_Needle_Gun:transform10
+    400942: Pr__vdenher:Maya_Needle_Gun:transform2
+    400944: Pr__vdenher:Maya_Needle_Gun:transform3
+    400946: Pr__vdenher:Maya_Needle_Gun:transform4
+    400948: Pr__vdenher:Maya_Needle_Gun:transform5
+    400950: Pr__vdenher:Maya_Needle_Gun:transform6
+    400952: Pr__vdenher:Maya_Needle_Gun:transform7
+    400954: Pr__vdenher:Maya_Needle_Gun:transform8
+    400956: Pr__vdenher:Maya_Needle_Gun:transform9
+    400958: Pr__vdenher:pasted__group4
+    400960: Pr__vdenher:pasted__group4 1
+    400962: Pr__vdenher:pasted__group5
+    400964: Pr__vdenher:pasted__group5 1
+    400966: Pr__vdenher:pasted__group7
+    400968: Pr__vdenher:pasted__group8
+    400970: Pr__vdenher:pasted__pasted__group4
+    400972: Pr__vdenher:pasted__pasted__group5
+    2300000: ButcherCleaverGun:pCube6
+    2300002: Machinegun:pCylinder1
+    2300004: MiniGun:polySurface1
+    2300006: MiniGun:polySurface10
+    2300008: MiniGun:polySurface11
+    2300010: MiniGun:polySurface12
+    2300012: MiniGun:polySurface13
+    2300014: MiniGun:polySurface14
+    2300016: MiniGun:polySurface15
+    2300018: MiniGun:polySurface16
+    2300020: MiniGun:polySurface17
+    2300022: MiniGun:polySurface2
+    2300024: MiniGun:polySurface3
+    2300026: MiniGun:polySurface4
+    2300028: MiniGun:polySurface5
+    2300030: MiniGun:polySurface6
+    2300032: MiniGun:polySurface7
+    2300034: MiniGun:polySurface8
+    2300036: MiniGun:polySurface9
+    2300038: polySurface249
+    2300040: polySurface267
+    2300042: polySurface268
+    2300044: polySurface269
+    2300046: polySurface270
+    2300048: polySurface271
+    2300050: polySurface272
+    2300052: polySurface273
+    2300054: polySurface274
+    2300056: polySurface275
+    2300058: polySurface276
+    2300060: polySurface277
+    2300062: polySurface278
+    2300064: polySurface279
+    2300066: polySurface280
+    2300068: polySurface281
+    2300070: polySurface282
+    2300072: polySurface283
+    2300074: polySurface284
+    2300076: polySurface285
+    2300078: polySurface286
+    2300080: polySurface287
+    2300082: polySurface288
+    2300084: polySurface289
+    2300086: polySurface290
+    2300088: polySurface291
+    2300090: polySurface292
+    2300092: polySurface293
+    2300094: polySurface294
+    2300096: polySurface295
+    2300098: polySurface296
+    2300100: polySurface297
+    2300102: polySurface298
+    2300104: polySurface299
+    2300106: polySurface300
+    2300108: polySurface301
+    2300110: polySurface302
+    2300112: polySurface303
+    2300114: polySurface304
+    2300116: polySurface305
+    2300118: polySurface306
+    2300120: polySurface307
+    2300122: polySurface308
+    2300124: polySurface309
+    2300126: polySurface310
+    2300128: polySurface311
+    2300130: polySurface312
+    2300132: polySurface313
+    2300134: polySurface314
+    2300136: polySurface315
+    2300138: polySurface316
+    3300000: ButcherCleaverGun:pCube6
+    3300002: Machinegun:pCylinder1
+    3300004: MiniGun:polySurface1
+    3300006: MiniGun:polySurface10
+    3300008: MiniGun:polySurface11
+    3300010: MiniGun:polySurface12
+    3300012: MiniGun:polySurface13
+    3300014: MiniGun:polySurface14
+    3300016: MiniGun:polySurface15
+    3300018: MiniGun:polySurface16
+    3300020: MiniGun:polySurface17
+    3300022: MiniGun:polySurface2
+    3300024: MiniGun:polySurface3
+    3300026: MiniGun:polySurface4
+    3300028: MiniGun:polySurface5
+    3300030: MiniGun:polySurface6
+    3300032: MiniGun:polySurface7
+    3300034: MiniGun:polySurface8
+    3300036: MiniGun:polySurface9
+    3300038: polySurface249
+    3300040: polySurface267
+    3300042: polySurface268
+    3300044: polySurface269
+    3300046: polySurface270
+    3300048: polySurface271
+    3300050: polySurface272
+    3300052: polySurface273
+    3300054: polySurface274
+    3300056: polySurface275
+    3300058: polySurface276
+    3300060: polySurface277
+    3300062: polySurface278
+    3300064: polySurface279
+    3300066: polySurface280
+    3300068: polySurface281
+    3300070: polySurface282
+    3300072: polySurface283
+    3300074: polySurface284
+    3300076: polySurface285
+    3300078: polySurface286
+    3300080: polySurface287
+    3300082: polySurface288
+    3300084: polySurface289
+    3300086: polySurface290
+    3300088: polySurface291
+    3300090: polySurface292
+    3300092: polySurface293
+    3300094: polySurface294
+    3300096: polySurface295
+    3300098: polySurface296
+    3300100: polySurface297
+    3300102: polySurface298
+    3300104: polySurface299
+    3300106: polySurface300
+    3300108: polySurface301
+    3300110: polySurface302
+    3300112: polySurface303
+    3300114: polySurface304
+    3300116: polySurface305
+    3300118: polySurface306
+    3300120: polySurface307
+    3300122: polySurface308
+    3300124: polySurface309
+    3300126: polySurface310
+    3300128: polySurface311
+    3300130: polySurface312
+    3300132: polySurface313
+    3300134: polySurface314
+    3300136: polySurface315
+    3300138: polySurface316
+    4300002: polySurface249
+    4300004: polySurface267
+    4300006: polySurface268
+    4300008: polySurface269
+    4300010: polySurface270
+    4300012: polySurface271
+    4300014: polySurface272
+    4300016: polySurface273
+    4300018: polySurface274
+    4300020: polySurface275
+    4300022: polySurface276
+    4300024: polySurface277
+    4300026: polySurface278
+    4300028: polySurface279
+    4300030: polySurface280
+    4300032: polySurface281
+    4300034: polySurface282
+    4300036: polySurface283
+    4300038: polySurface284
+    4300040: polySurface285
+    4300042: polySurface286
+    4300044: polySurface287
+    4300046: polySurface288
+    4300048: polySurface289
+    4300050: polySurface290
+    4300052: polySurface291
+    4300054: polySurface292
+    4300056: polySurface293
+    4300058: polySurface294
+    4300060: polySurface295
+    4300062: polySurface296
+    4300064: polySurface297
+    4300066: polySurface298
+    4300068: polySurface299
+    4300070: polySurface300
+    4300072: polySurface301
+    4300074: polySurface302
+    4300076: polySurface303
+    4300078: polySurface304
+    4300080: polySurface305
+    4300082: polySurface306
+    4300084: polySurface307
+    4300086: polySurface308
+    4300088: polySurface309
+    4300090: polySurface310
+    4300092: polySurface311
+    4300094: polySurface312
+    4300096: MiniGun:polySurface1
+    4300098: MiniGun:polySurface2
+    4300100: MiniGun:polySurface3
+    4300102: MiniGun:polySurface4
+    4300104: MiniGun:polySurface5
+    4300106: MiniGun:polySurface6
+    4300108: MiniGun:polySurface7
+    4300110: MiniGun:polySurface8
+    4300112: MiniGun:polySurface9
+    4300114: MiniGun:polySurface10
+    4300116: MiniGun:polySurface11
+    4300118: MiniGun:polySurface12
+    4300120: MiniGun:polySurface13
+    4300122: MiniGun:polySurface14
+    4300124: MiniGun:polySurface15
+    4300126: MiniGun:polySurface16
+    4300128: MiniGun:polySurface17
+    4300130: polySurface313
+    4300132: polySurface314
+    4300134: Machinegun:pCylinder1
+    4300136: polySurface315
+    4300138: polySurface316
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

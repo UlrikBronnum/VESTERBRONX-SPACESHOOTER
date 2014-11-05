@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: e5e2304407253ce45a02ac43fe67eab3
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: group12
+    100002: group13
+    100004: group14
+    100006: group15
+    100008: group17
+    100010: group18
+    100012: group9
+    100014: pasted__group12
+    100016: pasted__group6
+    100018: pasted__pCube13
+    100020: pasted__pCylinder1
+    100022: pCube12
+    100024: pCube13
+    100026: pCylinder1
+    100028: plasma_gun_model_template
+    100030: //RootNode
+    100032: transform19
+    100034: transform20
+    100036: transform21
+    100038: transform22
+    100040: transform23
+    400000: group12
+    400002: group13
+    400004: group14
+    400006: group15
+    400008: group17
+    400010: group18
+    400012: group9
+    400014: pasted__group12
+    400016: pasted__group6
+    400018: pasted__pCube13
+    400020: pasted__pCylinder1
+    400022: pCube12
+    400024: pCube13
+    400026: pCylinder1
+    400028: plasma_gun_model_template
+    400030: //RootNode
+    400032: transform19
+    400034: transform20
+    400036: transform21
+    400038: transform22
+    400040: transform23
+    2300000: plasma_gun_model_template
+    3300000: plasma_gun_model_template
+    4300000: plasma_gun_model_template
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .600000024
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
