@@ -1,4 +1,0 @@
-VESTERBRONX-SPACESHOOTER
-========================
-
-HEJ
