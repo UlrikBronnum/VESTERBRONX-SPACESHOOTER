@@ -45,7 +45,6 @@ public class Level_One : LevelScript_Level {
 
 
 
-
 		newProp = "MeteorSpawn";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,-1000,-150);
@@ -69,8 +68,14 @@ public class Level_One : LevelScript_Level {
 
 		newProp = "LevelProps/Vortex1";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,0,0);
+		newPosition = new Vector3(0,0,-27);
 		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+
+		newProp = "DepthMaskPlane";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,0,-228);
+		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 
 	}

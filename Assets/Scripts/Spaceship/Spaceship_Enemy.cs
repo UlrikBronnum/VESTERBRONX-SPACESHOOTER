@@ -14,11 +14,15 @@ public class Spaceship_Enemy : Spaceship_Base {
 	protected int damage;
 	// collisionDamage of the ENEMY
 	public int collisionDamage;
+	// contains the exlosion when the enemy is destroyed:
+	public GameObject explosion;
 
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
 	// Use this for initialization
-	public virtual void Start() { }
+	public virtual void Start() {
+		explosion = Resources.Load ("explosion") as GameObject;
+	}
 	public virtual void shipInitialization(){ }
 	public virtual void forceStart(){ }
 	public void modifyEnemy(int h, int s, float m, float f, int d){
@@ -126,6 +130,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		{
 			Parent.deadEnemy++;
 			Destroy(gameObject);
+			Instantiate(explosion,transform.position, new Quaternion());
 		}
 	}
 	// if the enemy os out of health, it will die. 
@@ -146,6 +151,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}
 		if(other.collider.tag =="Player")
 		{
+			Instantiate(explosion,transform.position, new Quaternion());
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
 			Destroy(gameObject);
 		}
