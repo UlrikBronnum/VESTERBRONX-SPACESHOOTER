@@ -3,22 +3,17 @@ using System.Collections;
 
 public class EnemyCanon : EnemyWeapon_Base {
 
-	public override void forceStart () 
+	public override void forceStart (float newFire, int damage) 
 	{
 		barrelEnd = transform.FindChild("barrelEnd").transform;
 		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
 
 		ammoType = "Projectile1";
-		// upgradeStates = { rate of fire , damage , capacity }
-		// will range from 0 to topLimit?
-		// the purchase value of the weapon
-		weaponValue = 1500;
 		// Damage of projetile
-		projectileDamage = 5;
+		projectileDamage = damage;
 		// the rate of fire value
-		rateOfFire = 10f;
+		rateOfFire = newFire;
 		// magasin capacity
-		magCapacity = 5000;
 		
 		fireTimer = new Weapon_Timer(rateOfFire);
 	}

@@ -4,7 +4,7 @@ using System.Collections;
 public class SpawnControl_Base : MonoBehaviour {
 
 	
-	public float spawnRate;
+	protected float spawnRate;
 	protected EventTimer_Base timer;
 
 

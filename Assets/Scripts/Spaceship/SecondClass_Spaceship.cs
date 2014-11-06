@@ -18,7 +18,7 @@ public class SecondClass_Spaceship : Spaceship_Player {
 		// and resets it's size, so it will not block
 		// shots from canons
 		cc = GetComponent<CharacterController>();
-		cc.radius = 1;
+		cc.radius = 4;
 		cc.height = 1;
 		
 		// Save the initial rotation of ship for reference

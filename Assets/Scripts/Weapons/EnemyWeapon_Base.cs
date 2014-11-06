@@ -10,26 +10,18 @@ public class EnemyWeapon_Base : MonoBehaviour {
 	// upgradeStates = { rate of fire , damage , capacity }
 	// will range from 0 to topLimit?
 	// the purchase value of the weapon
-	public int weaponValue;
 	// Damage of projetile
 	public int projectileDamage;
 	// the rate of fire value
 	public float rateOfFire;
 	// magasin capacity
-	public int magCapacity;
 	
 	protected Weapon_Timer fireTimer;
 	
 	
 	
 	// Use this for initialization
-	public virtual void forceStart () {}
-
-	public void setFireRate(float newFire){
-		rateOfFire = newFire;
-		fireTimer = new Weapon_Timer(rateOfFire);
-	}
-
+	public virtual void forceStart (float newFire, int damage) {}
 
 	public void fireWeapon(){
 		if(fireTimer.timerTick()){

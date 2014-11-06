@@ -5,7 +5,7 @@ public class VertexScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		this.transform.localScale = new Vector3(1F, 1f, 1f);
+		this.transform.localScale = new Vector3(1F, 5f, 1f);
 		grow ();
 		StartCoroutine("grow");
 
@@ -29,7 +29,7 @@ public class VertexScript : MonoBehaviour {
 			yield return new WaitForSeconds(0.00000001f);		
 		}
 		for (float i =0; i<100; i++) {
-			this.transform.localScale += new Vector3 (320f, 184f, 519f);
+			this.transform.localScale += new Vector3 (320f,1000f, 519f);
 			yield return new WaitForSeconds(0.014f);		
 		}
 

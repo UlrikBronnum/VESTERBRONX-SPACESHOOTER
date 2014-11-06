@@ -39,6 +39,7 @@ public class LevelScript_Level : LevelScript_Base {
 	protected int shipHealth;
 	protected int shipShield;
 
+	protected int numberOfFireButtons = 1;
 	
 	protected string endGame;
 	protected float _unLoadTimer = 5f;
@@ -82,7 +83,7 @@ public class LevelScript_Level : LevelScript_Base {
 		shipAmmunition = shipScr.mountMagasinCapacity;
 		shipAmmunitionLoss = shipScr.mountMagasinCapacity;
 
-		lifeRemainingTexture = Resources.Load("healthf") as Texture;
+		lifeRemainingTexture = Resources.Load("Interface/ammobar") as Texture;
 		lifeRemainingBehindTexture = Resources.Load("healthb") as Texture;
 
 
@@ -112,7 +113,6 @@ public class LevelScript_Level : LevelScript_Base {
 		if (spwnScr.spawnEmpty){
 			SpawnControl_Enemy tmpscr =  props[0].GetComponent<SpawnControl_Enemy>();
 			enemiesDestroyed = tmpscr.EnemyDead;
-			enemiesDestroyed = howManyEnemies;
 			if( (float)enemiesDestroyed/howManyEnemies > 0.6f){
 				endGame = "Complete";
 				gain = priceCreditsTotal();
@@ -153,68 +153,104 @@ public class LevelScript_Level : LevelScript_Base {
 		}
 	}
 
-	protected override void loadButtons(){
-		buttonScript = new AButton[2];
-		button  = new GameObject[3];
-
+	protected override void loadButtons()
+	{
 		int buttonSize = Screen.height/5, placementX = Screen.width - buttonSize*2, placementY = Screen.height/20 , scaleFont = buttonSize/4;
 
-		button[0] = (GameObject)Object.Instantiate(Resources.Load ("Interface/FireButton"));
-		button[0].SetActive(true);
-		button[0].guiTexture.texture = fireButton[script.gameSetting];
-		button[0].guiTexture.pixelInset = new Rect(placementX,placementY,buttonSize,buttonSize);
-		buttonScript[0] = button[0].GetComponent<AButton>();
-
-		button[0].guiText.pixelOffset = new Vector2(placementX + buttonSize/2,placementY + buttonSize/2) ;
-		button[0].guiText.text = "Fire1";
-		button[0].guiText.font = newFont;
-		button[0].guiText.fontSize = scaleFont;
-		button[0].guiText.color = script.textColor;
-
-		placementX = Screen.width - buttonSize - Screen.height/20;
-		placementY = buttonSize + Screen.height/20;
-
-		button[1] = (GameObject)Object.Instantiate(Resources.Load ("Interface/FireButton"));
-		button[1].SetActive(true);
-		button[1].guiTexture.texture = fireButton[script.gameSetting];
-		button[1].guiTexture.pixelInset = new Rect(placementX,placementY,buttonSize,buttonSize);
-		buttonScript[1] = button[1].GetComponent<AButton>();
-		
-		button[1].guiText.pixelOffset = new Vector2(placementX + buttonSize/2,placementY + buttonSize/2) ;
-		button[1].guiText.text = "Fire2";
-		button[1].guiText.font = newFont;
-		button[1].guiText.fontSize = scaleFont;
-		button[1].guiText.color = script.textColor;
+		if(numberOfFireButtons == 2){
+			buttonScript = new AButton[1];
+			button  = new GameObject[2];
+		}else if(numberOfFireButtons == 4){
+			buttonScript = new AButton[2];
+			button  = new GameObject[3];
+		}
 
 
 
 		placementX = Screen.width / 12;
 		placementY =  Screen.height / 9;
+		
+		button[0] = (GameObject)Object.Instantiate(Resources.Load ("joystick"));
+		button[0].SetActive(true);
+		button[0].guiTexture.pixelInset = new Rect (placementX , placementY, buttonSize,buttonSize);
+		joystick = button[0].GetComponent<Joystick>();
 
-		button[2] = (GameObject)Object.Instantiate(Resources.Load ("joystick"));
-		button[2].SetActive(true);
-		button[2].guiTexture.pixelInset = new Rect (placementX , placementY, buttonSize,buttonSize);
-		joystick = button[2].GetComponent<Joystick>();
+		placementX = Screen.width - buttonSize*2;
+		placementY = placementY = Screen.height/20;
+
+		button[1] = (GameObject)Object.Instantiate(Resources.Load ("Interface/FireButton"));
+		button[1].SetActive(true);
+		button[1].guiTexture.texture = fireButton[script.gameSetting];
+		button[1].guiTexture.pixelInset = new Rect(placementX,placementY,buttonSize,buttonSize);
+		buttonScript[0] = button[1].GetComponent<AButton>();
+
+		button[1].guiText.pixelOffset = new Vector2(placementX + buttonSize/2,placementY + buttonSize/2) ;
+		button[1].guiText.text = "Fire1";
+		button[1].guiText.font = newFont;
+		button[1].guiText.fontSize = scaleFont;
+		button[1].guiText.color = script.textColor;
+		if(numberOfFireButtons == 4)
+		{
+			placementX = Screen.width - buttonSize - Screen.height/20;
+			placementY = buttonSize + Screen.height/20;
+
+			button[2] = (GameObject)Object.Instantiate(Resources.Load ("Interface/FireButton"));
+			button[2].SetActive(true);
+			button[2].guiTexture.texture = fireButton[script.gameSetting];
+			button[2].guiTexture.pixelInset = new Rect(placementX,placementY,buttonSize,buttonSize);
+			buttonScript[1] = button[2].GetComponent<AButton>();
+			
+			button[2].guiText.pixelOffset = new Vector2(placementX + buttonSize/2,placementY + buttonSize/2) ;
+			button[2].guiText.text = "Fire2";
+			button[2].guiText.font = newFont;
+			button[2].guiText.fontSize = scaleFont;
+			button[2].guiText.color = script.textColor;
+
+		}
+
+
 		
 	}
 	protected override void unloadButtons(){
-		for(int i = 0; i < 3 ; i++){
+		int limit = 0;
+		if(numberOfFireButtons == 4){
+			limit = 3;
+		}
+		else
+		{
+			limit = 2;
+		}
+
+		for(int i = 0; i < limit ; i++){
 			Destroy(button[i]);
 		}
 	}
 
 	protected void sentButtonInput(){
-		shipScr.getButtonInput(buttonScript[0].touch, joystickInput);
-		if(buttonScript[0].touch){
-			button[0].guiTexture.texture = fireButtonDown[script.gameSetting];
-		}else{
-			button[0].guiTexture.texture = fireButton[script.gameSetting];
-		}
-		if(buttonScript[1].touch){
+		/*
+		if(buttonScript[1].touch)
+		{
 			button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
-		}else{
+		}
+		else
+		{
 			button[1].guiTexture.texture = fireButton[script.gameSetting];
 		}
+		shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
+
+		else if(numberOfFireButtons == 2)
+		{
+			if(buttonScript[2].touch)
+			{
+				button[2].guiTexture.texture = fireButtonDown[script.gameSetting];
+			}
+			else
+			{
+				button[2].guiTexture.texture = fireButton[script.gameSetting];
+			}
+			shipScr.getButtonInput(buttonScript[1].touch, buttonScript[2].touch,joystickInput);
+		}
+		*/
 	}
 
 	public int priceCreditsValue(){
@@ -250,10 +286,10 @@ public class LevelScript_Level : LevelScript_Base {
 			GUI.Box (new Rect (0, 0, buttonWidth, buttonHeight/3), "You won " + priceCreditsTotal() + " out of " + fullPriceCreditsTotal() + " credits!");
 			GUI.EndGroup();
 		}
-		else if(spwnScr.spawnEmpty && !levelCompleted)
-		{
-			GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4),endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
-		}
+	//	else if(spwnScr.spawnEmpty && !levelCompleted)
+	//	{
+	//		GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4),endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
+	//	}
 
 		float screenCenter = Screen.width / 2;
 		float backgroundTexWidth = Screen.width / 4;

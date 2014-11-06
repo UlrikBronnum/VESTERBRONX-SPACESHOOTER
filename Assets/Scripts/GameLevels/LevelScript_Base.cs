@@ -106,7 +106,7 @@ public class LevelScript_Base : MonoBehaviour {
 		GameObject tmp = new GameObject (gameProp);
 		tmp.AddComponent<Light>();
 		tmp.light.type = LightType.Directional;
-		tmp.light.color = Color.white;
+		tmp.light.color = lightColor;
 
 		//tmp.transform.localScale = new Vector3(tmp.transform.localScale.x * scale.x , tmp.transform.localScale.y * scale.y , tmp.transform.localScale.z * scale.z);
 		Vector3 newPos = cameraTransform.position;

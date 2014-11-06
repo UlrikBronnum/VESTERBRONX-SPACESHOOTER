@@ -13,22 +13,35 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 	private bool spwnWing = false;
 	private Vector3 tmpPos;
 
+
+	// 5 different enemies in each version
+	// spawn {30,40,20,10,0}
+	// how many of each enemy type to spawn
+	private int[] enemySets = new int[5];
+
 	private string[] shaderNames;
 
 	public int EnemyDead = 0;
 
-	public void setSpawnBase () {
-		spawnBase.enemiesToSpawn = numberOfEnemies;
-		shaderNames = new string[2];
-		shaderNames[0] = "Mars";
-		shaderNames[1] = "Fart";
-	}
+	private int enemyTypeCounter = 0;
+	private int[] enemyTypes = new int[20];
 
+	public void setSpawnBase (int levelNumber, int enemytospawn, int[] enemyType) {
+		spawnRate = 25f;
+		numberOfEnemies = enemytospawn;
+		enemyTypes = enemyType;
+		spawnBase = gameObject.AddComponent<Enemy_Spawn>() as Enemy_Spawn;
+		spawnBase.forceStart(levelNumber);
+		spawnBase.enemiesToSpawn = numberOfEnemies;
+		spawnEmpty = false;
+		timer = new EventTimer_Base(spawnRate);
+	}
+	/*
 	protected override void Start () {
 		spawnEmpty = false;
 		timer = new EventTimer_Base(spawnRate);
 	}
-	
+	*/
 	// Update is called once per frame
 	protected override void Update () {
 
@@ -40,6 +53,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 		}else if (transform.childCount == 0){
 			EnemyDead = spawnBase.deadEnemy;
 			spawnEmpty = true;
+			Debug.Log("done");
 		}
 
 
@@ -47,16 +61,18 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 		if (spwnWing){
 			spwnTim -= Time.deltaTime * 2f;
 			if (spwnTim < 0){
-				spawnBase.SpawnWing(tmpPos , spawnCount);
+				spawnBase.SpawnWing(tmpPos , spawnCount, enemyTypes[enemyTypeCounter]);
 				spawnCount++;
 				spwnTim = 1.5f;
 			}
 			if (spawnCount > 2){
 				timer.TimerValue = spawnRate;
+				enemyTypeCounter++;
 				spwnWing = false;
 				spawnCount = 0;
 				spwnTim = 1.5f;
 			}
 		}
+	
 	}
 }

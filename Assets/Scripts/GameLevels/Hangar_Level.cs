@@ -17,7 +17,10 @@ public class Hangar_Level : LevelScript_Base {
 
 	private string[] buildingProps = new string[1];
 
+	private void deleteAllProps(){
 
+		closeLevel();
+	}
 
 	public override void loadLevel()
 	{
@@ -65,7 +68,6 @@ public class Hangar_Level : LevelScript_Base {
 
 
 		if(completed){
-			closeLevel();
 		}else{
 			script.hangar.hangarslots[script.shipChoise].SetActive(false);
 			script.shipChoise = swipeControl.SwipeCounter;
@@ -149,6 +151,7 @@ public class Hangar_Level : LevelScript_Base {
 				ship.IsActive = false;
 				ship.gameObject.SetActive(false);
 			}
+			deleteAllProps();
 		}
 		scaleFont = buttonHeight/3;
 		myGUIStyle.fontSize = scaleFont;

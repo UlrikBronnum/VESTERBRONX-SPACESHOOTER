@@ -58,9 +58,9 @@ public class Player_Charactor : MonoBehaviour
 			Debug.Log("noLoad");
 		}*/
 
-		hangar.addSpaceshipToHangar("Enemies/Needle");
-		hangar.addSpaceshipToHangar("Enemies/Mustang");
-		hangar.addSpaceshipToHangar("Enemies/Spike");
+		hangar.addSpaceshipToHangar("PlayerShips/NeedlePlayer");
+		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
+		hangar.addSpaceshipToHangar("PlayerShips/SpikePlayer");
 		hangar.addToShipUpgrades();
 		hangar.addGunToHangar("Weapons/MiniGun");
 		hangar.addToCanonUpgrades();

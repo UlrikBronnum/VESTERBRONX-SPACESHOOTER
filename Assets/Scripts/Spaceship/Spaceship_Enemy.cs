@@ -6,12 +6,12 @@ public class Spaceship_Enemy : Spaceship_Base {
 	//private float objectVelocity;
 
 	private float lifeSpan;
-	private EventTimer_Base timer;
+	protected EventTimer_Base timer;
 	protected Transform cameraPos;
 
 	// The rate of fire is set in the child classes of the class and sets the rate of fire for the enemy's weapons
 	protected float fireRate;
-
+	protected int damage;
 	// collisionDamage of the ENEMY
 	public int collisionDamage;
 
@@ -20,6 +20,25 @@ public class Spaceship_Enemy : Spaceship_Base {
 	// Use this for initialization
 	public virtual void Start() { }
 	public virtual void shipInitialization(){ }
+	public virtual void forceStart(){ }
+	public void modifyEnemy(int h, int s, float m, float f, int d){
+		health += h;
+		shield += s;
+		// Ship speed
+		maneuverSpeed += m;
+		// sets the rate of fire for the guns of this Enemy:
+		fireRate -= f;
+		damage += d;
+		
+		collisionDamage = (int)(health/4f);
+		
+		resetTimer();
+		
+		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
+			removeCanon(i);
+			mountCanon(i);
+		}
+	}
 
 
 	public void resetEnemyType(float m, int h, int s, float f){
@@ -78,8 +97,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		canonMounted[i].transform.rotation = canonMount[i].rotation;
 		canonMounted[i].transform.parent = canonMount[i].transform;
 		EnemyWeapon_Base wwscript = canonMounted [i].GetComponent<EnemyWeapon_Base> ();
-		wwscript.forceStart ();
-		wwscript.setFireRate (fireRate);
+		wwscript.forceStart (fireRate,damage);
 	}
 
 
@@ -125,6 +143,11 @@ public class Spaceship_Enemy : Spaceship_Base {
 		{
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
 			takeDamage(other.collider.GetComponent<Projectile_Base>().damage);
+		}
+		if(other.collider.tag =="Player")
+		{
+			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
+			Destroy(gameObject);
 		}
 	}
 

@@ -28,7 +28,8 @@ public class Spaceship_Player : Spaceship_Base {
 	public int shipInGameHealth;
 	public int shipInGameShield;
 	// Controls, gui ship buttons
-	private bool fire = false;
+	private bool fire1 = false;
+	private bool fire2 = false;
 	private float dir = 0f;
 
 
@@ -77,8 +78,9 @@ public class Spaceship_Player : Spaceship_Base {
 
 	}
 	// Controls, sends input from gui ship buttons
-	public void getButtonInput(bool fb, float js){
-		fire = fb;
+	public void getButtonInput(bool fb1,bool fb2, float js){
+		fire1 = fb1;
+		fire2 = fb2;
 		dir = js;
 	}
 	
@@ -156,8 +158,10 @@ public class Spaceship_Player : Spaceship_Base {
 		{
 			if(IsActive)
 				androidControls(canonMountCapacity);
-		}*/
-
+		}
+		if(IsActive)
+			pcControls(canonMountCapacity);
+		*/
 		if(IsActive)
 			androidControls(canonMountCapacity);
 
@@ -237,14 +241,21 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 		}
 		
-		if(fire){
-			for(int i = 0; i < shipCapacity; i++){
-				Weapons_Base script = canonMounted[i].GetComponent<Weapons_Base>();
+		if(fire1){
+			Weapons_Base script = canonMounted[0].GetComponent<Weapons_Base>();
+			mountMagasinCapacity -= script.fireWeapon();
+			script = canonMounted[1].GetComponent<Weapons_Base>();
+			mountMagasinCapacity -= script.fireWeapon();
+		}
+		if(canonMountCapacity/2 == 2){
+			if(fire2)
+			{
+				Weapons_Base script = canonMounted[2].GetComponent<Weapons_Base>();
 				mountMagasinCapacity -= script.fireWeapon();
-
+				script = canonMounted[3].GetComponent<Weapons_Base>();
+				mountMagasinCapacity -= script.fireWeapon();
 			}
 		}
-		
 	}
 
 	public void setUpStates(int up1, int up2, int up3){

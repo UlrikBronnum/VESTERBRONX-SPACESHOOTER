@@ -32,11 +32,11 @@ public class SpaceshipShop_Level : LevelScript_Base {
 		setMainVars();
 
 		swipeControl.setUpSwipeLimits(4,true);
-
-		ships[0] = "Enemies/Needle";
-		ships[1] = "Enemies/Mustang";
-		ships[2] = "Enemies/Spike";
-		ships[3] = "Enemies/Needle";
+	
+		ships[0] = "PlayerShips/NeedlePlayer";
+		ships[1] = "PlayerShips/MustangPlayer";
+		ships[2] = "PlayerShips/SpikePlayer";
+		ships[3] = "PlayerShips/MustangPlayer";
 		
 		buildingProps[0] = "Buildings/Planetarium"; 
 

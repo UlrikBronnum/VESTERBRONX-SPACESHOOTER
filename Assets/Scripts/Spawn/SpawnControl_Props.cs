@@ -4,7 +4,9 @@ using System.Collections;
 public class SpawnControl_Props : SpawnControl_Base {
 
 	public SpawnClass_Base spawnBase;
-	protected virtual void Start () {
+	protected virtual void Start () 
+	{
+		spawnRate = 3f;
 		timer = new EventTimer_Base(spawnRate);
 	}
 	
@@ -12,7 +14,7 @@ public class SpawnControl_Props : SpawnControl_Base {
 	protected virtual void Update () {
 		if(timer.timerTick()){
 			timer.TimerValue = spawnRate;
-			spawnBase.Spawn();
+			spawnBase.Spawn(0);
 		}
 	}
 }
