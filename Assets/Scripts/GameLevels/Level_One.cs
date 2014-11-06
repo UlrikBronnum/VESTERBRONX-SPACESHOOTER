@@ -36,10 +36,13 @@ public class Level_One : LevelScript_Level {
 		newRotation = new Vector3(-90,0,180);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
-		int[] enemyTypeSelection = new int[20]{	0,0,1,0,0,
-												0,1,0,0,1,
-												0,0,1,0,1,
-												1,0,1,0,1};
+
+		int[] enemyTypeSelection = new int[20]{		0,0,1,0,0,
+													0,1,0,0,1,
+													0,0,1,0,1,
+													1,0,1,0,1
+												};
+
 		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection);
 		spwnScr.numberOfEnemies = howManyEnemies;
 

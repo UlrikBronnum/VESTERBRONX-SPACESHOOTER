@@ -34,7 +34,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 		spawnBase.forceStart(levelNumber);
 		spawnBase.enemiesToSpawn = numberOfEnemies;
 		spawnEmpty = false;
-		timer = new EventTimer_Base(spawnRate);
+		timer = new EventTimer_Base(spawnRate/4);
 	}
 	/*
 	protected override void Start () {
@@ -47,8 +47,10 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 
 		if(spawnBase.enemiesToSpawn > 0){
 			if(timer.timerTick()){
+				timer.TimerValue = spawnRate;
 				spwnWing = true;
 				tmpPos = new Vector3 (transform.position.x + Random.Range(-50f,50f),transform.position.y,transform.position.z);
+				Debug.Log(spawnBase.enemiesToSpawn);
 			}
 		}else if (transform.childCount == 0){
 			EnemyDead = spawnBase.deadEnemy;

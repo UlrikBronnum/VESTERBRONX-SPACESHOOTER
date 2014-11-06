@@ -40,6 +40,9 @@ public class Spaceship_Base : MonoBehaviour {
 	protected int health;
 	protected int shield;
 
+	
+	public int shipInGameHealth;
+	public int shipInGameShield;
 
 	protected Shield_Timer hitTimer = new Shield_Timer(1f);
 
@@ -48,11 +51,17 @@ public class Spaceship_Base : MonoBehaviour {
 	public virtual void Update () {}
 
 	public void manageShader(){
+		if(shipInGameShield > 0 && shipShield() > 0){
+			renderer.material.SetFloat("_Shield_State" , (float)shipInGameShield/shipShield());
+		}else{
+			renderer.material.SetFloat("_Shield_State" , 0f);
+		}
+
+
 		if(hitTimer.timerTick()){
 			hitTimer.timerActive = false;
-			renderer.material.shader = Shader.Find("Game/TransparentBulgingShield");
-			renderer.material.SetFloat("_ShieldBlend" , 0f);
-
+			renderer.material.shader = Shader.Find("Game/Spaceship_Shader");
+			renderer.material.SetFloat("_Shield_Blend" , 0f);
 		}
 	}
 
@@ -120,6 +129,19 @@ public class Spaceship_Base : MonoBehaviour {
 	// function that makes sure the enemies or player takes damage 
 	public virtual void takeDamage(int damage){
 		
+	}
+	public virtual int shipHealth(){
+		return 0;
+	}
+	
+	public virtual int shipShield(){
+		return 0;
+
+	}
+	
+	public virtual float shipManeuverSpeed(){
+		return 0f;
+
 	}
 
 }

@@ -29,7 +29,9 @@ public class Spaceship_Enemy : Spaceship_Base {
 		// sets the rate of fire for the guns of this Enemy:
 		fireRate -= f;
 		damage += d;
-		
+
+		shipInGameShield = shield;
+
 		collisionDamage = (int)(health/4f);
 		
 		resetTimer();
@@ -45,6 +47,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		maneuverSpeed = m;
 		health = h;
 		shield = s;
+
 		fireRate = f;
 		timer.resetTimer();
 	}
@@ -55,14 +58,12 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 	// Update is called once per frame
 	public override void Update () {
-
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;
 		transform.position = tmpPos;
-		if(hitTimer.timerActive){
-			manageShader();
-		}
+		manageShader();
+
 		if(!gameObject.activeSelf)
 			return;
 		
@@ -109,15 +110,15 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 
 	public override void takeDamage(int damage){
-		if(shield > 0){
+		if(shipInGameShield > 0){
 			hitTimer.timerActive = true;
-			renderer.material.SetFloat("_ShieldBlend" , 1);
+			renderer.material.SetFloat("_Shield_State" , 1f);
 			hitTimer.resetTimer();
-			if(shield - damage > 0){
-				shield -= damage;
+			if(shipInGameShield - damage > 0){
+				shipInGameShield -= damage;
 			}else{
-				shield -= damage;
-				health -= -1 * (shield - damage);
+				shipInGameShield -= damage;
+				health -= -1 * (shipInGameShield - damage);
 			}
 		}else{
 			health -= damage;
@@ -147,8 +148,20 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(other.collider.tag =="Player")
 		{
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
+			takeDamage(0);
 			Destroy(gameObject);
 		}
+	}
+	public override int shipHealth(){
+		return health;
+	}
+	
+	public override int shipShield(){
+		return shield ;
+	}
+	
+	public override float shipManeuverSpeed(){
+		return maneuverSpeed;
 	}
 
 

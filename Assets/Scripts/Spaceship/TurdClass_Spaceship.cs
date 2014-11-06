@@ -7,9 +7,12 @@ public class TurdClass_Spaceship : Spaceship_Player {
 
 	// Run function to set class specific lists 
 	public override void shipInitialization(){
-		renderer.material.shader = Shader.Find("Game/TransparentBulgingShield");
-		renderer.material.SetColor("_Color" , Color.white);
-		renderer.material.SetColor("_ColorShield" ,new Color(0.0f,0.2f,0.6f,0.0f));
+		renderer.material.shader = Shader.Find("Game/Spaceship_Shader");
+		renderer.material.SetColor("_Texture_Blend_Color" , Color.white);
+		renderer.material.SetColor("_Texture_Override_Color" , Color.red);
+		renderer.material.SetColor("_Shield_Blend_Color" ,new Color(0.0f,0.2f,0.6f,0.0f));
+		renderer.material.SetFloat("_Shield_Blend" , 0f);
+
 
 		shipValue = 10000;
 		cameraName = "ARCamera";

@@ -120,7 +120,7 @@ public class LevelScript_Level : LevelScript_Base {
 				endGame = "Fail";
 				gain = 0;
 			}
-			
+			levelCompleted = true;
 			_unLoadTimer -= Time.deltaTime * 1f;
 			
 			if(_unLoadTimer < 0){
@@ -128,7 +128,7 @@ public class LevelScript_Level : LevelScript_Base {
 					script.credits += priceCreditsTotal();
 					
 				}
-				levelCompleted = true;
+
 				completed = true;	
 				closeLevel();
 				unloadButtons();
@@ -227,8 +227,9 @@ public class LevelScript_Level : LevelScript_Base {
 	}
 
 	protected void sentButtonInput(){
-		/*
-		if(buttonScript[1].touch)
+		shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
+
+		if(buttonScript[0].touch)
 		{
 			button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
 		}
@@ -236,11 +237,10 @@ public class LevelScript_Level : LevelScript_Base {
 		{
 			button[1].guiTexture.texture = fireButton[script.gameSetting];
 		}
-		shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
 
-		else if(numberOfFireButtons == 2)
+		if(numberOfFireButtons == 4)
 		{
-			if(buttonScript[2].touch)
+			if(buttonScript[1].touch)
 			{
 				button[2].guiTexture.texture = fireButtonDown[script.gameSetting];
 			}
@@ -248,9 +248,9 @@ public class LevelScript_Level : LevelScript_Base {
 			{
 				button[2].guiTexture.texture = fireButton[script.gameSetting];
 			}
-			shipScr.getButtonInput(buttonScript[1].touch, buttonScript[2].touch,joystickInput);
+			shipScr.getButtonInput(buttonScript[0].touch, buttonScript[1].touch,joystickInput);
 		}
-		*/
+
 	}
 
 	public int priceCreditsValue(){
@@ -286,10 +286,10 @@ public class LevelScript_Level : LevelScript_Base {
 			GUI.Box (new Rect (0, 0, buttonWidth, buttonHeight/3), "You won " + priceCreditsTotal() + " out of " + fullPriceCreditsTotal() + " credits!");
 			GUI.EndGroup();
 		}
-	//	else if(spwnScr.spawnEmpty && !levelCompleted)
-	//	{
-	//		GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4),endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
-	//	}
+		else if(shipDamageHealth <= 0)
+		{
+			GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4),endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
+		}
 
 		float screenCenter = Screen.width / 2;
 		float backgroundTexWidth = Screen.width / 4;
@@ -318,7 +318,7 @@ public class LevelScript_Level : LevelScript_Base {
 		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), guiTop + guiHeigt, Screen.width / 10,guiHeigt ), "Shield: " + shipDamageShield.ToString());
 		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), guiTop + guiHeigt + guiHeigt, Screen.width / 10,guiHeigt ), "Ammunition: " + shipAmmunitionLoss.ToString());
 
-		GUI.DrawTexture (new Rect (screenCenter, guiTop, backgroundTexWidth, guiHeigt * 3), lifeRemainingBehindTexture, ScaleMode.StretchToFill, true, 1.0F);
+		GUI.DrawTexture (new Rect (screenCenter, guiTop, backgroundTexWidth, guiHeigt * 3), lifeRemainingBehindTexture, ScaleMode.ScaleAndCrop, true, 1.0F);
 		GUI.DrawTexture (new Rect (screenCenter + (backgroundTexWidth - life_Width), guiTop, life_Width, guiHeigt - 1), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
 		GUI.DrawTexture (new Rect (screenCenter + (backgroundTexWidth - shield_Width), guiTop + guiHeigt, shield_Width, guiHeigt - 1), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
 		GUI.DrawTexture (new Rect (screenCenter + (backgroundTexWidth - ammunition_Width), guiTop + guiHeigt * 2, ammunition_Width, guiHeigt - 1), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);

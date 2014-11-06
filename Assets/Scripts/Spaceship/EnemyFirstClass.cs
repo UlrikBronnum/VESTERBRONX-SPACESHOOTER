@@ -8,18 +8,18 @@ public class EnemyFirstClass : Spaceship_Enemy {
 	{
 		cameraPos = GameObject.Find ("ARCamera").transform;
 		
-		
-		renderer.material.shader = Shader.Find("Game/TransparentBulgingShield");
-		renderer.material.SetColor("_Color" , Color.white);
-		renderer.material.SetColor("_ColorShield" , new Color(0.0f,0.2f,0.6f,0.0f));
-		
-		
+		renderer.material.shader = Shader.Find("Game/Spaceship_Shader");
+		renderer.material.SetColor("_Texture_Blend_Color" , Color.white);
+		renderer.material.SetColor("_Texture_Override_Color" , Color.red);
+		renderer.material.SetColor("_Shield_Blend_Color" ,new Color(0.0f,0.2f,1f,0.0f));
+		renderer.material.SetFloat("_Shield_Blend" , 0f);
+
 		canonScale = transform;
 		
 		health = 100;
 		shield = 50;
 		// Ship speed
-		maneuverSpeed = 150f;
+		maneuverSpeed = 200f;
 		// sets the rate of fire for the guns of this Enemy:
 		fireRate = 5f;
 		damage = 50;

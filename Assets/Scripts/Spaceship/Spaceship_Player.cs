@@ -25,8 +25,6 @@ public class Spaceship_Player : Spaceship_Base {
 	// ship magasins, comes from the weapon mounted
 	public int mountMagasinCapacity;
 
-	public int shipInGameHealth;
-	public int shipInGameShield;
 	// Controls, gui ship buttons
 	private bool fire1 = false;
 	private bool fire2 = false;
@@ -60,8 +58,8 @@ public class Spaceship_Player : Spaceship_Base {
 	}
 	public override void takeDamage(int damage){
 		if(shipInGameShield > 0){
+			renderer.material.SetFloat("_Shield_Left" , 0f);
 			hitTimer.timerActive = true;
-			renderer.material.SetFloat("_ShieldBlend" , 1);
 			hitTimer.resetTimer();
 			if(shipInGameShield - damage > 0){
 				shipInGameShield -= damage;
@@ -122,15 +120,15 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 	}
 
-	public int shipHealth(){
+	public override int shipHealth(){
 		return health +  (int)(health * (upgradeStates[0] / 10.0f));
 	}
 	
-	public int shipShield(){
-		return health +  (int)(health * (upgradeStates[1] / 10.0f));
+	public override int shipShield(){
+		return shield +  (int)(shield * (upgradeStates[1] / 10.0f));
 	}
 	
-	public float shipManeuverSpeed(){
+	public override float shipManeuverSpeed(){
 		return maneuverSpeed +  (maneuverSpeed * (upgradeStates[2] / 10.0f));
 	}
 
@@ -142,9 +140,8 @@ public class Spaceship_Player : Spaceship_Base {
 	/// </summary>
 	public override void Update () 
 	{
-		if(hitTimer.timerActive){
-			manageShader();
-		}
+		manageShader();
+
 		/*
 		if(Application.platform == RuntimePlatform.WindowsEditor ||
 		   Application.platform == RuntimePlatform.OSXPlayer)
@@ -217,9 +214,7 @@ public class Spaceship_Player : Spaceship_Base {
 		{
 			dir = 0;
 		}
-		if(dir != 0){
 
-		}
 		if(transform.position.x < 250.0f  && dir > 0)
 		{
 			moveShip (shipManeuverSpeed()*dir);

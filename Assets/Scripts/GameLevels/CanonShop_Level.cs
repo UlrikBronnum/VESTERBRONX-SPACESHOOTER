@@ -36,7 +36,7 @@ public class CanonShop_Level : LevelScript_Base {
 		canons[9] = "Weapons/CoffeeCannon";
 		//canons[10] = "Weapons/Missile";
 
-		buildingProps[0] = "Buildings/Kihoskh"; 
+		buildingProps[0] = "Buildings/Gunshop"; 
 
 		string newProp ;
 		Vector3 newScale ;

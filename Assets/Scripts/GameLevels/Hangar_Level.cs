@@ -32,10 +32,10 @@ public class Hangar_Level : LevelScript_Base {
 
 		completed = false;
 
-		buildingProps[0] = "Buildings/Planetarium"; 
+		buildingProps[0] = "Buildings/SpaceHangar"; 
 
 		string newProp = buildingProps[0];
-		Vector3 newScale = new Vector3(5,5,5);
+		Vector3 newScale = new Vector3(5,10,5);
 		Vector3 newPosition = new Vector3(0,0,-125);
 		Vector3 newRotation = new Vector3(90,180,0);
 		createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
