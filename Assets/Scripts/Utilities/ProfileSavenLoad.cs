@@ -101,6 +101,12 @@ public class ProfileSavenLoad : MonoBehaviour {
 				if(getLine[0] == "ShipUpgrade3"){
 					profileScript.hangar.shipUpgrade3.Add(int.Parse(getLine[1]));
 				}
+				if(getLine[0] == "GameVersion"){
+					profileScript.gameSetting =  int.Parse(getLine[1]);
+				}
+				if(getLine[0] == "LevelCompleted"){
+					profileScript.levelsCompleted =  int.Parse(getLine[1]);
+				}
 				if(getLine[0] == "Credit"){
 					profileScript.credits =  int.Parse(getLine[1]);
 				}

@@ -51,17 +51,17 @@ public class Planet_One_Level : Mission_Level {
 		levels.Add(newLevel0);
 		Level_Two newLevel1 = gameObject.AddComponent("Level_Two") as Level_Two;
 		levels.Add(newLevel1);
-		Level_One newLevel2 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_Three newLevel2 = gameObject.AddComponent("Level_Three") as Level_Three;
 		levels.Add(newLevel2);
-		Level_One newLevel3 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_Four newLevel3 = gameObject.AddComponent("Level_Four") as Level_Four;
 		levels.Add(newLevel3);
-		Level_One newLevel4 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_5 newLevel4 = gameObject.AddComponent("Level_5") as Level_5;
 		levels.Add(newLevel4);
-		Level_One newLevel5 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_6 newLevel5 = gameObject.AddComponent("Level_6") as Level_6;
 		levels.Add(newLevel5);
-		Level_One newLevel6 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_7 newLevel6 = gameObject.AddComponent("Level_7") as Level_7;
 		levels.Add(newLevel6);
-		Level_One newLevel7 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_8 newLevel7 = gameObject.AddComponent("Level_8") as Level_8;
 		levels.Add(newLevel7);
 		
 	}

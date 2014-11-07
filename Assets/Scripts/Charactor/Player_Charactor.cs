@@ -44,9 +44,9 @@ public class Player_Charactor : MonoBehaviour
 		gameSetting = 0;
 		levelsCompleted = 0;
 
-		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro") as Texture;
+		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
-		gameTextColors[0] = new Color(1.0f,1f,1f,1.0f);
+		gameTextColors[0] = new Color(1.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
 
 		profileMan = gameObject.AddComponent("ProfileSavenLoad") as ProfileSavenLoad;
@@ -56,29 +56,18 @@ public class Player_Charactor : MonoBehaviour
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
 		setLevels();
 
-		/*
+
 		if(profileMan.filePresent()){
 			profileMan.gameLoad();
 			Debug.Log("Load");
 		}else{
-			hangar.addGunToHangar("projectileCanon");
+			hangar.addGunToHangar("Weapons/MiniGun");
 			hangar.addToCanonUpgrades();
-			hangar.addSpaceshipToHangar("TurdClass");
+			hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
 			hangar.addToShipUpgrades();
 			credits = 0;
 			Debug.Log("noLoad");
-		}*/
-
-		hangar.addSpaceshipToHangar("PlayerShips/NeedlePlayer");
-		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
-		hangar.addSpaceshipToHangar("PlayerShips/SpikePlayer");
-		hangar.addToShipUpgrades();
-		hangar.addGunToHangar("Weapons/MiniGun");
-		hangar.addToCanonUpgrades();
-		hangar.addToShipUpgrades();
-		credits = 1000000;
-
-
+		}
 
 
 		hangar.setHangar();
@@ -169,6 +158,7 @@ public class Player_Charactor : MonoBehaviour
 	public void OnGUI()
 	{	
 		int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
+		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 
 		if(systemState == "Menu")
 		{

@@ -47,21 +47,21 @@ public class Planet_Three_Level : Mission_Level {
 	
 	public override void setLevels()
 	{
-		Level_One newLevel0 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_17 newLevel0 = gameObject.AddComponent("Level_17") as Level_17;
 		levels.Add(newLevel0);
-		Level_Two newLevel1 = gameObject.AddComponent("Level_Two") as Level_Two;
+		Level_18 newLevel1 = gameObject.AddComponent("Level_18") as Level_18;
 		levels.Add(newLevel1);
-		Level_One newLevel2 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_19 newLevel2 = gameObject.AddComponent("Level_19") as Level_19;
 		levels.Add(newLevel2);
-		Level_One newLevel3 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_20 newLevel3 = gameObject.AddComponent("Level_20") as Level_20;
 		levels.Add(newLevel3);
-		Level_One newLevel4 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_21 newLevel4 = gameObject.AddComponent("Level_21") as Level_21;
 		levels.Add(newLevel4);
-		Level_One newLevel5 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_22 newLevel5 = gameObject.AddComponent("Level_22") as Level_22;
 		levels.Add(newLevel5);
-		Level_One newLevel6 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_23 newLevel6 = gameObject.AddComponent("Level_23") as Level_23;
 		levels.Add(newLevel6);
-		Level_One newLevel7 = gameObject.AddComponent("Level_One") as Level_One;
+		Level_24 newLevel7 = gameObject.AddComponent("Level_24") as Level_24;
 		levels.Add(newLevel7);
 		
 	}

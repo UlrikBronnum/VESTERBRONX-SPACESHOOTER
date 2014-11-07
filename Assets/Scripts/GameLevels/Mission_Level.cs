@@ -9,7 +9,7 @@ public class Mission_Level : LevelScript_Base {
 	public List<LevelScript_Level> levels = new List<LevelScript_Level>();
 	protected string planetState;
 	protected bool levelLoaded;
-
+	protected bool noAccess;
 	protected string[] levelNames;
 
 	public virtual void loadLevel()	{}
@@ -33,17 +33,12 @@ public class Mission_Level : LevelScript_Base {
 				loadLevel();
 			}
 		}
-		Debug.Log(script.levelsCompleted);
-		Debug.Log(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted));
-		Debug.Log(levels[swipeScript.NumberOfSwipes].getLevelNumber());
-
-
 		if(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted)){
+			noAccess = false;
 			if(planetState == levelNames[swipeScript.NumberOfSwipes]){
 				if(levelLoaded == false){
 					closeLevel();
 					levelLoaded = true;
-					levels[swipeScript.NumberOfSwipes].loadLevel();
 				}else if (levels[swipeScript.NumberOfSwipes].Completed) {
 					planetState = "Home";
 					levelLoaded = false;
@@ -53,6 +48,7 @@ public class Mission_Level : LevelScript_Base {
 			}
 		}else { 
 			planetState = "Home";
+			noAccess = true;
 		}
 
 	}
@@ -64,21 +60,18 @@ public class Mission_Level : LevelScript_Base {
 		{
 			placementX = Screen.width - buttonWidth; 
 			placementY = 0;
-
-			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
-				if(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted)){
+			if(!noAccess){
+				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
 					planetState = levelNames[swipeScript.NumberOfSwipes];
-					levelLoaded = false;
+					levelLoaded = true;
+					levels[swipeScript.NumberOfSwipes].loadLevel();
 				}
-			}else {
-				planetState = "Home";
+				scaleFont = buttonHeight/3;
+				myGUIStyle.fontSize = scaleFont;
+				GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), levelNames[swipeScript.NumberOfSwipes], myGUIStyle);
+				GUI.EndGroup();
 			}
-			scaleFont = buttonHeight/3;
-			myGUIStyle.fontSize = scaleFont;
-			GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), levelNames[swipeScript.NumberOfSwipes], myGUIStyle);
-			GUI.EndGroup();
-
 			placementX = 0; 
 			placementY = 0;
 
@@ -92,12 +85,30 @@ public class Mission_Level : LevelScript_Base {
 			myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), "Back", myGUIStyle);
 			GUI.EndGroup();
-		}else {
+		}
+		else
+		{
 			if(levelLoaded)
 				levels[swipeScript.NumberOfSwipes].levelGUI();
 
 		}
-	
+
+		if (noAccess)
+		{
+			buttonHeight = Screen.height/10 * 5;
+			buttonWidth = Screen.width/10 * 5;
+			placementX =  (int)(Screen.height/10 * 0.5f);
+			placementY =  (int)(Screen.width/10 * 0.5f); 
+			
+			scaleFont = 40;
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
+			
+			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+			GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),Resources.Load("Interface/NOAccess") as Texture);
+			myGUIStyle.fontSize = scaleFont;
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "No Access", myGUIStyle);
+			GUI.EndGroup();
+		}
 	}
 
 

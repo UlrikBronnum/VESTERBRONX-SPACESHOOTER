@@ -51,10 +51,11 @@ public class LevelScript_Level : LevelScript_Base {
 	protected int shipAmmunition;
 	protected int shipAmmunitionLoss;
 
-	protected Texture[] fireButton = new Texture[3];
-	protected Texture[] fireButtonDown = new Texture[3];
+	protected Texture[] fireButton = new Texture[2];
+	protected Texture[] fireButtonDown = new Texture[2];
 
 	protected string[] enemyTypes;
+
 	public virtual int getLevelNumber(){
 		return 0;
 	}
@@ -63,6 +64,8 @@ public class LevelScript_Level : LevelScript_Base {
 
 	public bool canLoad(int playerProgress)
 	{
+		levelNumber = getLevelNumber();
+		Debug.Log(playerProgress  + "  "+ levelNumber);
 		if(playerProgress >= levelNumber - 1){
 			return true;
 		}else{
@@ -75,13 +78,11 @@ public class LevelScript_Level : LevelScript_Base {
 
 	protected void setClassTargets()
 	{
-		fireButton[0] = Resources.Load("Interface/Button_Vesterbro_Fire") as Texture;
+		fireButton[0] = Resources.Load("Interface/fireButtom_vesterbro") as Texture;
 		fireButton[1] = Resources.Load("Interface/Button_Space_Fire") as Texture;
-		fireButton[2] = Resources.Load("Interface/Button_Gui_Fire") as Texture;
 
 		fireButtonDown[0] = Resources.Load("Interface/Button_Vesterbro_Fire") as Texture;
 		fireButtonDown[1] = Resources.Load("Interface/Button_Space_Fire") as Texture;
-		fireButtonDown[2] = Resources.Load("Interface/Button_Gui_Fire") as Texture;
 
 		setMainVars();
 
