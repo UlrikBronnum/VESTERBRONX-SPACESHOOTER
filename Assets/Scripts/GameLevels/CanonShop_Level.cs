@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class CanonShop_Level : LevelScript_Base {
 	
 	private int canonSelected = 0;
-	private string[] canons = new string[10];
-	private string[] buildingProps = new string[1];
+	private string[] canons ;
+	private string buildingProp;
 	private bool hasGun = false;
 	private int gunPos = 0;
 	private int price;
@@ -21,36 +21,33 @@ public class CanonShop_Level : LevelScript_Base {
 
 		setMainVars();
 
-		swipeControl.setUpSwipeLimits(10,true);
+		swipeControl.setUpSwipeLimits(5,true);
 
+		canons = script.playerArmory;
 
-		canons[0] = "Weapons/BeerBottleShooter";
-		canons[1] = "Weapons/ButcherCleaverGun";
-		canons[2] = "Weapons/MiniGun";
-		canons[3] = "Weapons/NeedleGun";
-		canons[4] = "Weapons/PlasmaGun";
-		canons[5] = "Weapons/Rocket";
-		canons[6] = "Weapons/SkydebaneCannon";
-		canons[7] = "Weapons/PlasmaLaser";
-		canons[8] = "Weapons/DurumGun";
-		canons[9] = "Weapons/CoffeeCannon";
-		//canons[10] = "Weapons/Missile";
-
-		buildingProps[0] = "Buildings/Gunshop"; 
-
-		string newProp ;
-		Vector3 newScale ;
+		string newProp;
+		Vector3 newScale;
 		Vector3 newPosition;
-		Vector3 newRotation;
+		Vector3 newRotation ;
+		
+		if(script.gameSetting == 1){
+			buildingProp = "Buildings/Gunshop";
+			newProp = buildingProp;
+			newScale = new Vector3(10,10,10);
+			newPosition = new Vector3(0,-50,-125);
+			newRotation = new Vector3(0,270,270);
+			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}else{
+			buildingProp = "Buildings/Kihoskh";
+			newProp = buildingProp;
+			newScale = new Vector3(10,10,10);
+			newPosition = new Vector3(0,-50,-125);
+			newRotation = new Vector3(0,270,270);
+			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}
+		 
 
-		newProp = buildingProps[0];
-		newScale = new Vector3(10,10,10);
-		newPosition = new Vector3(0,-50,-125);
-		newRotation = new Vector3(0,270,270);
-		createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-
-
-		for (int i = 0; i < 10; i++){
+		for (int i = 0; i < 5; i++){
 			
 			newProp = canons[i];
 			newScale = new Vector3(30,30,30);

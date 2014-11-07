@@ -1,7 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Level_Two :  LevelScript_Level {
+public class Level_Two :  LevelScript_Level 
+{
+
+	public override int getLevelNumber()
+	{
+		levelNumber = 2;
+		return levelNumber;
+	}
 
 
 	public override void loadLevel( )

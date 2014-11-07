@@ -54,12 +54,23 @@ public class LevelScript_Level : LevelScript_Base {
 	protected Texture[] fireButton = new Texture[3];
 	protected Texture[] fireButtonDown = new Texture[3];
 
+	protected string[] enemyTypes;
+	public virtual int getLevelNumber(){
+		return 0;
+	}
 
 	public virtual void loadLevel(){}
 
-	protected void calculateEnemy(int health ){
-
+	public bool canLoad(int playerProgress)
+	{
+		if(playerProgress >= levelNumber - 1){
+			return true;
+		}else{
+			return false;
+		}
 	}
+
+
 
 
 	protected void setClassTargets()
@@ -227,18 +238,19 @@ public class LevelScript_Level : LevelScript_Base {
 	}
 
 	protected void sentButtonInput(){
-		shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
-
-		if(buttonScript[0].touch)
+		if(numberOfFireButtons == 2)
 		{
-			button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
+			if(buttonScript[0].touch)
+			{
+				button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
+			}
+			else
+			{
+				button[1].guiTexture.texture = fireButton[script.gameSetting];
+			}
+			shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
 		}
-		else
-		{
-			button[1].guiTexture.texture = fireButton[script.gameSetting];
-		}
-
-		if(numberOfFireButtons == 4)
+		else if(numberOfFireButtons == 4)
 		{
 			if(buttonScript[1].touch)
 			{
@@ -270,9 +282,19 @@ public class LevelScript_Level : LevelScript_Base {
 		return priceValue;
 	}
 	public override void levelGUI(){
-		int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
+		int buttonHeight = Screen.height/10 * 9 , buttonWidth = Screen.width/10 * 9, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
+
+		myGUIStyle.alignment = TextAnchor.MiddleCenter;
+
+
 		if(levelCompleted){
-			GUI.BeginGroup(new Rect(Screen.width/2 - Screen.width/8,Screen.height/2-Screen.height/14, buttonWidth, buttonHeight));
+			
+			placementX = (int)(Screen.width/10 * 0.5f); 
+			placementY = (int)(Screen.height/10 * 0.5f);
+			buttonHeight = (int)Screen.height/10 * 9; 
+			buttonWidth = (int)Screen.width/10 * 9;
+
+			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			
 			float backGroundWidthCredits;
 			float creditWidth;
@@ -280,48 +302,100 @@ public class LevelScript_Level : LevelScript_Base {
 			creditPercent = priceCreditsTotal() / fullPriceCreditsTotal();
 			backGroundWidthCredits = buttonWidth;
 			creditWidth = creditPercent * backGroundWidthCredits;
+
 			
-			GUI.DrawTexture (new Rect (0, buttonHeight/3, backGroundWidthCredits, buttonHeight/3), lifeRemainingBehindTexture, ScaleMode.StretchToFill, true, 1.0F);
-			GUI.DrawTexture (new Rect (0, buttonHeight/3, creditWidth, buttonHeight/3), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
-			GUI.Box (new Rect (0, 0, buttonWidth, buttonHeight/3), "You won " + priceCreditsTotal() + " out of " + fullPriceCreditsTotal() + " credits!");
+
+			GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
+			scaleFont = 35;
+			myGUIStyle.fontSize = scaleFont;
+			GUI.Box (new Rect (0, buttonHeight/2, buttonWidth, buttonHeight), "You won " + priceCreditsTotal() + " out of " + fullPriceCreditsTotal() + " credits!",myGUIStyle);
 			GUI.EndGroup();
 		}
 		else if(shipDamageHealth <= 0)
 		{
-			GUI.TextField(new Rect(Screen.width/2 -Screen.width/8,Screen.height - Screen.height/4,Screen.width/4,Screen.height/4),endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain);
+			
+			placementX = (int)(Screen.width/10 * 0.5f); 
+			placementY = (int)(Screen.height/10 * 0.5f);
+			buttonHeight = (int)Screen.height/10 * 9; 
+			buttonWidth = (int)Screen.width/10 * 9;
+
+			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+
+			GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
+			scaleFont = 35;
+			myGUIStyle.fontSize = scaleFont;
+			GUI.Box (new Rect (0, scaleFont * 3, buttonWidth, buttonHeight/3), endGame +  "\nEnemy Kills: " + enemiesDestroyed.ToString() + " / " + howManyEnemies.ToString() + "\nCredits: " + gain,myGUIStyle);
+			GUI.EndGroup();
 		}
 
-		float screenCenter = Screen.width / 2;
-		float backgroundTexWidth = Screen.width / 4;
-		
-		float guiTop = 8f;
-		float guiHeigt = 24;
-		
-		float life_Remain = (float)shipDamageHealth / shipHealth ;
-		float life_Width = life_Remain * backgroundTexWidth;
-		float shield_Remain = (float)shipDamageShield / shipShield ;
-		float shield_Width = shield_Remain * backgroundTexWidth;
-		float ammunition_Remain = (float) shipAmmunitionLoss / shipAmmunition;
-		float ammunition_Width = ammunition_Remain * backgroundTexWidth;
+		buttonHeight = Screen.height/8;
+		buttonWidth = Screen.width/3;
+		placementX = 0;
+		placementY = 0;
+		scaleFont = buttonHeight/4;
 
+		myGUIStyle.alignment = TextAnchor.MiddleLeft;
+
+
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+
+
+		float life_Remain = (float)shipDamageHealth / shipHealth ;
+		float life_Width = life_Remain * buttonWidth;
+		float shield_Remain = (float)shipDamageShield / shipShield ;
+		float shield_Width = shield_Remain * buttonWidth;
+	
+		
 		if(life_Width < 0){
 			life_Width = 0;
 		}
 		if(shield_Width < 0){
 			shield_Width = 0;
 		}
+	
+		int hN = (shipDamageHealth > 0)? shipDamageHealth: 0;
+		int sN = (shipDamageShield > 0)? shipDamageShield: 0;
+
+		myGUIStyle.fontSize = scaleFont;
+		GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
+		GUI.Box (new Rect (scaleFont/2,- buttonHeight/4, buttonWidth,buttonHeight), "Health: " + hN.ToString(),myGUIStyle);
+		GUI.Box (new Rect (scaleFont/2,buttonHeight/4, buttonWidth,buttonHeight ), "Shield: " + sN.ToString(),myGUIStyle);
+		GUI.EndGroup();
+
+
+		buttonHeight = Screen.height/8;
+		buttonWidth = Screen.width/3;
+		placementX = Screen.width - buttonWidth;
+		placementY = 0;
+		scaleFont = buttonHeight/4;
+		
+		myGUIStyle.alignment = TextAnchor.MiddleRight;
+		
+		
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+
+		float ammunition_Remain = (float) shipAmmunitionLoss / shipAmmunition;
+		float ammunition_Width = ammunition_Remain * buttonWidth;
+
 		if(ammunition_Width < 0){
 			ammunition_Width = 0;
 		}
 
-		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), guiTop, Screen.width / 10,guiHeigt), "Health: " + shipDamageHealth.ToString());
-		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), guiTop + guiHeigt, Screen.width / 10,guiHeigt ), "Shield: " + shipDamageShield.ToString());
+		int a1N = (shipAmmunitionLoss > 0)? shipAmmunitionLoss: 0;
+
+		myGUIStyle.fontSize = scaleFont;
+		GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
+		GUI.Box (new Rect (- scaleFont/2,- buttonHeight/4, buttonWidth,buttonHeight),  "Ammunition: " + shipAmmunitionLoss.ToString(),myGUIStyle);
+		GUI.Box (new Rect (- scaleFont/2,buttonHeight/4, buttonWidth,buttonHeight ),  "Ammunition: " + shipAmmunitionLoss.ToString(),myGUIStyle);
+		GUI.EndGroup();
+
+		/*
 		GUI.Box (new Rect ((Screen.width / 2) + (Screen.width / 4), guiTop + guiHeigt + guiHeigt, Screen.width / 10,guiHeigt ), "Ammunition: " + shipAmmunitionLoss.ToString());
 
 		GUI.DrawTexture (new Rect (screenCenter, guiTop, backgroundTexWidth, guiHeigt * 3), lifeRemainingBehindTexture, ScaleMode.ScaleAndCrop, true, 1.0F);
 		GUI.DrawTexture (new Rect (screenCenter + (backgroundTexWidth - life_Width), guiTop, life_Width, guiHeigt - 1), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
 		GUI.DrawTexture (new Rect (screenCenter + (backgroundTexWidth - shield_Width), guiTop + guiHeigt, shield_Width, guiHeigt - 1), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
 		GUI.DrawTexture (new Rect (screenCenter + (backgroundTexWidth - ammunition_Width), guiTop + guiHeigt * 2, ammunition_Width, guiHeigt - 1), lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
-
+		*/
 	}
 }

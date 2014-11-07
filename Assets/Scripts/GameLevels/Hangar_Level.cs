@@ -15,7 +15,7 @@ public class Hangar_Level : LevelScript_Base {
 
 	protected newSwipe_Levels swipeControl;
 
-	private string[] buildingProps = new string[1];
+	private string buildingProps;
 
 	private void deleteAllProps(){
 
@@ -24,6 +24,7 @@ public class Hangar_Level : LevelScript_Base {
 
 	public override void loadLevel()
 	{
+
 		swipeControl = gameObject.AddComponent("newSwipe_Levels") as newSwipe_Levels;
 		// finds the texture for the buttons
 		setMainVars();
@@ -32,13 +33,28 @@ public class Hangar_Level : LevelScript_Base {
 
 		completed = false;
 
-		buildingProps[0] = "Buildings/SpaceHangar"; 
+		string newProp;
+		Vector3 newScale;
+		Vector3 newPosition;
+		Vector3 newRotation ;
 
-		string newProp = buildingProps[0];
-		Vector3 newScale = new Vector3(5,10,5);
-		Vector3 newPosition = new Vector3(0,0,-125);
-		Vector3 newRotation = new Vector3(90,180,0);
-		createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		if(script.gameSetting == 1){
+			buildingProps = "Buildings/SpaceHangar";
+			newProp = buildingProps;
+			newScale = new Vector3(5,10,5);
+			newPosition = new Vector3(0,0,-125);
+			newRotation = new Vector3(90,180,0);
+			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}else{
+			buildingProps = "Buildings/Planetarium";
+			newProp = buildingProps;
+			newScale = new Vector3(5,10,5);
+			newPosition = new Vector3(0,0,-125);
+			newRotation = new Vector3(90,180,0);
+			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}
+
+
 
 
 		newScale = new Vector3(10,10,10);

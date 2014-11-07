@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour {
 		if (this.transform.position.y < 0) {
 			Destroy(this.gameObject);
 			Instantiate(explosion,transform.position, new Quaternion());
-			}
+		}
 
 
 	

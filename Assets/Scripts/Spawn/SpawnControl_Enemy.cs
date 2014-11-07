@@ -34,7 +34,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 		spawnBase.forceStart(levelNumber);
 		spawnBase.enemiesToSpawn = numberOfEnemies;
 		spawnEmpty = false;
-		timer = new EventTimer_Base(spawnRate/4);
+		timer = new EventTimer_Base(spawnRate);
 	}
 	/*
 	protected override void Start () {

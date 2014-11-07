@@ -12,7 +12,6 @@ public class Mission_Level : LevelScript_Base {
 
 	protected string[] levelNames;
 
-
 	public virtual void loadLevel()	{}
 	public virtual void setLevels()	{}
 
@@ -34,18 +33,26 @@ public class Mission_Level : LevelScript_Base {
 				loadLevel();
 			}
 		}
+		Debug.Log(script.levelsCompleted);
+		Debug.Log(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted));
+		Debug.Log(levels[swipeScript.NumberOfSwipes].getLevelNumber());
 
-		if(planetState == levelNames[swipeScript.NumberOfSwipes]){
-			if(levelLoaded == false){
-				closeLevel();
-				levelLoaded = true;
-				levels[swipeScript.NumberOfSwipes].loadLevel();
-			}else if (levels[swipeScript.NumberOfSwipes].Completed) {
-				planetState = "Home";
-				levelLoaded = false;
-			}else{
-				levels[swipeScript.NumberOfSwipes].updateLevel();
+
+		if(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted)){
+			if(planetState == levelNames[swipeScript.NumberOfSwipes]){
+				if(levelLoaded == false){
+					closeLevel();
+					levelLoaded = true;
+					levels[swipeScript.NumberOfSwipes].loadLevel();
+				}else if (levels[swipeScript.NumberOfSwipes].Completed) {
+					planetState = "Home";
+					levelLoaded = false;
+				}else{
+					levels[swipeScript.NumberOfSwipes].updateLevel();
+				}
 			}
+		}else { 
+			planetState = "Home";
 		}
 
 	}
@@ -60,8 +67,12 @@ public class Mission_Level : LevelScript_Base {
 
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
-				planetState = levelNames[swipeScript.NumberOfSwipes];
-				levelLoaded = false;
+				if(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted)){
+					planetState = levelNames[swipeScript.NumberOfSwipes];
+					levelLoaded = false;
+				}
+			}else {
+				planetState = "Home";
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;
@@ -84,9 +95,12 @@ public class Mission_Level : LevelScript_Base {
 		}else {
 			if(levelLoaded)
 				levels[swipeScript.NumberOfSwipes].levelGUI();
+
 		}
 	
 	}
+
+
 
 
 

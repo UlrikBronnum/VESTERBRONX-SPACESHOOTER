@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class SpaceshipShop_Level : LevelScript_Base {
 	
 	private int shipSelected = 0;
-	private string[] ships = new string[4];
-	private string[] buildingProps = new string[1];
+	private string[] ships;
+	private string buildingProps;
 	private bool hasShip = false;
 	private int shipPos = 0;
 
@@ -31,22 +31,32 @@ public class SpaceshipShop_Level : LevelScript_Base {
 
 		setMainVars();
 
-		swipeControl.setUpSwipeLimits(4,true);
+		swipeControl.setUpSwipeLimits(3,true);
+		ships = script.playerVersion;
 	
-		ships[0] = "PlayerShips/NeedlePlayer";
-		ships[1] = "PlayerShips/MustangPlayer";
-		ships[2] = "PlayerShips/SpikePlayer";
-		ships[3] = "PlayerShips/MustangPlayer";
 		
-		buildingProps[0] = "Buildings/Planetarium"; 
+		string newProp;
+		Vector3 newScale;
+		Vector3 newPosition;
+		Vector3 newRotation ;
+		
+		if(script.gameSetting == 1){
+			buildingProps = "Buildings/SpaceHangar";
+			newProp = buildingProps;
+			newScale = new Vector3(5,10,5);
+			newPosition = new Vector3(0,0,-125);
+			newRotation = new Vector3(90,180,0);
+			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}else{
+			buildingProps = "Buildings/Planetarium";
+			newProp = buildingProps;
+			newScale = new Vector3(5,10,5);
+			newPosition = new Vector3(0,0,-125);
+			newRotation = new Vector3(90,180,0);
+			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}
 
-		string newProp = buildingProps[0];
-		Vector3 newScale = new Vector3(5,5,5);
-		Vector3 newPosition = new Vector3(0,0,-125);
-		Vector3 newRotation = new Vector3(90,180,0);
-		createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-
-		for (int i = 0; i < 4; i++)
+		for (int i = 0; i < 3; i++)
 		{			
 			newProp = ships[i];
 			newScale = new Vector3(10,10,10);

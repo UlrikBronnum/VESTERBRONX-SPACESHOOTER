@@ -6,20 +6,24 @@ public class Level_One : LevelScript_Level {
 
 
 
-
+	public override int getLevelNumber()
+	{
+		levelNumber = 1;
+		return levelNumber;
+	}
 
 	public override void loadLevel( )
 	{
 		setClassTargets();
 
-		levelNumber = 1;
-		howManyEnemies = 50;
+
+		howManyEnemies = 100;
 
 
 
 
 
-		newScale = new Vector3(10,10,10);
+		newScale = new Vector3(5,5,5);
 		newPosition = new Vector3(0,0,-115);
 		newRotation = new Vector3(90,0,0);
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,background.transform,true,true);
@@ -44,13 +48,12 @@ public class Level_One : LevelScript_Level {
 												};
 
 		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection);
-		spwnScr.numberOfEnemies = howManyEnemies;
 
 
 
 		newProp = "MeteorSpawn";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-1000,-150);
+		newPosition = new Vector3(0,-1000,-300);
 		newRotation = new Vector3(90,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 
@@ -67,7 +70,7 @@ public class Level_One : LevelScript_Level {
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(0,180,90);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
-		                              background.transform, Color.yellow);
+		                              background.transform, Color.white);
 
 		newProp = "LevelProps/Vortex1";
 		newScale = new Vector3(1,1,1);

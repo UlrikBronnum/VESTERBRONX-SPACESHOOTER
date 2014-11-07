@@ -13,6 +13,8 @@ public class LevelScript_Base : MonoBehaviour {
 	
 	protected bool completed;
 
+	protected int versionNum;
+
 	protected Texture buttonTexture;
 	protected GUIStyle myGUIStyle = new GUIStyle();
 	protected Font newFont;
@@ -28,6 +30,8 @@ public class LevelScript_Base : MonoBehaviour {
 		script = player.GetComponent<Player_Charactor>();
 		background = GameObject.Find("ImageTarget");
 		// finds the texture for the buttons
+		versionNum = script.gameSetting;
+
 		newFont = script.newFont;
 		buttonTexture = script.buttonTexture;
 		myGUIStyle.font = newFont ;

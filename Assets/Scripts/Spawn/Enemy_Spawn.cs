@@ -23,11 +23,18 @@ public class Enemy_Spawn : SpawnClass_Base {
 
 	private GameObject portal;
 
-	private int[] spaceshipModifier;
+	private string[] versionModifier;
 
 	public void forceStart(int leveln){
 		levelNum = leveln;
 		profileSet = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().gameSetting;
+		versionModifier = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().enemyVersion;
+
+		spawnObject = new GameObject[3];
+		spawnObject[0] = (GameObject)Resources.Load(versionModifier[0]);
+		spawnObject[1] = (GameObject)Resources.Load(versionModifier[1]);
+		spawnObject[2] = (GameObject)Resources.Load(versionModifier[2]);
+		/*
 		if(profileSet == 0){
 			spawnObject = new GameObject[3];
 			spawnObject[0] = (GameObject)Resources.Load("Enemies/Mustang");
@@ -39,7 +46,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 			spawnObject[1] = (GameObject)Resources.Load("Enemies/Needle");
 			spawnObject[2] = (GameObject)Resources.Load("Enemies/Spike");
 		}
-
+		*/
 		portal = (GameObject)Resources.Load("PortalFog");
 		
 		enemySpawning = false;

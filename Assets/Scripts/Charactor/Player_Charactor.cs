@@ -7,11 +7,12 @@ public class Player_Charactor : MonoBehaviour
 
 	// timer to control internal behavior
 	public int gameSetting ;
+	public int levelsCompleted;
 
 	private GUIStyle myGUIStyle = new GUIStyle();
 	public Font[] fontCollection = new Font[3];
 	public Font newFont ;
-
+	private bool targetNotFound = true;
 	private bool levelLoaded;
 	private string systemState;
 	private List<LevelScript_Base> levels = new List<LevelScript_Base>();
@@ -21,14 +22,18 @@ public class Player_Charactor : MonoBehaviour
 	public int shipChoise;
 
 	public int credits;
-
 	public ProfileSavenLoad profileMan;
 
 	// textures for the interface:
-	protected Texture[] gameButtonTexture = new Texture[3];
+	protected Texture[] gameButtonTexture = new Texture[2];
 	public Texture buttonTexture;
 
-	protected Color[] gameTextColors = new Color[3];
+	public string[] enemyVersion = new string[3];
+	public string[] playerVersion = new string[3];
+	public string[] playerArmory;
+
+
+	protected Color[] gameTextColors = new Color[2];
 	public Color textColor;
 
 	public void OnApplicationQuit(){
@@ -36,7 +41,13 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
-		gameSetting = 1;
+		gameSetting = 0;
+		levelsCompleted = 0;
+
+		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro") as Texture;
+		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
+		gameTextColors[0] = new Color(1.0f,1f,1f,1.0f);
+		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
 
 		profileMan = gameObject.AddComponent("ProfileSavenLoad") as ProfileSavenLoad;
 		shipChoise = 0;
@@ -72,43 +83,48 @@ public class Player_Charactor : MonoBehaviour
 
 		hangar.setHangar();
 
-		// finds the textures in the resources folder
-		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro") as Texture;
-		gameButtonTexture[1] = Resources.Load("Interface/Button_Space_3") as Texture;
-		gameButtonTexture[2] = Resources.Load("Interface/GUI") as Texture;
 
-
-		gameTextColors[0] = new Color(1.0f,1f,1f,1.0f);
-		//gameTextColors[1] = new Color(1.0f,0.2f,0.2f,1.0f);
-		gameTextColors[1] = new Color(1.0f,1f,1f,1.0f);
-		gameTextColors[2] = new Color(0.0f,1f,1f,1.0f);
-
-		buttonTexture = gameButtonTexture[gameSetting];
-		newFont = fontCollection[gameSetting];
-		textColor = gameTextColors[gameSetting];
-
-		// sets the font style for the price, which varies
-		//myGUIStyle.normal.textColor =  new Color(0F, 1F, 3F, 0.6F);
-		myGUIStyle.font = newFont;
-		myGUIStyle.normal.textColor = textColor;// Color.white;
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
+		setGameVersion();
+	
 	}
-
-	public  void Update () 
-	{
-		if (Input.GetKeyDown("space")){
-			gameSetting++;
-			if(gameSetting > 2){
-				gameSetting = 0;
-			}
-		}
-
+	private void setGameVersion(){
 		buttonTexture = gameButtonTexture[gameSetting];
 		newFont = fontCollection[gameSetting];
 		textColor = gameTextColors[gameSetting];
 		myGUIStyle.font = newFont;
 		myGUIStyle.normal.textColor = textColor;
-
+	
+		if(gameSetting == 0)
+		{
+			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
+			enemyVersion = new string[3] {"Enemies/Mustang","Enemies/Needle","Enemies/Spike"};
+			playerArmory  = new string[5] {"Weapons/CoffeeCannon","Weapons/DurumGun","Weapons/SkydebaneCannon","Weapons/ButcherCleaverGun","Weapons/BeerBottleShooter"};
+		}else{
+			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
+			enemyVersion = new string[3] {"Enemies/Mustang","Enemies/Needle","Enemies/Spike"};
+			playerArmory  = new string[5] {"Weapons/MiniGun","Weapons/NeedleGun","Weapons/PlasmaGun","Weapons/PlasmaLaser","Weapons/Rocket"};
+		}
+	}
+	public  void Update () 
+	{
+		if (Input.GetKeyDown("space")){
+			gameSetting++;
+			if(gameSetting > 1){
+				gameSetting = 0;
+			}
+			setGameVersion();
+		}
+		if(systemState == "No State"){
+			if(GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
+				Debug.Log("Found Target");
+				systemState = "Menu";
+			}else{
+				Debug.Log("No Target");
+				systemState = "No State";
+			}
+		}
+	
 		if(systemState == "Menu"){
 
 		}
@@ -118,7 +134,6 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "Hangar"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				//levels[0].loadLevel();
 			}else{
 				levels[0].updateLevel();
 			}
@@ -127,7 +142,6 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "MissionLevel"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				//levels[1].loadLevel();
 			}else{
 				levels[1].updateLevel();
 			}
@@ -136,7 +150,6 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "CanonShop"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				//levels[2].loadLevel();
 			}else{
 				levels[2].updateLevel();
 				
@@ -146,7 +159,6 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "ShipShop"){
 			if(levelLoaded == false){
 				levelLoaded = true;
-				//levels[2].loadLevel();
 			}else{
 				levels[3].updateLevel();
 				
@@ -158,7 +170,8 @@ public class Player_Charactor : MonoBehaviour
 	{	
 		int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
 
-		if(systemState == "Menu"){
+		if(systemState == "Menu")
+		{
 			placementX = Screen.width/2 - buttonWidth/2; 
 			placementY = (Screen.height/5)/2 ;
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
@@ -252,6 +265,18 @@ public class Player_Charactor : MonoBehaviour
 				levels[3].levelGUI();
 			}
 
+		}else{
+			placementX = (int)(Screen.width/10 * 0.5f); 
+			placementY = (int)(Screen.height/10 * 0.5f);
+			buttonHeight = (int)Screen.height/10 * 9; 
+			buttonWidth = (int)Screen.width/10 * 9;
+
+			GUI.BeginGroup(new Rect(placementX,placementY,Screen.width/10 * 9,Screen.height/10 * 9));
+			GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),Resources.Load("Interface/imagetargetpositiontex") as Texture);
+			scaleFont = 35;
+			myGUIStyle.fontSize = scaleFont;
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "No Image Target", myGUIStyle);
+			GUI.EndGroup();
 		}
 
 	}
@@ -270,6 +295,8 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public string returnContentString(){
 		string reportString = "";
+		reportString +=  "GameVersion=" + gameSetting + "\n";
+		reportString +=  "LevelCompleted=" + levelsCompleted + "\n";
 		reportString +=  "Credit=" + credits + "\n";
 		return reportString;
 	}

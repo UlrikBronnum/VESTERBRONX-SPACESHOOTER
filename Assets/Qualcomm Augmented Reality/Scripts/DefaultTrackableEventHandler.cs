@@ -12,7 +12,8 @@ using UnityEngine;
 public class DefaultTrackableEventHandler : MonoBehaviour,
                                             ITrackableEventHandler
 {
-    #region PRIVATE_MEMBER_VARIABLES
+	public bool isFound;
+	#region PRIVATE_MEMBER_VARIABLES
  
     private TrackableBehaviour mTrackableBehaviour;
     
@@ -50,10 +51,12 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             OnTrackingFound();
+			isFound = true;
         }
         else
         {
             OnTrackingLost();
+			isFound = false;
         }
     }
 
