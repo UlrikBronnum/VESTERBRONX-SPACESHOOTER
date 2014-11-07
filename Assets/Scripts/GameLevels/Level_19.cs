@@ -44,10 +44,10 @@ public class Level_19 : LevelScript_Level {
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
 		
-		int[] enemyTypeSelection = new int[20]{		0,0,1,0,0,
-			0,1,0,0,1,
-			0,0,1,0,1,
-			1,0,1,0,1
+		int[] enemyTypeSelection = new int[20]{		2,3,0,2,1,
+													3,2,1,3,2,
+													0,1,2,0,3,
+													1,0,3,1,0
 		};
 		
 		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection);
