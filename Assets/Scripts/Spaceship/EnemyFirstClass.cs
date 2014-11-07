@@ -16,12 +16,12 @@ public class EnemyFirstClass : Spaceship_Enemy {
 
 		canonScale = transform;
 		
-		health = 100;
-		shield = 50;
+		health = 300;
+		shield = 100;
 		// Ship speed
 		maneuverSpeed = 200f;
 		// sets the rate of fire for the guns of this Enemy:
-		fireRate = 5f;
+		fireRate = 4f;
 		damage = 50;
 		
 		// damage inflicted if the player collides with this enemy
@@ -48,6 +48,7 @@ public class EnemyFirstClass : Spaceship_Enemy {
 		canonMounted = new GameObject[canonMountCapacity];
 		// Save the initial rotation of ship for reference
 		spaceshipRotation = transform.rotation.z;
+
 		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 			mountCanon(i);
 		}

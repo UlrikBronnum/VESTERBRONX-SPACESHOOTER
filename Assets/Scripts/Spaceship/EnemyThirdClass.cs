@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySecondClass : Spaceship_Enemy {
+public class EnemyThirdClass : Spaceship_Enemy {
 	
-
+	
 	public override void forceStart()
 	{
 		cameraPos = GameObject.Find ("ARCamera").transform;
@@ -13,22 +13,22 @@ public class EnemySecondClass : Spaceship_Enemy {
 		renderer.material.SetColor("_Texture_Override_Color" , Color.red);
 		renderer.material.SetColor("_Shield_Blend_Color" ,new Color(0.0f,0.2f,1f,0.0f));
 		renderer.material.SetFloat("_Shield_Blend" , 0f);
-
+		
 		canonScale = transform;
-
-		health = 400;
-		shield = 150;
+		
+		health = 500;
+		shield = 200;
 		// Ship speed
-		maneuverSpeed = 250f;
+		maneuverSpeed = 300f;
 		// sets the rate of fire for the guns of this Enemy:
-		fireRate = 4f;
-		damage = 50;
+		fireRate = 3.5f;
+		damage = 80;
 		
 		// damage inflicted if the player collides with this enemy
 		collisionDamage = (int)(health/4f);
 		// Amount of gun attachments 
 		canonMountCapacity = 2;
-
+		
 		// Find the canon mounts on model
 		canonMount = new Transform[canonMountCapacity];
 		canonTypes = new string[canonMountCapacity];
@@ -36,7 +36,7 @@ public class EnemySecondClass : Spaceship_Enemy {
 		// the guns of this enemy:
 		canonTypes[0] = "enemyCanon";
 		canonTypes[1] = "enemyCanon";
-
+		
 		
 		for (int i = 0 ; i < canonMountCapacity ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);
@@ -48,12 +48,12 @@ public class EnemySecondClass : Spaceship_Enemy {
 		canonMounted = new GameObject[canonMountCapacity];
 		// Save the initial rotation of ship for reference
 		spaceshipRotation = transform.rotation.z;
-
+		
 		for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 			mountCanon(i);
 		}
 		initTimer(10f);
 	}
-
-
+	
+	
 }
