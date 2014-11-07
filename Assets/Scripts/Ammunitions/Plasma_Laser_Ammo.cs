@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NineMM : Projectile_Base {
+public class Plasma_Laser_Ammo : Projectile_Base {
 
 	
 	// Use this for initialization
