@@ -41,7 +41,7 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
-		gameSetting = 0;
+		gameSetting = 1;
 		levelsCompleted = 0;
 
 		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap") as Texture;
@@ -56,7 +56,7 @@ public class Player_Charactor : MonoBehaviour
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
 		setLevels();
 
-
+		/*
 		if(profileMan.filePresent()){
 			profileMan.gameLoad();
 			Debug.Log("Load");
@@ -67,8 +67,12 @@ public class Player_Charactor : MonoBehaviour
 			hangar.addToShipUpgrades();
 			credits = 0;
 			Debug.Log("noLoad");
-		}
-
+		}*/
+		hangar.addGunToHangar("Space/MiniGun");
+		hangar.addToCanonUpgrades();
+		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
+		hangar.addToShipUpgrades();
+		credits = 1000000;
 
 		hangar.setHangar();
 
@@ -86,13 +90,13 @@ public class Player_Charactor : MonoBehaviour
 	
 		if(gameSetting == 0)
 		{
-			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
-			enemyVersion = new string[3] {"Enemies/Mustang","Enemies/Needle","Enemies/Spike"};
-			playerArmory  = new string[5] {"Weapons/CoffeeCannon","Weapons/DurumGun","Weapons/SkydebaneCannon","Weapons/ButcherCleaverGun","Weapons/BeerBottleShooter"};
+			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/Carlsberg_wagon","PlayerShips/MustangPlayer"};
+			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/SpaceProstitude","VesterBro/CycleMonster","VesterBro/SpaceProstitude","VesterBro/Spike"};
+			playerArmory  = new string[6] {"VesterBro/DurumGun","VesterBro/BeerBottleShooter","VesterBro/CoffeeCannon","VesterBro/TomatoSauceCanon","VesterBro/SkydebaneCannon","VesterBro/ButcherCleaverGun"};
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
-			enemyVersion = new string[3] {"Enemies/Mustang","Enemies/Needle","Enemies/Spike"};
-			playerArmory  = new string[5] {"Weapons/MiniGun","Weapons/NeedleGun","Weapons/PlasmaGun","Weapons/PlasmaLaser","Weapons/Rocket"};
+			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/Needle","Space/Spike"};
+			playerArmory  = new string[6] {"Space/NeedleGun","Space/MiniGun","Space/PlasmaGun","Space/PlasmaLaser","Space/Rocket","Space/Missile_Weapon"};
 		}
 	}
 	public  void Update () 

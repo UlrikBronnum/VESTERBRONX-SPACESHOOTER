@@ -8,7 +8,7 @@ public class NeedleGun_Weapon : Weapons_Base {
 		barrelEnd = transform.FindChild("barrelEnd").transform;
 		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
 
-		ammoType = "Weapons/needle_Projectile";
+		ammoType = "Space/needle_ammo";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon

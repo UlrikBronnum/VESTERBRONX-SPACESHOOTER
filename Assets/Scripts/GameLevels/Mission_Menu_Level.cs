@@ -107,9 +107,10 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture,GUIStyle.none)){
-				levels.Clear();
+
 				completed = true;	
 				closeLevel();
+				levels.Clear();
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;

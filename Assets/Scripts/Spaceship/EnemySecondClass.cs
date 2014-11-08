@@ -34,8 +34,8 @@ public class EnemySecondClass : Spaceship_Enemy {
 		canonTypes = new string[canonMountCapacity];
 		
 		// the guns of this enemy:
-		canonTypes[0] = "enemyCanon";
-		canonTypes[1] = "enemyCanon";
+		canonTypes[0] = "Enemies/enemyCanon";
+		canonTypes[1] = "Enemies/enemyCanon";
 
 		
 		for (int i = 0 ; i < canonMountCapacity ; i ++){

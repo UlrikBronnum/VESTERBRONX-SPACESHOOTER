@@ -11,7 +11,7 @@ public class Meteor_Spawn : SpawnClass_Base {
 		spawnObject = new GameObject[2];
 		spawnObject[0] = (GameObject)Resources.Load("LevelProps/Meteor");
 		spawnObject[1] = (GameObject)Resources.Load("LevelProps/meteor_sign");
-		stackSize = 50;
+		stackSize = 100;
 
 		
 		for (int i = 0; i < stackSize; i++){

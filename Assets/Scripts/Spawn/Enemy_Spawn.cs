@@ -30,10 +30,11 @@ public class Enemy_Spawn : SpawnClass_Base {
 		profileSet = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().gameSetting;
 		versionModifier = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().enemyVersion;
 
-		spawnObject = new GameObject[3];
+		spawnObject = new GameObject[4];
 		spawnObject[0] = (GameObject)Resources.Load(versionModifier[0]);
 		spawnObject[1] = (GameObject)Resources.Load(versionModifier[1]);
 		spawnObject[2] = (GameObject)Resources.Load(versionModifier[2]);
+		spawnObject[3] = (GameObject)Resources.Load(versionModifier[3]);
 		/*
 		if(profileSet == 0){
 			spawnObject = new GameObject[3];
@@ -50,13 +51,12 @@ public class Enemy_Spawn : SpawnClass_Base {
 		portal = (GameObject)Resources.Load("PortalFog");
 		
 		enemySpawning = false;
-		enemyShipScipt = new string[5];
+		enemyShipScipt = new string[4];
 		enemyShipScipt[0] = "EnemyFirstClass";
 		enemyShipScipt[1] = "EnemySecondClass";
-		enemyShipScipt[2] = "EnemySecondClass";
-		enemyShipScipt[3] = "EnemySecondClass";
-		enemyShipScipt[4] = "EnemySecondClass";
-		
+		enemyShipScipt[2] = "EnemyThirdClass";
+		enemyShipScipt[3] = "EnemyFourthClass";
+
 		portalTime = 0.66f;
 		stackSize = 25;
 	}

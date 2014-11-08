@@ -32,14 +32,12 @@ public class CameraSwipe : MonoBehaviour {
 					if (Mathf.Abs (delta.x) > Mathf.Abs (delta.y)) {
 						if (delta.x > 0) {
 							if(numberOfSwipes>=1){
-							Debug.Log ("Swipe Right Found");
 							swipe = true;
 							targetPos +=300;
 							numberOfSwipes-=1;
 							}
 						} else {
 							if(numberOfSwipes<maxNumberOfSwipes){
-							Debug.Log ("Swipe Left Found");
 							swipe = true;
 							targetPos -=300;
 							numberOfSwipes+=1;

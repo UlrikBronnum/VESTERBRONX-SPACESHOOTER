@@ -15,10 +15,12 @@ public class Projectile_Base : MonoBehaviour {
 		if(timer.timerTick()){
 			Destroy(gameObject);
 		}
+		Debug.Log(damage);
 	}
 	void OnCollisionEnter(Collision col){
-	
-		Destroy(gameObject);
+		if(col.collider.tag == "Enemy"){
+			Destroy(gameObject);
+		}
 	}
 	public void setProjectileDamage(int newDamage){
 		damage = newDamage;

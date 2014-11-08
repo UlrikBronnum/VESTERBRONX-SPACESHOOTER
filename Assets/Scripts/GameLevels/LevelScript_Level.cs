@@ -65,7 +65,6 @@ public class LevelScript_Level : LevelScript_Base {
 	public bool canLoad(int playerProgress)
 	{
 		levelNumber = getLevelNumber();
-		Debug.Log(playerProgress  + "  "+ levelNumber);
 		if(playerProgress >= levelNumber - 1){
 			return true;
 		}else{
@@ -201,6 +200,7 @@ public class LevelScript_Level : LevelScript_Base {
 		button[1].guiText.font = newFont;
 		button[1].guiText.fontSize = scaleFont;
 		button[1].guiText.color = script.textColor;
+
 		if(numberOfFireButtons == 4)
 		{
 			placementX = Screen.width - buttonSize - Screen.height/20;

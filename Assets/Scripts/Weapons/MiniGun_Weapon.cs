@@ -8,11 +8,11 @@ public class MiniGun_Weapon : Weapons_Base {
 		barrelEnd = transform.FindChild("barrelEnd").transform;
 		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
 
-		ammoType = "Weapons/miniGun_Projectile";
+		ammoType = "Space/Projectile_Mini";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
-		weaponValue = 3000;
+		weaponValue = 2000;
 		// Damage of projetile
 		projectileDamage = 125;
 		// the rate of fire value

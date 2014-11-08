@@ -237,7 +237,6 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 		
 		if(fire1){
-			print("Fireing");
 			Weapons_Base script = canonMounted[0].GetComponent<Weapons_Base>();
 			mountMagasinCapacity -= script.fireWeapon();
 			script = canonMounted[1].GetComponent<Weapons_Base>();

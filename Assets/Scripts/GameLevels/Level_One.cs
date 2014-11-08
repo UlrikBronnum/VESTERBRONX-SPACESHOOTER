@@ -15,17 +15,15 @@ public class Level_One : LevelScript_Level {
 	public override void loadLevel( )
 	{
 
-		setClassTargets();
-		loadButtons();	
-		
-		numberOfFireButtons = shipScr.CanonMountCapacity;
+
+
 
 		levelNumber = 1;
 
 		howManyEnemies = 100;
 
 
-
+		setClassTargets();
 
 
 		newScale = new Vector3(5,5,5);
@@ -35,6 +33,8 @@ public class Level_One : LevelScript_Level {
 		shipHealth = shipScr.shipHealth();
 		shipShield = shipScr.shipShield();
 
+		numberOfFireButtons = shipScr.CanonMountCapacity;
+		loadButtons();
 
 
 		newProp = "EnemySpawn";
@@ -44,7 +44,7 @@ public class Level_One : LevelScript_Level {
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
 
-		int[] enemyTypeSelection = new int[20]{		0,0,1,0,0,
+		int[] enemyTypeSelection = new int[20]{		0,1,2,3,0,
 													0,1,0,0,1,
 													0,0,1,0,1,
 													1,0,1,0,1

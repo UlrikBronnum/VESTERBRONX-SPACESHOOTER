@@ -29,10 +29,13 @@ public class Weapons_Base : MonoBehaviour {
 		fireTimer = new Weapon_Timer(rateOfFire);
 	}
 	public int fireWeapon(){
+		Debug.Log(weaponDamage());
 		if(fireTimer.timerTick()){
 			fireTimer.resetTimer();
 			audio.PlayOneShot(fireExplosion);
 			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
+			newShot.tag = "PlayerProjectile";
+			newShot.layer = LayerMask.NameToLayer("PlayerProjectile");
 			Projectile_Base script = newShot.GetComponent<Projectile_Base>();
 			script.setProjectileDamage(weaponDamage());
 			newShot.transform.position = barrelEnd.position;

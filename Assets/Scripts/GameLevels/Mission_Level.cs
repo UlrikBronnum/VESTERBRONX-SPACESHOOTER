@@ -12,6 +12,9 @@ public class Mission_Level : LevelScript_Base {
 	protected bool noAccess;
 	protected string[] levelNames;
 
+	int levelCounter = 0;
+	int playerCounter = 0;
+
 	public virtual void loadLevel()	{}
 	public virtual void setLevels()	{}
 
@@ -19,9 +22,13 @@ public class Mission_Level : LevelScript_Base {
 
 	public override void updateLevel()
 	{
+
 		// finds the texture for the buttons
 		setMainVars();
 
+		levelCounter = swipeScript.NumberOfSwipes;
+		playerCounter = script.levelsCompleted;
+		noAccess = levels[levelCounter].canLoad(playerCounter);
 		if(!completed ){
 		
 		}else{
@@ -33,22 +40,22 @@ public class Mission_Level : LevelScript_Base {
 				loadLevel();
 			}
 		}
-		if(levels[swipeScript.NumberOfSwipes].canLoad(script.levelsCompleted)){
-			noAccess = false;
-			if(planetState == levelNames[swipeScript.NumberOfSwipes]){
-				if(levelLoaded == false){
-					closeLevel();
-					levelLoaded = true;
-				}else if (levels[swipeScript.NumberOfSwipes].Completed) {
-					planetState = "Home";
-					levelLoaded = false;
-				}else{
-					levels[swipeScript.NumberOfSwipes].updateLevel();
-				}
+
+
+		if(planetState == levelNames[swipeScript.NumberOfSwipes]){
+			if(levelLoaded == false &&  noAccess){
+				closeLevel();
+				levels[levelCounter].loadLevel();
+				levelLoaded = true;
+			}else if (levels[levelCounter].Completed) {
+				planetState = "Home";
+				levelLoaded = false;
+			}else{
+				levels[levelCounter].updateLevel();
 			}
+	
 		}else { 
 			planetState = "Home";
-			noAccess = true;
 		}
 
 	}
@@ -56,16 +63,15 @@ public class Mission_Level : LevelScript_Base {
 	{
 		int buttonHeight = Screen.height/7 , buttonWidth = Screen.width/4, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
 
-		if(planetState == "Home")
+		if(planetState == "Home" && levels.Count != 0)
 		{
 			placementX = Screen.width - buttonWidth; 
 			placementY = 0;
-			if(!noAccess){
+			if(noAccess){
 				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
 					planetState = levelNames[swipeScript.NumberOfSwipes];
-					levelLoaded = true;
-					levels[swipeScript.NumberOfSwipes].loadLevel();
+					levelLoaded = false;
 				}
 				scaleFont = buttonHeight/3;
 				myGUIStyle.fontSize = scaleFont;
@@ -88,12 +94,12 @@ public class Mission_Level : LevelScript_Base {
 		}
 		else
 		{
-			if(levelLoaded)
+			if(levelLoaded  && levels.Count != 0){
 				levels[swipeScript.NumberOfSwipes].levelGUI();
+			}
 
 		}
-
-		if (noAccess)
+		if (!noAccess)
 		{
 			buttonHeight = Screen.height/10 * 5;
 			buttonWidth = Screen.width/10 * 5;

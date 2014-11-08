@@ -68,7 +68,8 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 				spwnTim = 1.5f;
 			}
 			if (spawnCount > 2){
-				timer.TimerValue = spawnRate;
+				timer.TimerValue = spawnRate + Random.Range(-spawnRate/10,spawnRate/10);
+				timer.resetTimer();
 				enemyTypeCounter++;
 				spwnWing = false;
 				spawnCount = 0;

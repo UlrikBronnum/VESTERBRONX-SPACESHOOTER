@@ -18,7 +18,8 @@ public class Planet_One_Level : Mission_Level {
 		if(levels.Count == 0){
 			setLevels();
 		}
-		
+
+
 		levelLoaded = true;
 		completed = false;
 		

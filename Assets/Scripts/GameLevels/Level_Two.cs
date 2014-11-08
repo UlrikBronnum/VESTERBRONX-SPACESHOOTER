@@ -13,22 +13,19 @@ public class Level_Two :  LevelScript_Level
 
 	public override void loadLevel( )
 	{
+		
 		setClassTargets();
-		loadButtons();	
-		
-		levelNumber = 2;
-		howManyEnemies = 50;
 		
 		
-		Debug.Log(priceCreditsValue() + " " + priceCreditsTotal());
-		
-		
-		newScale = new Vector3(10,10,10);
-		newPosition = new Vector3(0,0,-20);
+		newScale = new Vector3(5,5,5);
+		newPosition = new Vector3(0,0,-115);
 		newRotation = new Vector3(90,0,0);
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,background.transform,true,true);
+		shipHealth = shipScr.shipHealth();
+		shipShield = shipScr.shipShield();
 		
-		
+		numberOfFireButtons = shipScr.CanonMountCapacity;
+		loadButtons();
 		
 		newProp = "EnemySpawn";
 		newScale = new Vector3(1,1,1);
