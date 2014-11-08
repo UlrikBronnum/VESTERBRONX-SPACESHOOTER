@@ -17,11 +17,9 @@ public class Level_One : LevelScript_Level {
 
 
 
-
-		levelNumber = 1;
-
+		levelNumber = getLevelNumber();
+		
 		howManyEnemies = 100;
-
 
 		setClassTargets();
 

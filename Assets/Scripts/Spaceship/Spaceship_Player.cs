@@ -96,7 +96,7 @@ public class Spaceship_Player : Spaceship_Base {
 		if(other.collider.tag =="EnemyProjectile")
 		{
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
-			takeDamage(other.collider.GetComponent<Projectile_Base>().damage);
+			takeDamage(other.collider.GetComponent<EnemyProjectile_Base>().damage);
 			Destroy (other.collider.gameObject);
 		}
 	}

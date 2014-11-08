@@ -16,7 +16,7 @@ public class MiniGun_Weapon : Weapons_Base {
 		// Damage of projetile
 		projectileDamage = 125;
 		// the rate of fire value
-		rateOfFire = 3f;
+		rateOfFire = 1f;
 		// magasin capacity
 		magCapacity = 100;
 		

@@ -55,7 +55,7 @@ public class CanonShop_Level : LevelScript_Base {
 			newRotation = new Vector3(75,0,0);
 			createGoodsObject(newProp,newScale,newPosition,newRotation,props[0].transform.FindChild("buyableObjectSpawn").transform);
 			float objHeight = buyableObjects[i].transform.localScale.x;
-			Debug.Log(objHeight);
+			Debug.Log(i);
 			buyableObjects[i].GetComponent<Weapons_Base>().forceStart();
 			if(i == canonSelected){
 				buyableObjects[i].SetActive(true);

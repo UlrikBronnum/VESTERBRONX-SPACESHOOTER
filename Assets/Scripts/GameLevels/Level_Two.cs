@@ -14,6 +14,12 @@ public class Level_Two :  LevelScript_Level
 	public override void loadLevel( )
 	{
 		
+		levelNumber = getLevelNumber();
+		
+		howManyEnemies = 100;
+		
+
+
 		setClassTargets();
 		
 		

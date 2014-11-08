@@ -29,7 +29,7 @@ public class EnemyWeapon_Base : MonoBehaviour {
 			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
 			newShot.tag = "EnemyProjectile";
 			newShot.layer = LayerMask.NameToLayer("EnemyProjectile");
-			Projectile_Base script = newShot.GetComponent<Projectile_Base>();
+			EnemyProjectile_Base script = newShot.GetComponent<EnemyProjectile_Base>();
 			script.setProjectileDamage(projectileDamage);
 			newShot.transform.position = barrelEnd.position;
 			newShot.transform.rotation = barrelEnd.rotation;

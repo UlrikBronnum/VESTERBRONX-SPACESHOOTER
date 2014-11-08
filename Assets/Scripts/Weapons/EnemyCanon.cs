@@ -8,7 +8,7 @@ public class EnemyCanon : EnemyWeapon_Base {
 		barrelEnd = transform.FindChild("barrelEnd").transform;
 		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
 
-		ammoType = "Projectile1";
+		ammoType = "Enemies/Enemy_projectile";
 		// Damage of projetile
 		projectileDamage = damage;
 		// the rate of fire value

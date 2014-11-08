@@ -14,18 +14,11 @@ public class Level_18 : LevelScript_Level {
 	
 	public override void loadLevel( )
 	{
-		
-		setClassTargets();
-		loadButtons();	
-		
-		numberOfFireButtons = shipScr.CanonMountCapacity;
-		
-		levelNumber = 18;
+		levelNumber = getLevelNumber();
 		
 		howManyEnemies = 100;
-		
-		
-		
+
+		setClassTargets();
 		
 		
 		newScale = new Vector3(5,5,5);
@@ -35,6 +28,9 @@ public class Level_18 : LevelScript_Level {
 		shipHealth = shipScr.shipHealth();
 		shipShield = shipScr.shipShield();
 		
+		numberOfFireButtons = shipScr.CanonMountCapacity;
+		loadButtons();
+
 		
 		
 		newProp = "EnemySpawn";

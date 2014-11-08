@@ -1,15 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rocket_Weapon : MonoBehaviour {
+public class Rocket_Weapon : Weapons_Base {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public override void forceStart () 
+	{
+		barrelEnd = transform.FindChild("barrelEnd").transform;
+		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
+		
+		ammoType = "Space/Rocket_ammo";
+		// upgradeStates = { rate of fire , damage , capacity }
+		// will range from 0 to topLimit?
+		// the purchase value of the weapon
+		weaponValue = 3000;
+		// Damage of projetile
+		projectileDamage = 125;
+		// the rate of fire value
+		rateOfFire = 3f;
+		// magasin capacity
+		magCapacity = 100;
+		
+		fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 }
