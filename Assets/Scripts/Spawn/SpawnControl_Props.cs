@@ -6,7 +6,7 @@ public class SpawnControl_Props : SpawnControl_Base {
 	public SpawnClass_Base spawnBase;
 	protected virtual void Start () 
 	{
-		spawnRate = 3f;
+		spawnRate = 0.5f;
 		timer = new EventTimer_Base(spawnRate);
 	}
 	
@@ -14,7 +14,7 @@ public class SpawnControl_Props : SpawnControl_Base {
 	protected virtual void Update () {
 		if(timer.timerTick()){
 			timer.TimerValue = spawnRate;
-			spawnBase.Spawn(0);
+			spawnBase.Spawn((int)(Random.Range(0.5f,1.5f)));
 		}
 	}
 }

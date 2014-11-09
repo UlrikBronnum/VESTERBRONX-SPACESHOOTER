@@ -31,8 +31,8 @@ public class Enemy_Spawn : SpawnClass_Base {
 		versionModifier = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().enemyVersion;
 
 		spawnObject = new GameObject[4];
-		spawnObject[0] = (GameObject)Resources.Load(versionModifier[1]);
-		spawnObject[1] = (GameObject)Resources.Load(versionModifier[0]);
+		spawnObject[0] = (GameObject)Resources.Load(versionModifier[0]);
+		spawnObject[1] = (GameObject)Resources.Load(versionModifier[1]);
 		spawnObject[2] = (GameObject)Resources.Load(versionModifier[2]);
 		spawnObject[3] = (GameObject)Resources.Load(versionModifier[3]);
 		/*
@@ -51,11 +51,8 @@ public class Enemy_Spawn : SpawnClass_Base {
 		portal = (GameObject)Resources.Load("PortalFog");
 		
 		enemySpawning = false;
-		enemyShipScipt = new string[4];
-		enemyShipScipt[0] = "EnemyFourthClass";
-		enemyShipScipt[1] = "EnemyThirdClass";
-		enemyShipScipt[2] = "EnemySecondClass";
-		enemyShipScipt[3] = "EnemyFirstClass";
+		enemyShipScipt = new string[4] {"EnemyFirstClass","EnemySecondClass","EnemyThirdClass","EnemyFourthClass"};
+
 		portalTime = 0.66f;
 		stackSize = 25;
 	}
@@ -113,7 +110,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 		go.AddComponent(enemyShipScipt[type]);
 		Spaceship_Enemy createdObject = go.GetComponent<Spaceship_Enemy>();
 		createdObject.forceStart();
-		createdObject.modifyEnemy(levelModifier(10), levelModifier(5),(float) levelModifier(5),0f,levelModifier(1));
+		createdObject.modifyEnemy(levelNum);
 		createdObject.Parent = this;
 		createdObject.transform.parent = this.transform;
 		enemiesToSpawn--;
@@ -121,7 +118,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 
 	}
 
-	private int levelModifier(int modifier){
+	private int modifyValue(int modifier){
 		return modifier * levelNum;
 	}
 

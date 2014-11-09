@@ -42,9 +42,9 @@ public class Level_5 : LevelScript_Level {
 			0,1,0,0,1,
 			0,0,1,0,1,
 			1,0,1,0,1
-		};
-		
-		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection);
+		}; 
+
+		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection, 20f);
 		
 		
 		

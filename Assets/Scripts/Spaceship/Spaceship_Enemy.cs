@@ -25,14 +25,22 @@ public class Spaceship_Enemy : Spaceship_Base {
 	}
 	public virtual void shipInitialization(){ }
 	public virtual void forceStart(){ }
-	public void modifyEnemy(int h, int s, float m, float f, int d){
-		health += h;
-		shield += s;
-		// Ship speed
-		maneuverSpeed += m;
-		// sets the rate of fire for the guns of this Enemy:
-		fireRate -= f;
-		damage += d;
+	public void modifyEnemy(int level){
+		int value = level;
+		if(level < 9){
+			value = level;
+		}else if(level > 8 && level < 17){
+			value = level - 8;
+		}else{
+			value = level - 16;
+		}
+		Debug.Log(value + "  " + level);
+
+		health += value * 10;
+		shield += value * 5;
+		maneuverSpeed += value * 5;
+		fireRate -= value * 0.1f;
+		damage += (int)(damage/50 * value);
 
 		shipInGameShield = shield;
 
@@ -51,7 +59,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 		maneuverSpeed = m;
 		health = h;
 		shield = s;
-
 		fireRate = f;
 		timer.resetTimer();
 	}
@@ -75,23 +82,35 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(transform.position.y > cameraPos.transform.position.y){	
 			Destroy(gameObject);
 		}
-		//	RaycastHit hit;
-		//	Ray weaponSight = new Ray(transform.position,Vector3.forward);
-		//	Debug.DrawRay(transform.position,Vector3.forward, Color.blue);
 
-		//if(Physics.Raycast(weaponSight,out hit, 5000f)){
-			//if(hit.collider.tag == "Player"){
+		RaycastHit hit1;
+		Vector3 forward1 = this.transform.FindChild("mountT0").transform.TransformDirection(Vector3.forward) * 20000; //Det sidste tal ændrer længen af søgefeltet (tror jeg)
+		Debug.DrawRay(this.transform.FindChild("mountT0").transform.position, forward1, Color.green);
+		RaycastHit hit2;
+		Vector3 forward2 = this.transform.FindChild("mountT1").transform.TransformDirection(Vector3.forward) * 20000; //Det sidste tal ændrer længen af søgefeltet (tror jeg)
+		Debug.DrawRay(this.transform.FindChild("mountT1").transform.position, forward2, Color.green);
 
-				
-			//}
-		//}
-		for (int i = 0; i < canonMountCapacity; i++) {
-			EnemyWeapon_Base script = canonMounted[i].GetComponent<EnemyWeapon_Base> ();
-			script.fireWeapon ();
+		if (Physics.Raycast(this.transform.FindChild("mountT0").transform.position, forward1, out hit1))
+		{
+			if (hit1.collider.tag == "Player")
+			{
+				for (int i = 0; i < canonMountCapacity; i++) {
+					EnemyWeapon_Base script = canonMounted[i].GetComponent<EnemyWeapon_Base> ();
+					script.fireWeapon ();
+				}
+			}
 		}
-
-
-
+		if (Physics.Raycast(this.transform.FindChild("mountT1").transform.position, forward2, out hit2))
+		{
+			if (hit2.collider.tag == "Player")
+			{
+				for (int i = 0; i < canonMountCapacity; i++) {
+					EnemyWeapon_Base script = canonMounted[i].GetComponent<EnemyWeapon_Base> ();
+					script.fireWeapon ();
+				}
+			}
+		}
+	
 	}
 	public override void initializeCanon(Transform scale, int i)
 	{
@@ -116,7 +135,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	public override void takeDamage(int damage){
 		if(shipInGameShield > 0){
 			hitTimer.timerActive = true;
-			renderer.material.SetFloat("_Shield_State" , 1f);
+			renderer.material.SetFloat("_Shield_Blend" , 1f);
 			hitTimer.resetTimer();
 			if(shipInGameShield - damage > 0){
 				shipInGameShield -= damage;
@@ -147,14 +166,19 @@ public class Spaceship_Enemy : Spaceship_Base {
 		//If the object has the tag projectile run this
 		if(other.collider.tag =="PlayerProjectile")
 		{
+			hitTimer.resetTimer();
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
 			takeDamage(other.collider.GetComponent<Projectile_Base>().damage);
+			if(shipInGameShield > 0){
+				renderer.material.SetFloat("_Shield_Blend" ,1f);
+			}
 		}
 		if(other.collider.tag =="Player")
 		{
+			hitTimer.resetTimer();
 			Instantiate(explosion,transform.position, new Quaternion());
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
-			takeDamage(0);
+			Parent.deadEnemy++;
 			Destroy(gameObject);
 		}
 	}

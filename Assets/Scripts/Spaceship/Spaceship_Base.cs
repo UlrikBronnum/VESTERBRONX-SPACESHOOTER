@@ -44,25 +44,25 @@ public class Spaceship_Base : MonoBehaviour {
 	public int shipInGameHealth;
 	public int shipInGameShield;
 
-	protected Shield_Timer hitTimer = new Shield_Timer(1f);
+	protected Shield_Timer hitTimer = new Shield_Timer(0.25f);
 
 	public virtual void initializeCanon(Transform scale, int i){}
 	public virtual void shipInitialization(){}
 	public virtual void Update () {}
 
 	public void manageShader(){
+	
+		renderer.material.shader = Shader.Find("Game/Spaceship_Shader");
 		if(shipInGameShield > 0 && shipShield() > 0){
-			renderer.material.SetFloat("_Shield_State" , (float)shipInGameShield/shipShield());
+			float shieldLeft = (float)shipInGameShield/shipShield();
+			renderer.material.SetFloat("_Shield_Left" , shieldLeft);
 		}else{
-			renderer.material.SetFloat("_Shield_State" , 0f);
+			renderer.material.SetFloat("_Shield_left" , 0f);
 		}
-
-
-		if(hitTimer.timerTick()){
-			hitTimer.timerActive = false;
-			renderer.material.shader = Shader.Find("Game/Spaceship_Shader");
+		if(hitTimer.timerTick())
 			renderer.material.SetFloat("_Shield_Blend" , 0f);
-		}
+
+
 	}
 
 	// Instantiates canons on 

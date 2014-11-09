@@ -9,7 +9,7 @@ public class Mission_Level : LevelScript_Base {
 	public List<LevelScript_Level> levels = new List<LevelScript_Level>();
 	protected string planetState;
 	protected bool levelLoaded;
-	protected bool noAccess;
+	protected bool access = true;
 	protected string[] levelNames;
 
 	int levelCounter = 0;
@@ -28,7 +28,7 @@ public class Mission_Level : LevelScript_Base {
 
 		levelCounter = swipeScript.NumberOfSwipes;
 		playerCounter = script.levelsCompleted;
-		noAccess = levels[levelCounter].canLoad(playerCounter);
+		access = levels[levelCounter].canLoad(playerCounter);
 		if(!completed ){
 		
 		}else{
@@ -43,7 +43,7 @@ public class Mission_Level : LevelScript_Base {
 
 
 		if(planetState == levelNames[swipeScript.NumberOfSwipes]){
-			if(levelLoaded == false &&  noAccess){
+			if(levelLoaded == false &&  access){
 				closeLevel();
 				levels[levelCounter].loadLevel();
 				levelLoaded = true;
@@ -67,7 +67,7 @@ public class Mission_Level : LevelScript_Base {
 		{
 			placementX = Screen.width - buttonWidth; 
 			placementY = 0;
-			if(noAccess){
+			if(access){
 				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
 					planetState = levelNames[swipeScript.NumberOfSwipes];
@@ -94,23 +94,24 @@ public class Mission_Level : LevelScript_Base {
 		}
 		else
 		{
-			if(levelLoaded  && levels.Count != 0){
+			if(levelLoaded && levels.Count != 0){
 				levels[swipeScript.NumberOfSwipes].levelGUI();
 			}
 
 		}
-		if (!noAccess)
+		if (!access)
 		{
-			buttonHeight = Screen.height/10 * 5;
-			buttonWidth = Screen.width/10 * 5;
-			placementX =  (int)(Screen.height/10 * 0.5f);
-			placementY =  (int)(Screen.width/10 * 0.5f); 
+			buttonHeight = Screen.height/2;
+			buttonWidth = Screen.height/2;
+			placementX = Screen.width/2 - buttonWidth/2;
+			placementY = Screen.height/2 - buttonHeight/2; 
 			
-			scaleFont = 40;
-			myGUIStyle.alignment = TextAnchor.MiddleCenter;
+			scaleFont = 50;
+
 			
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),Resources.Load("Interface/NOAccess") as Texture);
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
 			myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "No Access", myGUIStyle);
 			GUI.EndGroup();

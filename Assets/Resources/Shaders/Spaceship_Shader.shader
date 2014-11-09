@@ -5,7 +5,7 @@
 		_Texture_Override_Color("Overide_Color" , Color) = (1.0,1.0,1.0,1.0)
 		
 		_Shield_Blend_Color ("Shield_Color" , Color) = (1.0,1.0,1.0,1.0)
-		_Shield_Blend ("Shield_State" , Range(0.0,1.0)) = 0.0
+		_Shield_Blend ("Shield_Hit" , Range(0.0,1.0)) = 0.0
 		_Shield_Left ("Shield_Left" , Range(0.0,1.0)) = 0.0
 
 		_MainTex ("Diffuse Texture", 2D) = "white" {}
@@ -182,11 +182,13 @@
 				float4 finalColor;
 			
 				if(_Shield_Left > 0){
-					if(_Shield_Blend > 0){
-						finalColor = float4(_Shield_Blend_Color.xyz * (1 + (sin (_Time.x * 720) * _Shield_Left)),0.8f ) * rand(i.tex.xy  * _Time.x) ;				
+					if(_Shield_Blend == 0){
+						finalColor = float4(_Shield_Blend_Color.xyz , 0.8f * _Shield_Left ) ;				
+					}else{
+						finalColor = float4(normalize(_Shield_Blend_Color.xyz + float3(1.0f,1.0f,1.0f) * (1 + sin (_Time.x * 720) * _Shield_Left)  * rand(i.tex.xy  * _Time.x)) ,rand(i.tex.xy  * _Time.x ) );
 					}
 				}else{
-					finalColor = float4(_Shield_Blend_Color.xyz, 0f ) * rand(i.tex.xy  * _Time.x);
+					finalColor = float4(0f,0f,0f,0f);
 				}
 				return finalColor;
 			}	

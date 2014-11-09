@@ -36,8 +36,14 @@ public class Player_Charactor : MonoBehaviour
 	protected Color[] gameTextColors = new Color[2];
 	public Color textColor;
 
+	private float terminationTime = 0.0f;
+	public string startTime;
+	public string endTime;
+
 	public void OnApplicationQuit(){
 		profileMan.gameSave();
+		endTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+		Debug.Log(endTime);
 	}
 	public void Start () 
 	{
@@ -46,7 +52,7 @@ public class Player_Charactor : MonoBehaviour
 
 		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
-		gameTextColors[0] = new Color(1.0f,0.0f,0.0f,1.0f);
+		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
 
 		profileMan = gameObject.AddComponent("ProfileSavenLoad") as ProfileSavenLoad;
@@ -70,6 +76,8 @@ public class Player_Charactor : MonoBehaviour
 		}*/
 		hangar.addGunToHangar("Space/MiniGun");
 		hangar.addToCanonUpgrades();
+		hangar.addSpaceshipToHangar("SecondClass");
+		hangar.addToShipUpgrades();
 		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
 		hangar.addToShipUpgrades();
 		credits = 1000000;
@@ -91,7 +99,7 @@ public class Player_Charactor : MonoBehaviour
 		if(gameSetting == 0)
 		{
 			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/Carlsberg_wagon","PlayerShips/MustangPlayer"};
-			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/SpaceProstitude","VesterBro/CycleMonster","VesterBro/SpaceProstitude","VesterBro/Spike"};
+			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/SpaceProstitude","VesterBro/CycleMonster","VesterBro/Dove","VesterBro/Spike"};
 			playerArmory  = new string[6] {"VesterBro/DurumGun","VesterBro/BeerBottleShooter","VesterBro/CoffeeCannon","VesterBro/TomatoSauceCanon","VesterBro/SkydebaneCannon","VesterBro/ButcherCleaverGun"};
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
@@ -114,15 +122,22 @@ public class Player_Charactor : MonoBehaviour
 				systemState = "Menu";
 			}else{
 				Debug.Log("No Target");
-				systemState = "No State";
+				systemState = "Image Lost";
+				terminationTime = Time.time + 5;
+				Debug.Log(terminationTime);
 			}
 		}
-	
-		if(systemState == "Menu"){
 
+		if(systemState == "Image Lost")
+		{
+			if(GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
+				Debug.Log("Found Target");
+				systemState = "Menu";
+			}else if(terminationTime < Time.time){
+				Debug.Log ("Close");
+			}
 		}
-	
-
+			
 
 		if(systemState == "Hangar"){
 			if(levelLoaded == false){

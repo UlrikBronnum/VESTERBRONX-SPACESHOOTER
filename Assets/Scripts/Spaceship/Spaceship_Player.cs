@@ -58,7 +58,6 @@ public class Spaceship_Player : Spaceship_Base {
 	}
 	public override void takeDamage(int damage){
 		if(shipInGameShield > 0){
-			renderer.material.SetFloat("_Shield_Left" , 0f);
 			hitTimer.timerActive = true;
 			hitTimer.resetTimer();
 			if(shipInGameShield - damage > 0){
@@ -88,6 +87,10 @@ public class Spaceship_Player : Spaceship_Base {
 		//If the enemy collides with the player and has the tag " enemy", following will run:
 		if(other.collider.tag =="Enemy")
 		{
+			hitTimer.resetTimer();
+			if(shipInGameShield > 0){
+				renderer.material.SetFloat("_Shield_Blend" ,1f);
+			}
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
 			takeDamage(other.collider.GetComponent<Spaceship_Enemy>().collisionDamage);
 			Destroy (other.collider.gameObject);
@@ -95,6 +98,10 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 		if(other.collider.tag =="EnemyProjectile")
 		{
+			hitTimer.resetTimer();
+			if(shipInGameShield > 0){
+				renderer.material.SetFloat("_Shield_Blend" ,1f);
+			}
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
 			takeDamage(other.collider.GetComponent<EnemyProjectile_Base>().damage);
 			Destroy (other.collider.gameObject);
@@ -160,8 +167,8 @@ public class Spaceship_Player : Spaceship_Base {
 			pcControls(canonMountCapacity);
 		*/
 		if (IsActive) {
-						androidControls (canonMountCapacity);
-				}
+			androidControls (canonMountCapacity);
+		}
 	}
 	private void pcControls(int shipCapacity){
 		float sideSpeed;

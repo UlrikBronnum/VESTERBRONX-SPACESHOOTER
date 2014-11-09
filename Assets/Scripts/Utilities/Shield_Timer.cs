@@ -18,6 +18,7 @@ public class Shield_Timer {
 			_timer -= Time.deltaTime;
 			if(_timer < 0){
 				_timer = timerValue;
+				timerActive = false;
 				return true;
 			}else{
 				return false;
@@ -28,6 +29,7 @@ public class Shield_Timer {
 		}
 	}
 	public void resetTimer(){
+		timerActive = true;
 		_timer = TimerValue;
 	}
 	public float TimerValue{

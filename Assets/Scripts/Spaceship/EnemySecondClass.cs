@@ -19,10 +19,10 @@ public class EnemySecondClass : Spaceship_Enemy {
 		health = 400;
 		shield = 150;
 		// Ship speed
-		maneuverSpeed = 250f;
+		maneuverSpeed = 200f;
 		// sets the rate of fire for the guns of this Enemy:
-		fireRate = 4f;
-		damage = 50;
+		fireRate = 1.5f;
+		damage = 60;
 		
 		// damage inflicted if the player collides with this enemy
 		collisionDamage = (int)(health/4f);

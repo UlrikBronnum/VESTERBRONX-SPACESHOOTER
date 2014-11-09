@@ -46,7 +46,7 @@ public class Level_13 : LevelScript_Level {
 													1,0,2,0,3
 		};
 		
-		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection);
+		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection, 20f);
 		
 		
 		

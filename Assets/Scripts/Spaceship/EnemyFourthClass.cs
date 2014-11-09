@@ -18,9 +18,9 @@ public class EnemyFourthClass : Spaceship_Enemy {
 	health = 600;
 	shield = 250;
 	// Ship speed
-	maneuverSpeed = 350f;
+	maneuverSpeed = 250f;
 	// sets the rate of fire for the guns of this Enemy:
-	fireRate = 3f;
+	fireRate = 0.8f;
 	damage = 100;
 	
 	// damage inflicted if the player collides with this enemy
@@ -51,6 +51,7 @@ public class EnemyFourthClass : Spaceship_Enemy {
 	for(int i = 0 ; i < canonMountCapacity/2 ; i++){
 		mountCanon(i);
 	}
+
 	initTimer(10f);
 }
 

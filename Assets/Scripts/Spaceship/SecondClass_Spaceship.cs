@@ -34,8 +34,8 @@ public class SecondClass_Spaceship : Spaceship_Player {
 		maneuverSpeed = 150f;
 
 
-		health = 400;
-		shield = 100;
+		health = 500;
+		shield = 250;
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
 		

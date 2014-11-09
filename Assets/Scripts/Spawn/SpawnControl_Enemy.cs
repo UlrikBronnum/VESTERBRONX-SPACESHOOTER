@@ -13,6 +13,8 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 	private bool spwnWing = false;
 	private Vector3 tmpPos;
 
+	// spawnrate 25
+
 
 	// 5 different enemies in each version
 	// spawn {30,40,20,10,0}
@@ -26,8 +28,8 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 	private int enemyTypeCounter = 0;
 	private int[] enemyTypes = new int[20];
 
-	public void setSpawnBase (int levelNumber, int enemytospawn, int[] enemyType) {
-		spawnRate = 25f;
+	public void setSpawnBase (int levelNumber, int enemytospawn, int[] enemyType, float spawnTime) {
+		spawnRate = spawnTime;
 		numberOfEnemies = enemytospawn;
 		enemyTypes = enemyType;
 		spawnBase = gameObject.AddComponent<Enemy_Spawn>() as Enemy_Spawn;
@@ -68,7 +70,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 				spwnTim = 1.5f;
 			}
 			if (spawnCount > 2){
-				timer.TimerValue = spawnRate + Random.Range(-spawnRate/10,spawnRate/10);
+				timer.TimerValue = spawnRate + Random.Range(-spawnRate/8,spawnRate/8);
 				timer.resetTimer();
 				enemyTypeCounter++;
 				spwnWing = false;

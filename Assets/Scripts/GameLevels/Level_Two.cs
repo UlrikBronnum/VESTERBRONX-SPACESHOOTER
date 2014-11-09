@@ -44,9 +44,8 @@ public class Level_Two :  LevelScript_Level
 												0,0,1,0,1,
 												1,0,1,0,1};
 
-		spwnScr.setSpawnBase(levelNumber , 100,enemyTypeSelection);
-		spwnScr.numberOfEnemies = howManyEnemies;
-		
+		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection, 20f);
+
 		newProp = "MeteorSpawn";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,-1000,-100);

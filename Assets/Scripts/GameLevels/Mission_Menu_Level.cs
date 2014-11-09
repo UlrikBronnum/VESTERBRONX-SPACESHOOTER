@@ -38,8 +38,8 @@ public class Mission_Menu_Level : LevelScript_Base {
 		Vector3 newPosition;
 		Vector3 newRotation;
 		
-		newProp = "PlanetChainMenu";
-		newScale = new Vector3(150,150,150);
+		newProp = "LevelProps/Menu_vesterbro";
+		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
