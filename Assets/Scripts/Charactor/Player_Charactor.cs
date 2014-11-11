@@ -50,7 +50,7 @@ public class Player_Charactor : MonoBehaviour
 		gameSetting = 0;
 		levelsCompleted = 24;
 
-		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap") as Texture;
+		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
@@ -76,8 +76,6 @@ public class Player_Charactor : MonoBehaviour
 		}*/
 		hangar.addGunToHangar("Space/Minigun_weapon");
 		hangar.addToCanonUpgrades();
-		hangar.addSpaceshipToHangar("SecondClass");
-		hangar.addToShipUpgrades();
 		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
 		hangar.addToShipUpgrades();
 		credits = 1000000;
@@ -102,7 +100,7 @@ public class Player_Charactor : MonoBehaviour
 			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/Christiania_bike","VesterBro/CycleMonster","VesterBro/Christiania_bike","VesterBro/Spike"};
 			playerArmory  = new string[6] {"VesterBro/Durum_weapon","VesterBro/Bottle_weapon","VesterBro/Coffee_weapon","VesterBro/Tomato_weapon","VesterBro/Canon_weapon","VesterBro/Hatchet_weapon"};
 		}else{
-			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
+			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
 			playerArmory  = new string[6] {"Space/Needle_weapon","Space/Minigun_weapon","Space/Plasma_weapon","Space/Laser_weapon","Space/Rocket_weapon","Space/Missile_Weapon"};
 		}

@@ -83,11 +83,11 @@ public class LevelScript_Level : LevelScript_Base {
 
 	protected void setClassTargets()
 	{
-		fireButton[0] = Resources.Load("Interface/fireButtom_vesterbro") as Texture;
-		fireButton[1] = Resources.Load("Interface/Button_Space_Fire") as Texture;
+		fireButton[0] = Resources.Load("Interface/firebutton_vest_up") as Texture;
+		fireButton[1] = Resources.Load("Interface/Button_Gui_Fire") as Texture;
 
-		fireButtonDown[0] = Resources.Load("Interface/Button_Vesterbro_Fire") as Texture;
-		fireButtonDown[1] = Resources.Load("Interface/Button_Space_Fire") as Texture;
+		fireButtonDown[0] = Resources.Load("Interface/firebutton_vest_down") as Texture;
+		fireButtonDown[1] = Resources.Load("Interface/Button_Gui_Fire_down") as Texture;
 
 		setMainVars();
 
@@ -257,16 +257,22 @@ public class LevelScript_Level : LevelScript_Base {
 		}
 	}
 
+
 	protected void sentButtonInput(){
 		if(numberOfFireButtons == 2)
 		{
 			if(buttonScript[0].touch)
 			{
 				button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
+				if(script.gameSetting == 1)
+				{
+					button[1].guiText.color = Color.red;
+				}
 			}
 			else
 			{
 				button[1].guiTexture.texture = fireButton[script.gameSetting];
+				button[1].guiText.color = script.textColor;
 			}
 			shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
 		}
@@ -275,10 +281,15 @@ public class LevelScript_Level : LevelScript_Base {
 			if(buttonScript[1].touch)
 			{
 				button[2].guiTexture.texture = fireButtonDown[script.gameSetting];
+				if(script.gameSetting == 1)
+				{
+					button[2].guiText.color = Color.red;
+				}
 			}
 			else
 			{
 				button[2].guiTexture.texture = fireButton[script.gameSetting];
+				button[2].guiText.color = script.textColor;
 			}
 			shipScr.getButtonInput(buttonScript[0].touch, buttonScript[1].touch,joystickInput);
 		}
