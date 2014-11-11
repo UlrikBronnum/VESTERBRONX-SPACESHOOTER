@@ -81,7 +81,7 @@ public class Hangar_Level : LevelScript_Base {
 
 	public override void updateLevel()
 	{
-
+		Debug.Log(canonLimit);
 
 		if(completed){
 		}else{
@@ -103,7 +103,7 @@ public class Hangar_Level : LevelScript_Base {
 		if(canonLimit >= 2)
 		{
 			placementX = Screen.width - Screen.width/4; 
-			placementY = (Screen.height/5)/2;
+			placementY = Screen.height/10;
 
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))
@@ -131,7 +131,7 @@ public class Hangar_Level : LevelScript_Base {
 		if(canonLimit >= 4)
 		{
 			placementX = Screen.width - Screen.width/4; 
-			placementY = (Screen.height/5)/2;
+			placementY = Screen.height/10 + buttonHeight;
 
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))

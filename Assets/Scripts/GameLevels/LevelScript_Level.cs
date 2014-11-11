@@ -56,6 +56,8 @@ public class LevelScript_Level : LevelScript_Base {
 
 	protected string[] enemyTypes;
 
+	SpawnControl_Enemy enemySpawnScr;
+
 	public virtual int getLevelNumber(){
 		return 0;
 	}
@@ -97,6 +99,7 @@ public class LevelScript_Level : LevelScript_Base {
 		shipShield = shipScr.shipShield();
 		shipAmmunition = shipScr.mountMagasinCapacity;
 		shipAmmunitionLoss = shipScr.mountMagasinCapacity;
+	
 
 		lifeRemainingTexture = Resources.Load("Interface/ammobar") as Texture;
 		lifeRemainingBehindTexture = Resources.Load("healthb") as Texture;
@@ -112,6 +115,8 @@ public class LevelScript_Level : LevelScript_Base {
 		shipDamageHealth = shipScr.shipInGameHealth;
 		shipDamageShield = shipScr.shipInGameShield;
 		shipAmmunitionLoss = shipScr.mountMagasinCapacity;
+		enemySpawnScr =  props[0].GetComponent<SpawnControl_Enemy>();
+		enemiesDestroyed = enemySpawnScr.EnemyDead;
 
 		Debug.Log(levelCompleted);
 		
@@ -127,9 +132,6 @@ public class LevelScript_Level : LevelScript_Base {
 		
 		
 		if (spwnScr.spawnEmpty){
-			SpawnControl_Enemy tmpscr =  props[0].GetComponent<SpawnControl_Enemy>();
-			enemiesDestroyed = tmpscr.EnemyDead;
-
 			if( (float)enemiesDestroyed/howManyEnemies > 0.6f){
 				endGame = "Complete";
 				gain = priceCreditsTotal();
@@ -163,8 +165,7 @@ public class LevelScript_Level : LevelScript_Base {
 			_unLoadTimer -= Time.deltaTime * 1f;
 			Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
 			shipScript.gameObject.SetActive(false);
-			SpawnControl_Enemy tmpscr =  props[0].GetComponent<SpawnControl_Enemy>();
-			enemiesDestroyed = tmpscr.EnemyDead;
+
 
 			endGame = "Fail";
 			gain = 0;

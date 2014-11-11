@@ -7,13 +7,18 @@ ModelImporter:
     100002: spike_model_template
     100004: //RootNode
     100006: transform2
+    100008: polySurface1
     400000: pCube1
     400002: spike_model_template
     400004: //RootNode
     400006: transform2
+    400008: polySurface1
     2300000: spike_model_template
+    2300002: polySurface1
     3300000: spike_model_template
+    3300002: polySurface1
     4300000: spike_model_template
+    4300002: polySurface1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -34,7 +39,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .800000012
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

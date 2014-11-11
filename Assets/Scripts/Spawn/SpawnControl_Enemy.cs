@@ -46,7 +46,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 	*/
 	// Update is called once per frame
 	protected override void Update () {
-
+		EnemyDead = spawnBase.deadEnemy;
 		if(spawnBase.enemiesToSpawn > 0){
 			if(timer.timerTick()){
 				timer.TimerValue = spawnRate;
@@ -55,7 +55,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 				Debug.Log(spawnBase.enemiesToSpawn);
 			}
 		}else if (transform.childCount == 0){
-			EnemyDead = spawnBase.deadEnemy;
+
 			spawnEmpty = true;
 			Debug.Log("done");
 		}

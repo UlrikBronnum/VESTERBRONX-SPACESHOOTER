@@ -74,7 +74,7 @@ public class Player_Charactor : MonoBehaviour
 			credits = 0;
 			Debug.Log("noLoad");
 		}*/
-		hangar.addGunToHangar("Space/MiniGun");
+		hangar.addGunToHangar("Space/Minigun_weapon");
 		hangar.addToCanonUpgrades();
 		hangar.addSpaceshipToHangar("SecondClass");
 		hangar.addToShipUpgrades();
@@ -99,12 +99,12 @@ public class Player_Charactor : MonoBehaviour
 		if(gameSetting == 0)
 		{
 			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/Carlsberg_wagon","PlayerShips/MustangPlayer"};
-			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/SpaceProstitude","VesterBro/CycleMonster","VesterBro/Dove","VesterBro/Spike"};
-			playerArmory  = new string[6] {"VesterBro/DurumGun","VesterBro/BeerBottleShooter","VesterBro/CoffeeCannon","VesterBro/TomatoSauceCanon","VesterBro/SkydebaneCannon","VesterBro/ButcherCleaverGun"};
+			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/Christiania_bike","VesterBro/CycleMonster","VesterBro/Christiania_bike","VesterBro/Spike"};
+			playerArmory  = new string[6] {"VesterBro/Durum_weapon","VesterBro/Bottle_weapon","VesterBro/Coffee_weapon","VesterBro/Tomato_weapon","VesterBro/Canon_weapon","VesterBro/Hatchet_weapon"};
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/NeedlePlayer","PlayerShips/MustangPlayer"};
-			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/Needle","Space/Spike"};
-			playerArmory  = new string[6] {"Space/NeedleGun","Space/MiniGun","Space/PlasmaGun","Space/PlasmaLaser","Space/Rocket","Space/Missile_Weapon"};
+			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
+			playerArmory  = new string[6] {"Space/Needle_weapon","Space/Minigun_weapon","Space/Plasma_weapon","Space/Laser_weapon","Space/Rocket_weapon","Space/Missile_Weapon"};
 		}
 	}
 	public  void Update () 
@@ -180,7 +180,8 @@ public class Player_Charactor : MonoBehaviour
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 
 		if(systemState == "Menu")
-		{
+		{	
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
 			placementX = Screen.width/2 - buttonWidth/2; 
 			placementY = (Screen.height/5)/2 ;
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
@@ -198,6 +199,7 @@ public class Player_Charactor : MonoBehaviour
 
 			placementY += buttonHeight;
 
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture,GUIStyle.none))
 			{

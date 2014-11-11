@@ -8,7 +8,7 @@ public class DurumCanon_Weapon : Weapons_Base {
 		barrelEnd = transform.FindChild("barrelEnd").transform;
 		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
 
-		ammoType = "VesterBro/durum_ammo";
+		ammoType = "VesterBro/ammo_durum";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon

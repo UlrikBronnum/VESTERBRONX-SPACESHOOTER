@@ -14,6 +14,7 @@ public class CameraSwipe : MonoBehaviour {
 	public int targetPos = 0;
 	public float speed = 2000F;
 	public bool swipe = false;
+	public int adjustSwipeDistance = 300;
 
 	void Update() {
 
@@ -33,13 +34,13 @@ public class CameraSwipe : MonoBehaviour {
 						if (delta.x > 0) {
 							if(numberOfSwipes>=1){
 							swipe = true;
-							targetPos +=300;
+							targetPos += adjustSwipeDistance;
 							numberOfSwipes-=1;
 							}
 						} else {
 							if(numberOfSwipes<maxNumberOfSwipes){
 							swipe = true;
-							targetPos -=300;
+							targetPos -= adjustSwipeDistance;
 							numberOfSwipes+=1;
 							}
 						}

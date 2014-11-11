@@ -12,16 +12,18 @@ public class Menu_Vesterbro : Planet_Base {
 	private int numberOfChildren;
 	
 	private float sizes = 1;
-	private float[] spacing = {0,300,600};
+	private float[] spacing = {0,600,1200};
 	
 	private string[] propName = {"Buildings/Enghave","Buildings/Trinidad","Buildings/MadameAmour"};
 	
 	public void Start()
 	{
 		
-		numberOfChildren = 2;
+		numberOfChildren = 3;
 		player = GameObject.Find("ImageTarget");
-		
+		sizes = 25;
+
+
 		string newProp;
 		Vector3 newScale;
 		Vector3 newPosition;
@@ -30,8 +32,8 @@ public class Menu_Vesterbro : Planet_Base {
 		for (int i = 0; i < numberOfChildren; i++) {
 			newProp = propName[i];
 			newScale = new Vector3(sizes,sizes,sizes);
-			newPosition = new Vector3(spacing[i],0,0);
-			newRotation = new Vector3(0,0,0);
+			newPosition = new Vector3(spacing[i],0,-125);
+			newRotation = new Vector3(270,0,180);
 			createSceneObject(newProp,newScale,newPosition,newRotation,player.transform);
 			moonObjects[i].transform.parent = transform;
 			
