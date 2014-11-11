@@ -52,7 +52,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 				timer.TimerValue = spawnRate;
 				spwnWing = true;
 				tmpPos = new Vector3 (transform.position.x + Random.Range(-50f,50f),transform.position.y,transform.position.z);
-				Debug.Log(spawnBase.enemiesToSpawn);
+//				Debug.Log(spawnBase.enemiesToSpawn);
 			}
 		}else if (transform.childCount == 0){
 

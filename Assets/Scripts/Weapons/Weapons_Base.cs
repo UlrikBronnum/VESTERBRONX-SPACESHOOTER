@@ -29,7 +29,7 @@ public class Weapons_Base : MonoBehaviour {
 		fireTimer = new Weapon_Timer(rateOfFire);
 	}
 	public int fireWeapon(){
-		Debug.Log(weaponDamage());
+//		Debug.Log(weaponDamage());
 		if(fireTimer.timerTick()){
 			fireTimer.resetTimer();
 			audio.PlayOneShot(fireExplosion);

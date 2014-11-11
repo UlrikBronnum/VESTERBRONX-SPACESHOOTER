@@ -39,6 +39,7 @@ public class Player_Charactor : MonoBehaviour
 	private float terminationTime = 0.0f;
 	public string startTime;
 	public string endTime;
+	public GUIStyle EmptyGuiStyle;
 
 	public void OnApplicationQuit(){
 		profileMan.gameSave();
@@ -50,7 +51,7 @@ public class Player_Charactor : MonoBehaviour
 		gameSetting = 0;
 		levelsCompleted = 24;
 
-		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap") as Texture;
+		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap2") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
@@ -80,7 +81,7 @@ public class Player_Charactor : MonoBehaviour
 		hangar.addToShipUpgrades();
 		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
 		hangar.addToShipUpgrades();
-		credits = 1000000;
+		credits = 70000;
 
 		hangar.setHangar();
 
@@ -185,7 +186,7 @@ public class Player_Charactor : MonoBehaviour
 			placementX = Screen.width/2 - buttonWidth/2; 
 			placementY = (Screen.height/5)/2 ;
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture,GUIStyle.none))
+			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))
 			{
 				systemState = "Hangar";
 				levelLoaded = false;
@@ -194,14 +195,14 @@ public class Player_Charactor : MonoBehaviour
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;
-			GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), "Hangar", myGUIStyle);
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Hangar", myGUIStyle);
 			GUI.EndGroup();
 
 			placementY += buttonHeight;
 
 			myGUIStyle.alignment = TextAnchor.MiddleCenter;
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture,GUIStyle.none))
+			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))
 			{
 				systemState = "MissionLevel";
 				levelLoaded = false;
@@ -210,7 +211,7 @@ public class Player_Charactor : MonoBehaviour
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;
-			GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), "Missions", myGUIStyle);
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Missions", myGUIStyle);
 			GUI.EndGroup();
 
 			placementY += buttonHeight;
@@ -225,7 +226,7 @@ public class Player_Charactor : MonoBehaviour
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;
-			GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), "Canon Shop", myGUIStyle);
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Canon Shop", myGUIStyle);
 			GUI.EndGroup();
 
 			placementY += buttonHeight;
@@ -240,7 +241,8 @@ public class Player_Charactor : MonoBehaviour
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;
-			GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), "Ship Shop", myGUIStyle);
+			//-scaleFont/2 instead of second parameter:
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Ship Shop", myGUIStyle);
 			GUI.EndGroup();
 		}
 		else if(systemState == "Hangar"){

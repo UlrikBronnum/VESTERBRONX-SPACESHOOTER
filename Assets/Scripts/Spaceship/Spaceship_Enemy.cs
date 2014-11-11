@@ -26,21 +26,21 @@ public class Spaceship_Enemy : Spaceship_Base {
 	public virtual void shipInitialization(){ }
 	public virtual void forceStart(){ }
 	public void modifyEnemy(int level){
-		int value = level;
+		/*int value = level;
 		if(level < 9){
 			value = level;
 		}else if(level > 8 && level < 17){
 			value = level - 8;
 		}else{
 			value = level - 16;
-		}
-		Debug.Log(value + "  " + level);
+		}*/
+//		Debug.Log(value + "  " + level);
 
-		health += value * 10;
-		shield += value * 5;
-		maneuverSpeed += value * 5;
-		fireRate -= value * 0.1f;
-		damage += (int)(damage/50 * value);
+		health += level * 10;
+		shield += level * 5;
+		maneuverSpeed += level * 5;
+		fireRate -= level * 0.1f;
+		damage += (int)(damage/50 * level);
 
 		shipInGameShield = shield;
 
@@ -69,6 +69,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 	// Update is called once per frame
 	public override void Update () {
+		print ("dead enemies: "+Parent.deadEnemy);
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;
@@ -85,10 +86,10 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 		RaycastHit hit1;
 		Vector3 forward1 = this.transform.FindChild("mountT0").transform.TransformDirection(Vector3.forward) * 20000; //Det sidste tal ændrer længen af søgefeltet (tror jeg)
-		Debug.DrawRay(this.transform.FindChild("mountT0").transform.position, forward1, Color.green);
+	//	Debug.DrawRay(this.transform.FindChild("mountT0").transform.position, forward1, Color.green);
 		RaycastHit hit2;
 		Vector3 forward2 = this.transform.FindChild("mountT1").transform.TransformDirection(Vector3.forward) * 20000; //Det sidste tal ændrer længen af søgefeltet (tror jeg)
-		Debug.DrawRay(this.transform.FindChild("mountT1").transform.position, forward2, Color.green);
+	//	Debug.DrawRay(this.transform.FindChild("mountT1").transform.position, forward2, Color.green);
 
 		if (Physics.Raycast(this.transform.FindChild("mountT0").transform.position, forward1, out hit1))
 		{
@@ -176,10 +177,11 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(other.collider.tag =="Player")
 		{
 			hitTimer.resetTimer();
-			Instantiate(explosion,transform.position, new Quaternion());
+			//Instantiate(explosion,transform.position, new Quaternion());
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
-			Parent.deadEnemy++;
-			Destroy(gameObject);
+			//Parent.deadEnemy++;
+			//Destroy(gameObject);
+			health = -10;
 		}
 	}
 	public override int shipHealth(){

@@ -14,10 +14,11 @@ public class Level_18 : LevelScript_Level {
 	
 	public override void loadLevel( )
 	{
+		
 		levelNumber = getLevelNumber();
 		
-		howManyEnemies = 100;
-
+		howManyEnemies = 40;
+		
 		setClassTargets();
 		
 		
@@ -30,7 +31,7 @@ public class Level_18 : LevelScript_Level {
 		
 		numberOfFireButtons = shipScr.CanonMountCapacity;
 		loadButtons();
-
+		
 		
 		
 		newProp = "EnemySpawn";
@@ -40,13 +41,10 @@ public class Level_18 : LevelScript_Level {
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
 		
-		int[] enemyTypeSelection = new int[20]{		2,3,0,2,1,
-													3,2,1,3,2,
-													0,1,2,0,3,
-													1,0,3,1,0
+		int[] enemyTypeSelection = new int[8]{		0,1,2,0,1,1,2,1
 		};
 		
-		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection, 20f);
+		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 6f);
 		
 		
 		

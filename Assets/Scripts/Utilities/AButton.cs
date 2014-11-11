@@ -7,14 +7,14 @@ public class AButton : TouchLogic {
 
 	void OnTouchBegan () 
 	{
-		print ("The touch has begun " + this.name);
+	//	print ("The touch has begun " + this.name);
 		touch = true;
 		//Debug.Log ("the boolean is " + touch);
 	}
 
 	void OnTouchEnded () 
 	{
-		print ("The touch has ended " + this.name);
+	//	print ("The touch has ended " + this.name);
 		touch = false;
 		//Debug.Log ("the boolean is " + touch);
 		

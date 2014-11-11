@@ -16,7 +16,7 @@ public class Level_Two :  LevelScript_Level
 		
 		levelNumber = getLevelNumber();
 		
-		howManyEnemies = 100;
+		howManyEnemies = 20;
 		
 
 
@@ -39,12 +39,9 @@ public class Level_Two :  LevelScript_Level
 		newRotation = new Vector3(-90,0,180);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
-		int[] enemyTypeSelection = new int[20]{	0,0,1,0,0,
-												0,1,0,0,1,
-												0,0,1,0,1,
-												1,0,1,0,1};
+		int[] enemyTypeSelection = new int[4]{	0,1,2,0};
 
-		spwnScr.setSpawnBase(levelNumber , 100, enemyTypeSelection, 20f);
+		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 7f);
 
 		newProp = "MeteorSpawn";
 		newScale = new Vector3(1,1,1);

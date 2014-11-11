@@ -15,7 +15,7 @@ public class Projectile_Base : MonoBehaviour {
 		if(timer.timerTick()){
 			Destroy(gameObject);
 		}
-		Debug.Log(damage);
+	//	Debug.Log(damage);
 	}
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag == "Enemy"){
