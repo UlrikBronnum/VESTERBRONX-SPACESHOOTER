@@ -236,13 +236,13 @@ public class Spaceship_Player : Spaceship_Base {
 		if(transform.position.x < 250.0f  && dir > 0)
 		{
 			moveShip (shipManeuverSpeed()*dir);
-			if(transform.rotation.z > -0.3){
+			if(transform.rotation.z > -0.1){
 				transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 			}
 		}else if(transform.position.x > -250.0f  && dir < 0)
 		{
 			moveShip (shipManeuverSpeed()*dir);
-			if(transform.rotation.z < 0.3){
+			if(transform.rotation.z < 0.1){
 				transform.Rotate(new Vector3(0,0,1) * -dir * shipManeuverSpeed() * 2 * Time.deltaTime);
 			}
 		}else
