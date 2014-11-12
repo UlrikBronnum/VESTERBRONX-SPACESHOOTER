@@ -8,7 +8,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	private float lifeSpan;
 	protected EventTimer_Base timer;
 	protected Transform cameraPos;
-
+	protected bool isDead = false;
 	// The rate of fire is set in the child classes of the class and sets the rate of fire for the enemy's weapons
 	protected float fireRate;
 	protected int damage;
@@ -70,6 +70,12 @@ public class Spaceship_Enemy : Spaceship_Base {
 	// Update is called once per frame
 	public override void Update () {
 		//print ("dead enemies: "+Parent.deadEnemy);
+
+		if(isDead){
+			Parent.deadEnemy++;
+			Destroy(gameObject);
+			Debug.Log("dead enemies: " + Parent.deadEnemy);
+		}
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;
@@ -149,8 +155,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}
 		if(health<=0)
 		{
-			Parent.deadEnemy++;
-			Destroy(gameObject);
+			isDead = true;
 			Instantiate(explosion,transform.position, new Quaternion());
 		}
 	}

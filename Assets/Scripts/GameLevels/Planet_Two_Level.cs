@@ -32,7 +32,7 @@ public class Planet_Two_Level : Mission_Level {
 		Vector3 newPosition;
 		Vector3 newRotation;
 		
-		newProp = "PlanetChain";
+		newProp = "LevelProps/EnemyGallery";
 		newScale = new Vector3(150,150,150);
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(0,0,0);

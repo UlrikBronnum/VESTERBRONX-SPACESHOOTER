@@ -32,14 +32,14 @@ public class Planet_One_Level : Mission_Level {
 		Vector3 newScale;
 		Vector3 newPosition;
 		Vector3 newRotation;
-		
-		newProp = "PlanetChain";
+		Debug.Log("Hallo1");
+		newProp = "LevelProps/EnemyGallery";
 		newScale = new Vector3(150,150,150);
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,image.transform);
 		transform.parent = transform;
-		
+		Debug.Log("Hallo2");
 		
 		swipeScript = props[0].GetComponent<CameraSwipe>();
 		

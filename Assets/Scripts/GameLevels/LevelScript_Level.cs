@@ -48,8 +48,10 @@ public class LevelScript_Level : LevelScript_Base {
 	protected int shipDamageHealth;
 	protected int shipDamageShield;
 
-	protected int shipAmmunition;
-	protected int shipAmmunitionLoss;
+	protected int shipAmmunition1;
+	protected int shipAmmunitionLoss1;
+	protected int shipAmmunition2;
+	protected int shipAmmunitionLoss2;
 
 	protected Texture[] fireButton = new Texture[2];
 	protected Texture[] fireButtonDown = new Texture[2];
@@ -97,9 +99,15 @@ public class LevelScript_Level : LevelScript_Base {
 		shipScr.copyInitialization();
 		shipHealth = shipScr.shipHealth();
 		shipShield = shipScr.shipShield();
-		shipAmmunition = shipScr.mountMagasinCapacity;
-		shipAmmunitionLoss = shipScr.mountMagasinCapacity;
-	
+		shipAmmunition1 = shipScr.mountMagasinCapacity1;		
+		shipAmmunitionLoss1 = shipScr.mountMagasinCapacity1;
+
+		if(shipScr.CanonMountCapacity > 2){
+			shipAmmunition2 = shipScr.mountMagasinCapacity2;
+			shipAmmunitionLoss2 = shipScr.mountMagasinCapacity2;
+
+		}
+
 
 		lifeRemainingTexture = Resources.Load("Interface/ammobar") as Texture;
 		lifeRemainingBehindTexture = Resources.Load("healthb") as Texture;
@@ -114,7 +122,10 @@ public class LevelScript_Level : LevelScript_Base {
 		
 		shipDamageHealth = shipScr.shipInGameHealth;
 		shipDamageShield = shipScr.shipInGameShield;
-		shipAmmunitionLoss = shipScr.mountMagasinCapacity;
+		shipAmmunitionLoss1 = shipScr.mountMagasinCapacity1;
+		if(shipScr.CanonMountCapacity > 2){
+			shipAmmunitionLoss2 = shipScr.mountMagasinCapacity2;
+		}
 		enemySpawnScr =  props[0].GetComponent<SpawnControl_Enemy>();
 		enemiesDestroyed = enemySpawnScr.EnemyDead;
 
@@ -454,14 +465,14 @@ public class LevelScript_Level : LevelScript_Base {
 		
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 
-		float ammunition_Remain = (float) shipAmmunitionLoss / shipAmmunition;
-		float ammunition_Width = ammunition_Remain * buttonWidth * 2;
+		float ammunition_Remain1 = (float) shipAmmunitionLoss1 / shipAmmunition1;
+		float ammunition_Width1 = ammunition_Remain1 * buttonWidth * 2;
 		
-		if(ammunition_Width < 0){
-			ammunition_Width = 0;
+		if(ammunition_Width1 < 0){
+			ammunition_Width1 = 0;
 		}
 		
-		int a1N = (shipAmmunitionLoss > 0)? shipAmmunitionLoss: 0;
+		int a1N = (shipAmmunitionLoss1 > 0)? shipAmmunitionLoss1: 0;
 		
 		myGUIStyle.fontSize = scaleFont;
 		
@@ -474,7 +485,7 @@ public class LevelScript_Level : LevelScript_Base {
 		placementY = 0;
 
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth * 2,buttonHeight - 4));
-		GUI.DrawTexture (new Rect (buttonWidth * 2 - ammunition_Width, 2 ,buttonWidth * 2,buttonHeight - 2) , lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
+		GUI.DrawTexture (new Rect (buttonWidth * 2 - ammunition_Width1, 2 ,buttonWidth * 2,buttonHeight - 2) , lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
 		GUI.EndGroup();
 
 	}

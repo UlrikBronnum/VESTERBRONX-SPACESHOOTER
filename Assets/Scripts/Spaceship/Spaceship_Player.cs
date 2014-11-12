@@ -23,8 +23,8 @@ public class Spaceship_Player : Spaceship_Base {
 	public int[] upgradeStates = new int[3];
 
 	// ship magasins, comes from the weapon mounted
-	public int mountMagasinCapacity;
-
+	public int mountMagasinCapacity1;
+	public int mountMagasinCapacity2;
 	// Controls, gui ship buttons
 	private bool fire1 = false;
 	private bool fire2 = false;
@@ -51,7 +51,10 @@ public class Spaceship_Player : Spaceship_Base {
 	/// existing gameobjects
 	/// </summary>
 	public virtual void copyInitialization(){
-		mountMagasinCapacity = canonMounted[0].GetComponent<Weapons_Base>().weaponCapacity() * 2;
+		mountMagasinCapacity1 = canonMounted[0].GetComponent<Weapons_Base>().weaponCapacity() * 2;
+		if(canonMountCapacity > 2)
+			mountMagasinCapacity2 = canonMounted[2].GetComponent<Weapons_Base>().weaponCapacity() * 2;
+
 		shipInGameHealth = shipHealth();
 		shipInGameShield = shipShield();
 
@@ -170,6 +173,7 @@ public class Spaceship_Player : Spaceship_Base {
 			androidControls (canonMountCapacity);
 		}
 	}
+	/*
 	private void pcControls(int shipCapacity){
 		float sideSpeed;
 
@@ -215,7 +219,7 @@ public class Spaceship_Player : Spaceship_Base {
 		
 
 	}
-	
+	*/
 	private void androidControls(int shipCapacity){	
 		if(dir < 0.01 && dir > -0.01)
 		{
@@ -243,19 +247,19 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 		}
 		
-		if(fire1){
+		if(fire1 && mountMagasinCapacity1 > 0){
 			Weapons_Base script = canonMounted[0].GetComponent<Weapons_Base>();
-			mountMagasinCapacity -= script.fireWeapon();
+			mountMagasinCapacity1 -= script.fireWeapon();
 			script = canonMounted[1].GetComponent<Weapons_Base>();
-			mountMagasinCapacity -= script.fireWeapon();
+			mountMagasinCapacity1 -= script.fireWeapon();
 		}
 		if(canonMountCapacity/2 == 2){
-			if(fire2)
+			if(fire2 && mountMagasinCapacity2 > 0)
 			{
 				Weapons_Base script = canonMounted[2].GetComponent<Weapons_Base>();
-				mountMagasinCapacity -= script.fireWeapon();
+				mountMagasinCapacity2 -= script.fireWeapon();
 				script = canonMounted[3].GetComponent<Weapons_Base>();
-				mountMagasinCapacity -= script.fireWeapon();
+				mountMagasinCapacity2 -= script.fireWeapon();
 			}
 		}
 	}

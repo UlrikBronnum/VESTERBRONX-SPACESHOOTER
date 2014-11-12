@@ -29,6 +29,7 @@ public class Mission_Level : LevelScript_Base {
 		levelCounter = swipeScript.NumberOfSwipes;
 		playerCounter = script.levelsCompleted;
 		access = levels[levelCounter].canLoad(playerCounter);
+		Debug.Log("Hallo3");
 		if(!completed ){
 		
 		}else{

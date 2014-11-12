@@ -37,12 +37,20 @@ public class Mission_Menu_Level : LevelScript_Base {
 		Vector3 newScale;
 		Vector3 newPosition;
 		Vector3 newRotation;
-		
-		newProp = "LevelProps/Menu_vesterbro";
-		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,0,0);
-		newRotation = new Vector3(0,0,0);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		if(script.gameSetting == 0){
+			newProp = "LevelProps/Menu_vesterbro";
+			newScale = new Vector3(1,1,1);
+			newPosition = new Vector3(0,0,0);
+			newRotation = new Vector3(0,0,0);
+			createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}else
+		{
+			newProp = "LevelProps/Menu_space";
+			newScale = new Vector3(1f,1f,1f);
+			newPosition = new Vector3(0,0,0);
+			newRotation = new Vector3(0,0,0);
+			createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		}
 		transform.parent = transform;
 
 		
