@@ -38,6 +38,7 @@ public class Weapons_Base : MonoBehaviour {
 			newShot.layer = LayerMask.NameToLayer("PlayerProjectile");
 			Projectile_Base script = newShot.GetComponent<Projectile_Base>();
 			script.setProjectileDamage(weaponDamage());
+			Debug.Log(upgradeStates[0] + "  " + upgradeStates[1] + "  " + upgradeStates[2]);
 			newShot.transform.position = barrelEnd.position;
 			newShot.transform.rotation = barrelEnd.rotation;
 			return 1;

@@ -139,7 +139,6 @@ public class CanonShop_Level : LevelScript_Base {
 					script.credits -= calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]);
 				}
 
-
 				// the box containing the varying price of the upgrade
 				scaleFont = buttonHeight/4;
 				myGUIStyle.fontSize = scaleFont;
@@ -158,6 +157,7 @@ public class CanonShop_Level : LevelScript_Base {
 					script.hangar.canonUpgrade2[gunPos]++;
 					script.credits -= calcUpgradePrice(script.hangar.canonUpgrade2[gunPos]);
 				}
+
 				// the box containing the varying price of the upgrade
 				scaleFont = buttonHeight/4;
 				myGUIStyle.fontSize = scaleFont;

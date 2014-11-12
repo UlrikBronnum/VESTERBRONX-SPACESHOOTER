@@ -69,7 +69,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 	// Update is called once per frame
 	public override void Update () {
-		print ("dead enemies: "+Parent.deadEnemy);
+		//print ("dead enemies: "+Parent.deadEnemy);
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;

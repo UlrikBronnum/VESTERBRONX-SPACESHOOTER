@@ -70,6 +70,7 @@ public class Hangar_Level : LevelScript_Base {
 			}
 		}
 
+
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,15,-15);
@@ -77,12 +78,18 @@ public class Hangar_Level : LevelScript_Base {
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              background.transform, Color.yellow);
 
+
 	}
 
 	public override void updateLevel()
 	{
-		Debug.Log(canonLimit);
-
+		//Debug.Log(canonLimit);
+		for (int i = 0; i < script.hangar.canonUpgrade1.Count ; i++){
+			Debug.Log(script.hangar.canonUpgrade1[i]);
+			Debug.Log(script.hangar.canonUpgrade2[i]);
+			Debug.Log(script.hangar.canonUpgrade3[i]);
+		}
+		
 		if(completed){
 		}else{
 			script.hangar.hangarslots[script.shipChoise].SetActive(false);
