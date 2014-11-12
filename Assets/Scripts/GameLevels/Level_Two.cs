@@ -35,7 +35,7 @@ public class Level_Two :  LevelScript_Level
 		
 		newProp = "EnemySpawn";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-4000,-20);
+		newPosition = new Vector3(0,-4000,-115);
 		newRotation = new Vector3(-90,0,180);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
@@ -43,11 +43,6 @@ public class Level_Two :  LevelScript_Level
 
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 7f);
 
-		newProp = "MeteorSpawn";
-		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-1000,-100);
-		newRotation = new Vector3(90,0,0);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 	
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
@@ -56,10 +51,16 @@ public class Level_Two :  LevelScript_Level
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              background.transform, Color.yellow);
 
-		newProp = "Vortex";
+		newProp = "LevelProps/Vortex1";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,2,0);
+		newPosition = new Vector3(0,0,-27);
 		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		
+		newProp = "DepthMaskPlane";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,0,-228);
+		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		
 	}

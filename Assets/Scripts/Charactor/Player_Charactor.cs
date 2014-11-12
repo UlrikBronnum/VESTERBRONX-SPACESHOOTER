@@ -48,15 +48,25 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
-		gameSetting = 1;
+		gameSetting = 0;
 		levelsCompleted = 24;
 
 
+<<<<<<< Updated upstream
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
+=======
+
+		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
+
+>>>>>>> Stashed changes
 		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap2") as Texture;
 
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);

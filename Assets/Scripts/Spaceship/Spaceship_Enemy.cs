@@ -8,9 +8,19 @@ public class Spaceship_Enemy : Spaceship_Base {
 	private float lifeSpan;
 	protected EventTimer_Base timer;
 	protected Transform cameraPos;
+<<<<<<< Updated upstream
 	protected bool isDead = false;
+=======
+
+	// 
+	public float timeToShoot;
+
+	// bool determining when the first shot is fired:
+	public bool firstShot = false;
+
+>>>>>>> Stashed changes
 	// The rate of fire is set in the child classes of the class and sets the rate of fire for the enemy's weapons
-	protected float fireRate;
+	public float fireRate;
 	protected int damage;
 	// collisionDamage of the ENEMY
 	public int collisionDamage;
@@ -22,6 +32,10 @@ public class Spaceship_Enemy : Spaceship_Base {
 	// Use this for initialization
 	public virtual void Start() {
 		explosion = Resources.Load ("explosion") as GameObject;
+
+		timeToShoot = Random.Range (0.0F, 7.0F);
+		StartCoroutine (Shoot (timeToShoot));
+
 	}
 	public virtual void shipInitialization(){ }
 	public virtual void forceStart(){ }
@@ -69,6 +83,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 	// Update is called once per frame
 	public override void Update () {
+<<<<<<< Updated upstream
 		//print ("dead enemies: "+Parent.deadEnemy);
 
 		if(isDead){
@@ -76,6 +91,9 @@ public class Spaceship_Enemy : Spaceship_Base {
 			Destroy(gameObject);
 			Debug.Log("dead enemies: " + Parent.deadEnemy);
 		}
+=======
+		print ("DeadEnemies: "+Parent.deadEnemy);
+>>>>>>> Stashed changes
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;
@@ -89,8 +107,14 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(transform.position.y > cameraPos.transform.position.y){	
 			Destroy(gameObject);
 		}
+		if (firstShot) {
+						for (int i = 0; i < canonMountCapacity; i++) {
+								EnemyWeapon_Base script = canonMounted [i].GetComponent<EnemyWeapon_Base> ();
+								script.fireWeapon ();
+						}
+				}
 
-		RaycastHit hit1;
+		/*RaycastHit hit1;
 		Vector3 forward1 = this.transform.FindChild("mountT0").transform.TransformDirection(Vector3.forward) * 20000; //Det sidste tal ændrer længen af søgefeltet (tror jeg)
 	//	Debug.DrawRay(this.transform.FindChild("mountT0").transform.position, forward1, Color.green);
 		RaycastHit hit2;
@@ -116,7 +140,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 					script.fireWeapon ();
 				}
 			}
-		}
+		}*/
 	
 	}
 	public override void initializeCanon(Transform scale, int i)
@@ -155,8 +179,13 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}
 		if(health<=0)
 		{
+<<<<<<< Updated upstream
 			isDead = true;
+=======
+			Destroy(gameObject);
+>>>>>>> Stashed changes
 			Instantiate(explosion,transform.position, new Quaternion());
+			Parent.deadEnemy++;
 		}
 	}
 	// if the enemy os out of health, it will die. 
@@ -181,12 +210,11 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}
 		if(other.collider.tag =="Player")
 		{
+			Destroy(gameObject);
+			Instantiate(explosion,transform.position, new Quaternion());
 			hitTimer.resetTimer();
-			//Instantiate(explosion,transform.position, new Quaternion());
 			//Run a function to subtract damage from the enemy's health, according to the damage of the projectile
-			//Parent.deadEnemy++;
-			//Destroy(gameObject);
-			health = -10;
+			Parent.deadEnemy++;
 		}
 	}
 	public override int shipHealth(){
@@ -199,6 +227,15 @@ public class Spaceship_Enemy : Spaceship_Base {
 	
 	public override float shipManeuverSpeed(){
 		return maneuverSpeed;
+	}
+
+	IEnumerator Shoot(float waitTime) {
+		yield return new WaitForSeconds(waitTime);
+		for (int i = 0; i < canonMountCapacity; i++) {
+			EnemyWeapon_Base script = canonMounted[i].GetComponent<EnemyWeapon_Base> ();
+			script.fireWeapon ();
+		}
+		firstShot = true;
 	}
 
 

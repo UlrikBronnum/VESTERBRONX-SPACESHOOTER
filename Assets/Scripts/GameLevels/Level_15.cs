@@ -45,15 +45,7 @@ public class Level_15 : LevelScript_Level {
 		
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 6f);
 		
-		
-		newProp = "MeteorSpawn";
-		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-1000,-300);
-		newRotation = new Vector3(90,0,0);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-		
-		
-		
+
 		newProp = "Sun";
 		newScale = new Vector3(100,100,100);
 		newPosition = new Vector3(0,-9000,0);

@@ -13,6 +13,9 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 	private bool spwnWing = false;
 	private Vector3 tmpPos;
 
+	// int that determines the formation of the wave: 
+	public int formationType = Random.Range(0,3);
+
 	// spawnrate 25
 
 
@@ -65,7 +68,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 		if (spwnWing){
 			spwnTim -= Time.deltaTime * 2f;
 			if (spwnTim < 0){
-				spawnBase.SpawnWing(tmpPos , spawnCount, enemyTypes[enemyTypeCounter]);
+				spawnBase.SpawnWing(tmpPos , spawnCount, enemyTypes[enemyTypeCounter], formationType);
 				spawnCount++;
 				spwnTim = 1.5f;
 			}
@@ -76,6 +79,7 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 				spwnWing = false;
 				spawnCount = 0;
 				spwnTim = 1.5f;
+				formationType = Random.Range(0,3);
 			}
 		}
 	

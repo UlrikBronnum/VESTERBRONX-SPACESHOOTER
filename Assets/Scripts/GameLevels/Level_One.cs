@@ -25,7 +25,7 @@ public class Level_One : LevelScript_Level {
 
 
 		newScale = new Vector3(5,5,5);
-		newPosition = new Vector3(0,0,-100);
+		newPosition = new Vector3(0,0,-115);
 		newRotation = new Vector3(90,0,0);
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,background.transform,true,true);
 		shipHealth = shipScr.shipHealth();
@@ -37,24 +37,24 @@ public class Level_One : LevelScript_Level {
 
 		newProp = "EnemySpawn";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-6000,-100);
+		newPosition = new Vector3(0,-6000,-115);
 		newRotation = new Vector3(-90,0,180);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
 
-		int[] enemyTypeSelection = new int[4]{		0,1,0,1
+		int[] enemyTypeSelection = new int[4]{		0,1,2,3
 												};
 
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection,7f);
 
 
-
+/*
 		newProp = "MeteorSpawn";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,-6000,-200);
 		newRotation = new Vector3(90,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-
+*/
 
 
 		newProp = "Sun";

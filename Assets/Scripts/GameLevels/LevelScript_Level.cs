@@ -129,7 +129,7 @@ public class LevelScript_Level : LevelScript_Base {
 		enemySpawnScr =  props[0].GetComponent<SpawnControl_Enemy>();
 		enemiesDestroyed = enemySpawnScr.EnemyDead;
 
-		Debug.Log(levelCompleted);
+	//	Debug.Log(levelCompleted);
 		
 		if(useAxisInput) {
 			// assigns the position of the joystick to h and v
