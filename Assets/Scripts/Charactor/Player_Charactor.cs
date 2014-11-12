@@ -48,11 +48,18 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
-		gameSetting = 0;
+		gameSetting = 1;
 		levelsCompleted = 24;
 
 
+<<<<<<< Updated upstream
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
+=======
+		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap2") as Texture;
+
+		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
+
+>>>>>>> Stashed changes
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
@@ -225,7 +232,7 @@ public class Player_Charactor : MonoBehaviour
 			}
 			scaleFont = buttonHeight/3;
 			myGUIStyle.fontSize = scaleFont;
-			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Canon Shop", myGUIStyle);
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Cannon Shop", myGUIStyle);
 			GUI.EndGroup();
 
 			placementY += buttonHeight;
