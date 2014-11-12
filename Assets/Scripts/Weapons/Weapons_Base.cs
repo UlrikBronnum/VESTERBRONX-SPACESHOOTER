@@ -23,14 +23,18 @@ public class Weapons_Base : MonoBehaviour {
 	
 	// Use this for initialization
 	public virtual void forceStart () {}
-	
+	public void Update(){
+		Debug.Log(upgradeStates[0] + "  " + upgradeStates[1] + "  " + upgradeStates[2]);
+		Debug.Log(weaponRateOfFire()  + "  " + weaponDamage() + "  " + weaponCapacity());
+
+	}
 	public void setFireRate(float newFire){
 		rateOfFire = newFire;
-		fireTimer = new Weapon_Timer(rateOfFire);
+		fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 	public int fireWeapon(){
-//		Debug.Log(weaponDamage());
 		if(fireTimer.timerTick()){
+			fireTimer.TimerValue = weaponRateOfFire();   
 			fireTimer.resetTimer();
 			audio.PlayOneShot(fireExplosion);
 			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
@@ -38,7 +42,6 @@ public class Weapons_Base : MonoBehaviour {
 			newShot.layer = LayerMask.NameToLayer("PlayerProjectile");
 			Projectile_Base script = newShot.GetComponent<Projectile_Base>();
 			script.setProjectileDamage(weaponDamage());
-			Debug.Log(upgradeStates[0] + "  " + upgradeStates[1] + "  " + upgradeStates[2]);
 			newShot.transform.position = barrelEnd.position;
 			newShot.transform.rotation = barrelEnd.rotation;
 			return 1;
@@ -53,7 +56,7 @@ public class Weapons_Base : MonoBehaviour {
 		upgradeStates[2] = up3;
 	}
 	public float weaponRateOfFire(){
-		float wROF = rateOfFire + (rateOfFire * (upgradeStates[0] / 10.0f));
+		float wROF = rateOfFire  - (rateOfFire * (upgradeStates[0] / 10.0f));
 		return wROF;
 	}
 

@@ -11,6 +11,7 @@ public class MiniGun_Ammo : Projectile_Base {
 		projectileVelocity = 1000;
 		timer = new EventTimer_Base(flyTime);
 		rigidbody.velocity = transform.forward * projectileVelocity;
+		Debug.Log(damage);
 	}
 	
 

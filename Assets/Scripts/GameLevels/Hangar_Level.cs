@@ -156,7 +156,7 @@ public class Hangar_Level : LevelScript_Base {
 			}
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
-			string[] getLine = script.hangar.canonTypes[countMountOne].ToString().Split('/');
+			string[] getLine = script.hangar.canonTypes[countMountTwo].ToString().Split('/');
 			GUI.Box (new Rect(0,-buttonHeight/3,buttonWidth,buttonHeight), "Change Weapon", myGUIStyle);
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), getLine[1], myGUIStyle);
 			GUI.EndGroup();

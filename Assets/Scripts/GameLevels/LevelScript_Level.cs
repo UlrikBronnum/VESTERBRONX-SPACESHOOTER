@@ -289,6 +289,19 @@ public class LevelScript_Level : LevelScript_Base {
 		}
 		else if(numberOfFireButtons == 4)
 		{
+			if(buttonScript[0].touch)
+			{
+				button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
+				if(script.gameSetting == 1)
+				{
+					button[1].guiText.color = Color.red;
+				}
+			}
+			else
+			{
+				button[1].guiTexture.texture = fireButton[script.gameSetting];
+				button[1].guiText.color = script.textColor;
+			}
 			if(buttonScript[1].touch)
 			{
 				button[2].guiTexture.texture = fireButtonDown[script.gameSetting];
@@ -486,6 +499,38 @@ public class LevelScript_Level : LevelScript_Base {
 
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth * 2,buttonHeight - 4));
 		GUI.DrawTexture (new Rect (buttonWidth * 2 - ammunition_Width1, 2 ,buttonWidth * 2,buttonHeight - 2) , lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
+		GUI.EndGroup();
+		///////
+
+		buttonHeight = Screen.height/16;
+		buttonWidth = Screen.width/10;
+		placementX = Screen.width - buttonWidth;
+		placementY = buttonHeight;
+		scaleFont = buttonHeight/3 * 2;
+		
+		myGUIStyle.alignment = TextAnchor.MiddleCenter;
+		
+		float ammunition_Remain2 = (float) shipAmmunitionLoss2 / shipAmmunition2;
+		float ammunition_Width2 = ammunition_Remain2 * buttonWidth * 2;
+		
+		if(ammunition_Width2 < 0){
+			ammunition_Width2 = 0;
+		}
+		
+		int a2N = (shipAmmunitionLoss2 > 0)? shipAmmunitionLoss2: 0;
+		
+		myGUIStyle.fontSize = scaleFont;
+		
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+		GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
+		GUI.Box (new Rect (scaleFont/2,- buttonHeight/4, buttonWidth,buttonHeight),  "Ammo",myGUIStyle);
+		GUI.EndGroup();
+		
+		placementX = Screen.width - buttonWidth * 3;
+		placementY = buttonHeight;
+		
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth * 2,buttonHeight - 4));
+		GUI.DrawTexture (new Rect (buttonWidth * 2 - ammunition_Width2, 2 ,buttonWidth * 2,buttonHeight - 2) , lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);
 		GUI.EndGroup();
 
 	}

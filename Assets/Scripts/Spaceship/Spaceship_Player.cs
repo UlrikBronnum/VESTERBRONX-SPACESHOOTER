@@ -51,10 +51,23 @@ public class Spaceship_Player : Spaceship_Base {
 	/// existing gameobjects
 	/// </summary>
 	public virtual void copyInitialization(){
-		mountMagasinCapacity1 = canonMounted[0].GetComponent<Weapons_Base>().weaponCapacity() * 2;
-		if(canonMountCapacity > 2)
-			mountMagasinCapacity2 = canonMounted[2].GetComponent<Weapons_Base>().weaponCapacity() * 2;
 
+		for(int i = 0; i < canonMountCapacity ; i++){
+			Weapons_Base wScript = canonMounted[i].GetComponent<Weapons_Base>();
+			Player_Charactor hScript = GameObject.Find("ARCamera").GetComponent<Player_Charactor>();
+			wScript.forceStart ();
+			
+			for(int j = 0; j < hScript.hangar.canonTypes.Count ; j++){
+				if (hScript.hangar.canonTypes[j] == canonTypes[i]){
+					wScript.setUpStates(hScript.hangar.canonUpgrade1[j], hScript.hangar.canonUpgrade2[j] , hScript.hangar.canonUpgrade3[j]);				
+				}
+			}
+		}
+
+		mountMagasinCapacity1 = canonMounted[0].GetComponent<Weapons_Base>().weaponCapacity() * 2;
+		if(canonMountCapacity > 2){
+			mountMagasinCapacity2 = canonMounted[2].GetComponent<Weapons_Base>().weaponCapacity() * 2;
+		}
 		shipInGameHealth = shipHealth();
 		shipInGameShield = shipShield();
 
@@ -74,10 +87,7 @@ public class Spaceship_Player : Spaceship_Base {
 		}
 	}
 	// if the player is out of health, it will die. 
-	public void die(){
-
-	}
-	// Controls, sends input from gui ship buttons
+	// sends input from gui ship buttons
 	public void getButtonInput(bool fb1,bool fb2, float js){
 		fire1 = fb1;
 		fire2 = fb2;
@@ -96,8 +106,6 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
 			takeDamage(other.collider.GetComponent<Spaceship_Enemy>().collisionDamage);
-			Destroy (other.collider.gameObject);
-			other.collider.GetComponent<Spaceship_Enemy>().Parent.deadEnemy++;
 		}
 		if(other.collider.tag =="EnemyProjectile")
 		{
@@ -107,7 +115,6 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
 			takeDamage(other.collider.GetComponent<EnemyProjectile_Base>().damage);
-			Destroy (other.collider.gameObject);
 		}
 	}
 

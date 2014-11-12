@@ -28,7 +28,6 @@ public class Hangar_Base : MonoBehaviour {
 					addToShipUpgrades();
 				}
 				script.setUpStates(shipUpgrade1[i] , shipUpgrade2[i] , shipUpgrade3[i]);
-				Debug.Log(shipUpgrade1[i]+"  " +shipUpgrade2[i] +"  " + shipUpgrade3[i]);
 				script.shipInitialization();
 				hangarslots.Add(newObj);
 				gunMountManagement(script.canonTypes[0], i);

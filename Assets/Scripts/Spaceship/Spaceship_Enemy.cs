@@ -8,9 +8,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	private float lifeSpan;
 	protected EventTimer_Base timer;
 	protected Transform cameraPos;
-<<<<<<< Updated upstream
 	protected bool isDead = false;
-=======
 
 	// 
 	public float timeToShoot;
@@ -18,7 +16,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 	// bool determining when the first shot is fired:
 	public bool firstShot = false;
 
->>>>>>> Stashed changes
 	// The rate of fire is set in the child classes of the class and sets the rate of fire for the enemy's weapons
 	public float fireRate;
 	protected int damage;
@@ -83,7 +80,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 	// Update is called once per frame
 	public override void Update () {
-<<<<<<< Updated upstream
 		//print ("dead enemies: "+Parent.deadEnemy);
 
 		if(isDead){
@@ -91,9 +87,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 			Destroy(gameObject);
 			Debug.Log("dead enemies: " + Parent.deadEnemy);
 		}
-=======
-		print ("DeadEnemies: "+Parent.deadEnemy);
->>>>>>> Stashed changes
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;
 		tmpPos.y += maneuverSpeed * Time.deltaTime;
@@ -108,11 +101,11 @@ public class Spaceship_Enemy : Spaceship_Base {
 			Destroy(gameObject);
 		}
 		if (firstShot) {
-						for (int i = 0; i < canonMountCapacity; i++) {
-								EnemyWeapon_Base script = canonMounted [i].GetComponent<EnemyWeapon_Base> ();
-								script.fireWeapon ();
-						}
-				}
+			for (int i = 0; i < canonMountCapacity; i++) {
+					EnemyWeapon_Base script = canonMounted [i].GetComponent<EnemyWeapon_Base> ();
+					script.fireWeapon ();
+			}
+		}
 
 		/*RaycastHit hit1;
 		Vector3 forward1 = this.transform.FindChild("mountT0").transform.TransformDirection(Vector3.forward) * 20000; //Det sidste tal ændrer længen af søgefeltet (tror jeg)
@@ -179,13 +172,8 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}
 		if(health<=0)
 		{
-<<<<<<< Updated upstream
 			isDead = true;
-=======
-			Destroy(gameObject);
->>>>>>> Stashed changes
 			Instantiate(explosion,transform.position, new Quaternion());
-			Parent.deadEnemy++;
 		}
 	}
 	// if the enemy os out of health, it will die. 
