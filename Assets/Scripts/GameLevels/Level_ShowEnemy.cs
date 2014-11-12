@@ -28,28 +28,28 @@ public class Level_ShowEnemy : MonoBehaviour {
 	public void loadEnemies(int howManyEnemyType )
 	{
 
-		newScale = new Vector3(10,10,10);
+		newScale = new Vector3(5,5,5);
 		newPosition = new Vector3(-100,0,0);
 		newRotation = new Vector3(115,0,0);
 		createSceneObject(enemiesInWorld[0],newScale,newPosition,newRotation,transform);
 		props[0].transform.parent = this.transform.parent;
-		newScale = new Vector3(10,10,10);
+		newScale = new Vector3(5,5,5);
 		newPosition = new Vector3(100,0,0);
 		newRotation = new Vector3(115,0,0);
 		createSceneObject(enemiesInWorld[1],newScale,newPosition,newRotation,transform);
 		props[1].transform.parent = this.transform.parent;
 
 		if(howManyEnemyType > 2){
-			newScale = new Vector3(10,10,10);
-			newPosition = new Vector3(0,-100,0);
+			newScale = new Vector3(5,5,5);
+			newPosition = new Vector3(0,-75,15);
 			newRotation = new Vector3(115,0,0);
 			createSceneObject(enemiesInWorld[2],newScale,newPosition,newRotation,transform);
 			props[2].transform.parent = this.transform.parent;
 
 		}
 		if(howManyEnemyType > 3){
-			newScale = new Vector3(10,10,10);
-			newPosition = new Vector3(0,100,0);
+			newScale = new Vector3(5,5,5);
+			newPosition = new Vector3(0,75,-15);
 			newRotation = new Vector3(115,0,0);
 			createSceneObject(enemiesInWorld[3],newScale,newPosition,newRotation,transform);
 			props[3].transform.parent = this.transform.parent;
