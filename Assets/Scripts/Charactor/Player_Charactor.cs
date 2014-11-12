@@ -51,11 +51,8 @@ public class Player_Charactor : MonoBehaviour
 		gameSetting = 0;
 		levelsCompleted = 24;
 
-<<<<<<< HEAD
-		gameButtonTexture[0] = Resources.Load("Interface/VesterbroKnap2") as Texture;
-=======
+
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
->>>>>>> FETCH_HEAD
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
@@ -81,7 +78,7 @@ public class Player_Charactor : MonoBehaviour
 		}*/
 		hangar.addGunToHangar("Space/Minigun_weapon");
 		hangar.addToCanonUpgrades();
-		hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
+		hangar.addSpaceshipToHangar("PlayerShips/FixeBus");
 		hangar.addToShipUpgrades();
 		credits = 70000;
 
@@ -101,7 +98,7 @@ public class Player_Charactor : MonoBehaviour
 	
 		if(gameSetting == 0)
 		{
-			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/Carlsberg_wagon","PlayerShips/MustangPlayer"};
+			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/FixeBus","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/Christiania_bike","VesterBro/CycleMonster","VesterBro/Christiania_bike","VesterBro/Spike"};
 			playerArmory  = new string[6] {"VesterBro/Durum_weapon","VesterBro/Bottle_weapon","VesterBro/Coffee_weapon","VesterBro/Tomato_weapon","VesterBro/Canon_weapon","VesterBro/Hatchet_weapon"};
 		}else{
