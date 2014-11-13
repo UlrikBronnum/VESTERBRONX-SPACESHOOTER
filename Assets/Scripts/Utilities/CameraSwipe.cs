@@ -68,8 +68,14 @@ public class CameraSwipe : MonoBehaviour {
 				swipe = false;
 			}
 		}
+		else if(transform.position != new Vector3(targetPos,transform.position.y,transform.position.z)){
+			transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPos,transform.position.y,transform.position.z), speed * 2);
+		}
 	}
-
+	public void resetSwipe(int num){
+		numberOfSwipes = num;
+		targetPos = - ( numberOfSwipes * adjustSwipeDistance);
+	}
 	public int NumberOfSwipes{
 		get{ return numberOfSwipes;}
 	}

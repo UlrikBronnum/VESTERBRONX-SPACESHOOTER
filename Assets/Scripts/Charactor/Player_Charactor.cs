@@ -48,8 +48,8 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
-		gameSetting = 0;
-		levelsCompleted = 24;
+		gameSetting = 1;
+		levelsCompleted = 0;
 		
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;

@@ -84,12 +84,7 @@ public class Hangar_Level : LevelScript_Base {
 	public override void updateLevel()
 	{
 		//Debug.Log(canonLimit);
-		for (int i = 0; i < script.hangar.canonUpgrade1.Count ; i++){
-			Debug.Log(script.hangar.canonUpgrade1[i]);
-			Debug.Log(script.hangar.canonUpgrade2[i]);
-			Debug.Log(script.hangar.canonUpgrade3[i]);
-		}
-		
+
 		if(completed){
 		}else{
 			script.hangar.hangarslots[script.shipChoise].SetActive(false);

@@ -29,21 +29,20 @@ public class Mission_Level : LevelScript_Base {
 		levelCounter = swipeScript.NumberOfSwipes;
 		playerCounter = script.levelsCompleted;
 		access = levels[levelCounter].canLoad(playerCounter);
-		Debug.Log("Hallo3");
-		if(!completed ){
-		
-		}else{
 
-		}
+
 		if(planetState == "Home"){
+
 			if(levelLoaded == false){
 				levelLoaded = true;
 				loadLevel();
+				swipeScript.resetSwipe(levelCounter);
 			}
+			props[0].GetComponent<EnemyChain_script>().levelNumber = levelCounter;
 		}
 
 
-		if(planetState == levelNames[swipeScript.NumberOfSwipes]){
+		if(planetState == levelNames[levelCounter]){
 			if(levelLoaded == false &&  access){
 				closeLevel();
 				levels[levelCounter].loadLevel();

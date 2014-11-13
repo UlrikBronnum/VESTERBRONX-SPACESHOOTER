@@ -87,7 +87,6 @@ public class Spaceship_Enemy : Spaceship_Base {
 		if(isDead){
 			Parent.deadEnemy++;
 			Destroy(gameObject);
-			Debug.Log("dead enemies: " + Parent.deadEnemy);
 		}
 		Transform tmp = transform;
 		Vector3 tmpPos = tmp.position;

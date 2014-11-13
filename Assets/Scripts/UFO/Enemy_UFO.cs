@@ -12,7 +12,7 @@ public class Enemy_UFO : UFO_Base {
 		cameraPos = GameObject.Find ("ARCamera").transform;
 	}
 	
-	public void Update(){
+	public override void Update(){
 		
 		
 		
