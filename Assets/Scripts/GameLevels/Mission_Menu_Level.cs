@@ -9,6 +9,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 	protected string missionState;
 	protected bool levelLoaded;
 	protected string[] levelNames;
+	int levelCounter = 0;
 
 	
 
@@ -37,6 +38,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 		Vector3 newScale;
 		Vector3 newPosition;
 		Vector3 newRotation;
+
 		if(script.gameSetting == 0){
 			newProp = "LevelProps/Menu_vesterbro";
 			newScale = new Vector3(1,1,1);
@@ -55,39 +57,38 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 		
 		swipeScript = props[0].GetComponent<CameraSwipe>();
-		
 	}
 
 
 	public override void updateLevel()
 	{
 
-		if(!completed ){
-		
-			
-		}else{
 
-		}
 
 		if(missionState == "Home"){
 			if(levelLoaded == false){
 				levelLoaded = true;
 				loadLevel();
+				swipeScript.resetSwipe(levelCounter);
+
 			}
+			levelCounter = swipeScript.NumberOfSwipes;
 		}
 		
-		if(missionState == levelNames[swipeScript.NumberOfSwipes]){
+		if(missionState == levelNames[levelCounter]){
 			if(levelLoaded == false){
 				closeLevel();
 				levelLoaded = true;
-				levels[swipeScript.NumberOfSwipes].loadLevel();
-			}else if (levels[swipeScript.NumberOfSwipes].Completed) {
+				levels[levelCounter].loadLevel();
+			}else if (levels[levelCounter].Completed) {
 				missionState = "Home";
 				levelLoaded = false;
 			}else{
-				levels[swipeScript.NumberOfSwipes].updateLevel();
+				levels[levelCounter].updateLevel();
 			}
 		}
+
+
 		
 	}
 	public override void levelGUI()

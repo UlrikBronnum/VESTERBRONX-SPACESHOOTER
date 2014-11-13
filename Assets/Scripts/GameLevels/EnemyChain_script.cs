@@ -11,13 +11,14 @@ public class EnemyChain_script : Planet_Base {
 	public List<GameObject> moonObjects = new List<GameObject>();
 	public float moonOrbit;
 	public int numberOfChildren = 8;
-	
+
+	public int levelNumber = 0;
 	private float sizes = 1;
 	private float spacing;
 	private int[] enemyTypes = {2,2,2,3,2,2,2,4};
 	private string[] propName = {"LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom"};
 	
-	public void Start()
+	public override void Start()
 	{
 
 		player = GameObject.Find("ImageTarget");
@@ -28,6 +29,7 @@ public class EnemyChain_script : Planet_Base {
 		Vector3 newPosition;
 		Vector3 newRotation;
 
+		levelNumber = 0;
 		spacing = 600;
 		for (int i = 0; i < numberOfChildren; i++) {
 			newProp = propName[i];
@@ -41,7 +43,13 @@ public class EnemyChain_script : Planet_Base {
 		}
 	}
 	public override void Update(){
-		
+		for (int i = 0; i < numberOfChildren; i++) {
+			if(levelNumber == i){
+				moonObjects[i].SetActive(true);
+			}else {
+				moonObjects[i].SetActive(false);
+			}
+		}
 		
 	}
 	protected void createSceneObject(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation)

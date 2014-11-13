@@ -23,16 +23,14 @@ public class Weapons_Base : MonoBehaviour {
 	
 	// Use this for initialization
 	public virtual void forceStart () {}
-	public void Update(){
-		Debug.Log(upgradeStates[0] + "  " + upgradeStates[1] + "  " + upgradeStates[2]);
-		Debug.Log(weaponRateOfFire()  + "  " + weaponDamage() + "  " + weaponCapacity());
 
-	}
 	public void setFireRate(float newFire){
 		rateOfFire = newFire;
 		fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 	public int fireWeapon(){
+		Debug.Log(upgradeStates[0] + "  " + upgradeStates[1] + "  " + upgradeStates[2]);
+		Debug.Log(weaponRateOfFire()  + "  " + weaponDamage() + "  " + weaponCapacity());
 		if(fireTimer.timerTick()){
 			fireTimer.TimerValue = weaponRateOfFire();   
 			fireTimer.resetTimer();

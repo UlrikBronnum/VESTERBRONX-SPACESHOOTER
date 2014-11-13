@@ -24,7 +24,7 @@ public class UFO_Base : MonoBehaviour {
 
 	public virtual void Start(){}
 
-	public void Update(){
+	public virtual void Update(){
 		if(!gameObject.activeSelf)
 			return;
 	

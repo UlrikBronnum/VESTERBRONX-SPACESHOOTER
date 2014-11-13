@@ -22,7 +22,6 @@ public class Level_ShowEnemy : MonoBehaviour {
 	public void Update(){
 		foreach (GameObject element in props){
 			element.rigidbody.AddTorque(transform.forward  * 5 * Time.deltaTime,ForceMode.Acceleration);
-			//element.transform.Rotate(Vector3.up,45 * Time.deltaTime);
 		}
 	}
 	public void loadEnemies(int howManyEnemyType )
@@ -32,19 +31,19 @@ public class Level_ShowEnemy : MonoBehaviour {
 		newPosition = new Vector3(-100,0,0);
 		newRotation = new Vector3(115,0,0);
 		createSceneObject(enemiesInWorld[0],newScale,newPosition,newRotation,transform);
-		props[0].transform.parent = this.transform.parent;
+		props[0].transform.parent = this.transform;
 		newScale = new Vector3(5,5,5);
 		newPosition = new Vector3(100,0,0);
 		newRotation = new Vector3(115,0,0);
 		createSceneObject(enemiesInWorld[1],newScale,newPosition,newRotation,transform);
-		props[1].transform.parent = this.transform.parent;
+		props[1].transform.parent = this.transform;
 
 		if(howManyEnemyType > 2){
 			newScale = new Vector3(5,5,5);
 			newPosition = new Vector3(0,-75,15);
 			newRotation = new Vector3(115,0,0);
 			createSceneObject(enemiesInWorld[2],newScale,newPosition,newRotation,transform);
-			props[2].transform.parent = this.transform.parent;
+			props[2].transform.parent = this.transform;
 
 		}
 		if(howManyEnemyType > 3){
@@ -52,7 +51,7 @@ public class Level_ShowEnemy : MonoBehaviour {
 			newPosition = new Vector3(0,75,-15);
 			newRotation = new Vector3(115,0,0);
 			createSceneObject(enemiesInWorld[3],newScale,newPosition,newRotation,transform);
-			props[3].transform.parent = this.transform.parent;
+			props[3].transform.parent = this.transform;
 
 		}
 	}
