@@ -34,7 +34,7 @@ public class CanonShop_Level : LevelScript_Base {
 			buildingProp = "Buildings/Gunshop";
 			newProp = buildingProp;
 			newScale = new Vector3(10,10,10);
-			newPosition = new Vector3(0,-50,-125);
+			newPosition = new Vector3(0,-50,-54);
 			newRotation = new Vector3(0,270,270);
 			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		}else{

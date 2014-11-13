@@ -64,7 +64,7 @@ public class Level_Two :  LevelScript_Level
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		
 	}
-<<<<<<< HEAD
+
 	/*public override void updateLevel(){
 		
 		
@@ -113,9 +113,7 @@ public class Level_Two :  LevelScript_Level
 
 
 	}*/
-=======
 
->>>>>>> FETCH_HEAD
 	
 	
 

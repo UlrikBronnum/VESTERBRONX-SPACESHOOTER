@@ -48,7 +48,7 @@ public class Hangar_Level : LevelScript_Base {
 		}else{
 			buildingProps = "Buildings/Planetarium";
 			newProp = buildingProps;
-			newScale = new Vector3(5,10,5);
+			newScale = new Vector3(2.9f,4.2f,2.9f);
 			newPosition = new Vector3(0,0,-125);
 			newRotation = new Vector3(90,180,0);
 			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
