@@ -21,7 +21,7 @@ public class CanonShop_Level : LevelScript_Base {
 
 		setMainVars();
 
-		swipeControl.setUpSwipeLimits(5,true);
+		swipeControl.setUpSwipeLimits(6,true);
 
 		canons = script.playerArmory;
 
@@ -47,7 +47,7 @@ public class CanonShop_Level : LevelScript_Base {
 		}
 		 
 
-		for (int i = 0; i < 5; i++){
+		for (int i = 0; i < 6; i++){
 			
 			newProp = canons[i];
 			newScale = new Vector3(10,10,10);

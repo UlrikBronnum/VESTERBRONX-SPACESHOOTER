@@ -6,20 +6,20 @@ public class Missile_Weapon : Weapons_Base {
 	public override void forceStart () 
 	{
 		barrelEnd = transform.FindChild("barrelEnd").transform;
-		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
+		fireExplosion = Resources.Load("Audio/plasmaLazerS") as AudioClip;
 		
-		ammoType = "Space/Projectile_Mini";
+		ammoType = "Space/Projectile_missile";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
 		weaponValue = 2000;
 		// Damage of projetile
-		projectileDamage = 125;
+		projectileDamage = 200;
 		// the rate of fire value
-		rateOfFire = 3f;
+		rateOfFire = 2.5f;
 		// magasin capacity
-		magCapacity = 100;
+		magCapacity = 20;
 		
-		fireTimer = new Weapon_Timer(weaponRateOfFire());
+	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 }

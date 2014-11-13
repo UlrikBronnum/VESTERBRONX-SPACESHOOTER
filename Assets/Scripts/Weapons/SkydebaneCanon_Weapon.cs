@@ -6,7 +6,7 @@ public class SkydebaneCanon_Weapon : Weapons_Base {
 		public override void forceStart () 
 		{
 			barrelEnd = transform.FindChild("barrelEnd").transform;
-			fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
+		fireExplosion = Resources.Load("Audio/CanonS") as AudioClip;
 
 			ammoType = "VesterBro/ammo_canon";
 			// upgradeStates = { rate of fire , damage , capacity }
@@ -16,10 +16,10 @@ public class SkydebaneCanon_Weapon : Weapons_Base {
 			// Damage of projetile
 			projectileDamage = 100;
 			// the rate of fire value
-			rateOfFire = 2/5f;
+			rateOfFire = 5/6f;
 			// magasin capacity
 			magCapacity = 100;
 			
-			fireTimer = new Weapon_Timer(weaponRateOfFire());
+	//		fireTimer = new Weapon_Timer(weaponRateOfFire());
 		}
 }

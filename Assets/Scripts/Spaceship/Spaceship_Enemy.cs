@@ -9,7 +9,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 	protected EventTimer_Base timer;
 	protected Transform cameraPos;
 	protected bool isDead = false;
-
+	
 	// 
 	public float timeToShoot;
 
@@ -24,10 +24,12 @@ public class Spaceship_Enemy : Spaceship_Base {
 	// contains the exlosion when the enemy is destroyed:
 	public GameObject explosion;
 
+
 	[System.NonSerialized]
 	public Enemy_Spawn Parent;
 	// Use this for initialization
 	public virtual void Start() {
+
 		explosion = Resources.Load ("explosion") as GameObject;
 
 		timeToShoot = Random.Range (0.0F, 7.0F);
@@ -174,6 +176,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 		{
 			isDead = true;
 			Instantiate(explosion,transform.position, new Quaternion());
+
 		}
 	}
 	// if the enemy os out of health, it will die. 

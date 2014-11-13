@@ -20,6 +20,6 @@ public class ProjectileCanon_Script : Weapons_Base {
 		// magasin capacity
 		magCapacity = 5000;
 		
-		fireTimer = new Weapon_Timer(weaponRateOfFire());
+//		fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 }

@@ -6,6 +6,9 @@ public class Weapons_Base : MonoBehaviour {
 	public Transform barrelEnd;
 	public AudioClip fireExplosion;
 
+	//determines when the player can shoot again:
+	public bool canShoot = true;
+
 	public string ammoType;
 	// upgradeStates = { rate of fire , damage , capacity }
 	// will range from 0 to topLimit?
@@ -33,9 +36,11 @@ public class Weapons_Base : MonoBehaviour {
 		fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 	public int fireWeapon(){
-		if(fireTimer.timerTick()){
-			fireTimer.TimerValue = weaponRateOfFire();   
-			fireTimer.resetTimer();
+		//if(fireTimer.timerTick())
+		if(canShoot){
+		//	fireTimer.TimerValue = weaponRateOfFire();   
+		//	fireTimer.resetTimer();
+			StartCoroutine (Shoot (weaponRateOfFire()));
 			audio.PlayOneShot(fireExplosion);
 			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
 			newShot.tag = "PlayerProjectile";
@@ -56,7 +61,7 @@ public class Weapons_Base : MonoBehaviour {
 		upgradeStates[2] = up3;
 	}
 	public float weaponRateOfFire(){
-		float wROF = rateOfFire  - (rateOfFire * (upgradeStates[0] / 10.0f));
+		float wROF = rateOfFire  - (rateOfFire * (upgradeStates[0] / 5.0f));
 		return wROF;
 	}
 
@@ -70,7 +75,11 @@ public class Weapons_Base : MonoBehaviour {
 		return wCap;
 	}
 
-
+	protected IEnumerator Shoot(float fireRate) {
+		canShoot = false;
+		yield return new WaitForSeconds(fireRate);
+		canShoot = true;
+	}
 
 
 }
