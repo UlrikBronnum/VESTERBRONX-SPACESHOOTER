@@ -14,12 +14,14 @@ public class MiniGun_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 2000;
 		// Damage of projetile
-		projectileDamage = 125;
+		projectileDamage = 60;
 		// the rate of fire value
 		rateOfFire = 1f;
 		// magasin capacity
-		magCapacity = 100;
-		
-		fireTimer = new Weapon_Timer(weaponRateOfFire());
+		magCapacity = 1000;
+
+	//	StartCoroutine (Shoot (weaponRateOfFire()));
+
+		//fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 }

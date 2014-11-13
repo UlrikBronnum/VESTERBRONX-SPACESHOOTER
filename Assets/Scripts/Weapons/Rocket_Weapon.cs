@@ -7,20 +7,20 @@ public class Rocket_Weapon : Weapons_Base {
 	public override void forceStart () 
 	{
 		barrelEnd = transform.FindChild("barrelEnd").transform;
-		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
+		fireExplosion = Resources.Load("Audio/RocketS") as AudioClip;
 		
-		ammoType = "Space/ammo_rocket";
+		ammoType = "Space/Projectile_missile";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
 		weaponValue = 3000;
 		// Damage of projetile
-		projectileDamage = 125;
+		projectileDamage = 150;
 		// the rate of fire value
-		rateOfFire = 3f;
+		rateOfFire = 1+2/3f;
 		// magasin capacity
 		magCapacity = 100;
 		
-		fireTimer = new Weapon_Timer(weaponRateOfFire());
+	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 }

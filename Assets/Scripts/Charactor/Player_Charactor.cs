@@ -100,12 +100,12 @@ public class Player_Charactor : MonoBehaviour
 		{
 			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/FixeBus","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/Christiania_bike","VesterBro/CycleMonster","VesterBro/Christiania_bike","VesterBro/Spike"};
-			playerArmory  = new string[6] {"VesterBro/Durum_weapon","VesterBro/Bottle_weapon","VesterBro/Coffee_weapon","VesterBro/Tomato_weapon","VesterBro/Canon_weapon","VesterBro/Hatchet_weapon"};
+			playerArmory  = new string[6] {"VesterBro/Coffee_weapon","VesterBro/Durum_weapon","VesterBro/Needle_weapon","VesterBro/Bottle_weapon","VesterBro/Butchers_weapon","VesterBro/Canon_weapon"};
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
-			playerArmory  = new string[6] {"Space/Needle_weapon","Space/Minigun_weapon","Space/Plasma_weapon","Space/Laser_weapon","Space/Rocket_weapon","Space/Missile_Weapon"};
-		}
+			playerArmory  = new string[6] {"Space/Particle_weapon","Space/Missile_weapon","Space/Rocket_weapon","Space/Missile_laucher_weapon","Space/Plasma_weapon","Space/Laser_Weapon"};
+		} 
 	}
 	public  void Update () 
 	{

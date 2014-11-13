@@ -6,9 +6,9 @@ public class DurumCanon_Weapon : Weapons_Base {
 	public override void forceStart () 
 	{
 		barrelEnd = transform.FindChild("barrelEnd").transform;
-		fireExplosion = Resources.Load("Audio/shotgunSound") as AudioClip;
+		fireExplosion = Resources.Load("Audio/durumGun") as AudioClip;
 
-		ammoType = "VesterBro/ammo_durum";
+		ammoType = "VesterBro/Projectile_durum";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
@@ -16,10 +16,10 @@ public class DurumCanon_Weapon : Weapons_Base {
 		// Damage of projetile
 		projectileDamage = 200;
 		// the rate of fire value
-		rateOfFire = 2f;
+		rateOfFire = 2.5f;
 		// magasin capacity
-		magCapacity = 50;
+		magCapacity = 20;
 		
-		fireTimer = new Weapon_Timer(weaponRateOfFire());
+	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 }
