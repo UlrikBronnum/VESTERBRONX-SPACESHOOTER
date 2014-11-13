@@ -104,7 +104,7 @@ public class Player_Charactor : MonoBehaviour
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
-			playerArmory  = new string[6] {"Space/Particle_weapon","Space/Missile_weapon","Space/Rocket_weapon","Space/Missile_laucher_weapon","Space/Plasma_weapon","Space/Laser_Weapon"};
+			playerArmory  = new string[6] {"Space/Particle_weapon","Space/Missile_weapon","Space/Rocket_weapon","Space/Missile_launcher_weapon","Space/Plasma_weapon","Space/Laser_weapon"};
 		} 
 	}
 	public  void Update () 

@@ -60,6 +60,7 @@ public class Spaceship_Player : Spaceship_Base {
 			for(int j = 0; j < hScript.hangar.canonTypes.Count ; j++){
 				if (hScript.hangar.canonTypes[j] == canonTypes[i]){
 					wScript.setUpStates(hScript.hangar.canonUpgrade1[j], hScript.hangar.canonUpgrade2[j] , hScript.hangar.canonUpgrade3[j]);				
+					wScript.canShoot = true;
 				}
 			}
 		}
@@ -121,7 +122,7 @@ public class Spaceship_Player : Spaceship_Base {
 	public override void initializeCanon(Transform scale, int i){
 		canonMounted[i] = (GameObject)Object.Instantiate(Resources.Load(canonTypes[i]));
 		Transform thisTrans = canonMounted[i].transform;
-		canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
+		//canonMounted[i].transform.localScale = new Vector3(thisTrans.localScale.x * scale.localScale.x ,thisTrans.localScale.y * scale.localScale.y , thisTrans.localScale.z * scale.localScale.z);
 		canonMounted[i].transform.position = canonMount[i].position;
 		canonMounted[i].transform.rotation = canonMount[i].rotation;
 		canonMounted[i].transform.parent = canonMount[i].transform;

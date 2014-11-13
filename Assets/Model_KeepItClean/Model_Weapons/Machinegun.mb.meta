@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 364bc186634735440a71225544889f57
+guid: 2b106b33900404d7e88f98d26bf604c5
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: rocket_launcher_model_template
+    4300000: pCylinder1
     9500000: //RootNode
   materials:
     importMaterials: 1

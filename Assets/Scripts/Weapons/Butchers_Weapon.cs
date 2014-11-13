@@ -16,7 +16,7 @@ public class Butchers_Weapon : Weapons_Base {
 		// Damage of projetile
 		projectileDamage = 110;
 		// the rate of fire value
-		rateOfFire = 1f;
+		rateOfFire = 1/5f;
 		// magasin capacity
 		magCapacity = 100;
 		

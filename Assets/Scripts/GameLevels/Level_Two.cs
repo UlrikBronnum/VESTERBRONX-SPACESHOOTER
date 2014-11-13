@@ -64,7 +64,7 @@ public class Level_Two :  LevelScript_Level
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		
 	}
-	public override void updateLevel(){
+	/*public override void updateLevel(){
 		
 		
 		
@@ -111,7 +111,7 @@ public class Level_Two :  LevelScript_Level
 		}
 
 
-	}
+	}*/
 	
 	
 

@@ -14,9 +14,9 @@ public class NeedleGun_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 3000;
 		// Damage of projetile
-		projectileDamage = 150;
+		projectileDamage = 200;
 		// the rate of fire value
-		rateOfFire = 1+2/3f;
+		rateOfFire = 1/2f;
 		// magasin capacity
 		magCapacity = 100;
 		

@@ -241,7 +241,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	protected void createGoodsObject(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,Transform cameraTransform)
 	{
 		GameObject tmp = (GameObject)Object.Instantiate(Resources.Load(gameProp));
-		tmp.transform.localScale = new Vector3(scale.x , scale.y , scale.z);
+		//tmp.transform.localScale = new Vector3(scale.x , scale.y , scale.z);
 		Vector3 newPos = cameraTransform.position;
 		newPos.x += pos.x;
 		newPos.y += pos.y;
