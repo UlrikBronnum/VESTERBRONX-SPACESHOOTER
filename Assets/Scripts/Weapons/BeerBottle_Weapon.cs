@@ -12,7 +12,7 @@ public class BeerBottle_Weapon : Weapons_Base {
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
-		weaponValue = 3000;
+		weaponValue = 2000;
 		// Damage of projetile
 		projectileDamage = 225;
 		// the rate of fire value

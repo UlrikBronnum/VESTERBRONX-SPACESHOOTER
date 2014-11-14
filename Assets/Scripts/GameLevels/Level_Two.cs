@@ -43,6 +43,12 @@ public class Level_Two :  LevelScript_Level
 
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 7f);
 
+		newProp = "LevelProps/Particle System";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,-1450,0);
+		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+
 	
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
@@ -65,59 +71,6 @@ public class Level_Two :  LevelScript_Level
 
 
 	}
-
-	/*public override void updateLevel(){
-		
-		
-		
-		if(useAxisInput) {
-			// assigns the position of the joystick to h and v
-			joystickInput = joystick.position.x;
-		}
-		else {
-			joystickInput = Input.GetAxis("Horizontal");
-		}
-		
-		sentButtonInput();
-		
-		
-		if (spwnScr.spawnEmpty){
-			SpawnControl_Enemy tmpscr =  props[0].GetComponent<SpawnControl_Enemy>();
-			enemiesDestroyed = tmpscr.EnemyDead;
-			
-			if( (float)enemiesDestroyed/howManyEnemies > 0.6f){
-				endGame = "Complete";
-				gain = priceCreditsTotal();
-			}else {
-				endGame = "Fail";
-				gain = 0;
-			}
-			
-			_unLoadTimer -= Time.deltaTime * 1f;
-			
-			if(_unLoadTimer < 0){
-				if( (float)enemiesDestroyed/howManyEnemies > 0.6f){
-					script.credits += priceCreditsTotal();
-
-				}
-				
-				completed = true;	
-				closeLevel();
-				unloadButtons();
-				Spaceship_Player shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
-				shipScript.gameObject.SetActive(false);
-				shipScript.IsActive = false;
-				Debug.Log("Empty");
-			}
-			
-		}
-
-
-	}*/
-
-	
-	
-
 	
 
 }

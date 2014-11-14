@@ -192,7 +192,7 @@ public class Player_Charactor : MonoBehaviour
 				levels[0].loadLevel();
 
 			}
-			scaleFont = buttonHeight/3;
+			scaleFont = buttonWidth/10;
 			myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Hangar", myGUIStyle);
 			GUI.EndGroup();
@@ -208,7 +208,7 @@ public class Player_Charactor : MonoBehaviour
 				levels[1].loadLevel();
 
 			}
-			scaleFont = buttonHeight/3;
+			scaleFont = buttonWidth/10;
 			myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Missions", myGUIStyle);
 			GUI.EndGroup();
@@ -223,7 +223,7 @@ public class Player_Charactor : MonoBehaviour
 				levels[2].loadLevel();
 
 			}
-			scaleFont = buttonHeight/3;
+			scaleFont = buttonWidth/10;
 			myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Cannon Shop", myGUIStyle);
 			GUI.EndGroup();
@@ -238,7 +238,7 @@ public class Player_Charactor : MonoBehaviour
 				levels[3].loadLevel();
 				
 			}
-			scaleFont = buttonHeight/3;
+			scaleFont = buttonWidth/10;
 			myGUIStyle.fontSize = scaleFont;
 			//-scaleFont/2 instead of second parameter:
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Ship Shop", myGUIStyle);

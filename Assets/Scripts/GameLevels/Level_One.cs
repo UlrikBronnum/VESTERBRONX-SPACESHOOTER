@@ -54,6 +54,16 @@ public class Level_One : LevelScript_Level {
 		newPosition = new Vector3(0,-6000,-115);
 		newRotation = new Vector3(270,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+<<<<<<< Updated upstream
+=======
+*/
+		newProp = "LevelProps/Particle System";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,-1450,0);
+		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+
+>>>>>>> Stashed changes
 
 
 

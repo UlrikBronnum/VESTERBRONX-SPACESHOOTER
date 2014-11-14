@@ -50,7 +50,7 @@ public class CanonShop_Level : LevelScript_Base {
 		for (int i = 0; i < 6; i++){
 			
 			newProp = canons[i];
-			newScale = new Vector3(10,10,10);
+			newScale = new Vector3(15,15,15);
 			newPosition = new Vector3(0,0,50);
 			newRotation = new Vector3(75,0,0);
 			createGoodsObject(newProp,newScale,newPosition,newRotation,props[0].transform.FindChild("buyableObjectSpawn").transform);

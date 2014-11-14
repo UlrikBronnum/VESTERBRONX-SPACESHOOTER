@@ -43,6 +43,12 @@ public class Level_5 : LevelScript_Level {
 
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 6.5f);
 
+		newProp = "LevelProps/Particle System";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,-1450,0);
+		newRotation = new Vector3(0,90,0);
+		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+
 		
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
