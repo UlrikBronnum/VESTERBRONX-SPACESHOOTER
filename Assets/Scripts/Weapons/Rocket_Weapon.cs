@@ -9,7 +9,7 @@ public class Rocket_Weapon : Weapons_Base {
 		barrelEnd = transform.FindChild("barrelEnd").transform;
 		fireExplosion = Resources.Load("Audio/RocketS") as AudioClip;
 		
-		ammoType = "Space/Projectile_missile";
+		ammoType = "Space/Projectile_rockets";
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon

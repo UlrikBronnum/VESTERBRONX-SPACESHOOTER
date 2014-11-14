@@ -392,7 +392,7 @@ public class LevelScript_Level : LevelScript_Base {
 		buttonWidth = Screen.width/10;
 		placementX = 0;
 		placementY = 0;
-		scaleFont = buttonHeight/3 * 2;
+		scaleFont = buttonWidth/5;
 
 		myGUIStyle.alignment = TextAnchor.MiddleLeft;
 
@@ -406,7 +406,7 @@ public class LevelScript_Level : LevelScript_Base {
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 		myGUIStyle.fontSize = scaleFont;
 		GUI.DrawTexture(new Rect(0, 0,buttonWidth ,buttonHeight),script.buttonTexture);
-		GUI.Box (new Rect (scaleFont/2,0, buttonWidth/3,buttonHeight), "Health",myGUIStyle);
+		GUI.Box (new Rect (0,0, buttonWidth/3,buttonHeight), " Health",myGUIStyle);
 		GUI.EndGroup();
 
 		placementX = buttonWidth;
@@ -443,13 +443,12 @@ public class LevelScript_Level : LevelScript_Base {
 		int sN = (shipDamageShield > 0)? shipDamageShield: 0;
 		myGUIStyle.fontSize = scaleFont;
 		GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
-		GUI.Box (new Rect (scaleFont/2,0, buttonWidth,buttonHeight ), "Shield" ,myGUIStyle);
+		GUI.Box (new Rect (0,0, buttonWidth,buttonHeight ), " Shield" ,myGUIStyle);
 		GUI.EndGroup();
 
 
 		myGUIStyle.alignment = TextAnchor.MiddleRight;
 		placementX = buttonWidth;
-		placementY = buttonHeight;
 
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth * 2,buttonHeight - 4));
 		Texture2D shieldBar = new Texture2D(1,1);
@@ -468,13 +467,8 @@ public class LevelScript_Level : LevelScript_Base {
 		GUI.EndGroup();
 
 
-
-
-		buttonHeight = Screen.height/16;
-		buttonWidth = Screen.width/10;
 		placementX = Screen.width - buttonWidth;
 		placementY = 0;
-		scaleFont = buttonHeight/3 * 2;
 		
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 
@@ -491,7 +485,7 @@ public class LevelScript_Level : LevelScript_Base {
 		
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 		GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
-		GUI.Box (new Rect (scaleFont/2,- buttonHeight/4, buttonWidth,buttonHeight),  "Ammo",myGUIStyle);
+		GUI.Box (new Rect (0,0, buttonWidth,buttonHeight),  "Ammo",myGUIStyle);
 		GUI.EndGroup();
 
 		placementX = Screen.width - buttonWidth * 3;
@@ -502,11 +496,8 @@ public class LevelScript_Level : LevelScript_Base {
 		GUI.EndGroup();
 		///////
 
-		buttonHeight = Screen.height/16;
-		buttonWidth = Screen.width/10;
 		placementX = Screen.width - buttonWidth;
 		placementY = buttonHeight;
-		scaleFont = buttonHeight/3 * 2;
 		
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		
@@ -523,11 +514,10 @@ public class LevelScript_Level : LevelScript_Base {
 		
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 		GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),script.buttonTexture);
-		GUI.Box (new Rect (scaleFont/2,- buttonHeight/4, buttonWidth,buttonHeight),  "Ammo",myGUIStyle);
+		GUI.Box (new Rect (0,0, buttonWidth,buttonHeight),  "Ammo",myGUIStyle);
 		GUI.EndGroup();
 		
 		placementX = Screen.width - buttonWidth * 3;
-		placementY = buttonHeight;
 		
 		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth * 2,buttonHeight - 4));
 		GUI.DrawTexture (new Rect (buttonWidth * 2 - ammunition_Width2, 2 ,buttonWidth * 2,buttonHeight - 2) , lifeRemainingTexture, ScaleMode.StretchToFill, true, 1.0F);

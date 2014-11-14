@@ -44,9 +44,7 @@ public class Level_24 : LevelScript_Level {
 		
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 4.5f);
 
-<<<<<<< Updated upstream
 
-=======
 		newProp = "LevelProps/Particle System";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,-1450,0);
@@ -59,7 +57,7 @@ public class Level_24 : LevelScript_Level {
 		newPosition = new Vector3(0,-9000,0);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
->>>>>>> Stashed changes
+
 		
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
