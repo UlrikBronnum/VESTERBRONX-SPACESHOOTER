@@ -57,8 +57,15 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 		
 		swipeScript = props[0].GetComponent<CameraSwipe>();
-	}
 
+		newProp = "SunLight";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,15,-15);
+		newRotation = new Vector3(125,0,0);
+		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
+		                              background.transform, new Color (0.8f,0.3f,0.0f,1.0f));
+
+	}
 
 	public override void updateLevel()
 	{
@@ -119,6 +126,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 				completed = true;	
 				closeLevel();
+				destroyContent();
 				levels.Clear();
 			}
 			scaleFont = buttonHeight/3;
@@ -141,5 +149,11 @@ public class Mission_Menu_Level : LevelScript_Base {
 		Planet_Three_Level newLevel2 = gameObject.AddComponent("Planet_Three_Level") as Planet_Three_Level;
 		levels.Add(newLevel2);
 
+	}
+	public void destroyContent(){
+		for (int i = 0; i < levels.Count ; i++){
+			Destroy(levels[i]);
+		}
+		Destroy(swipeScript);
 	}
 }

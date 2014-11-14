@@ -48,27 +48,22 @@ public class Level_One : LevelScript_Level {
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection,7f);
 
 
-/*
+
 		newProp = "MeteorSpawn";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-6000,-200);
-		newRotation = new Vector3(90,0,0);
+		newPosition = new Vector3(0,-6000,-115);
+		newRotation = new Vector3(270,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-*/
 
 
-		newProp = "Sun";
-		newScale = new Vector3(100,100,100);
-		newPosition = new Vector3(0,-9000,0);
-		newRotation = new Vector3(0,90,0);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+
 
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(0,180,90);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
-		                              background.transform, Color.white);
+		                              background.transform, new Color (0.8f,0.3f,0.0f,1.0f));
 
 		newProp = "LevelProps/Vortex1";
 		newScale = new Vector3(1,1,1);

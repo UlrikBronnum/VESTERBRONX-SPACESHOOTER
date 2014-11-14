@@ -41,7 +41,14 @@ public class Planet_One_Level : Mission_Level {
 		transform.parent = transform;
 
 		swipeScript = props[0].GetComponent<CameraSwipe>();
-		
+
+		newProp = "SunLight";
+		newScale = new Vector3(1,1,1);
+		newPosition = new Vector3(0,15,-15);
+		newRotation = new Vector3(125,0,0);
+		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
+		                              image.transform, new Color (0.8f,0.3f,0.0f,1.0f));
+
 	}
 
 

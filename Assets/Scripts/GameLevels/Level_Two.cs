@@ -62,7 +62,8 @@ public class Level_Two :  LevelScript_Level
 		newPosition = new Vector3(0,0,-228);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-		
+
+
 	}
 
 	/*public override void updateLevel(){

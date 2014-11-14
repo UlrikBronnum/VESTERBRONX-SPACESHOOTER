@@ -75,28 +75,28 @@ public class Enemy_Spawn : SpawnClass_Base {
 	}*/
 
 	public void SpawnWing(Vector3 newPos , int num, int type , int formation){
-				if (formation == 0) {
-						switch (num) {
-						case 0:
-								spawnPosition = new Vector3 (newPos.x, newPos.y, newPos.z);
-								Spawn (type);
-								break;
-						case 1:
-								spawnPosition = new Vector3 (newPos.x + 75, newPos.y, newPos.z);
-								Spawn (type);
-								spawnPosition = new Vector3 (newPos.x - 75, newPos.y, newPos.z);
-								Spawn (type);
-								break;
-						case 2:
-								spawnPosition = new Vector3 (newPos.x + 150, newPos.y, newPos.z);
-								Spawn (type);
-								spawnPosition = new Vector3 (newPos.x - 150, newPos.y, newPos.z);
-								Spawn (type);
-								break;
-						default:
-								break;
-						}
-				}
+		if (formation == 0) {
+			switch (num) {
+			case 0:
+					spawnPosition = new Vector3 (newPos.x, newPos.y, newPos.z);
+					Spawn (type);
+					break;
+			case 1:
+					spawnPosition = new Vector3 (newPos.x + 75, newPos.y, newPos.z);
+					Spawn (type);
+					spawnPosition = new Vector3 (newPos.x - 75, newPos.y, newPos.z);
+					Spawn (type);
+					break;
+			case 2:
+					spawnPosition = new Vector3 (newPos.x + 150, newPos.y, newPos.z);
+					Spawn (type);
+					spawnPosition = new Vector3 (newPos.x - 150, newPos.y, newPos.z);
+					Spawn (type);
+					break;
+			default:
+					break;
+			}
+		}
 
 		else if(formation ==1){
 			switch (num) {

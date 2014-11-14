@@ -17,5 +17,7 @@ public class SpawnClass_Base : MonoBehaviour {
 	public virtual void Spawn(int type){
 
 	}
-
+	public virtual void Spawn(int type , int version){
+		
+	}
 }

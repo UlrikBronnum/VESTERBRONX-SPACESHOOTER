@@ -46,19 +46,14 @@ public class Level_19 : LevelScript_Level {
 		
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 6f);
 		
-		
-		newProp = "Sun";
-		newScale = new Vector3(100,100,100);
-		newPosition = new Vector3(0,-9000,0);
-		newRotation = new Vector3(0,0,0);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+
 		
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,0,0);
 		newRotation = new Vector3(0,180,90);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
-		                              background.transform, Color.white);
+		                              background.transform, new Color (0.8f,0.3f,0.0f,1.0f));
 		
 		newProp = "LevelProps/Vortex1";
 		newScale = new Vector3(1,1,1);
@@ -71,7 +66,7 @@ public class Level_19 : LevelScript_Level {
 		newPosition = new Vector3(0,0,-228);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
-		
+
 	}
 	
 	

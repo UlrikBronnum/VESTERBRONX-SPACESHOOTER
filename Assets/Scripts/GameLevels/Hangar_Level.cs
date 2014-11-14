@@ -74,9 +74,9 @@ public class Hangar_Level : LevelScript_Base {
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);
 		newPosition = new Vector3(0,15,-15);
-		newRotation = new Vector3(45,0,0);
+		newRotation = new Vector3(125,0,0);
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
-		                              background.transform, Color.yellow);
+		                              background.transform, Color.white);
 
 
 	}

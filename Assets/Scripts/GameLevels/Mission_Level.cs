@@ -83,6 +83,7 @@ public class Mission_Level : LevelScript_Base {
 
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
+				destroyContent();
 				levels.Clear();
 				completed = true;	
 				closeLevel();
@@ -117,9 +118,12 @@ public class Mission_Level : LevelScript_Base {
 			GUI.EndGroup();
 		}
 	}
-
-
-
+	public void destroyContent(){
+		for (int i = 0; i < levels.Count ; i++){
+			Destroy(levels[i]);
+		}
+		Destroy(swipeScript);
+	}
 
 
 }
