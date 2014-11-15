@@ -136,12 +136,10 @@ public class Spaceship_Base : MonoBehaviour {
 	
 	public virtual int shipShield(){
 		return 0;
-
 	}
 	
 	public virtual float shipManeuverSpeed(){
 		return 0f;
-
 	}
 
 }

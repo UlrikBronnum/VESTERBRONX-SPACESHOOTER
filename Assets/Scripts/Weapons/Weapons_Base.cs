@@ -63,18 +63,44 @@ public class Weapons_Base : MonoBehaviour {
 		upgradeStates[1] = up2;
 		upgradeStates[2] = up3;
 	}
+
+
+	/// <summary>
+	/// Weapons the rate of fire.
+	/// </summary>
+	/// <returns>The rate of fire.</returns>
 	public float weaponRateOfFire(){
 		float wROF = rateOfFire  - (rateOfFire * (upgradeStates[0] / 5.0f));
 		return wROF;
 	}
+	public float weaponRateOfFire(int num){
+		float wROF = rateOfFire  - (rateOfFire * (num / 5.0f));
+		return wROF;
+	}
 
+	/// <summary>
+	/// Weapons the damage.
+	/// </summary>
+	/// <returns>The damage.</returns>
 	public int weaponDamage(){
 		int wDam = projectileDamage + (int) (projectileDamage * (upgradeStates[1] / 10.0f));
 		return wDam;
 	}
+	public int weaponDamage(int num){
+		int wDam = projectileDamage + (int) (projectileDamage * (num / 10.0f));
+		return wDam;
+	}
 
+	/// <summary>
+	/// Weapons the capacity.
+	/// </summary>
+	/// <returns>The capacity.</returns>
 	public int weaponCapacity(){
 		int wCap = magCapacity + (int) (magCapacity * (upgradeStates[2] / 10.0f));
+		return wCap;
+	}
+	public int weaponCapacity(int num){
+		int wCap = magCapacity + (int) (magCapacity * (num / 10.0f));
 		return wCap;
 	}
 
