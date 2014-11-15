@@ -78,7 +78,7 @@ public class Hangar_Level : LevelScript_Base {
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              background.transform, Color.white);
 
-
+		shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
 	}
 
 	public override void updateLevel()
@@ -176,6 +176,29 @@ public class Hangar_Level : LevelScript_Base {
 		scaleFont = buttonHeight/3;
 		myGUIStyle.fontSize = scaleFont;
 		GUI.Box (new Rect(0,-buttonHeight/6,buttonWidth,buttonHeight), "Back", myGUIStyle )  ;
+		GUI.EndGroup();
+
+		placementX = 0; 
+		placementY = Screen.height - buttonHeight * 2;
+		
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight * 2));
+		GUI.Box (new Rect(0,0,buttonWidth,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
+		scaleFont = buttonHeight/4;
+		myGUIStyle.fontSize = scaleFont;	
+		GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), shipScript.getGunOne(), myGUIStyle )  ;
+
+		GUI.EndGroup();
+
+		
+		placementX = 0; 
+		placementY = Screen.height - buttonHeight * 1;
+		
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight * 2));
+		GUI.Box (new Rect(0,0,buttonWidth,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
+		scaleFont = buttonHeight/4;
+		myGUIStyle.fontSize = scaleFont;	
+		GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), shipScript.getShipStats(), myGUIStyle )  ;
+		
 		GUI.EndGroup();
 	}
 

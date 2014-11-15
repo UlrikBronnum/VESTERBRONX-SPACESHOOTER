@@ -50,12 +50,15 @@ public class Level_6 : LevelScript_Level {
 		newRotation = new Vector3(0,90,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 
+<<<<<<< HEAD
 		
 		newProp = "Sun";
 		newScale = new Vector3(100,100,100);
 		newPosition = new Vector3(0,-9000,0);
 		newRotation = new Vector3(0,0,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+=======
+>>>>>>> FETCH_HEAD
 
 		
 		newProp = "SunLight";

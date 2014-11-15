@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Player_Charactor : MonoBehaviour 
 {
-
+	private bool firstTime;
 	// timer to control internal behavior
 	public int gameSetting ;
 	public int levelsCompleted;
@@ -28,8 +28,8 @@ public class Player_Charactor : MonoBehaviour
 	protected Texture[] gameButtonTexture = new Texture[2];
 	public Texture buttonTexture;
 
-	public string[] enemyVersion = new string[3];
-	public string[] playerVersion = new string[3];
+	public string[] enemyVersion ;
+	public string[] playerVersion ;
 	public string[] playerArmory;
 
 
@@ -48,7 +48,7 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
-		gameSetting = 1;
+		gameSetting = 0;
 		levelsCompleted = 0;
 		
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
@@ -63,30 +63,36 @@ public class Player_Charactor : MonoBehaviour
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
 		setLevels();
 
-		/*
+		myGUIStyle.alignment = TextAnchor.MiddleCenter;
+		setGameVersion();
+
 		if(profileMan.filePresent()){
+			firstTime = false;
 			profileMan.gameLoad();
 			Debug.Log("Load");
 		}else{
-			hangar.addGunToHangar("Weapons/MiniGun");
+			firstTime = true;
+			hangar.addGunToHangar(playerArmory[0]);
 			hangar.addToCanonUpgrades();
-			hangar.addSpaceshipToHangar("PlayerShips/MustangPlayer");
+			hangar.addSpaceshipToHangar(playerVersion[0]);
 			hangar.addToShipUpgrades();
-			credits = 0;
+			credits = 20000;
 			Debug.Log("noLoad");
-		}*/
-		hangar.addSpaceshipToHangar("SecondClass");
-		hangar.addGunToHangar("Space/Minigun_weapon");
-		hangar.addToCanonUpgrades();
-		hangar.addSpaceshipToHangar("PlayerShips/FixeBus");
-		hangar.addToShipUpgrades();
-		credits = 70000;
+		}
+		/*
+			hangar.addSpaceshipToHangar("SecondClass");
+			hangar.addGunToHangar("Space/Minigun_weapon");
+			hangar.addToCanonUpgrades();
+			hangar.addSpaceshipToHangar("PlayerShips/FixeBus");
+			hangar.addToShipUpgrades();
+			credits = 70000;
+		*/
+
 
 		hangar.setHangar();
 
 
-		myGUIStyle.alignment = TextAnchor.MiddleCenter;
-		setGameVersion();
+	
 	
 	}
 	private void setGameVersion(){
@@ -99,8 +105,13 @@ public class Player_Charactor : MonoBehaviour
 		if(gameSetting == 0)
 		{
 			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/FixeBus","PlayerShips/MustangPlayer"};
+<<<<<<< HEAD
 			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/Christiania_bike","VesterBro/CycleMonster","VesterBro/Christiania_bike","VesterBro/Spike"};
 			playerArmory  = new string[6] {"VesterBro/Coffee gun_weapon","VesterBro/Durum launcher_weapon","VesterBro/Needle gun_weapon","VesterBro/Bottle Launcher_weapon","VesterBro/MeatCleaver gun_weapon","VesterBro/Cannon_weapon"};
+=======
+			enemyVersion = new string[5] {"VesterBro/CargoBike","VesterBro/Carlsberg_wagon","VesterBro/ChristaniaBike","VesterBro/Christiania_bike","VesterBro/Spike"};
+			playerArmory  = new string[6] {"VesterBro/Coffee_weapon","VesterBro/Durum_weapon","VesterBro/Needle_weapon","VesterBro/Bottle_weapon","VesterBro/Butchers_weapon","VesterBro/Canon_weapon"};
+>>>>>>> FETCH_HEAD
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
@@ -119,6 +130,7 @@ public class Player_Charactor : MonoBehaviour
 		if(systemState == "No State"){
 			if(GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
 				Debug.Log("Found Target");
+				startTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 				systemState = "Menu";
 			}else{
 				Debug.Log("No Target");
@@ -176,6 +188,13 @@ public class Player_Charactor : MonoBehaviour
 
 	public void OnGUI()
 	{	
+
+		if(firstTime){
+
+
+		}
+
+
 		int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 

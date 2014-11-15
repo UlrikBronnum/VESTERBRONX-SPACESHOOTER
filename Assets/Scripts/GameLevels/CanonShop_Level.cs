@@ -131,7 +131,18 @@ public class CanonShop_Level : LevelScript_Base {
 	public override void levelGUI()
 	{
 		int buttonHeight = Screen.height/7 , buttonWidth = Screen.width/4, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
-	
+
+		placementX = Screen.width/2 - buttonWidth/2; 
+		placementY = Screen.height - buttonHeight;
+		
+		GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+		GUI.Box (new Rect(0,0,buttonWidth,buttonHeight),  buttonTexture, GUIStyle.none )  ;
+		scaleFont = buttonHeight/4;
+		myGUIStyle.fontSize = scaleFont;
+		GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Credits Available", myGUIStyle )  ;
+		GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), script.credits.ToString(), myGUIStyle )  ;
+		GUI.EndGroup();
+
 
 		if(hasGun){
 			if(script.hangar.canonUpgrade1[gunPos] < 3 && script.credits > calcUpgradePrice(script.hangar.canonUpgrade1[gunPos]+1))
@@ -190,6 +201,22 @@ public class CanonShop_Level : LevelScript_Base {
 				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight),  calcUpgradePrice(script.hangar.canonUpgrade3[gunPos]+1).ToString(), myGUIStyle);
 				GUI.EndGroup();
 			}
+
+			placementX = 0; 
+			placementY = Screen.height - buttonHeight * 2;
+			
+			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight * 2));
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
+			scaleFont = buttonHeight/4;
+			myGUIStyle.fontSize = scaleFont;
+			if(!completed ){
+				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(script.hangar.canonUpgrade1[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Weapon Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
+			}
+			Debug.Log("1 " + buyableObjects[gunPos].name);
+			GUI.EndGroup();
+
 		}else {
 			if(script.credits > price)
 			{
@@ -211,7 +238,21 @@ public class CanonShop_Level : LevelScript_Base {
 				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight),  price.ToString() , myGUIStyle);
 				GUI.EndGroup();
 			}
+
+			placementX = 0; 
+			placementY = Screen.height - buttonHeight * 2;
 			
+			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight * 2));
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
+			scaleFont = buttonHeight/4;
+			myGUIStyle.fontSize = scaleFont;
+			if (!completed ){
+				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(0), myGUIStyle )  ;
+				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Weapon Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(0), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(0), myGUIStyle )  ;
+			}
+			Debug.Log("2 " + buyableObjects[gunPos].name);
+			GUI.EndGroup();
 		}
 		placementX = Screen.width/2 - buttonWidth/2; 
 		placementY = Screen.height - buttonHeight;
@@ -237,6 +278,10 @@ public class CanonShop_Level : LevelScript_Base {
 		myGUIStyle.fontSize = scaleFont;
 		GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), "Back", myGUIStyle );
 		GUI.EndGroup();
+
+
+
+
 	}
 
 	protected void createGoodsObject(string gameProp,Vector3 scale,Vector3 pos,Vector3 turnRotation,Transform cameraTransform)

@@ -137,20 +137,63 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 		}
 	}
-
+	/// <summary>
+	/// Ships the health.
+	/// </summary>
+	/// <returns>The health.</returns>
 	public override int shipHealth(){
 		return health +  (int)(health * (upgradeStates[0] / 10.0f));
 	}
-	
+	public int shipHealth(int num){
+		return health +  (int)(health * (num / 10.0f));
+	}
+	/// <summary>
+	/// Ships the shield.
+	/// </summary>
+	/// <returns>The shield.</returns>
 	public override int shipShield(){
 		return shield +  (int)(shield * (upgradeStates[1] / 10.0f));
 	}
-	
+	public int shipShield(int num){
+		return shield +  (int)(shield * (num / 10.0f));
+	}
+
+	/// <summary>
+	/// Ships the maneuver speed.
+	/// </summary>
+	/// <returns>The maneuver speed.</returns>
 	public override float shipManeuverSpeed(){
 		return maneuverSpeed +  (maneuverSpeed * (upgradeStates[2] / 10.0f));
 	}
+	public float shipManeuverSpeed(int num){
+		return maneuverSpeed +  (maneuverSpeed * (num/ 10.0f));
+	}
+
+	/// <summary>
+	/// Gets the gun one.
+	/// </summary>
+	/// <returns>The gun one.</returns>
+	public string getShipStats(){
+		string newStr = "Health: " + shipHealth().ToString() + 
+						"\nShield: " + shipShield().ToString() +
+						"\nMagasin: " + shipManeuverSpeed().ToString();
+		return newStr;
+	}
 
 
+	public string getGunOne(){
+		string newStr = "Firerate: " + canonMounted[0].GetComponent<Weapons_Base>().weaponRateOfFire().ToString() + 
+						"\nDamage: " + canonMounted[0].GetComponent<Weapons_Base>().weaponDamage().ToString() +
+						"\nMagasin: " + canonMounted[0].GetComponent<Weapons_Base>().weaponCapacity().ToString();
+		return newStr;
+	}
+
+	public string getGunTwo(){
+		string newStr = "Firerate: " + canonMounted[2].GetComponent<Weapons_Base>().weaponRateOfFire().ToString() + 
+						"\nDamage: " + canonMounted[2].GetComponent<Weapons_Base>().weaponDamage().ToString() +
+						"\nMagasin: " + canonMounted[2].GetComponent<Weapons_Base>().weaponCapacity().ToString();
+		return newStr;
+	}
 	/// <summary>
 	/// All of the players spaceship inherits 
 	/// this updatefunction, moves the spaceship
