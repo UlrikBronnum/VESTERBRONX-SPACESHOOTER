@@ -66,6 +66,14 @@ public class Player_Charactor : MonoBehaviour
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		setGameVersion();
 
+		firstTime = true;
+		hangar.addGunToHangar(playerArmory[0]);
+		hangar.addToCanonUpgrades();
+		hangar.addSpaceshipToHangar(playerVersion[0]);
+		hangar.addToShipUpgrades();
+		credits = 20000;
+		Debug.Log("noLoad");
+		/*
 		if(profileMan.filePresent()){
 			firstTime = false;
 			profileMan.gameLoad();
@@ -105,13 +113,11 @@ public class Player_Charactor : MonoBehaviour
 		if(gameSetting == 0)
 		{
 			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/FixeBus","PlayerShips/MustangPlayer"};
-<<<<<<< HEAD
-			enemyVersion = new string[5] {"VesterBro/Christiania_bike","VesterBro/Christiania_bike","VesterBro/CycleMonster","VesterBro/Christiania_bike","VesterBro/Spike"};
+			//cagobike, carlsberg wagon, cristianiaBike 
 			playerArmory  = new string[6] {"VesterBro/Coffee gun_weapon","VesterBro/Durum launcher_weapon","VesterBro/Needle gun_weapon","VesterBro/Bottle Launcher_weapon","VesterBro/MeatCleaver gun_weapon","VesterBro/Cannon_weapon"};
-=======
+
 			enemyVersion = new string[5] {"VesterBro/CargoBike","VesterBro/Carlsberg_wagon","VesterBro/ChristaniaBike","VesterBro/Christiania_bike","VesterBro/Spike"};
-			playerArmory  = new string[6] {"VesterBro/Coffee_weapon","VesterBro/Durum_weapon","VesterBro/Needle_weapon","VesterBro/Bottle_weapon","VesterBro/Butchers_weapon","VesterBro/Canon_weapon"};
->>>>>>> FETCH_HEAD
+
 		}else{
 			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed","PlayerShips/MustangPlayer"};
 			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
