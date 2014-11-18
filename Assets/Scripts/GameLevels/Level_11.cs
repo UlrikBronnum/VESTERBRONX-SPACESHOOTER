@@ -21,7 +21,7 @@ public class Level_11 : LevelScript_Level {
 		setClassTargets();
 		
 		
-		newScale = new Vector3(5,5,5);
+		newScale = new Vector3(7,7,7);
 		newPosition = new Vector3(0,0,-115);
 		newRotation = new Vector3(90,0,0);
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,background.transform,true,true);

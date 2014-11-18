@@ -16,7 +16,7 @@ public class CoffeeCanon_Weapon : Weapons_Base {
 		// Damage of projetile
 		projectileDamage = 100;
 		// the rate of fire value
-		rateOfFire = 1/3f;
+		rateOfFire = 1/2f;
 		// magasin capacity
 		magCapacity = 100; 
 		

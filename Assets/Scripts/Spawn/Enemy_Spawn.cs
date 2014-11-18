@@ -9,7 +9,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 
 	public string[] enemyShipScipt;
 
-	private float objScale = 5f;
+	private float objScale = 7f;
 	public bool enemySpawning;
 	private Vector3 spawnPosition;
 	private float portalTime;
@@ -82,15 +82,15 @@ public class Enemy_Spawn : SpawnClass_Base {
 					Spawn (type);
 					break;
 			case 1:
-					spawnPosition = new Vector3 (newPos.x + 75, newPos.y, newPos.z);
+					spawnPosition = new Vector3 (newPos.x + 80, newPos.y, newPos.z);
 					Spawn (type);
-					spawnPosition = new Vector3 (newPos.x - 75, newPos.y, newPos.z);
+					spawnPosition = new Vector3 (newPos.x - 80, newPos.y, newPos.z);
 					Spawn (type);
 					break;
 			case 2:
-					spawnPosition = new Vector3 (newPos.x + 150, newPos.y, newPos.z);
+					spawnPosition = new Vector3 (newPos.x + 160, newPos.y, newPos.z);
 					Spawn (type);
-					spawnPosition = new Vector3 (newPos.x - 150, newPos.y, newPos.z);
+					spawnPosition = new Vector3 (newPos.x - 160, newPos.y, newPos.z);
 					Spawn (type);
 					break;
 			default:
@@ -101,19 +101,19 @@ public class Enemy_Spawn : SpawnClass_Base {
 		else if(formation ==1){
 			switch (num) {
 			case 0:
-				spawnPosition = new Vector3 (newPos.x-150, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x-160, newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 1:
-				spawnPosition = new Vector3 (newPos.x - 75, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x - 80, newPos.y, newPos.z);
 				Spawn (type);
 				spawnPosition = new Vector3 (newPos.x , newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 2:
-				spawnPosition = new Vector3 (newPos.x + 75, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x + 160, newPos.y, newPos.z);
 				Spawn (type);
-				spawnPosition = new Vector3 (newPos.x + 150, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x + 160, newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			default:
@@ -123,19 +123,19 @@ public class Enemy_Spawn : SpawnClass_Base {
 		else if(formation ==2){
 			switch (num) {
 			case 0:
-				spawnPosition = new Vector3 (newPos.x+150, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x+160, newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 1:
-				spawnPosition = new Vector3 (newPos.x + 75, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x + 80, newPos.y, newPos.z);
 				Spawn (type);
 				spawnPosition = new Vector3 (newPos.x , newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 2:
-				spawnPosition = new Vector3 (newPos.x - 75, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x - 80, newPos.y, newPos.z);
 				Spawn (type);
-				spawnPosition = new Vector3 (newPos.x - 150, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x - 160, newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			default:
@@ -145,15 +145,15 @@ public class Enemy_Spawn : SpawnClass_Base {
 		else{
 			switch (num) {
 			case 0:
-				spawnPosition = new Vector3 (newPos.x + 150, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x + 160, newPos.y, newPos.z);
 				Spawn (type);
-				spawnPosition = new Vector3 (newPos.x - 150, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x - 160, newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 1:
-				spawnPosition = new Vector3 (newPos.x + 75, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x + 80, newPos.y, newPos.z);
 				Spawn (type);
-				spawnPosition = new Vector3 (newPos.x -75 , newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x -80 , newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 2:

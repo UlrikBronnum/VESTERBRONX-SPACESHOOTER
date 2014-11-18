@@ -240,10 +240,9 @@ public class CanonShop_Level : LevelScript_Base {
 				GUI.EndGroup();
 			}
 			else{
-				print("SHOULD BE THERE");
 				GUI.Box(new Rect(Screen.width - buttonWidth,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none);
-				GUI.Box (new Rect(Screen.width - buttonWidth,0,buttonWidth,buttonHeight), "to buy this weapon", myGUIStyle);
-				GUI.Box (new Rect(Screen.width - buttonWidth,-buttonHeight/3,buttonWidth,buttonHeight), "Not enough credits", myGUIStyle);
+				GUI.Box (new Rect(Screen.width - buttonWidth,-buttonHeight/3,buttonWidth,buttonHeight), "Costs: ", myGUIStyle);
+				GUI.Box (new Rect(Screen.width - buttonWidth,0,buttonWidth,buttonHeight), price.ToString(), myGUIStyle);
 
 			}
 

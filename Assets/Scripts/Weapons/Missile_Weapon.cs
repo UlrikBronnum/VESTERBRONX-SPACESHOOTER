@@ -18,7 +18,7 @@ public class Missile_Weapon : Weapons_Base {
 		// the rate of fire value
 		rateOfFire = 2.5f;
 		// magasin capacity
-		magCapacity = 10;
+		magCapacity = 20;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

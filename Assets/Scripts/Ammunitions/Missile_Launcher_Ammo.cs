@@ -10,8 +10,8 @@ public class Missile_Launcher_Ammo : Projectile_Base {
 	// Use this for initialization
 	public override void Start () {
 
-		flyTime = 5f;
-		projectileVelocity = 10;
+		flyTime = 7f;
+		projectileVelocity = 30;
 		timer = new EventTimer_Base(flyTime);
 
 		
