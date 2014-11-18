@@ -52,11 +52,6 @@ public class Level_24 : LevelScript_Level {
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 
 
-		newProp = "Sun";
-		newScale = new Vector3(100,100,100);
-		newPosition = new Vector3(0,-9000,0);
-		newRotation = new Vector3(0,0,0);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 
 		newProp = "SunLight";
 		newScale = new Vector3(1,1,1);

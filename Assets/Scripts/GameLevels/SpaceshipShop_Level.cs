@@ -22,6 +22,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			Destroy(element);
 		}
 		buyableObjects.Clear();
+		Destroy(swipeControl);
 		closeLevel();
 	}
 	
@@ -31,7 +32,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 
 		setMainVars();
 
-		swipeControl.setUpSwipeLimits(3,true);
+		swipeControl.setUpSwipeLimits(2,true);
 		ships = script.playerVersion;
 	
 		
@@ -56,7 +57,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			createScaleSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 		}
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 2; i++)
 		{			
 			newProp = ships[i];
 			newScale = new Vector3(10,10,10);

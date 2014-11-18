@@ -18,7 +18,7 @@ public class Hangar_Level : LevelScript_Base {
 	private string buildingProps;
 
 	private void deleteAllProps(){
-
+		Destroy(swipeControl);
 		closeLevel();
 	}
 

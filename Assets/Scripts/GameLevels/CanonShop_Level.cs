@@ -93,6 +93,7 @@ public class CanonShop_Level : LevelScript_Base {
 			Destroy(element);
 		}
 		buyableObjects.Clear();
+		Destroy(swipeControl);
 		closeLevel();
 	}
 	public override void updateLevel()

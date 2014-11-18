@@ -10,7 +10,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 	protected bool levelLoaded;
 	protected string[] levelNames;
 	int levelCounter = 0;
-
+	protected bool[] access = new bool[3] { true , false , false};
 	
 
 	public override void loadLevel()
@@ -65,6 +65,12 @@ public class Mission_Menu_Level : LevelScript_Base {
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              background.transform, new Color (0.8f,0.3f,0.0f,1.0f));
 
+		if(script.levelsCompleted > 7){
+			access[1] = true;
+		}else if(script.levelsCompleted > 15){
+			access[2] = true;
+		}
+
 	}
 
 	public override void updateLevel()
@@ -83,7 +89,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 		}
 		
 		if(missionState == levelNames[levelCounter]){
-			if(levelLoaded == false){
+			if(levelLoaded == false && access[levelCounter]){
 				closeLevel();
 				levelLoaded = true;
 				levels[levelCounter].loadLevel();
@@ -137,6 +143,24 @@ public class Mission_Menu_Level : LevelScript_Base {
 		}else {
 			if(levelLoaded)
 			levels[swipeScript.NumberOfSwipes].levelGUI();
+		}
+
+		if (!access[levelCounter])
+		{
+			buttonHeight = Screen.height/2;
+			buttonWidth = Screen.height/2;
+			placementX = Screen.width/2 - buttonWidth/2;
+			placementY = Screen.height/2 - buttonHeight/2; 
+			
+			scaleFont = 50;
+			
+			
+			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
+			GUI.DrawTexture(new Rect(0,0,buttonWidth ,buttonHeight),Resources.Load("Interface/NOAccess") as Texture);
+			myGUIStyle.alignment = TextAnchor.MiddleCenter;
+			myGUIStyle.fontSize = scaleFont;
+			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "No Access", myGUIStyle);
+			GUI.EndGroup();
 		}
 		
 	}

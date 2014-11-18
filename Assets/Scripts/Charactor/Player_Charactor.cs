@@ -90,7 +90,7 @@ public class Player_Charactor : MonoBehaviour
 		hangar.addToCanonUpgrades();
 		hangar.addSpaceshipToHangar(playerVersion[0]);
 		hangar.addToShipUpgrades();
-		credits = 1000;
+		credits = 20000;
 		Debug.Log("noLoad");
 		/*
 		if(profileMan.filePresent()){
@@ -129,14 +129,14 @@ public class Player_Charactor : MonoBehaviour
 	
 		if(gameSetting == 0)
 		{
-			playerVersion = new string[3] {"PlayerShips/CargoBike","PlayerShips/FixeBus","PlayerShips/MustangPlayer"};
+			playerVersion = new string[2] {"PlayerShips/CargoBike","PlayerShips/FixeBus"};
 			//cagobike, carlsberg wagon, cristianiaBike 
 			playerArmory  = new string[6] {"VesterBro/Coffee gun_weapon","VesterBro/Durum launcher_weapon","VesterBro/Needle gun_weapon","VesterBro/Bottle Launcher_weapon","VesterBro/MeatCleaver gun_weapon","VesterBro/Cannon_weapon"};
 
-			enemyVersion = new string[5] {"VesterBro/CargoBike","VesterBro/Carlsberg_wagon","VesterBro/ChristaniaBike","VesterBro/Christiania_bike","VesterBro/Spike"};
+			enemyVersion = new string[5] {"VesterBro/CargoBike","VesterBro/Carlsberg_wagon","VesterBro/ChristaniaBike","VesterBro/Christiania_bike","VesterBro/CargoBike"};
 
 		}else{
-			playerVersion = new string[3] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed","PlayerShips/MustangPlayer"};
+			playerVersion = new string[2] {"PlayerShips/SpikePlayer","PlayerShips/Spaceship_1ed"};
 			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
 			playerArmory  = new string[6] {"Space/Minigun_weapon","Space/Cobra Missile _Weapon","Space/Rocket launcher_weapon","Space/Plasma Missile_weapon","Space/Plasma gun_weapon","Space/Laser_weapon"};
 		} 

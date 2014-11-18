@@ -15,7 +15,7 @@ public class EnemyChain_script : Planet_Base {
 	public int levelNumber = 0;
 	private float sizes = 1;
 	private float spacing;
-	private int[] enemyTypes = {2,2,2,3,2,2,2,4};
+	private int[] enemyTypes = {4,4,4,4,4,4,4,4};
 	private string[] propName = {"LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom"};
 	
 	public override void Start()
