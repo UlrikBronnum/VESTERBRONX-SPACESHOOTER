@@ -18,7 +18,7 @@ public class DurumCanon_Weapon : Weapons_Base {
 		// the rate of fire value
 		rateOfFire = 2.5f;
 		// magasin capacity
-		magCapacity = 20;
+		magCapacity = 10;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

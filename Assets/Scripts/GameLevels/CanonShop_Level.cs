@@ -206,7 +206,7 @@ public class CanonShop_Level : LevelScript_Base {
 			placementY = Screen.height - buttonHeight * 2;
 			
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight * 2));
-			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
+			GUI.Box (new Rect(0,0,buttonWidth*1.5f,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
 			if(!completed ){
@@ -238,6 +238,13 @@ public class CanonShop_Level : LevelScript_Base {
 				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight),  price.ToString() , myGUIStyle);
 				GUI.EndGroup();
 			}
+			else{
+				print("SHOULD BE THERE");
+				GUI.Box(new Rect(Screen.width - buttonWidth,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none);
+				GUI.Box (new Rect(Screen.width - buttonWidth,0,buttonWidth,buttonHeight), "to buy this weapon", myGUIStyle);
+				GUI.Box (new Rect(Screen.width - buttonWidth,-buttonHeight/3,buttonWidth,buttonHeight), "Not enough credits", myGUIStyle);
+
+			}
 
 			placementX = 0; 
 			placementY = Screen.height - buttonHeight * 2;
@@ -251,7 +258,7 @@ public class CanonShop_Level : LevelScript_Base {
 				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Weapon Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(0), myGUIStyle )  ;
 				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(0), myGUIStyle )  ;
 			}
-			Debug.Log("2 " + buyableObjects[gunPos].name);
+			//Debug.Log("2 " + buyableObjects[gunPos].name);
 			GUI.EndGroup();
 		}
 		placementX = Screen.width/2 - buttonWidth/2; 

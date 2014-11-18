@@ -14,7 +14,7 @@ public class MiniGun_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 500;
 		// Damage of projetile
-		projectileDamage = 500;
+		projectileDamage = 100;
 		// the rate of fire value
 		rateOfFire = 1/3f;
 		// magasin capacity

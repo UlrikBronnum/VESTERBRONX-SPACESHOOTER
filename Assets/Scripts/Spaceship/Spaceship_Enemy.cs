@@ -49,9 +49,9 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}*/
 //		Debug.Log(value + "  " + level);
 
-		health += level * 10;
-		shield += level * 5;
-		maneuverSpeed += level * 5;
+		health += level * 40;
+		shield += level * 20;
+		maneuverSpeed += level * 9;
 		fireRate -= level * 0.1f;
 		damage += (int)(damage/50 * level);
 

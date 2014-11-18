@@ -4,6 +4,21 @@ using System.Collections.Generic;
 
 public class Player_Charactor : MonoBehaviour 
 {
+	//box and color used for info boxes
+	private Color infoColor = Color.grey;
+	private Texture2D box;
+
+	
+	// bool making sure each texture is shown for 10 sec
+	private bool hasShown = false;
+	private bool hasShown2 = false;
+	private bool hasShown3 = false;
+	private bool hasShown4 = false;
+	private bool hasShown5 = false;
+	private bool hasShown6 = false;
+	private bool hasShown7 = false;
+				
+			
 	private bool firstTime;
 	// timer to control internal behavior
 	public int gameSetting ;
@@ -56,12 +71,16 @@ public class Player_Charactor : MonoBehaviour
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
 		gameTextColors[1] = new Color(0.0f,1f,1f,1.0f);
 
+
 		profileMan = gameObject.AddComponent("ProfileSavenLoad") as ProfileSavenLoad;
 		shipChoise = 0;
 		systemState = "Menu";
 		levelLoaded = false;
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
 		setLevels();
+
+		// box used for info:
+		box = new Texture2D(1,1);
 
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		setGameVersion();
@@ -71,7 +90,7 @@ public class Player_Charactor : MonoBehaviour
 		hangar.addToCanonUpgrades();
 		hangar.addSpaceshipToHangar(playerVersion[0]);
 		hangar.addToShipUpgrades();
-		credits = 20000;
+		credits = 1000;
 		Debug.Log("noLoad");
 		/*
 		if(profileMan.filePresent()){
@@ -98,12 +117,10 @@ public class Player_Charactor : MonoBehaviour
 
 
 		hangar.setHangar();
-
-
-	
 	
 	}
 	private void setGameVersion(){
+
 		buttonTexture = gameButtonTexture[gameSetting];
 		newFont = fontCollection[gameSetting];
 		textColor = gameTextColors[gameSetting];
@@ -126,6 +143,7 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public  void Update () 
 	{
+		print ("hasshown: "+ hasShown2);
 		if (Input.GetKeyDown("space")){
 			gameSetting++;
 			if(gameSetting > 1){
@@ -158,6 +176,7 @@ public class Player_Charactor : MonoBehaviour
 			
 
 		if(systemState == "Hangar"){
+
 			if(levelLoaded == false){
 				levelLoaded = true;
 			}else{
@@ -194,15 +213,11 @@ public class Player_Charactor : MonoBehaviour
 
 	public void OnGUI()
 	{	
-
-		if(firstTime){
-
-
-		}
-
+	
 
 		int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
+
 
 		if(systemState == "Menu")
 		{	
@@ -215,7 +230,6 @@ public class Player_Charactor : MonoBehaviour
 				systemState = "Hangar";
 				levelLoaded = false;
 				levels[0].loadLevel();
-
 			}
 			scaleFont = buttonWidth/10;
 			myGUIStyle.fontSize = scaleFont;
@@ -224,7 +238,7 @@ public class Player_Charactor : MonoBehaviour
 
 			placementY += buttonHeight;
 
-			myGUIStyle.alignment = TextAnchor.MiddleCenter;
+			//myGUIStyle.alignment = TextAnchor.MiddleCenter;
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
 			if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))
 			{
@@ -233,8 +247,8 @@ public class Player_Charactor : MonoBehaviour
 				levels[1].loadLevel();
 
 			}
-			scaleFont = buttonWidth/10;
-			myGUIStyle.fontSize = scaleFont;
+			//scaleFont = buttonWidth/10;
+			//myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Missions", myGUIStyle);
 			GUI.EndGroup();
 
@@ -248,8 +262,8 @@ public class Player_Charactor : MonoBehaviour
 				levels[2].loadLevel();
 
 			}
-			scaleFont = buttonWidth/10;
-			myGUIStyle.fontSize = scaleFont;
+			//scaleFont = buttonWidth/10;
+			//myGUIStyle.fontSize = scaleFont;
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Cannon Shop", myGUIStyle);
 			GUI.EndGroup();
 
@@ -263,8 +277,8 @@ public class Player_Charactor : MonoBehaviour
 				levels[3].loadLevel();
 				
 			}
-			scaleFont = buttonWidth/10;
-			myGUIStyle.fontSize = scaleFont;
+			//scaleFont = buttonWidth/10;
+			//myGUIStyle.fontSize = scaleFont;
 			//-scaleFont/2 instead of second parameter:
 			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Ship Shop", myGUIStyle);
 			GUI.EndGroup();
@@ -316,6 +330,75 @@ public class Player_Charactor : MonoBehaviour
 			GUI.EndGroup();
 		}
 
+
+		// makes info screens
+		if(firstTime){
+			myGUIStyle.fontSize = Screen.width/22;
+
+			if(systemState == "Menu"){
+				if(!hasShown){
+				//	StartCoroutine (info((x) => hasShown = x));
+
+					// sets the color for the info box:
+					box.SetPixel(0,0, infoColor);
+					box.Apply();
+					GUI.skin.box.normal.background = box;
+
+				//	GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
+				//	GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), " ", myGUIStyle);
+				}
+			}
+			else if(systemState == "Hangar"){
+				if(!hasShown2){
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the hangar you can choose"+ "\n" +"which weapons should be mounted"+ "\n" +"on your ship."+ "\n" +"You need to buy a new weapon"+ "\n" +"in the cannon store before you"+ "\n" +"can change your weapon", myGUIStyle);
+
+					if(GUI.Button(new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
+						info(ref hasShown2);
+					}
+					GUI.Box (new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight), "Continue", myGUIStyle);
+	
+				}}
+			else if(systemState == "MissionLevel"){
+				if(!hasShown3){
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "Here you choose a level to play."+ "\n" +"There are 3 locations with 8 levels each."+ "\n" +"Use swipe to manage the levels,"+ "\n" +"and press the upper right button"+ "\n" +"to enter a location or play a level", myGUIStyle);
+					
+					if(GUI.Button(new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
+						info(ref hasShown3);
+					}
+					GUI.Box (new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight), "Continue", myGUIStyle);
+				}}
+			else if(systemState == "CanonShop"){
+				if(!hasShown4){
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the Cannon Shop, you can "+ "\n" +"upgrade your weapons and buy new ones."+ "\n" +"Swipe to the right to see the next weapon.", myGUIStyle);
+					
+					if(GUI.Button(new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
+						info(ref hasShown4);
+					}
+					GUI.Box (new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight), "Continue", myGUIStyle);
+				}}
+			else if(systemState == "ShipShop"){
+				if(!hasShown5){
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
+					GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the Ship Shop, you can"+ "\n" +"upgrade your ship or buy a new."+ "\n" +"Use swipe to manouvre between your ships", myGUIStyle);
+					
+					if(GUI.Button(new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
+						info(ref hasShown5);
+					}
+					GUI.Box (new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight), "Continue", myGUIStyle);
+				//	StartCoroutine (info((x) => hasShown5 = x));
+					//info1 = Resources.Load("Interface/InfoBoxShip") as Texture;
+					//GUI.DrawTexture (new Rect(0,0,Screen.width,Screen.height), info1, ScaleMode.ScaleToFit, true, 0);
+				}}
+			
+			
+			
+		}
+
+
+
 	}
 
 
@@ -337,6 +420,16 @@ public class Player_Charactor : MonoBehaviour
 		reportString +=  "Credit=" + credits + "\n";
 		return reportString;
 	}
+
+	private void info( ref bool Shown){
+		Shown = true;
+	}
+
+	/*IEnumerator info(System.Action<bool>Shown){
+		yield return new WaitForSeconds (50);
+		Shown (true);	
+		//Shown = false;
+		}*/
 
 }
 
