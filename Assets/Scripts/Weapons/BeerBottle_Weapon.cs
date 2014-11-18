@@ -12,13 +12,13 @@ public class BeerBottle_Weapon : Weapons_Base {
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
-		weaponValue = 2000;
+		weaponValue = 4000;
 		// Damage of projetile
-		projectileDamage = 225;
+		projectileDamage = 250;
 		// the rate of fire value
-		rateOfFire = 2.2f;
+		rateOfFire = 1f;
 		// magasin capacity
-		magCapacity = 25;
+		magCapacity = 50;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

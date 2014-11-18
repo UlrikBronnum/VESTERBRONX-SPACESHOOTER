@@ -31,11 +31,11 @@ public class SecondClass_Spaceship : Spaceship_Player {
 		canonScale = transform;
 		
 		// Ship speed
-		maneuverSpeed = 150f;
+		maneuverSpeed = 180f;
 
 
-		health = 500;
-		shield = 250;
+		health = 1000;
+		shield = 500;
 		// Amount of gun attachments 
 		canonMountCapacity = transform.childCount;
 		

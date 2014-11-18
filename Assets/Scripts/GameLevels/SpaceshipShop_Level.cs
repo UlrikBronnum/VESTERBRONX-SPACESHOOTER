@@ -193,7 +193,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 
 			}
 		}else {
-			if(script.credits > price)
+			if(script.credits >= price)
 			{
 				placementX = Screen.width - buttonWidth; 
 				placementY = 0;

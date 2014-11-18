@@ -10,24 +10,14 @@ public class Missile_Ammo : Projectile_Base {
 	// Use this for initialization
 	public override void Start () {
 
-		flyTime = 7f;
-		projectileVelocity = 30;
+		flyTime = 5f;
+		projectileVelocity = 1000;
 		timer = new EventTimer_Base(flyTime);
+		rigidbody.velocity = transform.forward * projectileVelocity;
+		Debug.Log(damage);
 
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(GameObject.Find("EnemySpawn(Clone)") != null ){
-			if(GameObject.Find("EnemySpawn(Clone)").transform.childCount != 0){
-				pos = GameObject.Find("EnemySpawn(Clone)").transform.GetChild(0).position;
-				transform.position = Vector3.MoveTowards(transform.position, pos, projectileVelocity);
-			}
-		}
-		if(timer.timerTick()){
-			Destroy(gameObject);
-		}
-	}
+
 	
 }

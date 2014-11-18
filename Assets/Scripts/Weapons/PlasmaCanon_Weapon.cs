@@ -12,11 +12,11 @@ public class PlasmaCanon_Weapon : Weapons_Base {
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
-		weaponValue = 4000;
+		weaponValue = 8000;
 		// Damage of projetile
-		projectileDamage = 110;
+		projectileDamage = 150;
 		// the rate of fire value
-		rateOfFire = 1/5f;
+		rateOfFire = 1/3f;
 		// magasin capacity
 		magCapacity = 100;
 		

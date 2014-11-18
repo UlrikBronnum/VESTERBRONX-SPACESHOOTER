@@ -30,7 +30,7 @@ public class TurdClass_Spaceship : Spaceship_Player {
 		canonScale = transform;
 
 		// Ship speed
-		maneuverSpeed = 200f;
+		maneuverSpeed = 150f;
 		// Health of this ship 
 		health = 500;
 		shield = 250;

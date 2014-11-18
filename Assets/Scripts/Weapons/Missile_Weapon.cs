@@ -12,13 +12,13 @@ public class Missile_Weapon : Weapons_Base {
 		// upgradeStates = { rate of fire , damage , capacity }
 		// will range from 0 to topLimit?
 		// the purchase value of the weapon
-		weaponValue = 500;
+		weaponValue = 1000;
 		// Damage of projetile
 		projectileDamage = 200;
 		// the rate of fire value
-		rateOfFire = 2.5f;
+		rateOfFire = 3/4f;
 		// magasin capacity
-		magCapacity = 20;
+		magCapacity = 80;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

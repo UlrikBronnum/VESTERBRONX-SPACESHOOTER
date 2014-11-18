@@ -27,6 +27,9 @@ public class LevelScript_Level : LevelScript_Base {
 	protected Vector3 newRotation;
 	protected string newProp;
 
+	// position for the spawnpoint of the enemies:
+	protected Vector3 spawnPoint = new Vector3(0,-4000,-115);
+
 
 	//Make these nice
 	

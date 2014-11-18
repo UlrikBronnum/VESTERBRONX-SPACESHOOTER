@@ -70,11 +70,11 @@ public class Weapons_Base : MonoBehaviour {
 	/// </summary>
 	/// <returns>The rate of fire.</returns>
 	public float weaponRateOfFire(){
-		float wROF = rateOfFire  - (rateOfFire * (upgradeStates[0] / 5.0f));
+		float wROF = rateOfFire  - (rateOfFire * (upgradeStates[0] / 10.0f));
 		return wROF;
 	}
 	public float weaponRateOfFire(int num){
-		float wROF = rateOfFire  - (rateOfFire * (num / 5.0f));
+		float wROF = rateOfFire  - (rateOfFire * (num / 10.0f));
 		return wROF;
 	}
 

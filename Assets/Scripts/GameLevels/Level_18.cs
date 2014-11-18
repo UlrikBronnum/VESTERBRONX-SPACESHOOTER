@@ -17,13 +17,13 @@ public class Level_18 : LevelScript_Level {
 		
 		levelNumber = getLevelNumber();
 		
-		howManyEnemies = 40;
+		howManyEnemies = 45;
 		
 		setClassTargets();
 		
 		
 		newScale = new Vector3(7,7,7);
-		newPosition = new Vector3(0,0,-115);
+		newPosition = new Vector3(0,32.5f,-115);
 		newRotation = new Vector3(90,0,0);
 		createPlayerSpaceship(script.hangar.hangarslots[script.shipChoise],newScale,newPosition,newRotation,background.transform,true,true);
 		shipHealth = shipScr.shipHealth();
@@ -36,15 +36,14 @@ public class Level_18 : LevelScript_Level {
 		
 		newProp = "EnemySpawn";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-6000,-115);
 		newRotation = new Vector3(-90,0,180);
-		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
+		createSceneObject(newProp,newScale,spawnPoint,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
 		
-		int[] enemyTypeSelection = new int[8]{		0,1,2,0,1,1,2,1
+		int[] enemyTypeSelection = new int[9]{		0,1,0,1,1,1,0,0,1
 		};
 		
-		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 6f);
+		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 5f);
 
 		newProp = "LevelProps/Particle System";
 		newScale = new Vector3(1,1,1);

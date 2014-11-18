@@ -18,12 +18,17 @@ public class Mission_Menu_Level : LevelScript_Base {
 		// finds the texture for the buttons
 
 		setMainVars();
-
-
 		levelNames = new string[3];
-		levelNames[0] = "Planet_One";
-		levelNames[1] = "Planet_Two";
-		levelNames[2] = "Planet_Three";
+		if (script.gameSetting == 1) {
+						levelNames [0] = "Planet_One";
+						levelNames [1] = "Planet_Two";
+						levelNames [2] = "Planet_Three";
+				} else {
+			levelNames [0] = "Planet Enghave";
+			levelNames [1] = "Planet Sdr Boulevard";
+			levelNames [2] = "Planet Istedgade";
+				
+		}
 	
 		
 		if(levels.Count == 0){

@@ -84,15 +84,15 @@ public class Player_Charactor : MonoBehaviour
 
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		setGameVersion();
-
+		/*
 		firstTime = true;
 		hangar.addGunToHangar(playerArmory[0]);
 		hangar.addToCanonUpgrades();
 		hangar.addSpaceshipToHangar(playerVersion[0]);
 		hangar.addToShipUpgrades();
-		credits = 20000;
+		credits = 0;
 		Debug.Log("noLoad");
-		/*
+*/
 		if(profileMan.filePresent()){
 			firstTime = false;
 			profileMan.gameLoad();
@@ -103,7 +103,7 @@ public class Player_Charactor : MonoBehaviour
 			hangar.addToCanonUpgrades();
 			hangar.addSpaceshipToHangar(playerVersion[0]);
 			hangar.addToShipUpgrades();
-			credits = 20000;
+			credits = 0;
 			Debug.Log("noLoad");
 		}
 		/*

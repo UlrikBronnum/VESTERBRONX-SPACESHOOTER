@@ -219,7 +219,7 @@ public class CanonShop_Level : LevelScript_Base {
 			GUI.EndGroup();
 
 		}else {
-			if(script.credits > price)
+			if(script.credits >= price)
 			{
 				placementX = Screen.width - buttonWidth; 
 				placementY = 0;
@@ -250,7 +250,7 @@ public class CanonShop_Level : LevelScript_Base {
 			placementY = Screen.height - buttonHeight * 2;
 			
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight * 2));
-			GUI.Box (new Rect(0,0,buttonWidth,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
+			GUI.Box (new Rect(0,0,buttonWidth*1.5f,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
 			if (!completed ){
