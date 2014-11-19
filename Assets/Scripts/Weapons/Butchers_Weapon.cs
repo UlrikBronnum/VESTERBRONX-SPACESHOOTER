@@ -14,11 +14,11 @@ public class Butchers_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 8000;
 		// Damage of projetile
-		projectileDamage = 150;
+		projectileDamage = 180;
 		// the rate of fire value
 		rateOfFire = 1/3f;
 		// magasin capacity
-		magCapacity = 100;
+		magCapacity = 140;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

@@ -325,7 +325,7 @@ public class LevelScript_Level : LevelScript_Base {
 	}
 
 	public int priceCreditsValue(){
-		int priceValue = (int) (75 * Mathf.Pow(levelNumber, 1.06f));
+		int priceValue = (int) (75 * Mathf.Pow(levelNumber, 1.2f));
 		return priceValue;
 	}
 

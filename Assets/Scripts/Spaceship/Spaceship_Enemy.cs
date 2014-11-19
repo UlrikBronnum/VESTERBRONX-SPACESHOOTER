@@ -32,7 +32,7 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 		explosion = Resources.Load ("explosion") as GameObject;
 
-		timeToShoot = Random.Range (0.0F, 5.0F);
+		timeToShoot = Random.Range (0.0F, 4.0F);
 		StartCoroutine (Shoot (timeToShoot));
 
 	
@@ -50,9 +50,9 @@ public class Spaceship_Enemy : Spaceship_Base {
 		}*/
 //		Debug.Log(value + "  " + level);
 
-		health += level * 60;
-		shield += level * 40;
-		maneuverSpeed += level * 18;
+		health += level * 50;
+		shield += level * 30;
+		maneuverSpeed += level * 16;
 		fireRate -= level * 0.1f;
 		damage += (int)(damage/50 * level);
 

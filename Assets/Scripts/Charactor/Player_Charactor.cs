@@ -85,10 +85,8 @@ public class Player_Charactor : MonoBehaviour
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		setGameVersion();
 
-<<<<<<< HEAD
-=======
-		/*
->>>>>>> FETCH_HEAD
+
+
 		firstTime = true;
 		hangar.addGunToHangar(playerArmory[0]);
 		hangar.addToCanonUpgrades();
@@ -111,7 +109,7 @@ public class Player_Charactor : MonoBehaviour
 			Debug.Log("noLoad");
 		}
 		credits = 20000;
-
+*/
 		hangar.setHangar();
 	
 	}
