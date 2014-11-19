@@ -84,6 +84,7 @@ public class Player_Charactor : MonoBehaviour
 
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		setGameVersion();
+
 		/*
 		firstTime = true;
 		hangar.addGunToHangar(playerArmory[0]);
@@ -103,18 +104,10 @@ public class Player_Charactor : MonoBehaviour
 			hangar.addToCanonUpgrades();
 			hangar.addSpaceshipToHangar(playerVersion[0]);
 			hangar.addToShipUpgrades();
-			credits = 0;
+			credits = 20000;
 			Debug.Log("noLoad");
 		}
-		/*
-			hangar.addSpaceshipToHangar("SecondClass");
-			hangar.addGunToHangar("Space/Minigun_weapon");
-			hangar.addToCanonUpgrades();
-			hangar.addSpaceshipToHangar("PlayerShips/FixeBus");
-			hangar.addToShipUpgrades();
-			credits = 70000;
-		*/
-
+		credits = 20000;
 
 		hangar.setHangar();
 	
@@ -166,6 +159,7 @@ public class Player_Charactor : MonoBehaviour
 
 		if(systemState == "Image Lost")
 		{
+			profileMan.gameSave();
 			if(GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
 				Debug.Log("Found Target");
 				systemState = "Menu";
@@ -173,7 +167,12 @@ public class Player_Charactor : MonoBehaviour
 				Debug.Log ("Close");
 			}
 		}
-			
+
+		if(systemState == "Menu"){
+			if(!GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
+				profileMan.gameSave();
+			}
+		}
 
 		if(systemState == "Hangar"){
 

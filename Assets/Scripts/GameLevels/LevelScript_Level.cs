@@ -171,7 +171,7 @@ public class LevelScript_Level : LevelScript_Base {
 				shipScript.gameObject.SetActive(false);
 				shipScript.IsActive = false;
 				completed = true;
-
+				GameObject.Find("ARCamera").GetComponent<Player_Charactor>().profileMan.gameSave();
 			}
 			
 		}else if (shipDamageHealth < 1){
@@ -190,6 +190,7 @@ public class LevelScript_Level : LevelScript_Base {
 				resetLevel();
 				shipScript.IsActive = false;
 				completed = true;	
+				GameObject.Find("ARCamera").GetComponent<Player_Charactor>().profileMan.gameSave();
 			}
 		}else {
 			sentButtonInput();
