@@ -183,6 +183,8 @@ public class LevelScript_Level : LevelScript_Base {
 				plC.profileMan.gameSave();
 				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime);
 				startTime = "";
+				System.GC.Collect();
+				Resources.UnloadUnusedAssets();
 			}
 			
 		}else if (shipDamageHealth < 1){
@@ -206,6 +208,8 @@ public class LevelScript_Level : LevelScript_Base {
 				plC.profileMan.gameSave();
 				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime);
 				startTime = "";
+				System.GC.Collect();
+				Resources.UnloadUnusedAssets();
 			}
 		}else {
 			sentButtonInput();

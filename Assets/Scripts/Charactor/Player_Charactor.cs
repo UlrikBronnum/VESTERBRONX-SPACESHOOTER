@@ -89,25 +89,7 @@ public class Player_Charactor : MonoBehaviour
 		box = new Texture2D(1,1);
 
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
-<<<<<<< HEAD
 
-
-=======
-		setGameVersion();
-
-<<<<<<< HEAD
-=======
-		/*
->>>>>>> FETCH_HEAD
-		firstTime = true;
-		hangar.addGunToHangar(playerArmory[0]);
-		hangar.addToCanonUpgrades();
-		hangar.addSpaceshipToHangar(playerVersion[0]);
-		hangar.addToShipUpgrades();
-		credits = 1000000;
-		Debug.Log("noLoad");
-/*
->>>>>>> origin/master
 		if(profileMan.filePresent()){
 			userCreated = true;
 			firstTime = false;
@@ -428,6 +410,7 @@ public class Player_Charactor : MonoBehaviour
 			}
 		}
 	}
+	//
 
 
 
