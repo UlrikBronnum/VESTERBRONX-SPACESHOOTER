@@ -72,7 +72,8 @@ public class Mission_Menu_Level : LevelScript_Base {
 
 		if(script.levelsCompleted > 7){
 			access[1] = true;
-		}else if(script.levelsCompleted > 15){
+		}
+		if(script.levelsCompleted > 15){
 			access[2] = true;
 		}
 
