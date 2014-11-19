@@ -62,6 +62,8 @@ public class LevelScript_Level : LevelScript_Base {
 	protected string[] enemyTypes;
 
 	SpawnControl_Enemy enemySpawnScr;
+	public string startTime = "";
+
 
 	public virtual int getLevelNumber(){
 		return 0;
@@ -119,6 +121,11 @@ public class LevelScript_Level : LevelScript_Base {
 		completed = false;
 
 		background = GameObject.Find("ImageTarget");
+
+		if(startTime == ""){
+			startTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+			Debug.Log(startTime);
+		}	
 	}
 
 	public override void updateLevel(){
@@ -171,7 +178,11 @@ public class LevelScript_Level : LevelScript_Base {
 				shipScript.gameObject.SetActive(false);
 				shipScript.IsActive = false;
 				completed = true;
-				GameObject.Find("ARCamera").GetComponent<Player_Charactor>().profileMan.gameSave();
+				GameObject pl = GameObject.Find("ARCamera");
+				Player_Charactor plC = pl.GetComponent<Player_Charactor>();
+				plC.profileMan.gameSave();
+				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime);
+				startTime = "";
 			}
 			
 		}else if (shipDamageHealth < 1){
@@ -190,7 +201,11 @@ public class LevelScript_Level : LevelScript_Base {
 				resetLevel();
 				shipScript.IsActive = false;
 				completed = true;	
-				GameObject.Find("ARCamera").GetComponent<Player_Charactor>().profileMan.gameSave();
+				GameObject pl = GameObject.Find("ARCamera");
+				Player_Charactor plC = pl.GetComponent<Player_Charactor>();
+				plC.profileMan.gameSave();
+				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime);
+				startTime = "";
 			}
 		}else {
 			sentButtonInput();
