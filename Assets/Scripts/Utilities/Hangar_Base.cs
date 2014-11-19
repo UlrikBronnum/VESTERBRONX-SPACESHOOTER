@@ -15,6 +15,8 @@ public class Hangar_Base : MonoBehaviour {
 	public List<int> canonUpgrade2 = new List<int>();
 	public List<int> canonUpgrade3 = new List<int>();
 
+	public int mount1Set = 0;
+	public int mount2Set = 0;
 
 	public void setHangar(){
 		int hangarCapacity = shipTypes.Count;
@@ -30,7 +32,9 @@ public class Hangar_Base : MonoBehaviour {
 				script.setUpStates(shipUpgrade1[i] , shipUpgrade2[i] , shipUpgrade3[i]);
 				script.shipInitialization();
 				hangarslots.Add(newObj);
+
 				gunMountManagement(script.canonTypes[0], i);
+
 			}
 		}
 	}
@@ -91,7 +95,8 @@ public class Hangar_Base : MonoBehaviour {
 		for(int i = 0; i < shipUpgrade3.Count ; i++){
 			reportString +=  "ShipUpgrade3=" + shipUpgrade3[i] + "\n";
 		}
-
+		reportString +=  "CannonChoise1=" + mount1Set + "\n";
+		reportString +=  "CannonChoise2=" + mount2Set + "\n";
 
 		return reportString;
 	}

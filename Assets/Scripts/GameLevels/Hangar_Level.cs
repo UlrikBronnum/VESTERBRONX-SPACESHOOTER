@@ -79,6 +79,7 @@ public class Hangar_Level : LevelScript_Base {
 		                              background.transform, Color.white);
 
 		shipScript = script.hangar.hangarslots[script.shipChoise].GetComponent<Spaceship_Player>();
+		swipeControl.resetSwipe(script.shipChoise);
 	}
 
 	public override void updateLevel()
@@ -116,6 +117,7 @@ public class Hangar_Level : LevelScript_Base {
 				if(countMountOne > script.hangar.canonTypes.Count - 1){
 					countMountOne = 0;
 				}
+				script.hangar.mount1Set = countMountOne;
 
 				shipScript.removeCanon(selectedGun);
 
@@ -144,6 +146,8 @@ public class Hangar_Level : LevelScript_Base {
 				if(countMountTwo > script.hangar.canonTypes.Count - 1){
 					countMountTwo = 0;
 				}
+
+				script.hangar.mount2Set = countMountTwo;
 
 				shipScript.removeCanon(selectedGun);
 				string newarr = script.hangar.canonTypes[countMountTwo];

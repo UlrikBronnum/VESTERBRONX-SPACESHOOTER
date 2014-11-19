@@ -79,4 +79,7 @@ public class newSwipe_Levels  : MonoBehaviour {
 	public bool Swipe{
 		get{ return swipe;}
 	}
+	public void resetSwipe(int num){
+		swipeCounter = num;
+	}
 }

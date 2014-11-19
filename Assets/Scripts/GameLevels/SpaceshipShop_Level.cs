@@ -244,6 +244,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 		{
 			completed = true;
 			deleteAllProps();
+			script.profileMan.gameSave();
 		}
 		scaleFont = buttonHeight/3;
 		myGUIStyle.fontSize = scaleFont;

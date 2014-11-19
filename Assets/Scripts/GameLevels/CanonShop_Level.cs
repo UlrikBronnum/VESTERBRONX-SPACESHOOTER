@@ -215,7 +215,6 @@ public class CanonShop_Level : LevelScript_Base {
 				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Weapon Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
 				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
 			}
-			Debug.Log("1 " + buyableObjects[gunPos].name);
 			GUI.EndGroup();
 
 		}else {
@@ -280,6 +279,7 @@ public class CanonShop_Level : LevelScript_Base {
 		{
 			completed = true;
 			deleteAllProps();
+			script.profileMan.gameSave();
 		}
 		scaleFont = buttonHeight/3;
 		myGUIStyle.fontSize = scaleFont;

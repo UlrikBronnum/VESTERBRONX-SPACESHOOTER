@@ -113,6 +113,17 @@ public class ProfileSavenLoad : MonoBehaviour {
 				if(getLine[0] == "DatabaseID"){
 					profileScript.userDatabaseID =  int.Parse(getLine[1]);
 				}
+				if(getLine[0] == "ShipChoise"){
+					profileScript.shipChoise =  int.Parse(getLine[1]);
+				}
+				if(getLine[0] == "CannonChoise1"){
+					profileScript.hangar.mount1Set = int.Parse(getLine[1]);
+				}
+				if(getLine[0] == "CannonChoise2"){
+					profileScript.hangar.mount2Set = int.Parse(getLine[1]);
+				}
+
+
 			}
 			// Close the file
 			fileLoaded.Close();

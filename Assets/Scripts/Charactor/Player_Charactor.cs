@@ -68,9 +68,11 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
+		print( Application.persistentDataPath );
+
 		databaseConnect = gameObject.AddComponent("StartUp") as StartUp; 
 		gameSetting = 0;
-		levelsCompleted = 0;
+		levelsCompleted = 20;
 		
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
@@ -90,7 +92,7 @@ public class Player_Charactor : MonoBehaviour
 		
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
 		
-		
+
 		if(profileMan.filePresent()){
 			userCreated = true;
 			firstTime = false;
@@ -102,8 +104,6 @@ public class Player_Charactor : MonoBehaviour
 		}else{
 			userCreated = false;
 		}
-		
-		
 	}
 	private void setGameVersion(){
 		
@@ -404,7 +404,7 @@ public class Player_Charactor : MonoBehaviour
 				hangar.addToCanonUpgrades();
 				hangar.addSpaceshipToHangar(playerVersion[0]);
 				hangar.addToShipUpgrades();
-				credits = 0;
+				credits = 100000;
 				hangar.setHangar();
 				Debug.Log("noLoad");
 				userCreated = true;
@@ -430,6 +430,7 @@ public class Player_Charactor : MonoBehaviour
 		reportString +=  "LevelCompleted=" + levelsCompleted + "\n";
 		reportString +=  "Credit=" + credits + "\n";
 		reportString +=  "DatabaseID=" + userDatabaseID + "\n";
+		reportString +=  "ShipChoise=" + shipChoise + "\n";
 		return reportString;
 	}
 	

@@ -14,7 +14,7 @@ public class Missile_Launcher_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 4000;
 		// Damage of projetile
-		projectileDamage = 250;
+		projectileDamage = 300;
 		// the rate of fire value
 		rateOfFire = 1f;
 		// magasin capacity
