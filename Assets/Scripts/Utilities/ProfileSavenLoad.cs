@@ -110,7 +110,9 @@ public class ProfileSavenLoad : MonoBehaviour {
 				if(getLine[0] == "Credit"){
 					profileScript.credits =  int.Parse(getLine[1]);
 				}
-
+				if(getLine[0] == "DatabaseID"){
+					profileScript.userDatabaseID =  int.Parse(getLine[1]);
+				}
 			}
 			// Close the file
 			fileLoaded.Close();
