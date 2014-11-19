@@ -70,7 +70,7 @@ public class Player_Charactor : MonoBehaviour
 	{
 		databaseConnect = gameObject.AddComponent("StartUp") as StartUp; 
 		gameSetting = 0;
-		levelsCompleted = 0;
+		levelsCompleted = 24;
 		
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
@@ -89,8 +89,25 @@ public class Player_Charactor : MonoBehaviour
 		box = new Texture2D(1,1);
 
 		myGUIStyle.alignment = TextAnchor.MiddleCenter;
+<<<<<<< HEAD
 
 
+=======
+		setGameVersion();
+
+<<<<<<< HEAD
+=======
+		/*
+>>>>>>> FETCH_HEAD
+		firstTime = true;
+		hangar.addGunToHangar(playerArmory[0]);
+		hangar.addToCanonUpgrades();
+		hangar.addSpaceshipToHangar(playerVersion[0]);
+		hangar.addToShipUpgrades();
+		credits = 1000000;
+		Debug.Log("noLoad");
+/*
+>>>>>>> origin/master
 		if(profileMan.filePresent()){
 			userCreated = true;
 			firstTime = false;

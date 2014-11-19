@@ -21,15 +21,13 @@ public class Weapons_Base : MonoBehaviour {
 	public float rateOfFire;
 	// magasin capacity
 	public int magCapacity;
-
-	public Weapon_Timer fireTimer;
 	
+
 	// Use this for initialization
 	public virtual void forceStart () {}
 
 	public void setFireRate(float newFire){
 		rateOfFire = newFire;
-		fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}
 	public int fireWeapon(){
 

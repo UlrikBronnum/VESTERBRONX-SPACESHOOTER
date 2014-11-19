@@ -15,11 +15,11 @@ public class Rocket_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 2000;
 		// Damage of projetile
-		projectileDamage = 225;
+		projectileDamage = 280;
 		// the rate of fire value
 		rateOfFire = 3/4f;
 		// magasin capacity
-		magCapacity = 100;
+		magCapacity = 120;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

@@ -7,7 +7,7 @@ public class Weapon_Timer {
 	
 	private float timerValue;
 	private float _timer;
-	
+	private bool hasShot = false;
 	
 	public Weapon_Timer(float timeInterval) //starting a new time
 	{
