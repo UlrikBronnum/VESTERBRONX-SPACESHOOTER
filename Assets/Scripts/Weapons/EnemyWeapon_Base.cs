@@ -17,14 +17,16 @@ public class EnemyWeapon_Base : MonoBehaviour {
 	// magasin capacity
 	
 	protected Weapon_Timer fireTimer;
-	
+
+	private bool canShoot = true;
 	
 	
 	// Use this for initialization
 	public virtual void forceStart (float newFire, int damage) {}
 
 	public void fireWeapon(){
-		if(fireTimer.timerTick()){
+		if(canShoot){
+			StartCoroutine("hasShot");
 			audio.PlayOneShot(fireExplosion);
 			GameObject newShot = (GameObject) Object.Instantiate(Resources.Load(ammoType));
 			newShot.tag = "EnemyProjectile";
@@ -34,6 +36,11 @@ public class EnemyWeapon_Base : MonoBehaviour {
 			newShot.transform.position = barrelEnd.position;
 			newShot.transform.rotation = barrelEnd.rotation;
 		}
+	}
+	IEnumerator hasShot() {
+		canShoot = false;
+		yield return new WaitForSeconds(rateOfFire);
+		canShoot = true;
 	}
 	
 

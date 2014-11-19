@@ -16,12 +16,12 @@ public class EnemyThirdClass : Spaceship_Enemy {
 		
 		canonScale = transform;
 		
-		health = 500;
+		health = 400;
 		shield = 200;
 		// Ship speed
 		maneuverSpeed = 225f;
 		// sets the rate of fire for the guns of this Enemy:
-		fireRate = 7f;
+		fireRate = 6f;
 		damage = 85;
 		
 		// damage inflicted if the player collides with this enemy
