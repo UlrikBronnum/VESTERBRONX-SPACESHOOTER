@@ -236,9 +236,10 @@ public class StartUp : MonoBehaviour {
 		{
 			message = w.text;
 			id2 = w.text;
-			Debug.Log(id2 + " + " + newID);
+
 
 			newID = int.Parse(w.text);
+			Debug.Log(id2 + " + " + newID);
 			tal = int.Parse(w.text);
 			tal = tal % 2;
 			print (tal % 2);

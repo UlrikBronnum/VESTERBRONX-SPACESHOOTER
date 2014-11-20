@@ -413,7 +413,7 @@ public class Player_Charactor : MonoBehaviour
 			if(databaseConnect.userCreatedBool){
 				gameSetting = databaseConnect.tal;
 				string ne = databaseConnect.id2;
-				userDatabaseID = databaseConnect.newID;
+				userDatabaseID = int.Parse(databaseConnect.id2);
 				setGameVersion();
 				firstTime = true;
 				hangar.addGunToHangar(playerArmory[0]);
