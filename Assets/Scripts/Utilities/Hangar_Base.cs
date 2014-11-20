@@ -18,7 +18,11 @@ public class Hangar_Base : MonoBehaviour {
 	public int mount1Set = 0;
 	public int mount2Set = 0;
 
+	public void run(){
+		Debug.Log(mount1Set + " " + mount2Set);
+	}
 	public void setHangar(){
+		Debug.Log(mount1Set + " " + mount2Set);
 		int hangarCapacity = shipTypes.Count;
 		if(hangarslots.Count != hangarCapacity){
 			for (int i = hangarslots.Count; i < hangarCapacity; i++){
@@ -33,8 +37,10 @@ public class Hangar_Base : MonoBehaviour {
 				script.shipInitialization();
 				hangarslots.Add(newObj);
 
-				gunMountManagement(script.canonTypes[0], i);
-
+				gunMountManagement(canonTypes[mount1Set], i, 0);
+				if (script.CanonMountCapacity > 2){
+					gunMountManagement(canonTypes[mount2Set], i, 1);
+				}
 			}
 		}
 	}
@@ -43,8 +49,28 @@ public class Hangar_Base : MonoBehaviour {
 	{
 		Spaceship_Player script = hangarslots[slotPos].GetComponent<Spaceship_Player>();
 		script.setUpStates(shipUpgrade1[slotPos] , shipUpgrade2[slotPos] , shipUpgrade3[slotPos]);
-		gunMountManagement(script.canonTypes[0], slotPos);
+		gunMountManagement(script.canonTypes[mount1Set], slotPos,0);
+		if(script.CanonMountCapacity > 2){
+			gunMountManagement(script.canonTypes[mount2Set], slotPos,1);
+		}
 	}
+
+	public void setSpaceshipGuns(int ps){
+		int shipC = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().shipChoise;
+		Spaceship_Player script = hangarslots[shipC].GetComponent<Spaceship_Player>();
+		script.removeCanon(0);
+		string _cannon = canonTypes[ps];
+		script.gunSetting(_cannon,0);
+		script.mountCanon(0);
+		mount1Set = ps;
+		if(script.CanonMountCapacity > 2){
+			script.removeCanon(1);
+			script.gunSetting(_cannon,1);
+			script.mountCanon(1);
+			mount2Set = ps;
+		}
+	}
+
 
 	public void addSpaceshipToHangar(string shipType){
 		shipTypes.Add(shipType);
@@ -52,9 +78,11 @@ public class Hangar_Base : MonoBehaviour {
 	public void addGunToHangar(string gunType){
 		canonTypes.Add(gunType);
 	}
-	public void gunMountManagement(string gunType, int ship){
+	public void gunMountManagement(string gunType, int ship, int m){
 		Spaceship_Player script = hangarslots[ship].GetComponent<Spaceship_Player>();
-		script.gunSetting(gunType);
+		script.removeCanon(m);
+		script.gunSetting(gunType,m);
+		script.mountCanon(m);
 	}
 	public void addToCanonUpgrades(){
 		canonUpgrade1.Add(0);

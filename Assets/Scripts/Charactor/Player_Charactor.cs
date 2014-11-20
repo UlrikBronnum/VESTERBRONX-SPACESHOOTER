@@ -85,6 +85,8 @@ public class Player_Charactor : MonoBehaviour
 		systemState = "Menu";
 		levelLoaded = false;
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
+		hangar.run();
+		
 		setLevels();
 		
 		// box used for info:

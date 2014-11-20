@@ -28,7 +28,8 @@ public class Hangar_Level : LevelScript_Base {
 		swipeControl = gameObject.AddComponent("newSwipe_Levels") as newSwipe_Levels;
 		// finds the texture for the buttons
 		setMainVars();
-
+		countMountOne = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().hangar.mount1Set;
+		countMountTwo = GameObject.Find("ARCamera").GetComponent<Player_Charactor>().hangar.mount2Set;
 		swipeControl.setUpSwipeLimits(script.hangar.hangarslots.Count,true);
 
 		completed = false;

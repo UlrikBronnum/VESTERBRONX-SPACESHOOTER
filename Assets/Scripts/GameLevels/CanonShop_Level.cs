@@ -231,6 +231,9 @@ public class CanonShop_Level : LevelScript_Base {
 					script.credits -= price;
 					hasGun = true;
 					gunPos = gunPos+1;
+					script.hangar.mount1Set = gunPos;
+					script.hangar.mount2Set = gunPos;
+					script.hangar.setSpaceshipGuns(gunPos);
 				}
 				scaleFont = buttonHeight/4;
 				myGUIStyle.fontSize = scaleFont;
