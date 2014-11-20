@@ -10,6 +10,6 @@ public class Enemy_ammo : EnemyProjectile_Base {
 		flyTime = 5f;
 		projectileVelocity = 1000;
 		timer = new EventTimer_Base(flyTime);
-		rigidbody.velocity = transform.forward * projectileVelocity;
+		rigidbody.velocity = transform.up * projectileVelocity;
 	}
 }

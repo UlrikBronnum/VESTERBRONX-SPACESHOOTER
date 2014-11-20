@@ -116,6 +116,7 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 			//Run a function to subtract damage from the player's health, according to the damage of the enemy
 			takeDamage(other.collider.GetComponent<EnemyProjectile_Base>().damage);
+			Destroy(other.gameObject);
 		}
 	}
 
@@ -142,20 +143,20 @@ public class Spaceship_Player : Spaceship_Base {
 	/// </summary>
 	/// <returns>The health.</returns>
 	public override int shipHealth(){
-		return health +  (int)(health * (upgradeStates[0] / 10.0f));
+		return health +  (int)(health * (upgradeStates[0] / 5.0f));
 	}
 	public int shipHealth(int num){
-		return health +  (int)(health * (num / 10.0f));
+		return health +  (int)(health * (num / 5.0f));
 	}
 	/// <summary>
 	/// Ships the shield.
 	/// </summary>
 	/// <returns>The shield.</returns>
 	public override int shipShield(){
-		return shield +  (int)(shield * (upgradeStates[1] / 10.0f));
+		return shield +  (int)(shield * (upgradeStates[1] / 5.0f));
 	}
 	public int shipShield(int num){
-		return shield +  (int)(shield * (num / 10.0f));
+		return shield +  (int)(shield * (num / 5.0f));
 	}
 
 	/// <summary>
@@ -163,10 +164,10 @@ public class Spaceship_Player : Spaceship_Base {
 	/// </summary>
 	/// <returns>The maneuver speed.</returns>
 	public override float shipManeuverSpeed(){
-		return maneuverSpeed +  (maneuverSpeed * (upgradeStates[2] / 10.0f));
+		return maneuverSpeed +  (maneuverSpeed * (upgradeStates[2] / 5.0f));
 	}
 	public float shipManeuverSpeed(int num){
-		return maneuverSpeed +  (maneuverSpeed * (num/ 10.0f));
+		return maneuverSpeed +  (maneuverSpeed * (num/ 5.0f));
 	}
 
 	/// <summary>
@@ -176,7 +177,7 @@ public class Spaceship_Player : Spaceship_Base {
 	public string getShipStats(){
 		string newStr = "Health: " + shipHealth().ToString() + 
 						"\nShield: " + shipShield().ToString() +
-						"\nMagasin: " + shipManeuverSpeed().ToString();
+						"\nSpeed: " + shipManeuverSpeed().ToString();
 		return newStr;
 	}
 

@@ -262,11 +262,11 @@ public class SpaceshipShop_Level : LevelScript_Base {
 		if(hasShip && !completed ){
 			GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Health: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipHealth(script.hangar.shipUpgrade1[shipPos]), myGUIStyle )  ;
 			GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Shield: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipShield(script.hangar.shipUpgrade2[shipPos]), myGUIStyle )  ;
-			GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Maneuver speed: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipManeuverSpeed(script.hangar.shipUpgrade3[shipPos]), myGUIStyle )  ;
+			GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Speed: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipManeuverSpeed(script.hangar.shipUpgrade3[shipPos]), myGUIStyle )  ;
 		}else if (!hasShip && !completed ){
 			GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Health: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipHealth(0), myGUIStyle )  ;
 			GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Shield: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipShield(0), myGUIStyle )  ;
-			GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Maneuver speed: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipManeuverSpeed(0), myGUIStyle )  ;
+			GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Speed: " + buyableObjects[shipSelected].GetComponent<Spaceship_Player>().shipManeuverSpeed(0), myGUIStyle )  ;
 		}
 		GUI.EndGroup();
 

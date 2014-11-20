@@ -111,7 +111,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 				Spawn (type);
 				break;
 			case 2:
-				spawnPosition = new Vector3 (newPos.x + 160, newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x + 80, newPos.y, newPos.z);
 				Spawn (type);
 				spawnPosition = new Vector3 (newPos.x + 160, newPos.y, newPos.z);
 				Spawn (type);
@@ -153,7 +153,7 @@ public class Enemy_Spawn : SpawnClass_Base {
 			case 1:
 				spawnPosition = new Vector3 (newPos.x + 80, newPos.y, newPos.z);
 				Spawn (type);
-				spawnPosition = new Vector3 (newPos.x -80 , newPos.y, newPos.z);
+				spawnPosition = new Vector3 (newPos.x -160 , newPos.y, newPos.z);
 				Spawn (type);
 				break;
 			case 2:

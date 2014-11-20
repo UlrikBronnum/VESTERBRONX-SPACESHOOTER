@@ -16,7 +16,9 @@ public class EnemyChain_script : Planet_Base {
 	private float sizes = 1;
 	private float spacing;
 	private int[] enemyTypes = {4,4,4,4,4,4,4,4};
+	private string[] background = {"Interface/level1"};
 	private string[] propName = {"LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom","LevelProps/Enemy_Showroom"};
+
 	
 	public override void Start()
 	{
@@ -39,7 +41,7 @@ public class EnemyChain_script : Planet_Base {
 			createSceneObject(newProp,newScale,newPosition,newRotation,player.transform);
 			moonObjects[i].transform.parent = transform;
 			moonObjects[i].GetComponent<Level_ShowEnemy>().showEnemy(script.enemyVersion,enemyTypes[i]);
-			
+
 		}
 	}
 	public override void Update(){

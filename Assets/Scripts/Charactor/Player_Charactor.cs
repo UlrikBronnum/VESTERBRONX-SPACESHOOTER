@@ -334,7 +334,7 @@ public class Player_Charactor : MonoBehaviour
 			
 			// makes info screens
 			if(firstTime){
-				myGUIStyle.fontSize = Screen.width/22;
+				myGUIStyle.fontSize = Screen.width/26;
 				
 				if(systemState == "Menu"){
 					if(!hasShown){
@@ -414,8 +414,6 @@ public class Player_Charactor : MonoBehaviour
 		}
 	}
 	
-	
-	
 	private void setLevels(){
 		Hangar_Level newHangarLevel = gameObject.AddComponent("Hangar_Level") as Hangar_Level;
 		levels.Add (newHangarLevel);
@@ -426,6 +424,7 @@ public class Player_Charactor : MonoBehaviour
 		SpaceshipShop_Level newShipLevel = gameObject.AddComponent("SpaceshipShop_Level") as SpaceshipShop_Level;
 		levels.Add(newShipLevel);
 	}
+
 	public string returnContentString(){
 		string reportString = "";
 		reportString +=  "GameVersion=" + gameSetting + "\n";

@@ -211,9 +211,9 @@ public class CanonShop_Level : LevelScript_Base {
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
 			if(!completed ){
-				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(script.hangar.canonUpgrade1[gunPos]), myGUIStyle )  ;
-				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Weapon Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
-				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(script.hangar.canonUpgrade1[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
 			}
 			GUI.EndGroup();
 
@@ -256,9 +256,9 @@ public class CanonShop_Level : LevelScript_Base {
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
 			if (!completed ){
-				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(0), myGUIStyle )  ;
-				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Weapon Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(0), myGUIStyle )  ;
-				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Weapon Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(0), myGUIStyle )  ;
+				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(0), myGUIStyle )  ;
+				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(0), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(0), myGUIStyle )  ;
 			}
 			//Debug.Log("2 " + buyableObjects[gunPos].name);
 			GUI.EndGroup();

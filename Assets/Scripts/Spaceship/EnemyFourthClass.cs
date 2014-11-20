@@ -21,7 +21,7 @@ public class EnemyFourthClass : Spaceship_Enemy {
 	maneuverSpeed = 250f;
 	// sets the rate of fire for the guns of this Enemy:
 	fireRate = 7f;
-	damage = 100;
+	damage = 65;
 	
 	// damage inflicted if the player collides with this enemy
 	collisionDamage = (int)(health/4f);

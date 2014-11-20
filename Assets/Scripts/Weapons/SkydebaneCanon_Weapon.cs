@@ -14,11 +14,11 @@ public class SkydebaneCanon_Weapon : Weapons_Base {
 			// the purchase value of the weapon
 			weaponValue = 16000;
 			// Damage of projetile
-			projectileDamage = 220;
+			projectileDamage = 250;
 			// the rate of fire value
 			rateOfFire = 1/3f;
 			// magasin capacity
-			magCapacity = 180;
+			magCapacity = 200;
 			
 	//		fireTimer = new Weapon_Timer(weaponRateOfFire());
 		}

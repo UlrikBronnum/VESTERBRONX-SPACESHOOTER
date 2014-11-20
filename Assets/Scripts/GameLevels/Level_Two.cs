@@ -38,7 +38,8 @@ public class Level_Two :  LevelScript_Level
 		newRotation = new Vector3(-90,0,180);
 		createSceneObject(newProp,newScale,spawnPoint,newRotation,background.transform);
 		spwnScr = props[0].GetComponent<SpawnControl_Enemy>();
-		int[] enemyTypeSelection = new int[5]{0,1,0,1,1};
+
+		int[] enemyTypeSelection = new int[5]{0,1,1,3,1};
 
 		spwnScr.setSpawnBase(levelNumber , howManyEnemies, enemyTypeSelection, 6f);
 

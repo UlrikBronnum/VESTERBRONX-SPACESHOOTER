@@ -34,7 +34,9 @@ public class EnemyWeapon_Base : MonoBehaviour {
 			EnemyProjectile_Base script = newShot.GetComponent<EnemyProjectile_Base>();
 			script.setProjectileDamage(projectileDamage);
 			newShot.transform.position = barrelEnd.position;
-			newShot.transform.rotation = barrelEnd.rotation;
+			//newShot.transform.rotation = Quaternion.Euler(180,0,0);
+			//newShot.transform.rotation = barrelEnd.rotation;
+			//newShot.transform.rotation = new Quaternion(90,0,0);
 		}
 	}
 	IEnumerator hasShot() {

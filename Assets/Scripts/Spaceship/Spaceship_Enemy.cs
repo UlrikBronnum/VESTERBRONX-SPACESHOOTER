@@ -52,9 +52,9 @@ public class Spaceship_Enemy : Spaceship_Base {
 
 		health += level * 50;
 		shield += level * 30;
-		maneuverSpeed += level * 16;
+		maneuverSpeed += level * 14;
 		fireRate -= level * 0.1f;
-		damage += (int)(damage/50 * level);
+		damage += 2*level;
 
 		shipInGameShield = shield;
 

@@ -75,7 +75,7 @@ public class Mission_Level : LevelScript_Base {
 				}
 				scaleFont = buttonHeight/3;
 				myGUIStyle.fontSize = scaleFont;
-				GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight), levelNames[swipeScript.NumberOfSwipes], myGUIStyle);
+					GUI.Box (new Rect(0,-scaleFont/2,buttonWidth,buttonHeight),"Play " +levelNames[swipeScript.NumberOfSwipes], myGUIStyle);
 				GUI.EndGroup();
 			}
 			placementX = 0; 
@@ -107,7 +107,7 @@ public class Mission_Level : LevelScript_Base {
 			placementX = Screen.width/2 - buttonWidth/2;
 			placementY = Screen.height/2 - buttonHeight/2; 
 			
-			scaleFont = 50;
+			scaleFont = Screen.width/24;
 
 			
 			GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
