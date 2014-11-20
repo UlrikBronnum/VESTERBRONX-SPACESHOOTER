@@ -22,7 +22,7 @@ public class Player_Charactor : MonoBehaviour
 	private Texture swipeSym;
 	
 	
-	private bool firstTime;
+	public bool firstTime;
 	// timer to control internal behavior
 	public int gameSetting ;
 	public int levelsCompleted;
@@ -349,8 +349,7 @@ public class Player_Charactor : MonoBehaviour
 						box.Apply();
 						GUI.skin.box.normal.background = box;
 						
-						//	GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
-						//	GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), " ", myGUIStyle);
+					
 					}
 				}
 				else if(systemState == "Hangar"){
@@ -368,8 +367,6 @@ public class Player_Charactor : MonoBehaviour
 						
 					}}
 				else if(systemState == "MissionLevel"){
-
-					GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
 
 					if(!hasShown3){
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;

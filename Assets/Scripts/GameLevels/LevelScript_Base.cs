@@ -25,6 +25,8 @@ public class LevelScript_Base : MonoBehaviour {
 	public virtual void updateLevel(){}
 	public virtual void levelGUI(){	}
 
+	protected Texture swipeSym;
+
 	public void setMainVars(){
 		player = GameObject.Find("ARCamera");
 		script = player.GetComponent<Player_Charactor>();
@@ -32,6 +34,7 @@ public class LevelScript_Base : MonoBehaviour {
 		// finds the texture for the buttons
 		versionNum = script.gameSetting;
 
+		swipeSym = Resources.Load ("Interface/swipeSymbol") as Texture;
 		newFont = script.newFont;
 		buttonTexture = script.buttonTexture;
 		myGUIStyle.font = newFont ;

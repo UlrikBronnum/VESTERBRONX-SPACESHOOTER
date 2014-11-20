@@ -12,6 +12,7 @@ public class Mission_Level : LevelScript_Base {
 	protected bool access = true;
 	protected string[] levelNames;
 
+
 	int levelCounter = 0;
 	int playerCounter = 0;
 
@@ -61,10 +62,14 @@ public class Mission_Level : LevelScript_Base {
 	}
 	public virtual void levelGUI()
 	{
+
 		int buttonHeight = Screen.height/7 , buttonWidth = Screen.width/4, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
 
 		if(planetState == "Home" && levels.Count != 0)
 		{
+			if (script.firstTime) {
+				GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
+			}
 			placementX = Screen.width - buttonWidth; 
 			placementY = 0;
 			if(access){

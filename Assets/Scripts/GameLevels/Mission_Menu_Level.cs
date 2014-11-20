@@ -11,6 +11,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 	protected string[] levelNames;
 	int levelCounter = 0;
 	protected bool[] access = new bool[3] { true , false , false};
+
 	
 
 	public override void loadLevel()
@@ -25,7 +26,7 @@ public class Mission_Menu_Level : LevelScript_Base {
 						levelNames [2] = "Planet_Three";
 				} else {
 			levelNames [0] = "Planet Enghave";
-			levelNames [1] = "Planet Sdr Boulevard";
+			levelNames [1] = "Planet Sønder Blvd";
 			levelNames [2] = "Planet Istedgade";
 				
 		}
@@ -112,11 +113,17 @@ public class Mission_Menu_Level : LevelScript_Base {
 	}
 	public override void levelGUI()
 	{
+
 		int buttonHeight = Screen.height/7 , buttonWidth = Screen.width/4, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
 		
 
 		
 		if(missionState == "Home"){
+
+			if (script.firstTime) {
+				GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
+			}
+
 			placementX = Screen.width - buttonWidth; 
 			placementY = 0;
 
