@@ -15,7 +15,7 @@ public class Rocket_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 2000;
 		// Damage of projetile
-		projectileDamage = 240;
+		projectileDamage = 230;
 		// the rate of fire value
 		rateOfFire = 3/4f;
 		// magasin capacity

@@ -181,7 +181,7 @@ public class LevelScript_Level : LevelScript_Base {
 				GameObject pl = GameObject.Find("ARCamera");
 				Player_Charactor plC = pl.GetComponent<Player_Charactor>();
 				plC.profileMan.gameSave();
-				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime);
+				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime, script.credits.ToString());
 				startTime = "";
 				System.GC.Collect();
 				Resources.UnloadUnusedAssets();
@@ -206,7 +206,7 @@ public class LevelScript_Level : LevelScript_Base {
 				GameObject pl = GameObject.Find("ARCamera");
 				Player_Charactor plC = pl.GetComponent<Player_Charactor>();
 				plC.profileMan.gameSave();
-				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime);
+				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime , script.credits.ToString());
 				startTime = "";
 				System.GC.Collect();
 				Resources.UnloadUnusedAssets();

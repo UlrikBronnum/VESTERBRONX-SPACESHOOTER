@@ -55,6 +55,12 @@ public class Spaceship_Enemy : Spaceship_Base {
 		maneuverSpeed += level * 14;
 		fireRate -= level * 0.1f;
 		damage += 2*level;
+		if (level > 20) {
+			health += level * 30;
+			shield += level * 20;
+			fireRate -= level * 0.01f;
+			damage += 1*level;
+				}
 
 		shipInGameShield = shield;
 

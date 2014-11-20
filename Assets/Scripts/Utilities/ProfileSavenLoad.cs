@@ -111,7 +111,7 @@ public class ProfileSavenLoad : MonoBehaviour {
 					profileScript.credits =  int.Parse(getLine[1]);
 				}
 				if(getLine[0] == "DatabaseID"){
-					profileScript.userDatabaseID =  int.Parse(getLine[1]);
+					profileScript.userDatabaseID = int.Parse(getLine[1]);
 				}
 				if(getLine[0] == "ShipChoise"){
 					profileScript.shipChoise =  int.Parse(getLine[1]);

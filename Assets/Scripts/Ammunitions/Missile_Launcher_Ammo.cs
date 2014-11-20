@@ -18,8 +18,11 @@ public class Missile_Launcher_Ammo : Projectile_Base {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public override void Update () {
 
+		if (timer.timerTick ()) {
+						Destroy (gameObject);
+				}
 		pos = GameObject.Find("EnemySpawn(Clone)").transform.GetChild(0).position;
 		transform.position = Vector3.MoveTowards(transform.position, pos, projectileVelocity);
 		

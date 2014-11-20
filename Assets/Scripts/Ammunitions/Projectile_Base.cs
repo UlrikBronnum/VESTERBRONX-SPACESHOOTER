@@ -11,7 +11,7 @@ public class Projectile_Base : MonoBehaviour {
 	// Use this for initialization
 	public virtual void  Start () {	}
 
-	void Update(){
+	public virtual void Update(){
 		if(timer.timerTick()){
 			Destroy(gameObject);
 		}

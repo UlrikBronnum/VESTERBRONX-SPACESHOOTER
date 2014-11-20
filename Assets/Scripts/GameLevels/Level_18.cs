@@ -47,7 +47,7 @@ public class Level_18 : LevelScript_Level {
 
 		newProp = "LevelProps/Particle System";
 		newScale = new Vector3(1,1,1);
-		newPosition = new Vector3(0,-1450,0);
+		newPosition = new Vector3(0,-1450,-30);
 		newRotation = new Vector3(0,90,0);
 		createSceneObject(newProp,newScale,newPosition,newRotation,background.transform);
 	

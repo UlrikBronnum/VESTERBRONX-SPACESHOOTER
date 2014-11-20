@@ -15,13 +15,14 @@ using UnityEngine;
 using System.Collections;
 
 public class StartUp : MonoBehaviour {
+	public int newID;
 	public bool isUser;
 	public string id2 = ""; // 
 	string registerText = "Write your info";
 	string defaultUserName = ">Username", userName = ""; 
 	string defaultEmail = ">Email", userEmail = "";  
-	string defaultBopael = ">Bopæl", userBopael = "";
-	string defaultAlder = ">Alder", userAlder = "";
+	string defaultBopael = ">City", userBopael = "";
+	string defaultAlder = ">Age", userAlder = "";
 	string score2 = ""; //timeStarted = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), 
 	string timeEnded = "";
 	string message = "";
@@ -92,13 +93,14 @@ public class StartUp : MonoBehaviour {
 		StartCoroutine(registerEmailFunc(w));
 	}
 
-	public void AddScore(string id, string score, string timeStarted) {
+	public void AddScore(string id, string score, string timeStarted, string credits) {
 
 		timeEnded = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		message = "";
 		WWWForm form = new WWWForm();
 		form.AddField("user_id", id);
 		form.AddField("score", score);
+		form.AddField ("credits", credits);
 		form.AddField("time_started", timeStarted);
 		form.AddField("time_ended", timeEnded);
 		WWW w = new WWW("http://www.carmoe.dk/AAU/AddScore.php", form);
@@ -155,7 +157,7 @@ public class StartUp : MonoBehaviour {
 			GUI.DrawTexture(new Rect(new Rect(0,0,Screen.width/2+Screen.width/11,Screen.width/2+Screen.width/170)),Resources.Load("Interface/texture14") as Texture);
 			GUI.Label(new Rect(Screen.width/24+Screen.width/600,Screen.width/150,500,500) , registerText, myHeadStyle);
 			GUI.SetNextControlName ("player_name");
-			userName = GUI.TextField(new Rect(Screen.width/24+Screen.width/200,Screen.width/11+ Screen.width/150,600,100),userName, mySecondStyle);
+			userName = GUI.TextField(new Rect(Screen.width/24+Screen.width/200,Screen.width/11+ Screen.width/150,Screen.width/2, Screen.height/10),userName, mySecondStyle);
 			if (UnityEngine.Event.current.type == EventType.Repaint)
 			{
 				if (GUI.GetNameOfFocusedControl () == "player_name")
@@ -168,7 +170,7 @@ public class StartUp : MonoBehaviour {
 				}
 			}
 			GUI.SetNextControlName ("player_bopael");
-			userBopael = GUI.TextField(new Rect(Screen.width/24+Screen.width/200,Screen.width/7+Screen.width/60,600,100),userBopael, mySecondStyle);
+			userBopael = GUI.TextField(new Rect(Screen.width/24+Screen.width/200,Screen.width/7+Screen.width/60,Screen.width/2, Screen.height/10),userBopael, mySecondStyle);
 			if (UnityEngine.Event.current.type == EventType.Repaint)
 			{
 				if (GUI.GetNameOfFocusedControl () == "player_bopael")
@@ -181,7 +183,7 @@ public class StartUp : MonoBehaviour {
 				}
 			}
 			GUI.SetNextControlName ("player_alder");
-			userAlder = GUI.TextField(new Rect(Screen.width/24+Screen.width/200,Screen.width/5+Screen.width/40,600,100),userAlder, mySecondStyle);
+			userAlder = GUI.TextField(new Rect(Screen.width/24+Screen.width/200,Screen.width/5+Screen.width/40,Screen.width/2, Screen.height/10),userAlder, mySecondStyle);
 			if (UnityEngine.Event.current.type == EventType.Repaint)
 			{
 				if (GUI.GetNameOfFocusedControl () == "player_alder")
@@ -195,7 +197,7 @@ public class StartUp : MonoBehaviour {
 			}
 
 			GUI.SetNextControlName ("pEmail");
-			userEmail = GUI.TextField(new Rect(Screen.width/23,Screen.width/4+Screen.width/25,Screen.width/2+Screen.width/190,Screen.width/12+Screen.width/600) ,userEmail, mySecondStyle);
+			userEmail = GUI.TextField(new Rect(Screen.width/23,Screen.width/4+Screen.width/25,Screen.width/2, Screen.height/10) ,userEmail, mySecondStyle);
 			if (UnityEngine.Event.current.type == EventType.Repaint)
 			{
 				if (GUI.GetNameOfFocusedControl () == "pEmail")
@@ -234,6 +236,9 @@ public class StartUp : MonoBehaviour {
 		{
 			message = w.text;
 			id2 = w.text;
+			Debug.Log(id2 + " + " + newID);
+
+			newID = int.Parse(w.text);
 			tal = int.Parse(w.text);
 			tal = tal % 2;
 			print (tal % 2);

@@ -14,7 +14,7 @@ public class Butchers_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 8000;
 		// Damage of projetile
-		projectileDamage = 240;
+		projectileDamage = 230;
 		// the rate of fire value
 		rateOfFire = 1/3f;
 		// magasin capacity

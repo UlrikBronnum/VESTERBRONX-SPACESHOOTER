@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,7 +10,7 @@ public class Player_Charactor : MonoBehaviour
 	private Texture2D box;
 	
 	
-	// bool making sure each texture is shown for 10 sec
+	// bool making sure each texture is shown untill a button is clicked
 	private bool hasShown = false;
 	private bool hasShown2 = false;
 	private bool hasShown3 = false;
@@ -17,6 +18,8 @@ public class Player_Charactor : MonoBehaviour
 	private bool hasShown5 = false;
 	private bool hasShown6 = false;
 	private bool hasShown7 = false;
+
+	private Texture swipeSym;
 	
 	
 	private bool firstTime;
@@ -72,8 +75,9 @@ public class Player_Charactor : MonoBehaviour
 
 		databaseConnect = gameObject.AddComponent("StartUp") as StartUp; 
 		gameSetting = 0;
-		levelsCompleted = 20;
-		
+		levelsCompleted = 24;
+
+		swipeSym = Resources.Load ("Interface/swipeSymbol") as Texture;
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
 		gameTextColors[0] = new Color(0.0f,0.0f,0.0f,1.0f);
@@ -121,11 +125,11 @@ public class Player_Charactor : MonoBehaviour
 			//cagobike, carlsberg wagon, cristianiaBike 
 			playerArmory  = new string[6] {"VesterBro/Coffee gun_weapon","VesterBro/Durum launcher_weapon","VesterBro/Needle gun_weapon","VesterBro/Bottle Launcher_weapon","VesterBro/MeatCleaver gun_weapon","VesterBro/Cannon_weapon"};
 			
-			enemyVersion = new string[5] {"VesterBro/CargoBike","VesterBro/Carlsberg_wagon","VesterBro/ChristaniaBike","VesterBro/Christiania_bike","VesterBro/CargoBike"};
+			enemyVersion = new string[4] {"VesterBro/CargoBike","VesterBro/Carlsberg_wagon","VesterBro/ChristaniaBike","VesterBro/Christiania_bike"};
 			
 		}else{
 			playerVersion = new string[2] {"PlayerShips/Spaceship_1ed","PlayerShips/SpikePlayer"};
-			enemyVersion = new string[5] {"Space/Mustang","Space/Needle","Space/Spike","Space/X_Fighter","Space/Phoenix"};
+			enemyVersion = new string[4] {"Space/Mustang","Space/Needle","Space/X_Fighter","Space/Phoenix"};
 			playerArmory  = new string[6] {"Space/Minigun_weapon","Space/Cobra Missile _Weapon","Space/Rocket launcher_weapon","Space/Plasma Missile_weapon","Space/Plasma gun_weapon","Space/Laser_weapon"};
 		} 
 	}
@@ -350,6 +354,9 @@ public class Player_Charactor : MonoBehaviour
 					}
 				}
 				else if(systemState == "Hangar"){
+
+					GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
+
 					if(!hasShown2){
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the hangar you can choose"+ "\n" +"which weapons should be mounted"+ "\n" +"on your ship."+ "\n" +"You need to buy a new weapon"+ "\n" +"in the cannon store before you"+ "\n" +"can change your weapon", myGUIStyle);
@@ -361,6 +368,9 @@ public class Player_Charactor : MonoBehaviour
 						
 					}}
 				else if(systemState == "MissionLevel"){
+
+					GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
+
 					if(!hasShown3){
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "Here you choose a level to play."+ "\n" +"There are 3 locations with 8 levels each."+ "\n" +"Use swipe to manage the levels,"+ "\n" +"and press the upper right button"+ "\n" +"to enter a location or play a level", myGUIStyle);
@@ -371,6 +381,8 @@ public class Player_Charactor : MonoBehaviour
 						GUI.Box (new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight), "Continue", myGUIStyle);
 					}}
 				else if(systemState == "CanonShop"){
+					GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
+
 					if(!hasShown4){
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the Cannon Shop, you can "+ "\n" +"upgrade your weapons and buy new ones."+ "\n" +"Swipe to the right to see the next weapon.", myGUIStyle);
@@ -381,9 +393,11 @@ public class Player_Charactor : MonoBehaviour
 						GUI.Box (new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight), "Continue", myGUIStyle);
 					}}
 				else if(systemState == "ShipShop"){
+					GUI.DrawTexture(new Rect(Screen.width/2-Screen.width/10,Screen.height-Screen.height/3, Screen.width/6,Screen.height/5), swipeSym, ScaleMode.ScaleToFit, true, 0);
+
 					if(!hasShown5){
 						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6),  box)  ;
-						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the Ship Shop, you can"+ "\n" +"upgrade your ship or buy a new."+ "\n" +"Use swipe to manouvre between your ships", myGUIStyle);
+						GUI.Box (new Rect(Screen.width/10,Screen.height/12, Screen.width-Screen.width/5,Screen.height-Screen.height/6), "In the Ship Shop, you can"+ "\n" +"upgrade your ship or buy a new."+ "\n" +"Use swipe to manouvre"+ "\n" + "between your ships", myGUIStyle);
 						
 						if(GUI.Button(new Rect(Screen.width/2-buttonWidth/2,Screen.height-Screen.height/6,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none)){
 							info(ref hasShown5);
@@ -399,14 +413,14 @@ public class Player_Charactor : MonoBehaviour
 			if(databaseConnect.userCreatedBool){
 				gameSetting = databaseConnect.tal;
 				string ne = databaseConnect.id2;
-				userDatabaseID = int.Parse(ne);
+				userDatabaseID = databaseConnect.newID;
 				setGameVersion();
 				firstTime = true;
 				hangar.addGunToHangar(playerArmory[0]);
 				hangar.addToCanonUpgrades();
 				hangar.addSpaceshipToHangar(playerVersion[0]);
 				hangar.addToShipUpgrades();
-				credits = 100000;
+				credits = 1000000;
 				hangar.setHangar();
 				Debug.Log("noLoad");
 				userCreated = true;

@@ -14,11 +14,11 @@ public class BeerBottle_Weapon : Weapons_Base {
 		// the purchase value of the weapon
 		weaponValue = 4000;
 		// Damage of projetile
-		projectileDamage = 300;
+		projectileDamage = 290;
 		// the rate of fire value
 		rateOfFire = 1f;
 		// magasin capacity
-		magCapacity = 60;
+		magCapacity = 75;
 		
 	//	fireTimer = new Weapon_Timer(weaponRateOfFire());
 	}

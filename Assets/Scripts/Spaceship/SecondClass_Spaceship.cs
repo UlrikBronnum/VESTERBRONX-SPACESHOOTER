@@ -37,7 +37,7 @@ public class SecondClass_Spaceship : Spaceship_Player {
 		health = 1000;
 		shield = 500;
 		// Amount of gun attachments 
-		canonMountCapacity = transform.childCount;
+		canonMountCapacity = 4;
 		
 		canonMount = new Transform[canonMountCapacity];
 		canonTypes = new string[canonMountCapacity];
@@ -45,7 +45,7 @@ public class SecondClass_Spaceship : Spaceship_Player {
 		
 		Player_Charactor script = player.GetComponent<Player_Charactor>();
 		
-		for (int i = 0 ; i < transform.childCount ; i ++){
+		for (int i = 0 ; i < canonMountCapacity ; i ++){
 			canonMount[i] = transform.FindChild("mountT" + i);
 			canonTypes[i] = script.hangar.canonTypes[0];
 		}
