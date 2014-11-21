@@ -37,7 +37,7 @@ public class LevelScript_Level : LevelScript_Base {
 
 	protected Texture lifeRemainingTexture;
 	protected Texture lifeRemainingBehindTexture;
-
+	protected AButton aButtonScript; 
 
 	protected int shipHealth;
 	protected int shipShield;
@@ -178,10 +178,8 @@ public class LevelScript_Level : LevelScript_Base {
 				shipScript.gameObject.SetActive(false);
 				shipScript.IsActive = false;
 				completed = true;
-				GameObject pl = GameObject.Find("ARCamera");
-				Player_Charactor plC = pl.GetComponent<Player_Charactor>();
-				plC.profileMan.gameSave();
-				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime, script.credits.ToString());
+				script.profileMan.gameSave();
+				script.databaseConnect.AddScore(script.userDatabaseID.ToString(),script.levelsCompleted.ToString(),startTime, script.credits.ToString(),levelNumber.ToString());
 				startTime = "";
 				System.GC.Collect();
 				Resources.UnloadUnusedAssets();
@@ -202,11 +200,9 @@ public class LevelScript_Level : LevelScript_Base {
 				closeLevel();
 				resetLevel();
 				shipScript.IsActive = false;
-				completed = true;	
-				GameObject pl = GameObject.Find("ARCamera");
-				Player_Charactor plC = pl.GetComponent<Player_Charactor>();
-				plC.profileMan.gameSave();
-				plC.databaseConnect.AddScore(plC.userDatabaseID.ToString(),plC.levelsCompleted.ToString(),startTime , script.credits.ToString());
+				completed = true;
+				script.profileMan.gameSave();
+				script.databaseConnect.AddScore(script.userDatabaseID.ToString(),script.levelsCompleted.ToString(),startTime , script.credits.ToString(),levelNumber.ToString());
 				startTime = "";
 				System.GC.Collect();
 				Resources.UnloadUnusedAssets();
@@ -221,19 +217,9 @@ public class LevelScript_Level : LevelScript_Base {
 
 		int buttonSize = Screen.height/5, placementX = Screen.width - buttonSize*2, placementY = Screen.height/20 , scaleFont = buttonSize/4;
 
-		if(numberOfFireButtons == 2){
-			buttonScript = new AButton[1];
-			button  = new GameObject[2];
-		}
-		else if(numberOfFireButtons == 4){
-			buttonScript = new AButton[1];
-			button  = new GameObject[2];
-			//buttonScript = new AButton[2];
-			//button  = new GameObject[3];
-		}
-
-
-
+		buttonScript = new AButton[1];
+		button  = new GameObject[2];
+	
 		placementX = Screen.width / 12;
 		placementY =  Screen.height / 9;
 		
@@ -252,42 +238,17 @@ public class LevelScript_Level : LevelScript_Base {
 		buttonScript[0] = button[1].GetComponent<AButton>();
 
 		button[1].guiText.pixelOffset = new Vector2(placementX + buttonSize/2,placementY + buttonSize/2) ;
-		button[1].guiText.text = "Fire1";
+		button[1].guiText.text = "Fire";
 		button[1].guiText.font = newFont;
 		button[1].guiText.fontSize = scaleFont;
 		button[1].guiText.color = script.textColor;
 
-		/*if(numberOfFireButtons == 4)
-		{
-			placementX = Screen.width - buttonSize - Screen.height/20;
-			placementY = buttonSize + Screen.height/20;
-
-			button[2] = (GameObject)Object.Instantiate(Resources.Load ("Interface/FireButton"));
-			button[2].SetActive(true);
-			button[2].guiTexture.texture = fireButton[script.gameSetting];
-			button[2].guiTexture.pixelInset = new Rect(placementX,placementY,buttonSize,buttonSize);
-			buttonScript[1] = button[2].GetComponent<AButton>();
-			
-			button[2].guiText.pixelOffset = new Vector2(placementX + buttonSize/2,placementY + buttonSize/2) ;
-			button[2].guiText.text = "Fire2";
-			button[2].guiText.font = newFont;
-			button[2].guiText.fontSize = scaleFont;
-			button[2].guiText.color = script.textColor;
-
-		}*/
 
 
 		
 	}
 	protected override void unloadButtons(){
-		int limit = 0;
-		if(numberOfFireButtons == 4){
-			limit = 3;
-		}
-		else
-		{
-			limit = 2;
-		}
+		int limit = 2;
 
 		for(int i = 0; i < limit ; i++){
 			Destroy(button[i]);
@@ -296,54 +257,21 @@ public class LevelScript_Level : LevelScript_Base {
 
 
 	protected void sentButtonInput(){
-		if(numberOfFireButtons == 2)
-		{
-			if(buttonScript[0].touch)
-			{
-				button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
-				if(script.gameSetting == 1)
-				{
-					button[1].guiText.color = Color.red;
-				}
-			}
-			else
-			{
-				button[1].guiTexture.texture = fireButton[script.gameSetting];
-				button[1].guiText.color = script.textColor;
-			}
-			shipScr.getButtonInput(buttonScript[0].touch, joystickInput);
-		}
-		else if(numberOfFireButtons == 4)
-		{
-			if(buttonScript[0].touch)
-			{
-				button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
-				if(script.gameSetting == 1)
-				{
-					button[1].guiText.color = Color.red;
-				}
-			}
-			else
-			{
-				button[1].guiTexture.texture = fireButton[script.gameSetting];
-				button[1].guiText.color = script.textColor;
-			}
-			/*if(buttonScript[1].touch)
-			{
-				button[2].guiTexture.texture = fireButtonDown[script.gameSetting];
-				if(script.gameSetting == 1)
-				{
-					button[2].guiText.color = Color.red;
-				}
-			}
-			else
-			{
-				button[2].guiTexture.texture = fireButton[script.gameSetting];
-				button[2].guiText.color = script.textColor;
-			}*/
-			shipScr.getButtonInput(buttonScript[0].touch,joystickInput);
-		}
 
+		if(buttonScript[0].touch && !levelCompleted)
+		{
+			button[1].guiTexture.texture = fireButtonDown[script.gameSetting];
+			if(script.gameSetting == 1)
+			{
+				button[1].guiText.color = Color.red;
+			}
+		}
+		else
+		{
+			button[1].guiTexture.texture = fireButton[script.gameSetting];
+			button[1].guiText.color = script.textColor;
+		}
+		shipScr.getButtonInput(buttonScript[0].touch, joystickInput);
 	}
 
 	public int priceCreditsValue(){
@@ -354,12 +282,15 @@ public class LevelScript_Level : LevelScript_Base {
 
 	public int priceCreditsTotal(){
 		int priceValue = priceCreditsValue();
-		priceValue += (int) ((priceValue * 0.1f) * ( (float)enemiesDestroyed / howManyEnemies));
+		priceValue = (int)(priceValue * (float)enemiesDestroyed / (howManyEnemies) );
+		if (enemiesDestroyed == howManyEnemies) {
+			priceValue += (int)(priceCreditsValue() * 0.1f);
+		}
 		return priceValue;
 	}
 	public int fullPriceCreditsTotal(){
 		int priceValue = priceCreditsValue();
-		priceValue += (int) ((priceValue * 0.1f));
+		priceValue = (int)(priceValue * (float)enemiesDestroyed / (howManyEnemies) );
 		return priceValue;
 	}
 	public override void levelGUI(){

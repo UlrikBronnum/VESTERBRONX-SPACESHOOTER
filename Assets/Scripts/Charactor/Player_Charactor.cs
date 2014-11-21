@@ -71,11 +71,12 @@ public class Player_Charactor : MonoBehaviour
 	}
 	public void Start () 
 	{
+
 		print( Application.persistentDataPath );
 
 		databaseConnect = gameObject.AddComponent("StartUp") as StartUp; 
 		gameSetting = 0;
-		levelsCompleted = 24;
+		levelsCompleted = 0;
 
 		swipeSym = Resources.Load ("Interface/swipeSymbol") as Texture;
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
@@ -220,7 +221,7 @@ public class Player_Charactor : MonoBehaviour
 	{	
 		
 		if(userCreated){
-			int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/3;
+			int buttonHeight = Screen.height/5 , buttonWidth = Screen.width/3, placementX = 0, placementY = 0, scaleFont = buttonHeight/4;
 			myGUIStyle.alignment = TextAnchor.MiddleCenter;
 			
 			
@@ -230,13 +231,14 @@ public class Player_Charactor : MonoBehaviour
 				placementX = Screen.width/2 - buttonWidth/2; 
 				placementY = (Screen.height/5)/2 ;
 				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))
+				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight), GUIContent.none, GUIStyle.none))
 				{
 					systemState = "Hangar";
 					levelLoaded = false;
 					levels[0].loadLevel();
 				}
-				scaleFont = buttonWidth/10;
+				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), buttonTexture, myGUIStyle);
+				scaleFont = buttonWidth/12;
 				myGUIStyle.fontSize = scaleFont;
 				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Hangar", myGUIStyle);
 				GUI.EndGroup();
@@ -245,13 +247,14 @@ public class Player_Charactor : MonoBehaviour
 				
 				//myGUIStyle.alignment = TextAnchor.MiddleCenter;
 				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture, GUIStyle.none))
+				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),GUIContent.none, GUIStyle.none))
 				{
 					systemState = "MissionLevel";
 					levelLoaded = false;
 					levels[1].loadLevel();
 					
 				}
+				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), buttonTexture, myGUIStyle);
 				//scaleFont = buttonWidth/10;
 				//myGUIStyle.fontSize = scaleFont;
 				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Missions", myGUIStyle);
@@ -260,13 +263,14 @@ public class Player_Charactor : MonoBehaviour
 				placementY += buttonHeight;
 				
 				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture,GUIStyle.none))
+				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),GUIContent.none,GUIStyle.none))
 				{
 					systemState = "CanonShop";
 					levelLoaded = false;
 					levels[2].loadLevel();
 					
 				}
+				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), buttonTexture, myGUIStyle);
 				//scaleFont = buttonWidth/10;
 				//myGUIStyle.fontSize = scaleFont;
 				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Cannon Shop", myGUIStyle);
@@ -275,13 +279,14 @@ public class Player_Charactor : MonoBehaviour
 				placementY += buttonHeight;
 				
 				GUI.BeginGroup(new Rect(placementX,placementY,buttonWidth,buttonHeight));
-				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),buttonTexture,GUIStyle.none))
+				if(GUI.Button(new Rect(0,0,buttonWidth,buttonHeight),GUIContent.none,GUIStyle.none))
 				{
 					systemState = "ShipShop";
 					levelLoaded = false;
 					levels[3].loadLevel();
 					
 				}
+				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), buttonTexture, myGUIStyle);
 				//scaleFont = buttonWidth/10;
 				//myGUIStyle.fontSize = scaleFont;
 				//-scaleFont/2 instead of second parameter:
@@ -417,7 +422,7 @@ public class Player_Charactor : MonoBehaviour
 				hangar.addToCanonUpgrades();
 				hangar.addSpaceshipToHangar(playerVersion[0]);
 				hangar.addToShipUpgrades();
-				credits = 1000000;
+				credits = 0;
 				hangar.setHangar();
 				Debug.Log("noLoad");
 				userCreated = true;

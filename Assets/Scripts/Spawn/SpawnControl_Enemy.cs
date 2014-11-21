@@ -60,7 +60,6 @@ public class SpawnControl_Enemy : SpawnControl_Base {
 		}else if (transform.childCount == 0){
 
 			spawnEmpty = true;
-			Debug.Log("done");
 		}
 
 

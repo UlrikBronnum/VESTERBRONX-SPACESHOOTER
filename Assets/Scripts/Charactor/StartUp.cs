@@ -93,12 +93,13 @@ public class StartUp : MonoBehaviour {
 		StartCoroutine(registerEmailFunc(w));
 	}
 
-	public void AddScore(string id, string score, string timeStarted, string credits) {
+	public void AddScore(string id, string score, string timeStarted, string credits, string level) {
 
 		timeEnded = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		message = "";
 		WWWForm form = new WWWForm();
 		form.AddField("user_id", id);
+		form.AddField ("level" , level);
 		form.AddField("score", score);
 		form.AddField ("credits", credits);
 		form.AddField("time_started", timeStarted);

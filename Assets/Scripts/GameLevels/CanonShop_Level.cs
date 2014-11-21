@@ -14,6 +14,8 @@ public class CanonShop_Level : LevelScript_Base {
 	private List<GameObject> buyableObjects = new List<GameObject>();
 	// textures for the interface:
 	protected newSwipe_Levels swipeControl;
+	public string startTime = "";
+
 
 	public override void loadLevel()
 	{
@@ -85,7 +87,10 @@ public class CanonShop_Level : LevelScript_Base {
 		createDirectionalLightInScene(newProp,newScale,newPosition ,newRotation,
 		                              background.transform, Color.white);
 
-
+		if(startTime == ""){
+			startTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+			Debug.Log(startTime);
+		}
 		
 	}
 	private void deleteAllProps(){
@@ -103,6 +108,7 @@ public class CanonShop_Level : LevelScript_Base {
 		if(!completed ){
 			buyableObjects[canonSelected].SetActive(false);
 			canonSelected = swipeControl.SwipeCounter;
+			Debug.Log(buyableObjects[canonSelected].name);
 
 			hasGun = false;
 			
@@ -211,9 +217,11 @@ public class CanonShop_Level : LevelScript_Base {
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
 			if(!completed ){
-				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(script.hangar.canonUpgrade1[gunPos]), myGUIStyle )  ;
-				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
-				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
+				string[] getLine = buyableObjects[canonSelected].name.ToString().Split('_');
+				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), getLine[0] , myGUIStyle )  ;
+				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(script.hangar.canonUpgrade1[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/1.5f ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
 			}
 			GUI.EndGroup();
 
@@ -257,15 +265,11 @@ public class CanonShop_Level : LevelScript_Base {
 			myGUIStyle.fontSize = scaleFont;
 		
 			if (!completed ){
-				//forsøg på at skrive våbennavn:
-				//string[] getLine = buyableObjects[canonSelected].ToString().Split('/');
-				//string[] getLine2 = getLine[1].ToString().Split('_');
-				//GUI.Box (new Rect(0,buttonHeight/1.5f ,buttonWidth,buttonHeight),  getLine2[0], myGUIStyle )  ;
-
-				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(0), myGUIStyle )  ;
-				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(0), myGUIStyle )  ;
-				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(0), myGUIStyle )  ;
-
+				string[] getLine = buyableObjects[canonSelected].name.ToString().Split('_');
+				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), getLine[0] , myGUIStyle )  ;
+				GUI.Box (new Rect(0,0,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(script.hangar.canonUpgrade2[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(script.hangar.canonUpgrade1[gunPos]), myGUIStyle )  ;
+				GUI.Box (new Rect(0,buttonHeight/1.5f ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(script.hangar.canonUpgrade3[gunPos]), myGUIStyle )  ;
 
 
 			}
@@ -292,6 +296,11 @@ public class CanonShop_Level : LevelScript_Base {
 			completed = true;
 			deleteAllProps();
 			script.profileMan.gameSave();
+			script.databaseConnect.AddScore(script.userDatabaseID.ToString(),script.levelsCompleted.ToString(),startTime, script.credits.ToString(),"Cannon");
+			System.GC.Collect();
+			Resources.UnloadUnusedAssets();
+			startTime = "";
+
 		}
 		scaleFont = buttonHeight/3;
 		myGUIStyle.fontSize = scaleFont;

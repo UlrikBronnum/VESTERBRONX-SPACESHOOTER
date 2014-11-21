@@ -14,6 +14,7 @@ public class SpaceshipShop_Level : LevelScript_Base {
 	private List<GameObject> buyableObjects = new List<GameObject>();
 
 	protected newSwipe_Levels swipeControl;
+	public string startTime = "";
 
 
 	// textures for the interface:
@@ -92,7 +93,9 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			}
 		}
 		
-		
+		if(startTime == ""){
+			startTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+		}	
 	}
 	
 	public override void updateLevel()
@@ -245,6 +248,11 @@ public class SpaceshipShop_Level : LevelScript_Base {
 			completed = true;
 			deleteAllProps();
 			script.profileMan.gameSave();
+			script.databaseConnect.AddScore(script.userDatabaseID.ToString(),script.levelsCompleted.ToString(),startTime, script.credits.ToString(),"Ship");
+			System.GC.Collect();
+			Resources.UnloadUnusedAssets();
+			startTime = "";
+
 		}
 		scaleFont = buttonHeight/3;
 		myGUIStyle.fontSize = scaleFont;
