@@ -89,9 +89,10 @@ public class Spaceship_Player : Spaceship_Base {
 	}
 	// if the player is out of health, it will die. 
 	// sends input from gui ship buttons
-	public void getButtonInput(bool fb1,bool fb2, float js){
+	// f 2 buttons there where 2 arguments here:
+	public void getButtonInput(bool fb1, float js){
 		fire1 = fb1;
-		fire2 = fb2;
+	//	fire2 = fb2;
 		dir = js;
 	}
 	
@@ -299,20 +300,28 @@ public class Spaceship_Player : Spaceship_Base {
 			}
 		}
 		
-		if(fire1 && mountMagasinCapacity1 > 0){
+		if(fire1 && mountMagasinCapacity1 > 0 && canonMountCapacity ==2){
 			Weapons_Base script = canonMounted[0].GetComponent<Weapons_Base>();
 			mountMagasinCapacity1 -= script.fireWeapon();
 			script = canonMounted[1].GetComponent<Weapons_Base>();
 			mountMagasinCapacity1 -= script.fireWeapon();
 		}
 		if(canonMountCapacity/2 == 2){
-			if(fire2 && mountMagasinCapacity2 > 0)
+			//fire two in the following if two buttons.
+			if(fire1 && mountMagasinCapacity2 > 0)
 			{
 				Weapons_Base script = canonMounted[2].GetComponent<Weapons_Base>();
 				mountMagasinCapacity2 -= script.fireWeapon();
 				script = canonMounted[3].GetComponent<Weapons_Base>();
 				mountMagasinCapacity2 -= script.fireWeapon();
 			}
+			if(fire1 && mountMagasinCapacity1 > 0){
+				Weapons_Base script = canonMounted[0].GetComponent<Weapons_Base>();
+				mountMagasinCapacity1 -= script.fireWeapon();
+				script = canonMounted[1].GetComponent<Weapons_Base>();
+				mountMagasinCapacity1 -= script.fireWeapon();
+			}
+
 		}
 	}
 

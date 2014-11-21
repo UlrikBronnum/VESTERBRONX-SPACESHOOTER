@@ -255,10 +255,19 @@ public class CanonShop_Level : LevelScript_Base {
 			GUI.Box (new Rect(0,0,buttonWidth*1.5f,buttonHeight * 2),  buttonTexture, GUIStyle.none )  ;
 			scaleFont = buttonHeight/4;
 			myGUIStyle.fontSize = scaleFont;
+		
 			if (!completed ){
+				//forsøg på at skrive våbennavn:
+				//string[] getLine = buyableObjects[canonSelected].ToString().Split('/');
+				//string[] getLine2 = getLine[1].ToString().Split('_');
+				//GUI.Box (new Rect(0,buttonHeight/1.5f ,buttonWidth,buttonHeight),  getLine2[0], myGUIStyle )  ;
+
 				GUI.Box (new Rect(0,-buttonHeight/3 ,buttonWidth,buttonHeight), "Firerate: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponRateOfFire(0), myGUIStyle )  ;
 				GUI.Box (new Rect(0,0 ,buttonWidth,buttonHeight), "Damage: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponDamage(0), myGUIStyle )  ;
 				GUI.Box (new Rect(0,buttonHeight/3 ,buttonWidth,buttonHeight), "Magasin: " + buyableObjects[canonSelected].GetComponent<Weapons_Base>().weaponCapacity(0), myGUIStyle )  ;
+
+
+
 			}
 			//Debug.Log("2 " + buyableObjects[gunPos].name);
 			GUI.EndGroup();

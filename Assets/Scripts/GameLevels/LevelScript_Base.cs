@@ -114,7 +114,8 @@ public class LevelScript_Base : MonoBehaviour {
 		tmp.AddComponent<Light>();
 		tmp.light.type = LightType.Directional;
 		tmp.light.intensity = 0.8f;
-		tmp.light.color = lightColor;
+		tmp.light.color = new Color (0.3f, 0.25f, 0.25f, 1.0f);
+		//	lightColor;
 		tmp.light.shadows = LightShadows.Hard;
 		Vector3 newPos = cameraTransform.position;
 		newPos.x += pos.x;

@@ -59,7 +59,7 @@ public class Hangar_Level : LevelScript_Base {
 
 
 		newScale = new Vector3(10,10,10);
-		newPosition = new Vector3(0,0,50);
+		newPosition = new Vector3(-23,0,50);
 		newRotation = new Vector3(0,0,0);
 
 

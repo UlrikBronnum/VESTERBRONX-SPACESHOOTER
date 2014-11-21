@@ -224,9 +224,12 @@ public class LevelScript_Level : LevelScript_Base {
 		if(numberOfFireButtons == 2){
 			buttonScript = new AButton[1];
 			button  = new GameObject[2];
-		}else if(numberOfFireButtons == 4){
-			buttonScript = new AButton[2];
-			button  = new GameObject[3];
+		}
+		else if(numberOfFireButtons == 4){
+			buttonScript = new AButton[1];
+			button  = new GameObject[2];
+			//buttonScript = new AButton[2];
+			//button  = new GameObject[3];
 		}
 
 
@@ -254,7 +257,7 @@ public class LevelScript_Level : LevelScript_Base {
 		button[1].guiText.fontSize = scaleFont;
 		button[1].guiText.color = script.textColor;
 
-		if(numberOfFireButtons == 4)
+		/*if(numberOfFireButtons == 4)
 		{
 			placementX = Screen.width - buttonSize - Screen.height/20;
 			placementY = buttonSize + Screen.height/20;
@@ -271,7 +274,7 @@ public class LevelScript_Level : LevelScript_Base {
 			button[2].guiText.fontSize = scaleFont;
 			button[2].guiText.color = script.textColor;
 
-		}
+		}*/
 
 
 		
@@ -308,7 +311,7 @@ public class LevelScript_Level : LevelScript_Base {
 				button[1].guiTexture.texture = fireButton[script.gameSetting];
 				button[1].guiText.color = script.textColor;
 			}
-			shipScr.getButtonInput(buttonScript[0].touch,false, joystickInput);
+			shipScr.getButtonInput(buttonScript[0].touch, joystickInput);
 		}
 		else if(numberOfFireButtons == 4)
 		{
@@ -325,7 +328,7 @@ public class LevelScript_Level : LevelScript_Base {
 				button[1].guiTexture.texture = fireButton[script.gameSetting];
 				button[1].guiText.color = script.textColor;
 			}
-			if(buttonScript[1].touch)
+			/*if(buttonScript[1].touch)
 			{
 				button[2].guiTexture.texture = fireButtonDown[script.gameSetting];
 				if(script.gameSetting == 1)
@@ -337,8 +340,8 @@ public class LevelScript_Level : LevelScript_Base {
 			{
 				button[2].guiTexture.texture = fireButton[script.gameSetting];
 				button[2].guiText.color = script.textColor;
-			}
-			shipScr.getButtonInput(buttonScript[0].touch, buttonScript[1].touch,joystickInput);
+			}*/
+			shipScr.getButtonInput(buttonScript[0].touch,joystickInput);
 		}
 
 	}
