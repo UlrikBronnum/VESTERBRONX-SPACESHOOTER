@@ -62,8 +62,7 @@ public class Player_Charactor : MonoBehaviour
 	
 	public StartUp databaseConnect; 
 	private bool userCreated = false;
-	
-	
+
 	public void OnApplicationQuit(){
 		profileMan.gameSave();
 		endTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -77,7 +76,6 @@ public class Player_Charactor : MonoBehaviour
 		databaseConnect = gameObject.AddComponent("StartUp") as StartUp; 
 		gameSetting = 0;
 		levelsCompleted = 0;
-
 		swipeSym = Resources.Load ("Interface/swipeSymbol") as Texture;
 		gameButtonTexture[0] = Resources.Load("Interface/Button_Vesterbro_3_down") as Texture;
 		gameButtonTexture[1] = Resources.Load("Interface/GUI") as Texture;
@@ -87,7 +85,7 @@ public class Player_Charactor : MonoBehaviour
 		
 		profileMan = gameObject.AddComponent("ProfileSavenLoad") as ProfileSavenLoad;
 		shipChoise = 0;
-		systemState = "Menu";
+		systemState = "No State";
 		levelLoaded = false;
 		hangar = gameObject.AddComponent("Hangar_Base") as Hangar_Base;
 		hangar.run();
@@ -141,40 +139,20 @@ public class Player_Charactor : MonoBehaviour
 	{
 		
 		if(userCreated){
-			if (Input.GetKeyDown("space")){
-				gameSetting++;
-				if(gameSetting > 1){
-					gameSetting = 0;
-				}
-				setGameVersion();
-			}
+
 			if(systemState == "No State"){
 				if(GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
-					Debug.Log("Found Target");
-					startTime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 					systemState = "Menu";
-				}else{
-					Debug.Log("No Target");
-					systemState = "Image Lost";
-					terminationTime = Time.time + 5;
-					Debug.Log(terminationTime);
 				}
 			}
 			
-			if(systemState == "Image Lost")
-			{
-				profileMan.gameSave();
-				if(GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
-					Debug.Log("Found Target");
-					systemState = "Menu";
-				}else if(terminationTime < Time.time){
-					Debug.Log ("Close");
-				}
-			}
+
+
 			
 			if(systemState == "Menu"){
 				if(!GameObject.Find("ImageTarget").GetComponent<DefaultTrackableEventHandler>().isFound){
 					profileMan.gameSave();
+
 				}
 			}
 			
